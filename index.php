@@ -28,30 +28,27 @@
       <div class="navbar navbar-default navbar-static-top">
         <div class="container">
           <div class="navbar-header">
-            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html"><img alt="logo" src="img/logo.png"></a>
+            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="index.php"><img alt="logo" src="img/logo.png"></a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="active">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
               </li>
               <li>
-                <a href="about.html">About Us</a>
+                <a href="about.php">About Us</a>
               </li>
               <li>
-                <a href="services.html">Services</a>
+                <a href="services.php">Services</a>
               </li>
               <li>
-                <a href="portfolio.html">Portfolio</a>
+              <a href="pilticloud.php">PiltiCloud</a>
               </li>
               <li>
-                <a href="pricing.html">Pricing</a>
+                <a href="pricing.php">Pricing</a>
               </li>
               <li>
-                <a href="contact.html">Contact</a>
-              </li>
-              <li>
-                <a href="pilticloud.html">PiltiCloud</a>
+                <a href="contact.php">Contact</a>
               </li>
             </ul>
           </div>
@@ -150,21 +147,23 @@
           <div class="skill-home">
             <div class="skill-home-solid clearfix">
               <div class="col-md-3 text-center">
-                <span class="icons c1 fa fa-trophy" style="font-style: italic"></span>
+                <span class="icons c1 fa fa-home" style="font-style: italic"></span>
+                <!-- <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
                 <div class="box-area">
                   <h3>Smart Home</h3>
                   <p style="text-align: justify;"> State of the art, integrated smart automation systems. With a strong background in domestic, commercial and industrial electrical installation, We have the necessary skills to work with architects and builders and electricians to provide a hassle-free turn-key solution. Pilti can bring the very latest in home cinema, discrete multi-zone audio visual, lighting, security and climate control to your home.</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
-                <span class="icons c2 fa fa-picture-o" style="font-style: italic"></span>
+                <span class="icons c1 fa fa-building" style="font-style: italic"></span>
                 <div class="box-area">
                   <h3>Smart Office</h3>
                   <p style="text-align: justify;">A smart office creates value in different areas of the business, ranging from saving energy and better utilization of resources. A smarter use of resources means that less time and money is wasted. Our Smart office solution often generate value or savings on water, heating, cooling, and electricity spending.</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
-                <span class="icons c3 fa fa-desktop" style="font-style: italic"></span>
+                <!-- <span class="icons c3 fa fa-desktop" style="font-style: italic"></span> -->
+                <span class="icons"><img src="img/slides/smart_farming.jpg"></span>
                 <div class="box-area">
                   <h3>Smart Farming</h3>
                   <p style="text-align: justify;">Pilti helps in mitigating the shortage of food by optimum utilization of land at minimum cost. Our Smart farming solution offers an automated farming techniques, useful data collection and high-rigor crop control using IOT based sensors monitoring networks and forecast for better farming conditions</p>
@@ -225,99 +224,7 @@
         </div>
       </div>
     </section>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="widget">
-              <h5 class="widgetheading">Our Contact</h5>
-              <address>
-                <strong>Pilti</strong><br> 78 South Veli Street<br> Madurai - 625001<br>India.</address>
-              <p><i class="icon-phone"></i> +91 (452) 2339787<br>
-                <i class="icon-envelope-alt"></i> enquiry@pilti.in</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget">
-              <h5 class="widgetheading">Quick Links</h5>
-              <ul class="link-list">
-                <li>
-                  <a href="#">Latest Events</a>
-                </li>
-                <li>
-                  <a href="#">Terms and conditions</a>
-                </li>
-                <li>
-                  <a href="#">Privacy policy</a>
-                </li>
-                <li>
-                  <a href="#">Career</a>
-                </li>
-                <li>
-                  <a href="#">Contact us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget">
-              <h5 class="widgetheading">Latest posts</h5>
-              <ul class="link-list">
-                <li>
-                  <a href="#">updated soon :)</a>
-                </li>
-                <li>
-                  <a href="#">updated soon :)</a>
-                </li>
-                <li>
-                  <a href="#">updated soon :)</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget">
-              <h5 class="widgetheading">Recent News</h5>
-              <ul class="link-list">
-                <li>
-                  <a href="#">updated soon :)</a>
-                </li>
-                <li>
-                  <a href="#">updated soon :)</a>
-                </li>
-                <li>
-                  <a href="#">updated soon :)</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="sub-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="copyright">
-                <p><span>© Pilti 2021 All right reserved.</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <ul class="social-network">
-                <li>
-                  <a class="fa fa-facebook" data-placement="top" href="#" style="font-style: italic" title="Facebook"></a>
-                </li>
-                <li>
-                  <a class="fa fa-twitter" data-placement="top" href="#" style="font-style: italic" title="Twitter"></a>
-                </li>
-                <li>
-                  <a class="fa fa-linkedin" data-placement="top" href="#" style="font-style: italic" title="Linkedin"></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <?php include_once 'footer.php';?>
   </div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
   <!-- javascript
     ================================================== -->

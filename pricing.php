@@ -35,15 +35,12 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li> 
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="index.php">Home</a></li>  
+						<li><a href="about.php">About Us</a></li>
+						<li><a href="services.php">Services</a></li>
+                        <li><a href="pilticloud.php">Pilti Cloud</a></li>
                         <li class="active"><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-						<li>
-							<a href="pilticloud.html">PiltiCloud</a>
-						  </li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +54,7 @@
 			<div class="col-lg-12">
 				<h4>Our best plans</h4>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-4">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
 						<h3><strong>Basic</strong></h3>
@@ -67,11 +64,11 @@
 					</div>
 					<div class="pricing-container">
 						<ul>
-							<li><i class="icon-ok"></i> Responsive Design</li>
-							<li><i class="icon-ok"></i> Bootstrap Design</li>
-							<li><i class="icon-ok"></i> Unlimited Support</li>
-							<li><i class="icon-ok"></i> Free Trial version</li>
-							<li><i class="icon-ok"></i> HTML5 CSS3 jQuery</li>
+							<li><i class="icon-ok"></i> Smart Home</li>
+							<li><i class="icon-ok"></i> Smart Home</li>
+							<li><i class="icon-ok"></i> Smart Home</li>
+							<li><i class="icon-ok"></i> Smart Home</li>
+							<li><i class="icon-ok"></i> Smart Home</li>
 						</ul>
 					</div>
 					<div class="pricing-action">
@@ -79,7 +76,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-4">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
 						<h3><strong>Standard</strong></h3>
@@ -101,29 +98,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3">
-				<div class="pricing-box-item activeItem">
-					<div class="pricing-heading">
-						<h3><strong>Advanced</strong></h3>
-					</div>
-					<div class="pricing-terms">
-						<h6>&#36;15.00 / Year</h6>
-					</div>
-					<div class="pricing-container">
-						<ul>
-							<li><i class="icon-ok"></i> Responsive Design</li>
-							<li><i class="icon-ok"></i> Bootstrap Design</li>
-							<li><i class="icon-ok"></i> Unlimited Support</li>
-							<li><i class="icon-ok"></i> Free Trial version</li>
-							<li><i class="icon-ok"></i> HTML5 CSS3 jQuery</li>
-						</ul>
-					</div>
-					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Get Now</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-4">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
 						<h3><strong>Mighty</strong></h3>
@@ -148,99 +123,7 @@
 		</div>
 	</div>
 	</section>
-	<footer>
-		<div class="container">
-		  <div class="row">
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Our Contact</h5>
-				<address>
-				  <strong>Pilti</strong><br> 78 South Veli Street<br> Madurai - 625001<br>India.</address>
-				<p><i class="icon-phone"></i> +91 (452) 2339787<br>
-				  <i class="icon-envelope-alt"></i> enquiry@pilti.in</p>
-			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Quick Links</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">Latest Events</a>
-				  </li>
-				  <li>
-					<a href="#">Terms and conditions</a>
-				  </li>
-				  <li>
-					<a href="#">Privacy policy</a>
-				  </li>
-				  <li>
-					<a href="#">Career</a>
-				  </li>
-				  <li>
-					<a href="#">Contact us</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Latest posts</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Recent News</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div id="sub-footer">
-		  <div class="container">
-			<div class="row">
-			  <div class="col-lg-6">
-				<div class="copyright">
-				  <p><span>© Pilti 2021 All right reserved.</p>
-				</div>
-			  </div>
-			  <div class="col-lg-6">
-				<ul class="social-network">
-				  <li>
-					<a class="fa fa-facebook" data-placement="top" href="#" style="font-style: italic" title="Facebook"></a>
-				  </li>
-				  <li>
-					<a class="fa fa-twitter" data-placement="top" href="#" style="font-style: italic" title="Twitter"></a>
-				  </li>
-				  <li>
-					<a class="fa fa-linkedin" data-placement="top" href="#" style="font-style: italic" title="Linkedin"></a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+	<?php include_once 'footer.php';?>
 	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
 	<!-- javascript
 	  ================================================== -->
@@ -255,7 +138,17 @@
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/owl-carousel/owl.carousel.js"></script>
+	<script src="js/owl-carousel/owl.carousel.js"></script><script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/60a5f3b5185beb22b30ef2c0/1f643vvs5';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
   </body>
   
   </html>

@@ -36,29 +36,18 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li> 
-						<li class="active"><a href="about.html">About Us</a></li>
-						<li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-						<li>
-							<a href="pilticloud.html">PiltiCloud</a>
-						  </li>
+                        <li><a href="index.php">Home</a></li>  
+						<li class="active"><a href="about.php">About Us</a></li>
+						<li><a href="services.php">Services</a></li>
+                        <li><a href="pilticloud.php">Pilti Cloud</a></li>
+                        <li><a href="pricing.php">Pricing</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-	</header><!-- end header -->
-	<section id="inner-headline">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2 class="pageTitle">About Us</h2>
-			</div>
-		</div>
-	</div>
-	</section>
+	</header>
+	<!-- end header -->
 	<section id="content">
 	<div class="container">
 					
@@ -272,7 +261,7 @@
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
-										<img class="img-responsive" src="img/team1.jpg" alt="">
+										<img class="img-responsive" src="img/team1.jpg" alt=""  style="height:200px">
 										<!-- Name -->
 										<h4>Johne Doe</h4>
 										<span class="deg">Creative</span> 
@@ -282,7 +271,7 @@
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
-										<img class="img-responsive" src="img/team2.jpg" alt="">
+										<img class="img-responsive" src="img/team2.jpg" alt=""  style="height:200px">
 										<!-- Name -->
 										<h4>Jennifer</h4>
 										<span class="deg">Programmer</span> 
@@ -292,7 +281,7 @@
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
-										<img class="img-responsive" src="img/team3.jpg" alt="">
+										<img class="img-responsive" src="img/team3.jpg" alt=""  style="height:200px">
 										<!-- Name -->
 										<h4>Christean</h4>
 										<span class="deg">CEO</span> 
@@ -302,7 +291,7 @@
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
-										<img class="img-responsive" src="img/team4.jpg" alt="">
+										<img class="img-responsive" src="img/team4.jpg" alt=""  style="height:200px">
 										<!-- Name -->
 										<h4>Kerinele rase</h4>
 										<span class="deg">Manager</span> 
@@ -318,99 +307,7 @@
 									
 				</div>
 	</section>
-	<footer>
-		<div class="container">
-		  <div class="row">
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Our Contact</h5>
-				<address>
-				  <strong>Pilti</strong><br> 78 South Veli Street<br> Madurai - 625001<br>India.</address>
-				<p><i class="icon-phone"></i> +91 (452) 2339787<br>
-				  <i class="icon-envelope-alt"></i> enquiry@pilti.in</p>
-			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Quick Links</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">Latest Events</a>
-				  </li>
-				  <li>
-					<a href="#">Terms and conditions</a>
-				  </li>
-				  <li>
-					<a href="#">Privacy policy</a>
-				  </li>
-				  <li>
-					<a href="#">Career</a>
-				  </li>
-				  <li>
-					<a href="#">Contact us</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Latest posts</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Recent News</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div id="sub-footer">
-		  <div class="container">
-			<div class="row">
-			  <div class="col-lg-6">
-				<div class="copyright">
-				  <p><span>© Pilti 2021 All right reserved.</p>
-				</div>
-			  </div>
-			  <div class="col-lg-6">
-				<ul class="social-network">
-				  <li>
-					<a class="fa fa-facebook" data-placement="top" href="#" style="font-style: italic" title="Facebook"></a>
-				  </li>
-				  <li>
-					<a class="fa fa-twitter" data-placement="top" href="#" style="font-style: italic" title="Twitter"></a>
-				  </li>
-				  <li>
-					<a class="fa fa-linkedin" data-placement="top" href="#" style="font-style: italic" title="Linkedin"></a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+	<?php include_once 'footer.php';?>
 	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
 	<!-- javascript
 	  ================================================== -->
@@ -425,7 +322,17 @@
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/owl-carousel/owl.carousel.js"></script>
+	<script src="js/owl-carousel/owl.carousel.js"></script><script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/60a5f3b5185beb22b30ef2c0/1f643vvs5';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
   </body>
   
   </html>

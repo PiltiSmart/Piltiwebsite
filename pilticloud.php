@@ -36,29 +36,18 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li> 
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="services.html">Services</a></li>
-                        <li class="active"><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-						<li>
-							<a href="pilticloud.html">PiltiCloud</a>
-						  </li>
+                        <li><a href="index.php">Home</a></li>  
+						<li><a href="about.php">About Us</a></li>
+						<li><a href="services.php">Services</a></li>
+                        <li class="active"><a href="pilticloud.php">Pilti Cloud</a></li>
+                        <li><a href="pricing.php">Pricing</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-	</header><!-- end header -->
-	<section id="inner-headline">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2 class="pageTitle">Portfolio</h2>
-			</div>
-		</div>
-	</div>
-	</section>
+	</header>
+	<!-- end header -->
 	<section id="content">
 	<div class="container">
 		<div class="row">
@@ -66,7 +55,7 @@
 				<ul class="portfolio-categ filter">
 					<li class="web"><a href="#" title="">Things Board</a></li>
 					<li class="icon"><a href="#" title="">Chat server</a></li>
-					<li class="graphic"><a href="#" title="">Updated</a></li>
+					<li class="graphic"><a href="#" title="">NAS</a></li>
 				</ul>
 				<div class="clearfix">
 				</div>
@@ -76,21 +65,21 @@
 						<!-- Item Project and Filter Name -->
 						<li class="item-thumbs col-lg-12 design" data-id="id-0" data-type="web">
 							<iframe  height="600" width="100%"
-							src="http://viswa2k.tk" 
+							src="https://pilti-tbcloud.ddns.net/home" 
 							style="border:0;"></iframe>
 						</li>
 						<!-- End Item Project -->
 						<!-- Item Project and Filter Name -->
 						<li class="item-thumbs col-lg-12 design" data-id="id-1" data-type="icon">
 							<iframe  height="600" width="100%"
-							src="http://viswa2k.cf" 
+							src="http://pilti-chat.ddns.net:3000/admin/Layout" 
 							style="border:0;"></iframe>
 						</li>
 						<!-- End Item Project -->
 						<!-- Item Project and Filter Name -->
 						<li class="item-thumbs col-lg-12 photography" data-id="id-2" data-type="graphic">
 							<iframe  height="600" width="100%"
-							src="http://viswa2k.tk" 
+							src="https://206.189.130.212/" 
 							style="border:0;"></iframe>
 						</li>
 						
@@ -102,99 +91,7 @@
 		</div>
 	</div>
 	</section>
-	<footer>
-		<div class="container">
-		  <div class="row">
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Our Contact</h5>
-				<address>
-				  <strong>Pilti</strong><br> 78 South Veli Street<br> Madurai - 625001<br>India.</address>
-				<p><i class="icon-phone"></i> +91 (452) 2339787<br>
-				  <i class="icon-envelope-alt"></i> enquiry@pilti.in</p>
-			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Quick Links</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">Latest Events</a>
-				  </li>
-				  <li>
-					<a href="#">Terms and conditions</a>
-				  </li>
-				  <li>
-					<a href="#">Privacy policy</a>
-				  </li>
-				  <li>
-					<a href="#">Career</a>
-				  </li>
-				  <li>
-					<a href="#">Contact us</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Latest posts</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Recent News</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div id="sub-footer">
-		  <div class="container">
-			<div class="row">
-			  <div class="col-lg-6">
-				<div class="copyright">
-				  <p><span>© Pilti 2021 All right reserved.</p>
-				</div>
-			  </div>
-			  <div class="col-lg-6">
-				<ul class="social-network">
-				  <li>
-					<a class="fa fa-facebook" data-placement="top" href="#" style="font-style: italic" title="Facebook"></a>
-				  </li>
-				  <li>
-					<a class="fa fa-twitter" data-placement="top" href="#" style="font-style: italic" title="Twitter"></a>
-				  </li>
-				  <li>
-					<a class="fa fa-linkedin" data-placement="top" href="#" style="font-style: italic" title="Linkedin"></a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+	<?php include_once 'footer.php';?>
 	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
 	<!-- javascript
 	  ================================================== -->
@@ -209,7 +106,17 @@
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/owl-carousel/owl.carousel.js"></script>
+	<script src="js/owl-carousel/owl.carousel.js"></script><script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/60a5f3b5185beb22b30ef2c0/1f643vvs5';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
   </body>
   
   </html>

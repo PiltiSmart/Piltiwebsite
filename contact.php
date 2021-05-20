@@ -1,69 +1,122 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pilti - Everything can be Smart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://webthemez.com" />
+<!-- css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jcarousel.css" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-//Retrieve form data. 
-//GET - user submitted data using AJAX
-//POST - in case user does not support javascript, we'll use POST instead
-$name = ($_GET['name']) ? $_GET['name'] : $_POST['name'];
-$email = ($_GET['email']) ?$_GET['email'] : $_POST['email'];
-$comment = ($_GET['comment']) ?$_GET['comment'] : $_POST['comment'];
-
-//flag to indicate which method it uses. If POST set it to 1
-
-if ($_POST) $post=1;
-
-//Simple server side validation for POST data, of course, you should validate the email
-if (!$name) $errors[count($errors)] = 'Please enter your name.';
-if (!$email) $errors[count($errors)] = 'Please enter your email.'; 
-if (!$comment) $errors[count($errors)] = 'Please enter your message.'; 
-
-//if the errors array is empty, send the mail
-if (!$errors) {
-
-	//recipient - replace your email here
-	$to = 'piltigroup@gmail.com';	
-	//sender - from the form
-	$from = $name . ' <' . $email . '>';
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+	<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                  <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.php">Home</a></li>  
+						<li><a href="about.php">About Us</a></li>
+						<li><a href="services.php">Services</a></li>
+                        <li><a href="pilticloud.php">Pilti Cloud</a></li>
+                        <li><a href="pricing.php">Pricing</a></li>
+                        <li class="active"><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+	<!-- end header -->
+	</section>
+	<section id="content">
 	
-	//subject and the html message
-	$subject = 'Message from ' . $name;	
-	$message = 'Name: ' . $name . '<br/><br/>
-		       Email: ' . $email . '<br/><br/>		
-		       Message: ' . nl2br($comment) . '<br/>';
-
-	//send the mail
-	$result = sendmail($to, $subject, $message, $from);
-	
-	//if POST was used, display the message straight away
-	if ($_POST) {
-		if ($result) echo 'Thank you! We have received your message.';
-		else echo 'Sorry, unexpected error. Please try again later';
-		
-	//else if GET was used, return the boolean value so that 
-	//ajax script can react accordingly
-	//1 means success, 0 means failed
-	} else {
-		echo $result;	
-	}
-
-//if the errors array has values
-} else {
-	//display the errors message
-	for ($i=0; $i<count($errors); $i++) echo $errors[$i] . '<br/>';
-	echo '<a href="index.html">Back</a>';
-	exit;
-}
-
-
-//Simple mail function with HTML header
-function sendmail($to, $subject, $message, $from) {
-	$headers = "MIME-Version: 1.0" . "\r\n";
-	$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
-	$headers .= 'From: ' . $from . "\r\n";
-	
-	$result = mail($to,$subject,$message,$headers);
-	
-	if ($result) return 1;
-	else return 0;
-}
-
-?>
+	<div class="container">
+	<div class="row">
+								<div class="col-md-6">
+									<div class="done">
+			<div class="alert alert-success">
+				<button type="button" class="close" data-dismiss="alert">×</button>
+				Your message has been sent. Thank you!
+			</div>
+		</div>
+									<div class="contact-form">
+											
+		<form method="post" action="contact.php" id="contactform" class="contact">
+											<div class="form-group has-feedback">
+												<label for="name">Name*</label>
+												<input type="text" class="form-control" name="name" placeholder="">
+												<i class="fa fa-user form-control-feedback"></i>
+											</div>
+											<div class="form-group has-feedback">
+												<label for="email">Email*</label>
+												<input type="email" class="form-control" name="email" placeholder="">
+												<i class="fa fa-envelope form-control-feedback"></i>
+											</div>
+ 
+											<div class="form-group has-feedback">
+												<label for="message">Message*</label>
+												<textarea class="form-control" rows="6" name="comment" placeholder=""></textarea>
+												<i class="fa fa-pencil form-control-feedback"></i>
+											</div>
+											<input type="submit" value="Submit" id="submit" class="submit btn btn-default">
+										</form>
+										 
+										
+									</div>
+								</div>
+								<div class="col-md-6">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.2756666389405!2d78.11800701473246!3d9.91098347728015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c57845949ffd%3A0x79bd2c911bd095bf!2s78%2C%20S%20Veli%20St%2C%20South%20Gate%2C%20Panthadi%2C%20Tamil%20Nadu%20625001!5e0!3m2!1sen!2sin!4v1621471176791!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								</div>
+							</div>
+	</div>
+ 
+	</section>
+	<?php include_once 'footer.php';?>
+	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
+	<!-- javascript
+	  ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.fancybox-media.js"></script>
+	<script src="js/portfolio/jquery.quicksand.js"></script>
+	<script src="js/portfolio/setting.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/animate.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/owl-carousel/owl.carousel.js"></script><script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/60a5f3b5185beb22b30ef2c0/1f643vvs5';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  </body>
+  
+  </html>
