@@ -109,21 +109,26 @@
         <div class="col-lg-7 about wow fadeInRight animated" data-wow-animation-name="none" style="visibility: visible; -webkit-animation-name: none;">
 
           <p>
-            updated soon :)
+            Our Core Values
           </p>
           <ul class="list-unstyled">
             <li>
               <i class="fa fa-angle-right pr-10">
               </i>
-              updated soon :)
+			  Our Customers First!
+              We build products we believe in.
+			  We care about what we do.
+			  Each person is important; each has the opportunity and the obligation to make a difference.
+			  We are all in it together to win
+			  We are here to make a positive difference in society, as well as make a profit.
             </li>
           </ul>
           <blockquote>
             <p>
-              Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why.
+              We bring a personal and effective approach to every project we work on, which is why.
             </p>
             <small>
-              CEO Jack Bour
+              Director - Umesh Kandhalu
             </small>
           </blockquote>
         </div>

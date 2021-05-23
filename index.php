@@ -151,14 +151,14 @@
                 <!-- <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
                 <div class="box-area">
                   <h3>Smart Home</h3>
-                  <p style="text-align: justify;"> State of the art, integrated smart automation systems. With a strong background in domestic, commercial and industrial electrical installation, We have the necessary skills to work with architects and builders and electricians to provide a hassle-free turn-key solution. Pilti can bring the very latest in home cinema, discrete multi-zone audio visual, lighting, security and climate control to your home.</p>
+                  <p style="text-align: justify;"> State of the art, integrated smart automation systems. With a strong background in domestic, commercial and industrial electrical installation, We have the necessary skills to work with architects and builders and electricians to provide a hassle-free turn-key solution. Pilti can bring the very latest in smart lighting, switch, cinema, security and climate control to your home.</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
                 <span class="icons c1 fa fa-building" style="font-style: italic"></span>
                 <div class="box-area">
                   <h3>Smart Office</h3>
-                  <p style="text-align: justify;">A smart office creates value in different areas of the business, ranging from saving energy and better utilization of resources. A smarter use of resources means that less time and money is wasted. Our Smart office solution often generate value or savings on water, heating, cooling, and electricity spending.</p>
+                  <p style="text-align: justify;">A smart office creates value in different areas of the business, ranging from saving energy and better utilization of resources. A smarter use of resources means that less time and money is wasted. Our Smart office solution often generate value or savings on water, heating, cooling, and electricity spending. Counsult us on more smart office ideas, installations and many more.</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
@@ -166,14 +166,14 @@
                 <span class="icons"><img src="img/slides/smart_farming.jpg"></span>
                 <div class="box-area">
                   <h3>Smart Farming</h3>
-                  <p style="text-align: justify;">Pilti helps in mitigating the shortage of food by optimum utilization of land at minimum cost. Our Smart farming solution offers an automated farming techniques, useful data collection and high-rigor crop control using IOT based sensors monitoring networks and forecast for better farming conditions</p>
+                  <p style="text-align: justify;">Pilti helps in mitigating the shortage of food by optimum utilization of land at minimum cost. Our Smart farming solution offers an automated farming techniques, useful data collection and high-rigor crop control using IOT based sensors monitoring networks and forecast for better farming conditions. Counsult us on more smart farming ideas, home garderns, installations and many more</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
                 <span class="icons c4 fa fa-globe" style="font-style: italic"></span>
                 <div class="box-area">
-                  <h3>Smart AI</h3>
-                  <p style="text-align: justify;">updates required :) </p>
+                  <h3>Smart Schools</h3>
+                  <p style="text-align: justify;">Smart Schools will bring together students and educators through connected devices that can lead to more meaningful interactions and can also improve or expand lesson plans. Students can take the skills and insights they learn from early exposure to IoT and use them in future challenges. Whether it’s video conferencing with a museum or tracking a student’s progress through an assignment.</p>
                 </div>
               </div>
             </div>
