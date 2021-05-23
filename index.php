@@ -127,7 +127,7 @@
             <h1>Our Smart Products</h1>
             <hr>
             <p><i class="fa fa-check fa-lg pr-10"></i> SmartySwitch 
-            <p>A Smart WiFi current meter swith for electrical applications. Integrates with PiltiCloud for energy optimisation through Mechine Learning.<p></p><br>
+            <p>A Smart WiFi current meter swith for electrical applications. Integrates with PiltiCloud for energy optimisation through Mechine Learning. Alters when connected application misbehaves <p></p><br>
             <p><i class="fa fa-check fa-lg pr-10"></i> SmartyTalkCamera
             <p>A Smart AI Camera with voice for better survaliance. Integrates with PiltiCloud<p></p><br>
             <p><i class="fa fa-check fa-lg pr-10"></i> SmartyCompTV 
