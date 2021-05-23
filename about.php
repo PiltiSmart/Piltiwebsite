@@ -116,19 +116,37 @@
               <i class="fa fa-angle-right pr-10">
               </i>
 			  Our Customers First!
-              We build products we believe in.
+            </li>
+			<li>
+              <i class="fa fa-angle-right pr-10">
+              </i>
+			  We build products we believe in.
+            </li><li>
+              <i class="fa fa-angle-right pr-10">
+              </i>
 			  We care about what we do.
+            </li><li>
+              <i class="fa fa-angle-right pr-10">
+              </i>
 			  Each person is important; each has the opportunity and the obligation to make a difference.
-			  We are all in it together to win
+            </li>
+			</li><li>
+              <i class="fa fa-angle-right pr-10">
+              </i>
+			  We are all in it together to win.
+            </li>
+			</li><li>
+              <i class="fa fa-angle-right pr-10">
+              </i>
 			  We are here to make a positive difference in society, as well as make a profit.
             </li>
           </ul>
           <blockquote>
             <p>
-              We bring a personal and effective approach to every project we work on, which is why.
+              We bring a personal and effective approach to every project we work on!
             </p>
             <small>
-              Director - Umesh Kandhalu
+              CEO
             </small>
           </blockquote>
         </div>
@@ -141,7 +159,12 @@
 								<div class="block-heading-two">
 									<h3><span>Why Choose Us?</span></h3>
 								</div>
-								<p>updated soon :)
+								<p>Pilti Group is committed to helping its clients reach their goals, to personalising their smart experiences, to providing an innovative environment, and to making a difference.  
+									"Attention to Details" 
+									"A Plan for Success" 
+									"Creativity"
+									"Pricing" 
+									"Meeting Deadlines" 
 								</p>
 							</div>
 							<div class="col-md-4">
@@ -163,7 +186,7 @@
 									 <div id="collapseOne-alt3" class="panel-collapse collapse">
 										<!-- Panel body -->
 										<div class="panel-body">
-										  updated soon :)
+										Fully managed smart home with Pilti smart devices. Optimization and Recommendations through Pilti’s AI capabilities.
 										</div>
 									 </div>
 								  </div>
@@ -177,7 +200,7 @@
 									 </div>
 									 <div id="collapseTwo-alt3" class="panel-collapse collapse">
 										<div class="panel-body">
-											updated soon :)
+										Fully Managed smart office with Pilti smart devices. Remote device management, monitoring, data analytics with IOT data, auto scheduling with pattern matching and early fault detection of devices using Pilti’s ML models and AI capabilities
 										</div>
 									 </div>
 								  </div>
@@ -185,13 +208,13 @@
 									 <div class="panel-heading">
 										<h4 class="panel-title">
 										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-											<i class="fa fa-angle-right"></i>Smart Factory or Industry
+											<i class="fa fa-angle-right"></i>Smart Farming
 										  </a>
 										</h4>
 									 </div>
 									 <div id="collapseThree-alt3" class="panel-collapse collapse">
 										<div class="panel-body">
-											updated soon :)
+										Fully managed smart farming with Pilti smart devices. Remote weather monitoring Remote device management, monitoring, data analytics with IOT data, auto scheduling with pattern matching and early fault detection of devices using Pilti’s ML models and AI capabilities.
 										</div>
 									 </div>
 								  </div>
@@ -205,7 +228,7 @@
 									 </div>
 									 <div id="collapseFour-alt3" class="panel-collapse collapse">
 										<div class="panel-body">
-											updated soon :)
+										Fully managed smart farming with Pilti smart devices. Virtual classrooms, student tracking wristbands, smart attendance, play based ap development and much more 
 										</div>
 									 </div>
 								  </div>
@@ -221,26 +244,26 @@
 								<h6>IOT Development</h6>
 								<div class="progress pb-sm">
 								  <!-- White color (progress-bar-white) -->
-								  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-									 <span class="sr-only">40% Complete (success)</span>
+								  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									 <span class="sr-only">100% Complete (success)</span>
 								  </div>
 								</div>
 								<h6>Data Analytics</h6>
 								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-									 <span class="sr-only">40% Complete (success)</span>
+								  <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									 <span class="sr-only">100% Complete (success)</span>
 								  </div>
 								</div>
 								<h6>Machine Learning</h6>
 								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-									 <span class="sr-only">40% Complete (success)</span>
+								  <div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									 <span class="sr-only">100% Complete (success)</span>
 								  </div>
 								</div>
 								<h6>Embedded Development</h6>
 								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-									 <span class="sr-only">40% Complete (success)</span>
+								  <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									 <span class="sr-only">100% Complete (success)</span>
 								  </div>
 								</div>
 							</div>

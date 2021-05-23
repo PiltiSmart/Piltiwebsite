@@ -52,7 +52,7 @@
 		<!-- end divider -->
 		<div class="row">
 			<div class="col-lg-12">
-				<h4>Our best plans</h4>
+				<h4>Our best offers</h4>
 			</div>
 			<div class="col-lg-4">
 				<div class="pricing-box-item">
@@ -60,7 +60,7 @@
 						<h3><strong>SmartySwitch</strong></h3>
 					</div>
 					<div class="pricing-terms">
-						<h6>&#36;Rs 699.00</h6>
+						<h6>Rs 699.00</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
@@ -72,7 +72,7 @@
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Get Now</a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
 					</div>
 				</div>
 			</div>
@@ -82,41 +82,41 @@
 						<h3><strong>SmartyTalkCamera</strong></h3>
 					</div>
 					<div class="pricing-terms">
-						<h6>&#36;Rs 1599.00</h6>
+						<h6>Rs 1599.00</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
 							<li><i class="icon-ok"></i> Voice Greetings </li>
 							<li><i class="icon-ok"></i> Vedio Recordings </li>
-							<li><i class="icon-ok"></i> Audio Recordings </li>
+							<li><i class="icon-ok"></i> Mobile App </li>
 							<li><i class="icon-ok"></i> Motion Detection </li>
 							<li><i class="icon-ok"></i> Animales Alerts </li>
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Get Now</a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h3><strong>SmartyCompTV</strong></h3>
+						<h3><strong>SmartyCompTV - L1</strong></h3>
 					</div>
 					<div class="pricing-terms">
-						<h6>&#36;Rs 9999</h6>
+						<h6>Rs 9999</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
 							<li><i class="icon-ok"></i> Computer on TV </li>
 							<li><i class="icon-ok"></i> Vedio Calling </li>
-							<li><i class="icon-ok"></i> Word Processer</li>
-							<li><i class="icon-ok"></i> Excel sheets</li>
+							<li><i class="icon-ok"></i> Word, Excel and Power Point</li>
+							<li><i class="icon-ok"></i> Mobile App</li>
 							<li><i class="icon-ok"></i> Linux OS</li>
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Get Now</a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
 					</div>
 				</div>
 			</div>

@@ -126,9 +126,12 @@
           <div class="col-lg-6 col-sm-6 wow fadeInRight animated" data-wow-animation-name="none">
             <h1>Our Smart Products</h1>
             <hr>
-            <p><i class="fa fa-check fa-lg pr-10"></i> SmartySwitch - A Smart WiFi current meter swith for electrical applications. Integrates with PiltiCloud for energy optimisation through Mechine Learning.</p><br>
-            <p><i class="fa fa-check fa-lg pr-10"></i> SmartyTalkCamera - A Smart AI Camera with voice for better survaliance. Integrates with PiltiCloud</p><br>
-            <p><i class="fa fa-check fa-lg pr-10"></i> SmartyCompTV - A SmartTV with computer. PiltiCloud integrated and Zoom capable</p>
+            <p><i class="fa fa-check fa-lg pr-10"></i> SmartySwitch 
+            <p>A Smart WiFi current meter swith for electrical applications. Integrates with PiltiCloud for energy optimisation through Mechine Learning.<p></p><br>
+            <p><i class="fa fa-check fa-lg pr-10"></i> SmartyTalkCamera
+            <p>A Smart AI Camera with voice for better survaliance. Integrates with PiltiCloud<p></p><br>
+            <p><i class="fa fa-check fa-lg pr-10"></i> SmartyCompTV 
+            <p>A SmartTV with computer. PiltiCloud integrated and Zoom capable<p></p>
             <hr>
           </div>
         </div>
@@ -212,12 +215,12 @@
                 <p style="font-weight: bold">- Michael Scott -</p>
               </div>
               <div class="item active">
-                <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                <p style="font-weight: bold">- Tony Antonio -</p>
+                <p>Machine learning will automate jobs that most people thought could only be done by people</p>
+                <p style="font-weight: bold">- Dave Waters -</p>
               </div>
               <div class="item">
-                <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                <p style="font-weight: bold">- Leena Doe -</p>
+                <p>Computers are able to see, hear, and learn. If you teach them right way</p>
+                <p style="font-weight: bold">- Umesh Kandhalu -</p>
               </div>
             </div>
           </div>
