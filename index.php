@@ -39,10 +39,10 @@
                 <a href="about.php">About Us</a>
               </li>
               <li>
-                <a href="services.php">Services</a>
+                <a href="pilticloud.php">PiltiCloud</a>
               </li>
               <li>
-              <a href="pilticloud.php">PiltiCloud</a>
+                <a href="services.php">Services</a>
               </li>
               <li>
                 <a href="pricing.php">Pricing</a>
@@ -76,8 +76,20 @@
         </ul>
       </div><!-- end slider -->
     </section>
+    <section id="content" style="background: #3BA0F4;text-align:justify;">
+      <div class="container"">
+    <div class="col-lg-12 col-sm-12">
+           <h3 style="color:#FFF;">We offer a wide verity of smart devices and services that will enhance the user smart
+experiences. Whether it is your home or office, our products make them smart and reliable
+especially in device functionalities, communication and security. We offer a complete end-to-
+end IoT smart solutions, our customers have access to a comprehensive customer
+dashboards to user friendly tools through desktop apps and mobile apps&quot;.</h3>
+    </div>
+    </div></section>
     <section class="hero-text">
+      
       <div class="container">
+      
         <div class="row">
           <div class="col-lg-6 col-sm-6 text-center wow fadeInLeft animated" data-wow-animation-name="none">
 
@@ -123,6 +135,7 @@
                   </div>
           
           </div>
+          
           <div class="col-lg-6 col-sm-6 wow fadeInRight animated" data-wow-animation-name="none">
             <h1>Our Smart Products</h1>
             <hr>
@@ -133,6 +146,7 @@
             <p><i class="fa fa-check fa-lg pr-10"></i> SmartyCompTV 
             <p>A SmartTV with computer. PiltiCloud integrated and Zoom capable<p></p>
             <hr>
+            <a class="btn btn-purchase" href="pricing.php">Check Availability</a>
           </div>
         </div>
       </div>
@@ -150,7 +164,7 @@
           <div class="skill-home">
             <div class="skill-home-solid clearfix">
               <div class="col-md-3 text-center">
-                <span class="icons c1 fa fa-home" style="font-style: italic"></span>
+                <span class="icons c1 fas fa-laptop-house style="font-style: italic"></span>
                 <!-- <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
                 <div class="box-area">
                   <h3>Smart Home</h3>
@@ -158,7 +172,8 @@
                 </div>
               </div>
               <div class="col-md-3 text-center">
-                <span class="icons c1 fa fa-building" style="font-style: italic"></span>
+                <span class="icons"><img src="img/ai.png"></span>
+                <!-- <span class="icons c1 fa fa-building" style="font-style: italic"></span> -->
                 <div class="box-area">
                   <h3>Smart Office</h3>
                   <p style="text-align: justify;">A smart office creates value in different areas of the business, ranging from saving energy and better utilization of resources. A smarter use of resources means that less time and money is wasted. Our Smart office solution often generate value or savings on water, heating, cooling, and electricity spending. Counsult us on more smart office ideas, installations and many more.</p>
@@ -166,14 +181,14 @@
               </div>
               <div class="col-md-3 text-center">
                 <!-- <span class="icons c3 fa fa-desktop" style="font-style: italic"></span> -->
-                <span class="icons"><img src="img/slides/smart_farming.jpg"></span>
+                <span class="icons"><img src="img/farm.png"></span>
                 <div class="box-area">
                   <h3>Smart Farming</h3>
                   <p style="text-align: justify;">Pilti helps in mitigating the shortage of food by optimum utilization of land at minimum cost. Our Smart farming solution offers an automated farming techniques, useful data collection and high-rigor crop control using IOT based sensors monitoring networks and forecast for better farming conditions. Counsult us on more smart farming ideas, home garderns, installations and many more</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
-                <span class="icons c4 fa fa-globe" style="font-style: italic"></span>
+                <span class="icons c4 fas fa-chalkboard-teacher style="font-style: italic"></span>
                 <div class="box-area">
                   <h3>Smart Schools</h3>
                   <p style="text-align: justify;">Smart Schools will bring together students and educators through connected devices that can lead to more meaningful interactions and can also improve or expand lesson plans. Students can take the skills and insights they learn from early exposure to IoT and use them in future challenges. Whether it’s video conferencing with a museum or tracking a student’s progress through an assignment.</p>
@@ -244,6 +259,7 @@
   <script src="js/custom.js"></script>
   <script src="js/owl-carousel/owl.carousel.js"></script>
 <script type="text/javascript">
+
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   (function(){
   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];

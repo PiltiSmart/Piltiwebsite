@@ -37,8 +37,8 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Home</a></li>  
 						<li><a href="about.php">About Us</a></li>
-						<li><a href="services.php">Services</a></li>
                         <li><a href="pilticloud.php">Pilti Cloud</a></li>
+						<li><a href="services.php">Services</a></li>
                         <li><a href="pricing.php">Pricing</a></li>
                         <li class="active"><a href="contact.php">Contact</a></li>
                     </ul>
@@ -61,7 +61,7 @@
 		</div>
 									<div class="contact-form">
 											
-		<form method="post" action="contact.php" id="contactform" class="contact">
+		<form method="post" action="form.php" class="contact">
 											<div class="form-group has-feedback">
 												<label for="name">Name*</label>
 												<input type="text" class="form-control" name="name" placeholder="">

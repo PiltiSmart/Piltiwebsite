@@ -1,341 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Pilti - Everything can be Smart </title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="http://webthemez.com" />
-<!-- css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/jcarousel.css" rel="stylesheet" />
-<link href="css/flexslider.css" rel="stylesheet" />
-<link href="css/style.css" rel="stylesheet" />
- 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+	<meta charset="utf-8">
+	<title>Pilti - Everything can be Smart </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="http://webthemez.com" />
+	<!-- css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link href="css/jcarousel.css" rel="stylesheet" />
+	<link href="css/flexslider.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
 </head>
-<body>
-<div id="wrapper">
 
-	<!-- start header -->
+<body>
+	<div id="wrapper">
+
+		<!-- start header -->
 		<header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                  <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>  
-						<li class="active"><a href="about.php">About Us</a></li>
-						<li><a href="services.php">Services</a></li>
-                        <li><a href="pilticloud.php">Pilti Cloud</a></li>
-                        <li><a href="pricing.php">Pricing</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-	</header>
-	<!-- end header -->
-	<section id="content">
-	<div class="container">
-					
-					<div class="about">
-					
-						<div class="row"> 
-							<div class="col-md-12">
-								<div class="about-logo">
-									<h3>We are awesome <span class="color">T-E-A-M</span></h3>
-									<p>Everyone says it, but in our case it’s true: our team is the secret to our success. Each of our employees is amazing in their own right, but together they are what makes Pilti such a fun and rewarding place to work.  The Pilti team is a tight-knit, talented group with a shared vision of delivering consistently great results for our clients, as well as ensuring the company is a fun, inclusive, challenging place to work and develop a rewarding career</p>
-                                    	<p>We’re very proud of the team we’ve built – there’s more than ten of us now but it still feels like it did when there were just a few of us.  Pilti has always been an company defined by bringing together talented people with a shared vision and passion for helping us to be the best we can be for our clients.  But that doesn’t mean Pilti is a cookie-cutter company.  All of our employees are unique individuals who are united by a set of five core values that apply to everything we do within the company</p>
-								</div> 
+			<div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" /></a>
+					</div>
+					<div class="navbar-collapse collapse ">
+						<ul class="nav navbar-nav">
+							<li><a href="index.php">Home</a></li>
+							<li class="active"><a href="about.php">About Us</a></li>
+							<li><a href="pilticloud.php">Pilti Cloud</a></li>
+							<li><a href="services.php">Services</a></li>
+							<li><a href="pricing.php">Pricing</a></li>
+							<li><a href="contact.php">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- end header -->
+		<section id="content">
+			<div class="container">
+
+				<div class="about">
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="about-logo">
+								<h3>We are awesome <span class="color">T-E-A-M</span></h3>
+								<p style="text-align: justify;">Everyone says it, but in our case it’s true: our team is
+									the secret to our success. Each of our employees is amazing in their own right, but
+									together they are what makes Pilti such a fun and rewarding place to work. The Pilti
+									team is a tight-knit, talented group with a shared vision of delivering consistently
+									great results for our clients, as well as ensuring the company is a fun, inclusive,
+									challenging place to work and develop a rewarding career</p>
+								<p>We’re very proud of the team we’ve built – there’s more than ten of us now but it
+									still feels like it did when there were just a few of us. Pilti has always been an
+									company defined by bringing together talented people with a shared vision and
+									passion for helping us to be the best we can be for our clients. But that doesn’t
+									mean Pilti is a cookie-cutter company. All of our employees are unique individuals
+									who are united by a set of five core values that apply to everything we do within
+									the company</p>
 							</div>
 						</div>
-						
-						<div class="row">
-        <div class="col-lg-5">
-          <div class="about-carousel wow fadeInLeft animated" data-wow-animation-name="none">
-            <div id="myCarousel" class="carousel slide">
-              <!-- Carousel items -->
-              <div class="carousel-inner">
-                <div class="item">
-                  <img src="img/service1.jpg" alt="">
-                  <div class="carousel-caption">
-                    <p>
-                      Lorem ipsum dolor sit amet.
-                    </p>
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="img/service2.jpg" alt="">
-                  <div class="carousel-caption">
-                    <p>
-                      Blanditiis praesentium voluptatum
-                    </p>
-                  </div>
-                </div>
-                <div class="item active">
-                  <img src="img/service3.jpg" alt="">
-                  <div class="carousel-caption">
-                    <p>
-                      Blanditiis praesentium voluptatum
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Carousel nav -->
-              <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                <i class="fa fa-angle-left">
-                </i>
-              </a>
-              <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                <i class="fa fa-angle-right">
-                </i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-7 about wow fadeInRight animated" data-wow-animation-name="none" style="visibility: visible; -webkit-animation-name: none;">
+					</div>
 
-          <p>
-            Our Core Values
-          </p>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fa fa-angle-right pr-10">
-              </i>
-			  Our Customers First!
-            </li>
-			<li>
-              <i class="fa fa-angle-right pr-10">
-              </i>
-			  We build products we believe in.
-            </li><li>
-              <i class="fa fa-angle-right pr-10">
-              </i>
-			  We care about what we do.
-            </li><li>
-              <i class="fa fa-angle-right pr-10">
-              </i>
-			  Each person is important; each has the opportunity and the obligation to make a difference.
-            </li>
-			</li><li>
-              <i class="fa fa-angle-right pr-10">
-              </i>
-			  We are all in it together to win.
-            </li>
-			</li><li>
-              <i class="fa fa-angle-right pr-10">
-              </i>
-			  We are here to make a positive difference in society, as well as make a profit.
-            </li>
-          </ul>
-          <blockquote>
-            <p>
-              We bring a personal and effective approach to every project we work on!
-            </p>
-            <small>
-              CEO
-            </small>
-          </blockquote>
-        </div>
-      </div>
-						<br>
-						
-						<div class="row">
-							<div class="col-md-4">
-								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>Why Choose Us?</span></h3>
+					<div class="row">
+						<div class="col-lg-5">
+							<div class="about-carousel wow fadeInLeft animated" data-wow-animation-name="none">
+								<div id="myCarousel" class="carousel slide">
+									<!-- Carousel items -->
+									<div class="carousel-inner">
+										<div class="item">
+											<img src="img/service1.jpg" alt="">
+											<div class="carousel-caption">
+												<p>
+													Lorem ipsum dolor sit amet.
+												</p>
+											</div>
+										</div>
+										<div class="item">
+											<img src="img/service2.jpg" alt="">
+											<div class="carousel-caption">
+												<p>
+													Blanditiis praesentium voluptatum
+												</p>
+											</div>
+										</div>
+										<div class="item active">
+											<img src="img/service3.jpg" alt="">
+											<div class="carousel-caption">
+												<p>
+													Blanditiis praesentium voluptatum
+												</p>
+											</div>
+										</div>
+									</div>
+									<!-- Carousel nav -->
+									<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+										<i class="fa fa-angle-left">
+										</i>
+									</a>
+									<a class="carousel-control right" href="#myCarousel" data-slide="next">
+										<i class="fa fa-angle-right">
+										</i>
+									</a>
 								</div>
-								<p>Pilti Group is committed to helping its clients reach their goals, to personalising their smart experiences, to providing an innovative environment, and to making a difference.  
-									"Attention to Details" 
-									"A Plan for Success" 
-									"Creativity"
-									"Pricing" 
-									"Meeting Deadlines" 
-								</p>
 							</div>
-							<div class="col-md-4">
-								<div class="block-heading-two">
-									<h3><span>Our Solution</span></h3>
-								</div>		
-								<!-- Accordion starts -->
-								<div class="panel-group" id="accordion-alt3">
-								 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
-								  <div class="panel">	
+						</div>
+						<div class="col-lg-7 about wow fadeInRight animated" data-wow-animation-name="none"
+							style="visibility: visible; -webkit-animation-name: none;">
+							<blockquote>
+
+							<p style="font-size:30px;">
+								Our Core Values
+							</p>
+							&nbsp;
+							<ul class="list-unstyled" style="margin:0 0 10px 0">
+								<li style="padding:0 0 4px 0">
+									<i class="fa fa-angle-right pr-10">
+									</i>
+									Our Customers First!
+								</li>
+								<li style="padding:0 0 4px 0">
+									<i class="fa fa-angle-right pr-10">
+									</i>
+									We build products we believe in.
+								</li>
+								<li style="padding:0 0 4px 0">
+									<i class="fa fa-angle-right pr-10">
+									</i>
+									We care about what we do.
+								</li>
+								<li style="padding:0 0 4px 0">
+									<i class="fa fa-angle-right pr-10">
+									</i>
+									Each person is important; each has the opportunity and the obligation to make a
+									difference.
+								</li>
+								</li>
+								<li style="padding:0 0 4px 0">
+									<i class="fa fa-angle-right pr-10">
+									</i>
+									We are all in it together to win.
+								</li>
+								</li>
+								<li style="padding:0 0 4px 0">
+									<i class="fa fa-angle-right pr-10">
+									</i>
+									We are here to make a positive difference in society, as well as make a profit.
+								</li>
+							</ul>
+</blockquote>
+
+							<blockquote>
+								<p>
+									We bring a personal and effective approach to every project we work on!
+								</p>
+								<small>
+									CEO
+								</small>
+							</blockquote>
+						</div>
+					</div>
+					<br>
+
+					<div class="row">
+						<div class="col-md-4">
+							<!-- Heading and para -->
+							<div class="block-heading-two">
+								<h3><span>Why Choose Us?</span></h3>
+							</div>
+							<p>Pilti Group is committed to helping its clients reach their goals, to personalising their
+								smart experiences, to providing an innovative environment, and to making a difference.
+							</p>
+							<ul>
+							<li>Attention to Details</li>
+							<li>A Plan for Success</li>
+							<li>Creativity</li>
+							<li>Pricing</li>
+							<li>Meeting Deadlines</li>
+</ul>
+						</div>
+						<div class="col-md-4">
+							<div class="block-heading-two">
+								<h3><span>Our Solution</span></h3>
+							</div>
+							<!-- Accordion starts -->
+							<div class="panel-group" id="accordion-alt3">
+								<!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
+								<div class="panel">
 									<!-- Panel heading -->
-									 <div class="panel-heading">
+									<div class="panel-heading">
 										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-											<i class="fa fa-angle-right"></i>Smart Home
-										  </a>
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseOne-alt3">
+												<i class="fa fa-angle-right"></i>Smart Home
+											</a>
 										</h4>
-									 </div>
-									 <div id="collapseOne-alt3" class="panel-collapse collapse">
+									</div>
+									<div id="collapseOne-alt3" class="panel-collapse collapse">
 										<!-- Panel body -->
 										<div class="panel-body">
-										Fully managed smart home with Pilti smart devices. Optimization and Recommendations through Pilti’s AI capabilities.
+											Fully managed smart home with Pilti smart devices. Optimization and
+											Recommendations through Pilti’s AI capabilities.
 										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-											<i class="fa fa-angle-right"></i> Smart Office
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseTwo-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										Fully Managed smart office with Pilti smart devices. Remote device management, monitoring, data analytics with IOT data, auto scheduling with pattern matching and early fault detection of devices using Pilti’s ML models and AI capabilities
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-											<i class="fa fa-angle-right"></i>Smart Farming
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseThree-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										Fully managed smart farming with Pilti smart devices. Remote weather monitoring Remote device management, monitoring, data analytics with IOT data, auto scheduling with pattern matching and early fault detection of devices using Pilti’s ML models and AI capabilities.
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-											<i class="fa fa-angle-right"></i>Smart Education System
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseFour-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										Fully managed smart farming with Pilti smart devices. Virtual classrooms, student tracking wristbands, smart attendance, play based ap development and much more 
-										</div>
-									 </div>
-								  </div>
-								</div>
-								<!-- Accordion ends -->
-								
-							</div>
-							
-							<div class="col-md-4">
-								<div class="block-heading-two">
-									<h3><span>Our Expertise</span></h3>
-								</div>								
-								<h6>IOT Development</h6>
-								<div class="progress pb-sm">
-								  <!-- White color (progress-bar-white) -->
-								  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-									 <span class="sr-only">100% Complete (success)</span>
-								  </div>
-								</div>
-								<h6>Data Analytics</h6>
-								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-									 <span class="sr-only">100% Complete (success)</span>
-								  </div>
-								</div>
-								<h6>Machine Learning</h6>
-								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-									 <span class="sr-only">100% Complete (success)</span>
-								  </div>
-								</div>
-								<h6>Embedded Development</h6>
-								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-									 <span class="sr-only">100% Complete (success)</span>
-								  </div>
-								</div>
-							</div>
-							
-						</div>
-						
-						 						
-						 
-						<br>
-						<!-- Our Team starts -->
-				
-						<!-- Heading -->
-						<div class="block-heading-six">
-							<h4 class="bg-color">Our Team</h4>
-						</div>
-						<br>
-						
-						<!-- Our team starts -->
-						
-						<div class="team-six">
-							<div class="row">
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="img/team1.jpg" alt=""  style="height:200px">
-										<!-- Name -->
-										<h4>Johne Doe</h4>
-										<span class="deg">Creative</span> 
 									</div>
 								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="img/team2.jpg" alt=""  style="height:200px">
-										<!-- Name -->
-										<h4>Jennifer</h4>
-										<span class="deg">Programmer</span> 
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseTwo-alt3">
+												<i class="fa fa-angle-right"></i> Smart Office
+											</a>
+										</h4>
+									</div>
+									<div id="collapseTwo-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Fully Managed smart office with Pilti smart devices. Remote device
+											management, monitoring, data analytics with IOT data, auto scheduling with
+											pattern matching and early fault detection of devices using Pilti’s ML
+											models and AI capabilities
+										</div>
 									</div>
 								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="img/team3.jpg" alt=""  style="height:200px">
-										<!-- Name -->
-										<h4>Christean</h4>
-										<span class="deg">CEO</span> 
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseThree-alt3">
+												<i class="fa fa-angle-right"></i>Smart Farming
+											</a>
+										</h4>
+									</div>
+									<div id="collapseThree-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Fully managed smart farming with Pilti smart devices. Remote weather
+											monitoring Remote device management, monitoring, data analytics with IOT
+											data, auto scheduling with pattern matching and early fault detection of
+											devices using Pilti’s ML models and AI capabilities.
+										</div>
 									</div>
 								</div>
-								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
-									<div class="team-member">
-										<!-- Image -->
-										<img class="img-responsive" src="img/team4.jpg" alt=""  style="height:200px">
-										<!-- Name -->
-										<h4>Kerinele rase</h4>
-										<span class="deg">Manager</span> 
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseFour-alt3">
+												<i class="fa fa-angle-right"></i>Smart Education System
+											</a>
+										</h4>
+									</div>
+									<div id="collapseFour-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Fully managed smart farming with Pilti smart devices. Virtual classrooms,
+											student tracking wristbands, smart attendance, play based ap development and
+											much more
+										</div>
 									</div>
 								</div>
 							</div>
+							<!-- Accordion ends -->
+
 						</div>
-						
-						<!-- Our team ends -->
-					  
-						
+
+						<div class="col-md-4">
+							<div class="block-heading-two">
+								<h3><span>Our Expertise</span></h3>
+							</div>
+							<h6>IOT Development</h6>
+							<div class="progress pb-sm">
+								<!-- White color (progress-bar-white) -->
+								<div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40"
+									aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									<span class="sr-only">100% Complete (success)</span>
+								</div>
+							</div>
+							<h6>Data Analytics</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60"
+									aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									<span class="sr-only">100% Complete (success)</span>
+								</div>
+							</div>
+							<h6>Machine Learning</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80"
+									aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									<span class="sr-only">100% Complete (success)</span>
+								</div>
+							</div>
+							<h6>Embedded Development</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="30"
+									aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									<span class="sr-only">100% Complete (success)</span>
+								</div>
+							</div>
+						</div>
+
 					</div>
-									
+
+
+
+					<br>
+					<!-- Our Team starts -->
+
+					<!-- Heading -->
+					<div class="block-heading-six">
+						<h4 class="bg-color">Our Team</h4>
+					</div>
+					<br>
+
+					<!-- Our team starts -->
+
+					<div class="team-six">
+						<div class="row">
+							<div class="col-md-3 col-sm-6">
+								<!-- Team Member -->
+								<div class="team-member">
+									<!-- Image -->
+									<img class="img-responsive" src="img/team1.jpg" alt="" style="height:200px">
+									<!-- Name -->
+									<h4>Johne Doe</h4>
+									<span class="deg">Creative</span>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<!-- Team Member -->
+								<div class="team-member">
+									<!-- Image -->
+									<img class="img-responsive" src="img/team2.jpg" alt="" style="height:200px">
+									<!-- Name -->
+									<h4>Jennifer</h4>
+									<span class="deg">Programmer</span>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<!-- Team Member -->
+								<div class="team-member">
+									<!-- Image -->
+									<img class="img-responsive" src="img/team3.jpg" alt="" style="height:200px">
+									<!-- Name -->
+									<h4>Christean</h4>
+									<span class="deg">CEO</span>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<!-- Team Member -->
+								<div class="team-member">
+									<!-- Image -->
+									<img class="img-responsive" src="img/team4.jpg" alt="" style="height:200px">
+									<!-- Name -->
+									<h4>Kerinele rase</h4>
+									<span class="deg">Manager</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Our team ends -->
+
+
 				</div>
-	</section>
-	<?php include_once 'footer.php';?>
+
+			</div>
+		</section>
+		<?php include_once 'footer.php';?>
 	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
 	<!-- javascript
 	  ================================================== -->
@@ -350,17 +394,20 @@
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/owl-carousel/owl.carousel.js"></script><script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/60a5f3b5185beb22b30ef2c0/1f643vvs5';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-  </body>
-  
-  </html>
+	<script src="js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript">
+		var Tawk_API = Tawk_API || {},
+			Tawk_LoadStart = new Date();
+		(function () {
+			var s1 = document.createElement("script"),
+				s0 = document.getElementsByTagName("script")[0];
+			s1.async = true;
+			s1.src = 'https://embed.tawk.to/60a5f3b5185beb22b30ef2c0/1f643vvs5';
+			s1.charset = 'UTF-8';
+			s1.setAttribute('crossorigin', '*');
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+	</script>
+</body>
+
+</html>

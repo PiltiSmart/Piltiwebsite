@@ -5,9 +5,19 @@
 			  <div class="widget">
 				<h5 class="widgetheading">Our Contact</h5>
 				<address>
-				  <strong>Pilti</strong><br> 78 South Veli Street<br> Madurai - 625001<br>India.</address>
-				<p><i class="icon-phone"></i> +91 (452) 2339787<br>
-				  <i class="icon-envelope-alt"></i> enquiry@pilti.in</p>
+					<strong>Pilti</strong><br> 78 South Veli Street<br> Madurai - 625001<br>India.</address>
+					<p><i class="icon-phone"></i> +91 (452) 2339787<br>
+					<i class="icon-envelope-alt"></i> enquiry@pilti.in</p>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Ireland Contact</h5>
+					<address>
+					  <strong>Pilti</strong><br> 7104, Semple Court<br> Capel Street Dublin 01<br>Ireland.</address>
+					<p><i class="icon-phone"></i> +353 892345949<br>
+					  <i class="icon-envelope-alt"></i> enquiry_ireland@pilti.in</p>
+				
 			  </div>
 			</div>
 			<div class="col-lg-3">
@@ -31,23 +41,7 @@
 				  </li>
 				</ul>
 			  </div>
-			</div>
-			<div class="col-lg-3">
-			  <div class="widget">
-				<h5 class="widgetheading">Latest posts</h5>
-				<ul class="link-list">
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				  <li>
-					<a href="#">updated soon :)</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
+			</div>			
 			<div class="col-lg-3">
 			  <div class="widget">
 				<h5 class="widgetheading">Recent News</h5>

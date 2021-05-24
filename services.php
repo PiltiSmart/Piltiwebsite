@@ -36,95 +36,139 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>  
+                    <li><a href="index.php">Home</a></li>  
 						<li><a href="about.php">About Us</a></li>
-						<li class="active"><a href="services.html">Services</a></li>
-                        <li><a href="pilticloud.php">Pilti Cloud</a></li>
+            <li><a href="pilticloud.php">Pilti Cloud</a></li>
+						<li class="active"><a href="services.php">Services</a></li>
                         <li><a href="pricing.php">Pricing</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-	</header>
-	<!-- end header -->
+	</header><!-- end header -->
 	<section id="content">
 		<div class="container content">		
-		<div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="aligncenter">
-              <h2 class="aligncenter">Our Services</h2>Not every customer will tell you that they are walking away unhappy — in fact, few will. So it’s important to make sure that the customer leaves satisfied. Ending your emails without a closing message can be risky as it’s not inviting the customer to share further issues — issues you sincerely want to hear about. Checkout our services 
-            </div><br>
-          </div>
-        </div>
+        <!-- Service Blcoks -->
+		<div class="row mar-b-50">
+        <div class="col-lg-5">
+          <div class="about-carousel wow fadeInLeft animated" data-wow-animation-name="none" style="visibility: visible; -webkit-animation-name: none;">
+            <div id="myCarousel" class="carousel slide">
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="active item">
+                  <img src="img/service1.jpg" alt="">
+                  <div class="carousel-caption">
+                    <p>
+                      Donec luctus ullamcorper nulla
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/service2.jpg" alt="">
+                  <div class="carousel-caption">
+                    <p>
+                      Blanditiis praesentium voluptatum
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/service3.jpg" alt="">
+                  <div class="carousel-caption">
+                    <p>
+                      Blanditiis praesentium voluptatum
+                    </p>
+                  </div>
+                </div>
 
-		<div class="row">
-          <div class="skill-home">
-            <div class="skill-home-solid clearfix">
-              <div class="col-md-3 text-center">
-                <span class="icons c1 fa fa-home" style="font-style: italic"></span>
-                <!-- <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
-                <div class="box-area">
-                  <h3>Smart Home</h3>
-                  <p style="text-align: justify;"> State of the art, integrated smart automation systems. With a strong background in domestic, commercial and industrial electrical installation, We have the necessary skills to work with architects and builders and electricians to provide a hassle-free turn-key solution. Pilti can bring the very latest in home cinema, discrete multi-zone audio visual, lighting, security and climate control to your home.</p>
-                </div>
               </div>
-              <div class="col-md-3 text-center">
-                <span class="icons c1 fa fa-building" style="font-style: italic"></span>
-                <div class="box-area">
-                  <h3>Smart Office</h3>
-                  <p style="text-align: justify;">A smart office creates value in different areas of the business, ranging from saving energy and better utilization of resources. A smarter use of resources means that less time and money is wasted. Our Smart office solution often generate value or savings on water, heating, cooling, and electricity spending.</p>
-                </div>
-              </div>
-              <div class="col-md-3 text-center">
-                <!-- <span class="icons c3 fa fa-desktop" style="font-style: italic"></span> -->
-                <span class="icons"><img src="img/slides/smart_farming.jpg"></span>
-                <div class="box-area">
-                  <h3>Smart Farming</h3>
-                  <p style="text-align: justify;">Pilti helps in mitigating the shortage of food by optimum utilization of land at minimum cost. Our Smart farming solution offers an automated farming techniques, useful data collection and high-rigor crop control using IOT based sensors monitoring networks and forecast for better farming conditions</p>
-                </div>
-              </div>
-              <div class="col-md-3 text-center">
-                <span class="icons c4 fa fa-globe" style="font-style: italic"></span>
-                <div class="box-area">
-                  <h3>Smart AI</h3>
-                  <p style="text-align: justify;">updates required :) </p>
-                </div>
-              </div>
+              <!-- Carousel nav -->
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                <i class="fa fa-angle-left">
+                </i>
+              </a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                <i class="fa fa-angle-right">
+                </i>
+              </a>
             </div>
           </div>
         </div>
+        <div class="col-lg-7 about wow fadeInRight animated" data-wow-animation-name="none" >
+          <h3>
+            What we offer
+          </h3>
+          <p>
+            Welcome 
+            Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore dolore magnm aliquam quaerat voluptatem.
+          </p>
+          <p>
+            Aenean nibh ante, lacinia non tincidunt nec, lobortis ut tellus. Sed in porta diam. Suspendisse potenti. Donec luctus ullamcorper nulla. Duis nec velit odio.
+          </p>
+		  <br/>
+		  <br/>
+        </div>
       </div>
+	  
+		<div class="row">
+		<div class="skill-home"> <div class="skill-home-solid clearfix"> 
+		<div class="col-md-3 text-center">
+		<span class="icons c1"><i class="fa fa-trophy"></i></span> <div class="box-area">
+		<h3>Web Development</h3> <p>Lorem ipsum dolor sitamet, consec tetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident</p></div>
+		</div>
+		<div class="col-md-3 text-center"> 
+		<span class="icons c2"><i class="fa fa-picture-o"></i></span> <div class="box-area">
+		<h3>UI Design</h3> <p>Lorem ipsum dolor sitamet, consec tetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident</p></div>
+		</div>
+		<div class="col-md-3 text-center"> 
+		<span class="icons c3"><i class="fa fa-desktop"></i></span> <div class="box-area">
+		<h3>Interaction</h3> <p>Lorem ipsum dolor sitamet, consec tetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident</p></div>
+		</div>
+		<div class="col-md-3 text-center"> 
+		<span class="icons c4"><i class="fa fa-globe"></i></span> <div class="box-area">
+		<h3>User Experience</h3> <p>Lorem ipsum dolor sitamet, consec tetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident</p>
+		</div></div>
+		</div></div>
+		</div>
+		 
+ 
 
-
+        <div class="row service-v1 margin-bottom-40">
+            <div class="col-md-4 md-margin-bottom-40">
+               <img class="img-responsive" src="img/service1.jpg" alt="">   
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive" src="img/service2.jpg" alt="">            
+                <h2>Mobile Development</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
+            </div>
+            <div class="col-md-4 md-margin-bottom-40">
+              <img class="img-responsive" src="img/service3.jpg" alt="">  
+                <h2>Responsive Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
+            </div>
+        </div>
+        <!-- End Service Blcoks -->
+        
+    </div>
     </section>
 	<?php include_once 'footer.php';?>
-	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
-	<!-- javascript
-	  ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.fancybox.pack.js"></script>
-	<script src="js/jquery.fancybox-media.js"></script>
-	<script src="js/portfolio/jquery.quicksand.js"></script>
-	<script src="js/portfolio/setting.js"></script>
-	<script src="js/jquery.flexslider.js"></script>
-	<script src="js/animate.js"></script>
-	<script src="js/custom.js"></script>
-	<script src="js/owl-carousel/owl.carousel.js"></script><script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/60a5f3b5185beb22b30ef2c0/1f643vvs5';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-  </body>
-  
-  </html>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

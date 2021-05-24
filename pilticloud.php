@@ -38,8 +38,8 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.php">Home</a></li>  
 						<li><a href="about.php">About Us</a></li>
-						<li><a href="services.php">Services</a></li>
                         <li class="active"><a href="pilticloud.php">Pilti Cloud</a></li>
+						<li><a href="services.php">Services</a></li>
                         <li><a href="pricing.php">Pricing</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>
