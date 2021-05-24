@@ -14,7 +14,7 @@
 				<div class="widget">
 					<h5 class="widgetheading">Ireland Contact</h5>
 					<address>
-					  <strong>Pilti</strong><br> 7104, Semple Court<br> Capel Street Dublin 01<br>Ireland.</address>
+					  <strong>Pilti</strong><br>104, Semple Court<br> Capel Street Dublin 01<br>Ireland.</address>
 					<p><i class="icon-phone"></i> +353 892345949<br>
 					  <i class="icon-envelope-alt"></i> enquiry_ireland@pilti.in</p>
 				

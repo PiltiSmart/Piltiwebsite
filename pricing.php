@@ -57,7 +57,7 @@
 			<div class="col-lg-3">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h3><strong>SmartySwitch</strong></h3>
+						<h5><strong>SmartySwitch</strong></h5>
 					</div>
 					<div class="pricing-terms">
 						<h6>Rs 699.00</h6>
@@ -79,7 +79,7 @@
 			<div class="col-lg-3">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h3><strong>SmartyTalkCamera</strong></h3>
+						<h5><strong>SmartyTalkCamera</strong></h5>
 					</div>
 					<div class="pricing-terms">
 						<h6>Rs 1599.00</h6>
@@ -101,18 +101,18 @@
 			<div class="col-lg-3">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h3><strong>SmartyTalkCamera</strong></h3>
+						<h5><strong>SmartyGateway</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 1599.00</h6>
+						<h6>Rs 4599.00</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
-							<li><i class="icon-ok"></i> Voice Greetings </li>
-							<li><i class="icon-ok"></i> Vedio Recordings </li>
-							<li><i class="icon-ok"></i> Mobile App </li>
-							<li><i class="icon-ok"></i> Motion Detection </li>
-							<li><i class="icon-ok"></i> Animales Alerts </li>
+							<li><i class="icon-ok"></i> Local Storage </li>
+							<li><i class="icon-ok"></i> BLE support </li>
+							<li><i class="icon-ok"></i> Battary Support </li>
+							<li><i class="icon-ok"></i> Upto 10 Device support </li>
+							<li><i class="icon-ok"></i> Offline data collection </li>
 						</ul>
 					</div>
 					<div class="pricing-action">
@@ -123,7 +123,7 @@
 			<div class="col-lg-3">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h3><strong>SmartyCompTV - L1</strong></h3>
+						<h5><strong>SmartyCompTV - L1</strong></h5>
 					</div>
 					<div class="pricing-terms">
 						<h6>Rs 9999</h6>
@@ -148,18 +148,18 @@
 			<div class="col-lg-3">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h3><strong>SmartySwitch</strong></h3>
+						<h5><strong>Smart Home</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 699.00</h6>
+						<h6>Rs 1000.00 / month </h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
-							<li><i class="icon-ok"></i> Mobile App </li>
-							<li><i class="icon-ok"></i> Voice Control </li>
-							<li><i class="icon-ok"></i> Power Monitor </li>
-							<li><i class="icon-ok"></i> Fault Prediction </li>
-							<li><i class="icon-ok"></i> Alert Notifications </li>
+							<li><i class="icon-ok"></i> 3 Device Insatllations and service</li>
+							<li><i class="icon-ok"></i> Power Monitor Dashboards </li>
+							<li><i class="icon-ok"></i> Pilti Cloud with AI </li>
+							<li><i class="icon-ok"></i> Monthly / Yearly Reports</li>
+							<li><i class="icon-ok"></i> Early Fault detections</li>
 						</ul>
 					</div>
 					<div class="pricing-action">
@@ -170,29 +170,7 @@
 			<div class="col-lg-3">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h3><strong>SmartyTalkCamera</strong></h3>
-					</div>
-					<div class="pricing-terms">
-						<h6>Rs 1599.00</h6>
-					</div>
-					<div class="pricing-container">
-						<ul>
-							<li><i class="icon-ok"></i> Voice Greetings </li>
-							<li><i class="icon-ok"></i> Vedio Recordings </li>
-							<li><i class="icon-ok"></i> Mobile App </li>
-							<li><i class="icon-ok"></i> Motion Detection </li>
-							<li><i class="icon-ok"></i> Animales Alerts </li>
-						</ul>
-					</div>
-					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="pricing-box-item">
-					<div class="pricing-heading">
-						<h3><strong>SmartyTalkCamera</strong></h3>
+						<h5><strong>SmartyTalkCamera</strong></h5>
 					</div>
 					<div class="pricing-terms">
 						<h6>Rs 1599.00</h6>
@@ -214,7 +192,29 @@
 			<div class="col-lg-3">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h3><strong>SmartyCompTV - L1</strong></h3>
+						<h5><strong>SmartyTalkCamera</strong></h5>
+					</div>
+					<div class="pricing-terms">
+						<h6>Rs 1599.00</h6>
+					</div>
+					<div class="pricing-container">
+						<ul>
+							<li><i class="icon-ok"></i> Voice Greetings </li>
+							<li><i class="icon-ok"></i> Vedio Recordings </li>
+							<li><i class="icon-ok"></i> Mobile App </li>
+							<li><i class="icon-ok"></i> Motion Detection </li>
+							<li><i class="icon-ok"></i> Animales Alerts </li>
+						</ul>
+					</div>
+					<div class="pricing-action">
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="pricing-box-item">
+					<div class="pricing-heading">
+						<h5><strong>SmartyCompTV - L1</strong></h5>
 					</div>
 					<div class="pricing-terms">
 						<h6>Rs 9999</h6>

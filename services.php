@@ -99,8 +99,7 @@
             What we offer
           </h3>
           <p>
-            Welcome 
-            Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore dolore magnm aliquam quaerat voluptatem.
+          Pilti offers a wide verity of smart devices and services that will enhance the user smart experiences. Whether it is your home or office, our products make them smart and reliable especially in device functionalities, communication and security. We offer a complete end-to- end IoT smart solutions, our customers have access to a comprehensive customer dashboards to user friendly tools through desktop apps and mobile apps
           </p>
           <p>
             Aenean nibh ante, lacinia non tincidunt nec, lobortis ut tellus. Sed in porta diam. Suspendisse potenti. Donec luctus ullamcorper nulla. Duis nec velit odio.

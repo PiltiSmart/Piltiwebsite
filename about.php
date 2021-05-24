@@ -84,27 +84,15 @@
 									<!-- Carousel items -->
 									<div class="carousel-inner">
 										<div class="item">
-											<img src="img/service1.jpg" alt="">
+											<img src="img/corevalues3.jpg" alt="">
 											<div class="carousel-caption">
-												<p>
-													Lorem ipsum dolor sit amet.
-												</p>
+												
 											</div>
 										</div>
-										<div class="item">
-											<img src="img/service2.jpg" alt="">
-											<div class="carousel-caption">
-												<p>
-													Blanditiis praesentium voluptatum
-												</p>
-											</div>
-										</div>
+										
 										<div class="item active">
-											<img src="img/service3.jpg" alt="">
+											<img src="img/corevalues2.jpg" alt="">
 											<div class="carousel-caption">
-												<p>
-													Blanditiis praesentium voluptatum
-												</p>
 											</div>
 										</div>
 									</div>
@@ -122,12 +110,12 @@
 						</div>
 						<div class="col-lg-7 about wow fadeInRight animated" data-wow-animation-name="none"
 							style="visibility: visible; -webkit-animation-name: none;">
-							<blockquote>
+							
 
-							<p style="font-size:30px;">
+							<p style="font-size:22px;">
 								Our Core Values
 							</p>
-							&nbsp;
+						
 							<ul class="list-unstyled" style="margin:0 0 10px 0">
 								<li style="padding:0 0 4px 0">
 									<i class="fa fa-angle-right pr-10">
@@ -147,7 +135,7 @@
 								<li style="padding:0 0 4px 0">
 									<i class="fa fa-angle-right pr-10">
 									</i>
-									Each person is important; each has the opportunity and the obligation to make a
+									Each person has the opportunity and the obligation to make a
 									difference.
 								</li>
 								</li>
@@ -163,15 +151,10 @@
 									We are here to make a positive difference in society, as well as make a profit.
 								</li>
 							</ul>
-</blockquote>
+
 
 							<blockquote>
-								<p>
-									We bring a personal and effective approach to every project we work on!
-								</p>
-								<small>
-									CEO
-								</small>
+						
 							</blockquote>
 						</div>
 					</div>

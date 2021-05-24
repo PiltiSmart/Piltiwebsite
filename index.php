@@ -63,7 +63,7 @@
             <img alt="" src="img/slides/1.jpg">
             <div class="flex-caption wow fadeInLeft animated" data-wow-animation-name="none">
               <h3>Smart Devices</h3>
-              <p>...Making Everything Smart...</p>
+              <p>...Making Devices Smart...</p>
             </div>
           </li>
           <li>
@@ -77,14 +77,16 @@
       </div><!-- end slider -->
     </section>
     <section id="content" style="background: #3BA0F4;text-align:justify;">
-      <div class="container"">
-    <div class="col-lg-12 col-sm-12">
-           <h3 style="color:#FFF;">We offer a wide verity of smart devices and services that will enhance the user smart
+      <div class="container">
+    <hr>
+      <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;">Pilti offers a wide verity of smart devices and services that will enhance the user smart
 experiences. Whether it is your home or office, our products make them smart and reliable
 especially in device functionalities, communication and security. We offer a complete end-to-
 end IoT smart solutions, our customers have access to a comprehensive customer
-dashboards to user friendly tools through desktop apps and mobile apps&quot;.</h3>
-    </div>
+dashboards to user friendly tools through desktop apps and mobile apps
+      </h5>
+    <hr>
+    
     </div></section>
     <section class="hero-text">
       
@@ -98,29 +100,25 @@ dashboards to user friendly tools through desktop apps and mobile apps&quot;.</h
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                       <div class="item active">
-                        <img src="img/slides/h1.jpg" alt="">
+                        <img src="img/slides/sh2.jpg" alt="">
                         <div class="carousel-caption">
-                          <p>
-                            Caption 1
-                          </p>
+                          
                         </div>
                       </div>
                       <div class="item">
-                        <img src="img/slides/h2.jpg" alt="">
+                        <img src="img/slides/sh3.jpg" alt="">
                         <div class="carousel-caption">
-                          <p>
-                            Caption 2
-                          </p>
+                         
                         </div>
                       </div>
                       <div class="item">
-                        <img src="img/slides/h3.jpg" alt="">
+                        <img src="img/slides/sh5.jpg" alt="">
                         <div class="carousel-caption">
-                          <p>
-                            Caption 3
-                          </p>
+                          
                         </div>
                       </div>
+                    
+                    
                     </div>
                     <!-- Carousel nav -->
                     <a class="carousel-control left" href="#myCarousel" data-slide="prev">
@@ -140,11 +138,11 @@ dashboards to user friendly tools through desktop apps and mobile apps&quot;.</h
             <h1>Our Smart Products</h1>
             <hr>
             <p><i class="fa fa-check fa-lg pr-10"></i> SmartySwitch 
-            <p>A Smart WiFi current meter swith for electrical applications. Integrates with PiltiCloud for energy optimisation through Mechine Learning. Alters when connected application misbehaves <p></p><br>
+            <p> A Smart WiFi current meter swith for electrical applications. Integrates with PiltiCloud for energy optimisation through Mechine Learning. Alters when connected application misbehaves <p></p><br>
             <p><i class="fa fa-check fa-lg pr-10"></i> SmartyTalkCamera
-            <p>A Smart AI Camera with voice for better survaliance. Integrates with PiltiCloud<p></p><br>
+            <p> A Smart AI Camera with voice for better survaliance. Integrates with PiltiCloud<p></p><br>
             <p><i class="fa fa-check fa-lg pr-10"></i> SmartyCompTV 
-            <p>A SmartTV with computer. PiltiCloud integrated and Zoom capable<p></p>
+            <p> A SmartTV with computer. PiltiCloud integrated with Vedio calling <p></p>
             <hr>
             <a class="btn btn-purchase" href="pricing.php">Check Availability</a>
           </div>
