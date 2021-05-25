@@ -134,15 +134,15 @@ dashboards to user friendly tools through desktop apps and mobile apps
           
           </div>
           
-          <div class="col-lg-6 col-sm-6 wow fadeInRight animated" data-wow-animation-name="none">
-            <h1>Our Smart Products</h1>
+          <div class="col-lg-4 col-sm-4 wow fadeInRight animated" data-wow-animation-name="none">
+            <h4>Our Smart Products</h4>
             <hr>
-            <p><i class="fa fa-check fa-lg pr-10"></i> SmartySwitch 
-            <p> A Smart WiFi current meter swith for electrical applications. Integrates with PiltiCloud for energy optimisation through Mechine Learning. Alters when connected application misbehaves <p></p><br>
-            <p><i class="fa fa-check fa-lg pr-10"></i> SmartyTalkCamera
-            <p> A Smart AI Camera with voice for better survaliance. Integrates with PiltiCloud<p></p><br>
-            <p><i class="fa fa-check fa-lg pr-10"></i> SmartyCompTV 
-            <p> A SmartTV with computer. PiltiCloud integrated with Vedio calling <p></p>
+            <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter swith
+            
+            <p><i class="fa fa-check fa-lg pr-8"></i> SmartyTalkCamera - A Smart AI Camera with voice for better survaliance
+            
+            <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A SmartTV with computer
+           
             <hr>
             <a class="btn btn-purchase" href="pricing.php">Check Availability</a>
           </div>

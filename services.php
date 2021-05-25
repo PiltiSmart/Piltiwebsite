@@ -101,9 +101,6 @@
           <p>
           Pilti offers a wide verity of smart devices and services that will enhance the user smart experiences. Whether it is your home or office, our products make them smart and reliable especially in device functionalities, communication and security. We offer a complete end-to- end IoT smart solutions, our customers have access to a comprehensive customer dashboards to user friendly tools through desktop apps and mobile apps
           </p>
-          <p>
-            Aenean nibh ante, lacinia non tincidunt nec, lobortis ut tellus. Sed in porta diam. Suspendisse potenti. Donec luctus ullamcorper nulla. Duis nec velit odio.
-          </p>
 		  <br/>
 		  <br/>
         </div>

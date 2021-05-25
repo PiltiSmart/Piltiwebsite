@@ -197,7 +197,7 @@
 									<div id="collapseOne-alt3" class="panel-collapse collapse">
 										<!-- Panel body -->
 										<div class="panel-body">
-											Fully managed smart home with Pilti smart devices. Optimization and
+											Fully managed smart home service with Pilti smart devices. Optimization and
 											Recommendations through Pilti’s AI capabilities.
 										</div>
 									</div>
@@ -213,7 +213,7 @@
 									</div>
 									<div id="collapseTwo-alt3" class="panel-collapse collapse">
 										<div class="panel-body">
-											Fully Managed smart office with Pilti smart devices. Remote device
+											Fully Managed smart office service with Pilti smart devices. Remote device
 											management, monitoring, data analytics with IOT data, auto scheduling with
 											pattern matching and early fault detection of devices using Pilti’s ML
 											models and AI capabilities
@@ -231,7 +231,7 @@
 									</div>
 									<div id="collapseThree-alt3" class="panel-collapse collapse">
 										<div class="panel-body">
-											Fully managed smart farming with Pilti smart devices. Remote weather
+											Fully managed smart farming service with Pilti smart devices. Remote weather
 											monitoring Remote device management, monitoring, data analytics with IOT
 											data, auto scheduling with pattern matching and early fault detection of
 											devices using Pilti’s ML models and AI capabilities.
@@ -243,13 +243,13 @@
 										<h4 class="panel-title">
 											<a data-toggle="collapse" data-parent="#accordion-alt3"
 												href="#collapseFour-alt3">
-												<i class="fa fa-angle-right"></i>Smart Education System
+												<i class="fa fa-angle-right"></i>Smart Schools
 											</a>
 										</h4>
 									</div>
 									<div id="collapseFour-alt3" class="panel-collapse collapse">
 										<div class="panel-body">
-											Fully managed smart farming with Pilti smart devices. Virtual classrooms,
+											Fully managed smart school service with Pilti smart devices. Virtual classrooms,
 											student tracking wristbands, smart attendance, play based ap development and
 											much more
 										</div>
