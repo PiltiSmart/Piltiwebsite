@@ -32,7 +32,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                    <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="logo"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
@@ -53,9 +53,9 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<ul class="portfolio-categ filter">
-					<li class="web"><a href="#" title="">Things Board</a></li>
-					<li class="icon"><a href="#" title="">Chat server</a></li>
-					<li class="graphic"><a href="#" title="">NAS</a></li>
+					<li class="web"><a href="#" title="">Pilti ThingsBoard</a></li>
+					<li class="icon"><a href="#" title="">Pilti TimeTracker</a></li>
+					<li class="graphic"><a href="#" title="">Pilti CloudStorage</a></li>
 				</ul>
 				<div class="clearfix">
 				</div>
@@ -72,14 +72,14 @@
 						<!-- Item Project and Filter Name -->
 						<li class="item-thumbs col-lg-12 design" data-id="id-1" data-type="icon">
 							<iframe  height="600" width="100%"
-							src="http://pilti-chat.ddns.net:3000/admin/Layout" 
+							src="http://timesheet-pilti.ddns.net:8001" 
 							style="border:0;"></iframe>
 						</li>
 						<!-- End Item Project -->
 						<!-- Item Project and Filter Name -->
 						<li class="item-thumbs col-lg-12 photography" data-id="id-2" data-type="graphic">
 							<iframe  height="600" width="100%"
-							src="https://206.189.130.212/" 
+							src="https://pilti-cloud.ddns.net/" 
 							style="border:0;"></iframe>
 						</li>
 						
