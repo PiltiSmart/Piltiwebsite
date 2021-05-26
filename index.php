@@ -98,7 +98,7 @@
 
         <div class="row">
           <div class="col-lg-6 col-sm-6 text-center wow fadeInLeft animated" data-wow-animation-name="none">
-            <video width="255" height="434" controls>
+            <video width="200" height="434" controls autoplay>
       <source src="img/smarty_dribbble.mp4" type=video/mp4>
     </video>
           </div>
