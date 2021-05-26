@@ -97,12 +97,13 @@
       <div class="container">
 
         <div class="row">
-          <div class="col-lg-6 col-sm-6 text-center wow fadeInLeft animated" data-wow-animation-name="none">
-            <video width="200" height="434" controls autoplay>
+       
+          <div class="col-lg-4 col-sm-4 text-center wow fadeInLeft animated" data-wow-animation-name="none">
+            <video width="200" height="434" controls autoplay loop>
       <source src="img/smarty_dribbble.mp4" type=video/mp4>
     </video>
-          </div>
-          <div class="col-lg-6 col-sm-6 wow fadeInRight animated" data-wow-animation-name="none">
+          </div> 
+          <div class="col-lg-4 col-sm-4 wow fadeInRight animated" data-wow-animation-name="none">
             <h4>Our Smart Products</h4>
             <hr>
             <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter swith
@@ -115,7 +116,46 @@
                   <hr>
                   <a class="btn btn-purchase" href="pricing.php">Check Availability</a>
           </div>
+          <div class="col-lg-4 col-sm-4 text-center wow fadeInLeft animated" data-wow-animation-name="none">
+
+                <div class="about-carousel wow fadeInLeft animated" data-wow-animation-name="none" style="padding:25px">
+                  <div id="myCarousel" class="carousel slide">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="img/slides/sh2.jpg" alt="">
+                        <div class="carousel-caption">
+                          
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img src="img/slides/sh3.jpg" alt="">
+                        <div class="carousel-caption">
+                         
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img src="img/slides/sh5.jpg" alt="">
+                        <div class="carousel-caption">
+                          
+                        </div>
+                      </div>
+                    
+                    
+                    </div>
+                    <!-- Carousel nav -->
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                      <i class="fa fa-angle-left">
+                      </i>
+                    </a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                      <i class="fa fa-angle-right">
+                      </i>
+                    </a>
+                  </div>
+                  </div>
           
+          </div> 
         </div>
       </div>
     </section>
