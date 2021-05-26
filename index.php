@@ -28,7 +28,9 @@
       <div class="navbar navbar-default navbar-static-top">
         <div class="container">
           <div class="navbar-header">
-            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="index.php"><img alt="logo" src="img/logo.png"></a>
+            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span
+                class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a
+              class="navbar-brand" href="index.php"><img alt="logo" src="img/logo.png"></a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -78,74 +80,42 @@
     </section>
     <section id="content" style="background: #3BA0F4;text-align:justify;">
       <div class="container">
-    <hr>
-      <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;">Pilti offers a wide verity of smart devices and services that will enhance the user smart
-experiences. Whether it is your home or office, our products make them smart and reliable
-especially in device functionalities, communication and security. We offer a complete end-to-
-end IoT smart solutions, our customers have access to a comprehensive customer
-dashboards to user friendly tools through desktop apps and mobile apps
-      </h5>
-    <hr>
-    
-    </div></section>
+        <hr>
+        <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;">Pilti offers a wide
+          verity of smart devices and services that will enhance the user smart
+          experiences. Whether it is your home or office, our products make them smart and reliable
+          especially in device functionalities, communication and security. We offer a complete end-to-
+          end IoT smart solutions, our customers have access to a comprehensive customer
+          dashboards to user friendly tools through desktop apps and mobile apps
+        </h5>
+        <hr>
+
+      </div>
+    </section>
     <section class="hero-text">
-      
+
       <div class="container">
-      
+
         <div class="row">
           <div class="col-lg-6 col-sm-6 text-center wow fadeInLeft animated" data-wow-animation-name="none">
-
-                <div class="about-carousel wow fadeInLeft animated" data-wow-animation-name="none" style="padding:25px">
-                  <div id="myCarousel" class="carousel slide">
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="img/slides/sh2.jpg" alt="">
-                        <div class="carousel-caption">
-                          
-                        </div>
-                      </div>
-                      <div class="item">
-                        <img src="img/slides/sh3.jpg" alt="">
-                        <div class="carousel-caption">
-                         
-                        </div>
-                      </div>
-                      <div class="item">
-                        <img src="img/slides/sh5.jpg" alt="">
-                        <div class="carousel-caption">
-                          
-                        </div>
-                      </div>
-                    
-                    
-                    </div>
-                    <!-- Carousel nav -->
-                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                      <i class="fa fa-angle-left">
-                      </i>
-                    </a>
-                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                      <i class="fa fa-angle-right">
-                      </i>
-                    </a>
-                  </div>
-                  </div>
-          
+            <video width="255" height="434" controls>
+      <source src="img/smarty_dribbble.mp4" type=video/mp4>
+    </video>
           </div>
-          
-          <div class="col-lg-4 col-sm-4 wow fadeInRight animated" data-wow-animation-name="none">
+          <div class="col-lg-6 col-sm-6 wow fadeInRight animated" data-wow-animation-name="none">
             <h4>Our Smart Products</h4>
             <hr>
             <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter swith
-            
-            <p><i class="fa fa-check fa-lg pr-8"></i> SmartyTalkCamera - A Smart AI Camera with voice for better survaliance
-            
-            <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A SmartTV with computer
-           
-            <hr>
-            <a class="btn btn-purchase" href="pricing.php">Check Availability</a>
+
+              <p><i class="fa fa-check fa-lg pr-8"></i> SmartyTalkCamera - A Smart AI Camera with voice for better
+                survaliance
+
+                <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A SmartTV with computer
+
+                  <hr>
+                  <a class="btn btn-purchase" href="pricing.php">Check Availability</a>
           </div>
+          
         </div>
       </div>
     </section>
@@ -154,7 +124,10 @@ dashboards to user friendly tools through desktop apps and mobile apps
         <div class="row">
           <div class="col-md-12">
             <div class="aligncenter">
-              <h2 class="aligncenter">Our Services</h2>Not every customer will tell you that they are walking away unhappy — in fact, few will. So it’s important to make sure that the customer leaves satisfied. Ending your emails without a closing message can be risky as it’s not inviting the customer to share further issues — issues you sincerely want to hear about. Checkout our services 
+              <h2 class="aligncenter">Our Services</h2>Not every customer will tell you that they are walking away
+              unhappy — in fact, few will. So it’s important to make sure that the customer leaves satisfied. Ending
+              your emails without a closing message can be risky as it’s not inviting the customer to share further
+              issues — issues you sincerely want to hear about. Checkout our services
             </div><br>
           </div>
         </div>
@@ -162,11 +135,15 @@ dashboards to user friendly tools through desktop apps and mobile apps
           <div class="skill-home">
             <div class="skill-home-solid clearfix">
               <div class="col-md-3 text-center">
-                <span class="icons c1 fas fa-laptop-house style="font-style: italic"></span>
+                <span class="icons c1 fas fa-laptop-house style=" font-style: italic"></span>
                 <!-- <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
                 <div class="box-area">
                   <h3>Smart Home</h3>
-                  <p style="text-align: justify;"> State of the art, integrated smart automation systems. With a strong background in domestic, commercial and industrial electrical installation, We have the necessary skills to work with architects and builders and electricians to provide a hassle-free turn-key solution. Pilti can bring the very latest in smart lighting, switch, cinema, security and climate control to your home.</p>
+                  <p style="text-align: justify;"> State of the art, integrated smart automation systems. With a strong
+                    background in domestic, commercial and industrial electrical installation, We have the necessary
+                    skills to work with architects and builders and electricians to provide a hassle-free turn-key
+                    solution. Pilti can bring the very latest in smart lighting, switch, cinema, security and climate
+                    control to your home.</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
@@ -174,7 +151,11 @@ dashboards to user friendly tools through desktop apps and mobile apps
                 <!-- <span class="icons c1 fa fa-building" style="font-style: italic"></span> -->
                 <div class="box-area">
                   <h3>Smart Office</h3>
-                  <p style="text-align: justify;">A smart office creates value in different areas of the business, ranging from saving energy and better utilization of resources. A smarter use of resources means that less time and money is wasted. Our Smart office solution often generate value or savings on water, heating, cooling, and electricity spending. Counsult us on more smart office ideas, installations and many more.</p>
+                  <p style="text-align: justify;">A smart office creates value in different areas of the business,
+                    ranging from saving energy and better utilization of resources. A smarter use of resources means
+                    that less time and money is wasted. Our Smart office solution often generate value or savings on
+                    water, heating, cooling, and electricity spending. Counsult us on more smart office ideas,
+                    installations and many more.</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
@@ -182,14 +163,22 @@ dashboards to user friendly tools through desktop apps and mobile apps
                 <span class="icons"><img src="img/farm.png"></span>
                 <div class="box-area">
                   <h3>Smart Farming</h3>
-                  <p style="text-align: justify;">Pilti helps in mitigating the shortage of food by optimum utilization of land at minimum cost. Our Smart farming solution offers an automated farming techniques, useful data collection and high-rigor crop control using IOT based sensors monitoring networks and forecast for better farming conditions. Counsult us on more smart farming ideas, home garderns, installations and many more</p>
+                  <p style="text-align: justify;">Pilti helps in mitigating the shortage of food by optimum utilization
+                    of land at minimum cost. Our Smart farming solution offers an automated farming techniques, useful
+                    data collection and high-rigor crop control using IOT based sensors monitoring networks and forecast
+                    for better farming conditions. Counsult us on more smart farming ideas, home garderns, installations
+                    and many more</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
-                <span class="icons c4 fas fa-chalkboard-teacher style="font-style: italic"></span>
+                <span class="icons c4 fas fa-chalkboard-teacher style=" font-style: italic"></span>
                 <div class="box-area">
                   <h3>Smart Schools</h3>
-                  <p style="text-align: justify;">Smart Schools will bring together students and educators through connected devices that can lead to more meaningful interactions and can also improve or expand lesson plans. Students can take the skills and insights they learn from early exposure to IoT and use them in future challenges. Whether it’s video conferencing with a museum or tracking a student’s progress through an assignment.</p>
+                  <p style="text-align: justify;">Smart Schools will bring together students and educators through
+                    connected devices that can lead to more meaningful interactions and can also improve or expand
+                    lesson plans. Students can take the skills and insights they learn from early exposure to IoT and
+                    use them in future challenges. Whether it’s video conferencing with a museum or tracking a student’s
+                    progress through an assignment.</p>
                 </div>
               </div>
             </div>
@@ -224,7 +213,8 @@ dashboards to user friendly tools through desktop apps and mobile apps
                 <p style="font-weight: bold">- Neil Leckman -</p>
               </div>
               <div class="item">
-                <p>Sometimes I’ll start a sentence and I don’t even know where it’s going. I just hope I find it along the way.</p>
+                <p>Sometimes I’ll start a sentence and I don’t even know where it’s going. I just hope I find it along
+                  the way.</p>
                 <p style="font-weight: bold">- Michael Scott -</p>
               </div>
               <div class="item active">
@@ -256,18 +246,6 @@ dashboards to user friendly tools through desktop apps and mobile apps
   <script src="js/animate.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/owl-carousel/owl.carousel.js"></script>
-<script type="text/javascript">
-
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/60a5f3b5185beb22b30ef2c0/1f643vvs5';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
 </body>
 
 </html>
