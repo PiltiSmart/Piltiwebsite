@@ -78,10 +78,10 @@
         </ul>
       </div><!-- end slider -->
     </section>
-    <section id="content" style="background: #3BA0F4;text-align:justify;">
+    <section id="content1">
       <div class="container">
         <hr>
-        <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;">Pilti offers a wide
+        <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;letter-spacing: 2px;line-height: 20px;">Pilti offers a wide
           verity of smart devices and services that will enhance the user smart
           experiences. Whether it is your home or office, our products make them smart and reliable
           especially in device functionalities, communication and security. We offer a complete end-to-
@@ -97,65 +97,63 @@
       <div class="container">
 
         <div class="row">
-       
-          <div class="col-lg-4 col-sm-4 text-center wow fadeInLeft animated" data-wow-animation-name="none">
-            <video width="200" height="434" controls autoplay loop>
-      <source src="img/smarty_dribbble.mp4" type=video/mp4>
-    </video>
-          </div> 
-          <div class="col-lg-4 col-sm-4 wow fadeInRight animated" data-wow-animation-name="none">
-            <h4>Our Smart Products</h4>
-            <hr>
-            <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter swith
 
-              <p><i class="fa fa-check fa-lg pr-8"></i> SmartyTalkCamera - A Smart AI Camera with voice for better
-                survaliance
+          <div class="col-lg-3 col-sm-3 text-center wow fadeInLeft animated" data-wow-animation-name="none">
+            <video width="200" height="434" style="border-radius: 15px;" controls autoplay muted loop>
+              <source src="img/smarty_dribbble.mp4" type=video/mp4> </video> </div> <div
+                class="col-lg-4 col-sm-4 wow fadeInRight animated" data-wow-animation-name="none">
+              <h4>Our Smart Products</h4>
+              <hr>
+              <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter swith
 
-                <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A SmartTV with computer
+                <p><i class="fa fa-check fa-lg pr-8"></i> SmartyTalkCamera - A Smart AI Camera with voice for better
+                  survaliance
 
-                  <hr>
-                  <a class="btn btn-purchase" href="pricing.php">Check Availability</a>
+                  <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A SmartTV with computer
+<br><br><br><br><br><br><br><br><br>
+                    <hr>
+                    <a class="btn btn-purchase" href="pricing.php">Check Availability</a>
           </div>
-          <div class="col-lg-4 col-sm-4 text-center wow fadeInLeft animated" data-wow-animation-name="none">
+          <div class="col-lg-5 col-sm-5 text-center wow fadeInLeft animated" data-wow-animation-name="none">
+<br><br>
+            <div class="about-carousel wow fadeInLeft animated" data-wow-animation-name="none" style="padding:25px">
+              <div id="myCarousel" class="carousel slide">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="img/slides/sh2.jpg" alt="">
+                    <div class="carousel-caption">
 
-                <div class="about-carousel wow fadeInLeft animated" data-wow-animation-name="none" style="padding:25px">
-                  <div id="myCarousel" class="carousel slide">
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img src="img/slides/sh2.jpg" alt="">
-                        <div class="carousel-caption">
-                          
-                        </div>
-                      </div>
-                      <div class="item">
-                        <img src="img/slides/sh3.jpg" alt="">
-                        <div class="carousel-caption">
-                         
-                        </div>
-                      </div>
-                      <div class="item">
-                        <img src="img/slides/sh5.jpg" alt="">
-                        <div class="carousel-caption">
-                          
-                        </div>
-                      </div>
-                    
-                    
                     </div>
-                    <!-- Carousel nav -->
-                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                      <i class="fa fa-angle-left">
-                      </i>
-                    </a>
-                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                      <i class="fa fa-angle-right">
-                      </i>
-                    </a>
                   </div>
+                  <div class="item">
+                    <img src="img/slides/sh3.jpg" alt="">
+                    <div class="carousel-caption">
+
+                    </div>
                   </div>
-          
-          </div> 
+                  <div class="item">
+                    <img src="img/slides/sh5.jpg" alt="">
+                    <div class="carousel-caption">
+
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                  <i class="fa fa-angle-left">
+                  </i>
+                </a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                  <i class="fa fa-angle-right">
+                  </i>
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>

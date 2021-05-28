@@ -113,41 +113,36 @@
 							
 
 							<p style="font-size:22px;">
-								Our Core Values
+								<b>Our Core Values</b>
 							</p>
+							<br>
 						
-							<ul class="list-unstyled" style="margin:0 0 10px 0">
-								<li style="padding:0 0 4px 0">
-									<i class="fa fa-angle-right pr-10">
-									</i>
+							<ul style="margin:0 0 10px 0">
+								<li style="padding:0 0 4px 0; font-size:16px;">
+																		
 									Our Customers First!
 								</li>
-								<li style="padding:0 0 4px 0">
-									<i class="fa fa-angle-right pr-10">
-									</i>
+								<li style="padding:0 0 4px 0; font-size:16px;">
+									
 									We build products we believe in.
 								</li>
-								<li style="padding:0 0 4px 0">
-									<i class="fa fa-angle-right pr-10">
-									</i>
+								<li style="padding:0 0 4px 0; font-size:16px;">
+									
 									We care about what we do.
 								</li>
-								<li style="padding:0 0 4px 0">
-									<i class="fa fa-angle-right pr-10">
-									</i>
+								<li style="padding:0 0 4px 0; font-size:16px;">
+									
 									Each person has the opportunity and the obligation to make a
 									difference.
 								</li>
 								</li>
-								<li style="padding:0 0 4px 0">
-									<i class="fa fa-angle-right pr-10">
-									</i>
+								<li style="padding:0 0 4px 0; font-size:16px;">
+									
 									We are all in it together to win.
 								</li>
 								</li>
-								<li style="padding:0 0 4px 0">
-									<i class="fa fa-angle-right pr-10">
-									</i>
+								<li style="padding:0 0 4px 0; font-size:16px;">
+									
 									We are here to make a positive difference in society, as well as make a profit.
 								</li>
 							</ul>
@@ -264,7 +259,7 @@
 							<div class="block-heading-two">
 								<h3><span>Our Expertise</span></h3>
 							</div>
-							<h6>IOT Development</h6>
+							<h6>IOT Managed Service and Development</h6>
 							<div class="progress pb-sm">
 								<!-- White color (progress-bar-white) -->
 								<div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40"
