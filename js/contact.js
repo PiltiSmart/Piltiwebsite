@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
         //start the ajax
         $.ajax({
             //this is the php file that processes the data and sends email
-            url: "contact.php",
+            url: "form.php",
 
             //GET method is used
             type: "GET",
@@ -73,7 +73,6 @@ jQuery(document).ready(function($) {
                     $('.done').fadeIn('slow');
 
                     $(".form").find('input[type=text], textarea').val("");
-
                     //if contact.php returned 0/false (send mail failed)
                 } else alert('Sorry, unexpected error. Please try again later.');
             }

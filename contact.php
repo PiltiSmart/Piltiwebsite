@@ -64,7 +64,7 @@
 						</div>
 						<div class="contact-form">
 
-							<form method="post" action="form.php" class="contact">
+							<form method="post" class="contact">
 								<div class="form-group has-feedback">
 									<label for="name">Name*</label>
 									<input type="text" class="form-control" name="name" placeholder="">
@@ -115,6 +115,7 @@
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/contact.js"></script>
 	<script src="js/owl-carousel/owl.carousel.js"></script>
 
 </body>
