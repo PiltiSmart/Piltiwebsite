@@ -81,7 +81,7 @@
 									<textarea class="form-control" rows="6" name="comment" placeholder=""></textarea>
 									<i class="fa fa-pencil form-control-feedback"></i>
 								</div>
-								<input type="submit" value="Submit" id="submit" class="submit btn btn-default">
+								<input type="submit" value="Submit" id="submit" class="submit btn btn-default"">
 							</form>
 
 
@@ -90,7 +90,11 @@
 					<div class="col-md-6">
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.2756666389405!2d78.11800701473246!3d9.91098347728015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c57845949ffd%3A0x79bd2c911bd095bf!2s78%2C%20S%20Veli%20St%2C%20South%20Gate%2C%20Panthadi%2C%20Tamil%20Nadu%20625001!5e0!3m2!1sen!2sin!4v1621471176791!5m2!1sen!2sin"
-							 style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							 style="border:0;width:250px;height:400px" allowfullscreen="" loading="lazy"></iframe>
+							 &nbsp;&nbsp;&nbsp;
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.2756666389405!2d78.11800701473246!3d9.91098347728015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c57845949ffd%3A0x79bd2c911bd095bf!2s78%2C%20S%20Veli%20St%2C%20South%20Gate%2C%20Panthadi%2C%20Tamil%20Nadu%20625001!5e0!3m2!1sen!2sin!4v1621471176791!5m2!1sen!2sin"
+							 style="border:0;width:250px;height:400px" allowfullscreen="" loading="lazy"></iframe>
 					</div>
 				</div>
 			</div>
@@ -112,6 +116,7 @@
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/owl-carousel/owl.carousel.js"></script>
+
 </body>
 
 </html>
