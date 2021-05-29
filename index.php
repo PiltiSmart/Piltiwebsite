@@ -82,17 +82,13 @@
       <div class="container text-center">
         <hr>
         <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;letter-spacing: 2px;line-height: 20px;"> 
-          Pilti offers a wide
-          verity of smart devices that will enhance the user smart automation
-          experiences
+          Pilti<sup>®</sup> offers a wide
+          verity of smart devices for smart home, smart office, smart industries and other smart fields.
           <hr>
-          
-          Whether it is your home, office or factory, our products make them smart and reliable!
-          <br>
-          Pilti's advanced device functionalities, analytics and security ensures our customers comfort at their finger tips. 
-          <br>
-          Complete E2E IoT smart solutions, our customers have access user friendly tools and eye-catching
-          dashboards
+          <li style="text-align:left"> &emsp; Whether it is your home, office or factory, our products make them smart and reliable!</li>
+          <li style="text-align:left" > &emsp; Pilti's advanced device functionalities, analytics and security ensures our customers comfort at their finger tips</li> 
+          <li style="text-align:left"> &emsp; Complete E2E IoT smart solutions, our customers have access user friendly tools and eye-catching
+          dashboards</li>
         </h5>
         <hr>
 
