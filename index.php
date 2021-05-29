@@ -79,14 +79,16 @@
       </div><!-- end slider -->
     </section>
     <section id="content1">
-      <div class="container">
+      <div class="container text-center">
         <hr>
-        <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;letter-spacing: 2px;line-height: 20px;">Pilti offers a wide
-          verity of smart devices and services that will enhance the user smart
-          experiences. Whether it is your home or office, our products make them smart and reliable
-          especially in device functionalities, communication and security. We offer a complete end-to-
-          end IoT smart solutions, our customers have access to a comprehensive customer
-          dashboards to user friendly tools through desktop apps and mobile apps
+        <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;letter-spacing: 2px;line-height: 20px;"> 
+          Pilti<sup>®</sup> offers a wide
+          verity of smart devices for smart home, smart office, smart industries and other smart fields.
+          <hr>
+          <li style="text-align:left"> &emsp; Whether it is your home, office or factory, our products make them smart and reliable!</li>
+          <li style="text-align:left" > &emsp; Pilti's advanced device functionalities, analytics and security ensures our customers comfort at their finger tips</li> 
+          <li style="text-align:left"> &emsp; Complete E2E IoT smart solutions, our customers have access user friendly tools and eye-catching
+          dashboards</li>
         </h5>
         <hr>
 
@@ -102,7 +104,7 @@
             <video width="200" height="434" style="border-radius: 15px;" controls autoplay muted loop>
               <source src="img/smarty_dribbble.mp4" type=video/mp4> </video> </div> <div
                 class="col-lg-4 col-sm-4 wow fadeInRight animated" data-wow-animation-name="none">
-              <h4>Our Smart Products</h4>
+              <h4 class="text-center">Our Smart Products</h4>
               <hr>
               <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter swith
 
