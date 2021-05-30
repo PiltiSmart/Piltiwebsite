@@ -25,9 +25,6 @@
 				<h5 class="widgetheading">Quick Links</h5>
 				<ul class="link-list">
 				  <li>
-					<a href="#">Latest Events</a>
-				  </li>
-				  <li>
 					<a href="#">Terms and conditions</a>
 				  </li>
 				  <li>
@@ -47,13 +44,13 @@
 				<h5 class="widgetheading">Recent News</h5>
 				<ul class="link-list">
 				  <li>
-					<a href="#">updated soon :)</a>
+					<a href="#">SmartySwitch Prototype completed</a>
 				  </li>
 				  <li>
-					<a href="#">updated soon :)</a>
+					<a href="#">Pilti mobile app underdevelpment</a>
 				  </li>
 				  <li>
-					<a href="#">updated soon :)</a>
+					<a href="#">SmartyTV prototype underdevelpment</a>
 				  </li>
 				</ul>
 			  </div>
