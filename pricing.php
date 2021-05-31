@@ -73,7 +73,7 @@
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Coming Soon </a>
 					</div>
 				</div>
 			</div>
@@ -95,7 +95,7 @@
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Coming Soon </a>
 					</div>
 				</div>
 			</div>
@@ -117,7 +117,7 @@
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Coming Soon </a>
 					</div>
 				</div>
 			</div>
@@ -139,7 +139,7 @@
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Coming Soon </a>
 					</div>
 				</div>
 			</div>
@@ -156,81 +156,81 @@
 					</div>
 					<div class="pricing-container">
 						<ul>
-							<li><i class="icon-ok"></i> 3 Device Insatllations and service</li>
-							<li><i class="icon-ok"></i> Power Monitor Dashboards </li>
-							<li><i class="icon-ok"></i> Pilti Cloud with AI </li>
-							<li><i class="icon-ok"></i> Monthly / Yearly Reports</li>
+							<li><i class="icon-ok"></i> Smart Lighting</li>
+							<li><i class="icon-ok"></i> Energy Optimisation </li>
+							<li><i class="icon-ok"></i> Heating Control </li>
+							<li><i class="icon-ok"></i> Detect emergency</li>
 							<li><i class="icon-ok"></i> Early Fault detections</li>
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Checkout Later </a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h5><strong>SmartyTalkCamera</strong></h5>
+						<h5><strong>Smart Office</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 1599.00</h6>
+						<h6>Rs 2500 / month</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
-							<li><i class="icon-ok"></i> Voice Greetings </li>
-							<li><i class="icon-ok"></i> Vedio Recordings </li>
-							<li><i class="icon-ok"></i> Mobile App </li>
-							<li><i class="icon-ok"></i> Motion Detection </li>
+							<li><i class="icon-ok"></i> Temperature Monitoring</li>
+							<li><i class="icon-ok"></i> Energy Optimisation </li>
+							<li><i class="icon-ok"></i> Indoor air quality monitoring </li>
+							<li><i class="icon-ok"></i> Smart locks</li>
+							<li><i class="icon-ok"></i> Occupancy detection </li>
+						</ul>
+					</div>
+					<div class="pricing-action">
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Checkout Later </a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="pricing-box-item">
+					<div class="pricing-heading">
+						<h5><strong>Smart Farming</strong></h5>
+					</div>
+					<div class="pricing-terms">
+						<h6>Rs 2000 / month </h6>
+					</div>
+					<div class="pricing-container">
+						<ul>
+							<li><i class="icon-ok"></i> Cost and waste reduction </li>
+							<li><i class="icon-ok"></i> Monitoring of climate conditions </li>
+							<li><i class="icon-ok"></i> Greenhouse automation </li>
+							<li><i class="icon-ok"></i> Precision farming </li>
 							<li><i class="icon-ok"></i> Animales Alerts </li>
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Checkout Later </a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3">
 				<div class="pricing-box-item">
 					<div class="pricing-heading">
-						<h5><strong>SmartyTalkCamera</strong></h5>
+						<h5><strong>Smart Schools</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 1599.00</h6>
+						<h6>Rs 5000 / month</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
-							<li><i class="icon-ok"></i> Voice Greetings </li>
-							<li><i class="icon-ok"></i> Vedio Recordings </li>
-							<li><i class="icon-ok"></i> Mobile App </li>
-							<li><i class="icon-ok"></i> Motion Detection </li>
-							<li><i class="icon-ok"></i> Animales Alerts </li>
+							<li><i class="icon-ok"></i> Automated attendance </li>
+							<li><i class="icon-ok"></i> Wireless door locks </li>
+							<li><i class="icon-ok"></i> Noise level Optimisation</li>
+							<li><i class="icon-ok"></i> Digital ID cards</li>
+							<li><i class="icon-ok"></i> Robotic education</li>
 						</ul>
 					</div>
 					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="pricing-box-item">
-					<div class="pricing-heading">
-						<h5><strong>SmartyCompTV - L1</strong></h5>
-					</div>
-					<div class="pricing-terms">
-						<h6>Rs 9999</h6>
-					</div>
-					<div class="pricing-container">
-						<ul>
-							<li><i class="icon-ok"></i> Computer on TV </li>
-							<li><i class="icon-ok"></i> Vedio Calling </li>
-							<li><i class="icon-ok"></i> Word, Excel and Power Point</li>
-							<li><i class="icon-ok"></i> Mobile App</li>
-							<li><i class="icon-ok"></i> Linux OS</li>
-						</ul>
-					</div>
-					<div class="pricing-action">
-						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Buy </a>
+						<a href="#" class="btn btn-medium"><i class="icon-bolt"></i> Checkout Later </a>
 					</div>
 				</div>
 			</div>

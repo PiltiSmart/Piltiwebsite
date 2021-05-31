@@ -64,7 +64,7 @@
           <li>
             <img alt="" src="img/slides/1.jpg">
             <div class="flex-caption wow fadeInLeft animated" data-wow-animation-name="none">
-              <h3>Smart Devices</h3>
+              <h3>Pilti Smart</h3>
               <p>...Making Devices Smart...</p>
             </div>
           </li>
