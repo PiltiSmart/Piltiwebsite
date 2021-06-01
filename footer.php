@@ -28,7 +28,7 @@
 					<a href="tac.php">Terms and conditions</a>
 				  </li>
 				  <li>
-					<a href="#">Privacy policy</a>
+					<a href="privacy.php">Privacy policy</a>
 				  </li>
 				  <li>
 					<a href="#">Career</a>
