@@ -31,7 +31,7 @@
 					<a href="privacy.php">Privacy policy</a>
 				  </li>
 				  <li>
-					<a href="#">Career</a>
+					<a href="careers.php">Careers</a>
 				  </li>
 				  <li>
 					<a href="#">Contact us</a>
