@@ -25,7 +25,7 @@
 				<h5 class="widgetheading">Quick Links</h5>
 				<ul class="link-list">
 				  <li>
-					<a href="#">Terms and conditions</a>
+					<a href="tac.php">Terms and conditions</a>
 				  </li>
 				  <li>
 					<a href="#">Privacy policy</a>
