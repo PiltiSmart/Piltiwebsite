@@ -104,7 +104,7 @@
             <video width="200" height="434" style="border-radius: 15px;" controls autoplay muted loop>
               <source src="img/smarty_dribbble.mp4" type=video/mp4> </video> </div> <div
                 class="col-lg-4 col-sm-4 wow fadeInRight animated" data-wow-animation-name="none">
-              <h4 class="text-center">Our Smart Products</h4>
+              <h4 class="text-center" style="color:white">Our Smart Products</h4>
               <hr>
               <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter swith
 

@@ -34,7 +34,7 @@
 					<a href="careers.php">Careers</a>
 				  </li>
 				  <li>
-					<a href="#">Contact us</a>
+					<a href="contact.php">Contact us</a>
 				  </li>
 				</ul>
 			  </div>
