@@ -72,9 +72,13 @@ jQuery(document).ready(function($) {
                     //show the success message
                     $('.done').fadeIn('slow');
 
-                    $(".form").find('input[type=text], textarea').val("");
+                    $(".contact-form").find('input[type=text], textarea').val("");
+                    $(".contact-form").find('input[type=email]').val("");
+
                     //if contact.php returned 0/false (send mail failed)
-                } else alert('Sorry, unexpected error. Please try again later.');
+                } else {
+                    alert('Sorry, unexpected error. Please try again later.');
+                }
             }
         });
 

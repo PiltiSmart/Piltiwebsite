@@ -88,15 +88,21 @@
 
 						</div>
 					</div>
-					<div class="col-md-6">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.2756666389405!2d78.11800701473246!3d9.91098347728015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c57845949ffd%3A0x79bd2c911bd095bf!2s78%2C%20S%20Veli%20St%2C%20South%20Gate%2C%20Panthadi%2C%20Tamil%20Nadu%20625001!5e0!3m2!1sen!2sin!4v1621471176791!5m2!1sen!2sin"
-							width="250" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-							 &nbsp;&nbsp;&nbsp;
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.632593787099!2d-6.271750283887086!3d53.34983277997977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c29fcdd95ab%3A0x1de927b305ed43f6!2sSemple%20Court%2C%20Capel%20St%2C%20Rotunda%2C%20Dublin%201%2C%20Ireland!5e0!3m2!1sen!2sin!4v1622466857614!5m2!1sen!2sin" width="250" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					<div class="col-md-3" style="padding-left:40px">					
+								<h4>Madurai</h4>
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.2756666389405!2d78.11800701473246!3d9.91098347728015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c57845949ffd%3A0x79bd2c911bd095bf!2s78%2C%20S%20Veli%20St%2C%20South%20Gate%2C%20Panthadi%2C%20Tamil%20Nadu%20625001!5e0!3m2!1sen!2sin!4v1621471176791!5m2!1sen!2sin"
+									width="230" height="380" style="border:0;" allowfullscreen=""
+									loading="lazy"></iframe>
+						</div>
+						<div class="col-md-3">
+							<h4>Ireland</h4>
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.632593787099!2d-6.271750283887086!3d53.34983277997977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c29fcdd95ab%3A0x1de927b305ed43f6!2sSemple%20Court%2C%20Capel%20St%2C%20Rotunda%2C%20Dublin%201%2C%20Ireland!5e0!3m2!1sen!2sin!4v1622466857614!5m2!1sen!2sin"
+								width="250" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						</div>
 					</div>
 				</div>
-			</div>
 
 		</section>
 		<?php include_once 'footer.php';?>
