@@ -59,19 +59,13 @@
 
                 <div class="entry-content">
 
-                    <p>The vast majority of design projects run smoothly, without any problems. However, from time to
-                        time, something does come up, and these terms and conditions are designed to ensure that we are
-                        both protected from any unexpected circumstances. It also lays out the basic groundwork for how
-                        the project will progress, and what’s expected of us both. </p>
-
-
-
+                
                     <p><strong>Summary</strong></p>
 
 
 
-                    <p>The following Terms and Conditions apply to all products and services provided by Helen Murphy
-                        Freelance Graphic Design (hereinafter referred to as Helen Murphy or ‘I’)&nbsp;</p>
+                    <p>The following Terms and Conditions apply to all products and services provided by Pilti Group
+                        (hereinafter referred to as Pilti)&nbsp;</p>
 
 
 
@@ -84,19 +78,18 @@
 
 
                     <p>You agree that: You have the authority to enter into this contract on behalf of yourself, your
-                        company or your organization. You agree to provide me with everything that I need to complete
-                        the project including text, images and other information as and when I need it, and in the
-                        format that I ask for. You’ll review my work and provide feedback and approval in a timely
+                        company or your organization. You agree to provide pilti with everything that Pilti needs to complete
+                        the project including text, images and other information as and when pilti needs it, and in the
+                        format that Pilti asks for. You’ll review pilti's work and provide feedback and approval in a timely
                         manner. You also agree to stick to the payment schedule set out in these terms and conditions.
                     </p>
 
 
 
-                    <p>I agree that: I have the experience and ability to perform the services you need from me and I
-                        will carry them out in a professional and timely manner. Along the way I will endeavour to meet
-                        all the deadlines set but I can’t be responsible for a missed deadline if materials have been
-                        supplied late or have not approved or signed off my work on-time at any stage. I will maintain
-                        the confidentiality of any information that you give me.</p>
+                    <p>Pilti team provide the services in a professional and timely manner. Along the way team will endeavour to meet
+                        all the deadlines set but team Pilti team can’t be responsible for a missed deadline if materials have been
+                        supplied late or have not approved or signed off the work on-time at any stage. Pilti will maintain
+                        the confidentiality of any information provided.</p>
 
 
 
@@ -107,16 +100,16 @@
                     <p>If there is a hard deadline for your project, you must communicate it clearly up front before the
                         project begins. It is always my intention to complete your project on time. Revisions and your
                         response times play a major role in the amount of time it takes to complete your project.
-                        Therefore, the project completion date I give you is not a guarantee.</p>
+                        Therefore, the project completion date provided by Pilti is not a guarantee.</p>
 
 
 
-                    <p><strong>Design Services</strong></p>
+                    <p><strong>Smart Services and Services ******(needs update)******* </strong></p>
 
 
 
                     <p>These Terms and Conditions allow for up to three sets of revisions unless agreed otherwise prior
-                        to starting the project.&nbsp; Extra revisions are subject to additional charges at my
+                        to starting the project.&nbsp; Extra revisions are subject to additional charges at Pilti's
                         discretion. &nbsp;</p>
 
 
@@ -143,7 +136,7 @@
 
                     <p>If a choice of designs is presented and one is chosen for your project, only that solution is
                         deemed to be given by us as fulfilling the contract. All other designs remain the property of
-                        Helen Murphy, unless specifically agreed in writing.</p>
+                        Pilti, unless specifically agreed in writing.</p>
 
 
 
@@ -157,9 +150,9 @@
 
 
 
-                    <p>It is the Client’s responsibility to check proofs carefully for accuracy in all respects
-                        including but not limited to prices, spelling, and dimensions. Helen Murphy is not liable for
-                        errors or omissions. The Client’s written approval of an artwork proof, will be taken as
+                    <p>It is the Client’s responsibility to check devices and dashboards for accuracy in all respects
+                        including but not visual. Pilti is not liable for
+                        errors or omissions. The Client’s written approval will be taken as
                         confirmation that the project is correct and complete.</p>
 
 
@@ -170,17 +163,17 @@
 
                     <p>Should something happen for any reason whatsoever that causes you to cancel this project once it
                         has begun, you are completely free to do so. You will simply be billed for any work completed up
-                        to the point of cancellation, and I will send you any work completed up to that point.</p>
+                        to the point of cancellation, and Pilti will send you invoice for any work completed up to that point.</p>
 
 
 
-                    <p>In the unlikely event that some life altering event happens to cause me to cancel this project, I
+                    <p>In the unlikely event that some life altering event happens to cause pilti to cancel this project, pilti
                         will hand over any work completed up to the point of cancellation and refund you for any
                         payments made on incomplete work.</p>
 
 
 
-                    <p><strong>Copyrights</strong></p>
+                    <p><strong>Copyrights ******(needs update)******* </strong></p>
 
 
 
@@ -189,7 +182,7 @@
 
 
 
-                    <p>Copyright is retained by Helen Murphy on all design work including words, pictures, ideas,
+                    <p>Copyright is retained by Pilti on all design work including words, pictures, ideas,
                         visuals and illustrations until all costs have been settled. When your final payment has
                         cleared, copyright will be automatically assigned as follows:</p>
 
@@ -221,18 +214,17 @@
 
 
 
-                    <p>Publication and/or release of work done by Helen Murphy on behalf of the client, may not take
+                    <p>Publication and/or release of work done by Pilti on behalf of the client, may not take
                         place before cleared funds have been received.</p>
 
 
 
-                    <p>Helen Murphy reserves the right to charge statutory interest of 8% plus the Bank of England base
-                        rate under the late payment legislation on overdue balances.</p>
+                    <p>Pilti reserves the right to charge statutory interest of 12% under the late payment legislation on overdue balances.</p>
 
 
 
-                    <p>Helen Murphy is responsible for the payment of all government taxes with respect to the services
-                        she performs for the Client as a sole trader.</p>
+                    <p>Pilti is responsible for the payment of all government taxes with respect to the services
+                        she performs for the Client</p>
 
 
 
@@ -240,17 +232,17 @@
 
 
 
-                    <p>Helen Murphy will not be responsible for any damages your business may suffer. I can not
-                        guarantee that my work will be error-free and so I can’t be liable to you or any third-party for
+                    <p>Pilti will not be responsible for any damages your business may suffer. Pilti can not
+                        guarantee that any work will be error-free and so Pilti can’t be liable to clinets or any third-party for
                         damages, including lost profits, lost savings or other incidental, consequential or special
-                        damages, even if you’ve advised me of them. Finally, if any provision of this contract shall be
+                        damages. Finally, if any provision of this contract shall be
                         unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable
                         from this contract and shall not affect the validity and enforceability of any remaining
                         provisions.&nbsp;</p>
 
 
 
-                    <p>Helen Murphy reserves the right to revise its policies, Terms and Conditions at any time.</p>
+                    <p>Pilti reserves the right to revise its policies, Terms and Conditions at any time.</p>
 
 
 
@@ -258,7 +250,7 @@
 
 
 
-                    <p>By accepting a quotation and supplying information/images/files to alllow a project to commence,
+                    <p>By accepting a quotation and supplying information/access to alllow a project to commence,
                         the Client agrees that they have read, understood, and are considered legally bound to these
                         terms.</p>
 
