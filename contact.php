@@ -43,7 +43,6 @@
 							<li><a href="pilticloud.php">Pilti Cloud</a></li>
 							<li><a href="services.php">Services</a></li>
 							<li><a href="pricing.php">Pricing</a></li>
-							<li><a href="careers.php">Careers</a></li>
 							<li class="active"><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
@@ -56,7 +55,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<div class="done">
 							<div class="alert alert-success">
 								<button type="button" class="close" data-dismiss="alert">×</button>
@@ -73,13 +72,13 @@
 								</div>
 								<div class="form-group has-feedback">
 									<label for="email">Email*</label>
-									<input type="email" class="form-control" name="email" placeholder="">
+									<input type="email" class="form-control" name="email" placeholder="" onblur="error()">
 									<i class="fa fa-envelope form-control-feedback"></i>
+									<p style="color:red" id="e1"></p>
 								</div>
-
 								<div class="form-group has-feedback">
 									<label for="message">Message*</label>
-									<textarea class="form-control" rows="6" name="comment" placeholder=""></textarea>
+									<textarea class="form-control" rows="6" name="comment" placeholder="" onblur="cError()"></textarea>
 									<i class="fa fa-pencil form-control-feedback"></i>
 								</div>
 								<input type="submit" value="Submit" id="submit" class="submit btn btn-default"">
@@ -88,18 +87,18 @@
 
 						</div>
 					</div>
-					<div class="col-md-3" style="padding-left:40px">					
-								<h4>Madurai</h4>
+					<div class="col-md-4" style="padding-left:40px">					
+								<h4>Madurai, India</h4>
 								<iframe
 									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.2756666389405!2d78.11800701473246!3d9.91098347728015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c57845949ffd%3A0x79bd2c911bd095bf!2s78%2C%20S%20Veli%20St%2C%20South%20Gate%2C%20Panthadi%2C%20Tamil%20Nadu%20625001!5e0!3m2!1sen!2sin!4v1621471176791!5m2!1sen!2sin"
-									width="230" height="380" style="border:0;" allowfullscreen=""
+									height="420" style="border:0;border-radius:15px;" allowfullscreen=""
 									loading="lazy"></iframe>
 						</div>
-						<div class="col-md-3">
-							<h4>Ireland</h4>
+						<div class="col-md-4">
+							<h4>Dublin, Ireland</h4>
 							<iframe
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.632593787099!2d-6.271750283887086!3d53.34983277997977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c29fcdd95ab%3A0x1de927b305ed43f6!2sSemple%20Court%2C%20Capel%20St%2C%20Rotunda%2C%20Dublin%201%2C%20Ireland!5e0!3m2!1sen!2sin!4v1622466857614!5m2!1sen!2sin"
-								width="250" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								height="420" style="border:0;border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
 						</div>
 					</div>
 				</div>
@@ -122,7 +121,6 @@
 	<script src="js/custom.js"></script>
 	<script src="js/contact.js"></script>
 	<script src="js/owl-carousel/owl.carousel.js"></script>
-
 </body>
 
 </html>
