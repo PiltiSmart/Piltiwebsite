@@ -86,3 +86,13 @@ jQuery(document).ready(function($) {
         return false;
     });
 });
+
+function error(){    
+    var regx = /^([a-z0-9_\-\.])+\@([a-z0-9_\-\.])+\.([a-z]{2,4})$/i;
+    var email = $('input[name=email]');
+    if (!regx.test(email.val())) {
+        document.getElementById("e2").innerHTML = "Enter valid email";
+    }else{
+        document.getElementById("e2").innerHTML = "";
+    }
+}
