@@ -81,7 +81,7 @@
 		}
 
 		.vertical-tab .nav-tabs li a:after {
-			background-color: #F35349;
+			background-color: #5DA5E4;
 			width: 4px;
 			transform: scaleY(0);
 		}
@@ -105,7 +105,7 @@
 
 		.vertical-tab .nav-tabs li a:hover i,
 		.vertical-tab .nav-tabs li.active a i {
-			color: #F35349;
+			color: #5DA5E4;
 		}
 
 		.vertical-tab .tab-content {
