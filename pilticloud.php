@@ -1,97 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Pilti - Everything can be Smart</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="http://webthemez.com" />
-<!-- css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/jcarousel.css" rel="stylesheet" />
-<link href="css/flexslider.css" rel="stylesheet" />
-<link href="css/style.css" rel="stylesheet" />
- 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+	<meta charset="utf-8">
+	<title>Pilti - Everything can be Smart</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="http://webthemez.com" />
+	<!-- css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link href="css/jcarousel.css" rel="stylesheet" />
+	<link href="css/flexslider.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+	<style>
+		a:hover,
+		a:focus {
+			text-decoration: none;
+			outline: none;
+		}
 
+		.vertical-tab {
+			font-family: 'Poppins', sans-serif;
+			display: table;
+			border-radius: 0;
+		}
+
+		.vertical-tab .nav-tabs {
+			display: table-cell;
+			width: 25%;
+			min-width: 25%;
+			border: none;
+		}
+
+		.vertical-tab .nav-tabs li {
+			float: none;
+		}
+
+		.vertical-tab .nav-tabs li a {
+			color: #333;
+			background-color: transparent;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 18px;
+			text-transform: capitalize;
+			text-align: center;
+			padding: 15px 10px;
+			margin: 0;
+			border-radius: 0;
+			border: none;
+			position: relative;
+			z-index: 1;
+			transition: all 0.3s ease 0s;
+		}
+
+		.vertical-tab .nav-tabs li a:hover,
+		.vertical-tab .nav-tabs li.active a,
+		.vertical-tab .nav-tabs li.active a:hover {
+			color: #000;
+			background-color: #fff;
+			border: none;
+		}
+
+		.vertical-tab .nav-tabs li a:before,
+		.vertical-tab .nav-tabs li a:after {
+			content: '';
+			background-color: #efefdc;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+			transition: all 0.3s ease 0s;
+		}
+
+		.vertical-tab .nav-tabs li a:after {
+			background-color: #F35349;
+			width: 4px;
+			transform: scaleY(0);
+		}
+
+		.vertical-tab .nav-tabs li a:hover:before,
+		.vertical-tab .nav-tabs li.active a:before {
+			transform: scaleY(0);
+		}
+
+		.vertical-tab .nav-tabs li a:hover:after,
+		.vertical-tab .nav-tabs li.active a:after {
+			transform: scaleY(1);
+		}
+
+		.vertical-tab .nav-tabs li a i {
+			font-size: 14px;
+			margin: 0 0 5px;
+			display: block;
+			transition: all 0.3s ease 0s;
+		}
+
+		.vertical-tab .nav-tabs li a:hover i,
+		.vertical-tab .nav-tabs li.active a i {
+			color: #F35349;
+		}
+
+		.vertical-tab .tab-content {
+			color: #00639e;
+			font-size: 14px;
+			letter-spacing: 0.5px;
+			line-height: 23px;
+			padding: 15px 15px 10px;
+			margin-top: 10px;
+			display: table-cell;
+		}
+
+		.vertical-tab .tab-content h3 {
+			font-size: 20px;
+			font-weight: 600;
+			text-transform: capitalize;
+			margin: 0 0 4px;
+		}
+
+		@media only screen and (max-width: 479px) {
+			.vertical-tab {
+				padding: 0;
+				margin: 0;
+			}
+
+			.vertical-tab .nav-tabs {
+				width: 100%;
+				display: block;
+				margin: 0 0 4px;
+			}
+
+			.vertical-tab .nav-tabs li a {
+				margin: 0 0 1px;
+			}
+
+			.vertical-tab .nav-tabs li a:after {
+				width: 100%;
+				height: 4px;
+				transform: scaleY(1) scaleX(0);
+			}
+
+			.vertical-tab .nav-tabs li a:hover:before,
+			.vertical-tab .nav-tabs li.active a:before {
+				transform: scaleX(0);
+			}
+
+			.vertical-tab .nav-tabs li a:hover:after,
+			.vertical-tab .nav-tabs li.active a:after {
+				transform: scaleX(1);
+			}
+
+			.vertical-tab .tab-content {
+				font-size: 14px;
+				margin-top: 0;
+				display: block;
+			}
+
+			.vertical-tab .tab-content h3 {
+				font-size: 18px;
+			}
+		}
+	</style>
 </head>
-<body>
-<div id="wrapper">
 
-	<!-- start header -->
+<body>
+	<div id="wrapper">
+
+		<!-- start header -->
 		<header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="logo"/></a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>  
-						<li><a href="about.php">About Us</a></li>
-                        <li class="active"><a href="pilticloud.php">Pilti Cloud</a></li>
-						<li><a href="services.php">Services</a></li>
-                        <li><a href="pricing.php">Pricing</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-	</header>
-	<!-- end header -->
-	<section id="content">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<ul class="portfolio-categ filter">
-					<li class="web"><a href="#" title="">Pilti ThingsBoard</a></li>
-					<li class="icon"><a href="#" title="">Pilti TimeTracker</a></li>
-					<li class="graphic"><a href="#" title="">Pilti CloudStorage</a></li>
-				</ul>
-				<div class="clearfix">
+			<div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="logo" /></a>
+					</div>
+					<div class="navbar-collapse collapse ">
+						<ul class="nav navbar-nav">
+							<li><a href="index.php">Home</a></li>
+							<li><a href="about.php">About Us</a></li>
+							<li class="active"><a href="pilticloud.php">Pilti Cloud</a></li>
+							<li><a href="services.php">Services</a></li>
+							<li><a href="pricing.php">Pricing</a></li>
+							<li><a href="contact.php">Contact</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="row">
-					<section id="projects">
-					<ul id="thumbs" class="portfolio">
-						<!-- Item Project and Filter Name -->
-						<li class="item-thumbs col-lg-12 design" data-id="id-0" data-type="web">
-							<iframe  height="600" width="100%"
+			</div>
+		</header>
+		<!-- end header -->
+
+		<div class="container" style="padding-top:20px">
+			<div class="row">
+					<div class="vertical-tab" role="tabpanel">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab"
+									data-toggle="tab"><i class="fa fa-cogs"></i> ThingsBoard</a></li>
+							<li role="presentation"><a href="#Section2" aria-controls="profile" role="tab"
+									data-toggle="tab"><i class="fa fa-calendar-o"></i> TimeTracker</a></li>
+							<li role="presentation"><a href="#Section3" aria-controls="messages" role="tab"
+									data-toggle="tab"><i class="fa fa-hdd-o"></i> CloudStorage</a></li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content tabs">
+							
+							<div role="tabpanel" class="tab-pane fade in active" id="Section1">
+							<iframe height="600" width="1000px"
 							src="https://pilti-tbcloud.ddns.net/home" 
 							style="border:0;"></iframe>
-						</li>
-						<!-- End Item Project -->
-						<!-- Item Project and Filter Name -->
-						<li class="item-thumbs col-lg-12 design" data-id="id-1" data-type="icon">
-							<iframe  height="600" width="100%"
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="Section2">
+							<iframe  height="600" width="1000px"
 							src="http://timesheet-pilti.ddns.net:8001" 
 							style="border:0;"></iframe>
-						</li>
-						<!-- End Item Project -->
-						<!-- Item Project and Filter Name -->
-						<li class="item-thumbs col-lg-12 photography" data-id="id-2" data-type="graphic">
-							<iframe  height="600" width="100%"
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="Section3">
+							<iframe  height="600" width="1000px"
 							src="https://pilti-cloud.ddns.net/" 
 							style="border:0;"></iframe>
-						</li>
-						
-						<!-- End Item Project -->
-					</ul>
-					</section>
+							</div>
+						</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	</section>
-	<?php include_once 'footer.php';?>
+
+
+
+
+		<?php include_once 'footer.php';?>
 	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
 	<!-- javascript
 	  ================================================== -->
@@ -107,6 +255,11 @@
 	<script src="js/animate.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/owl-carousel/owl.carousel.js"></script>
-  </body>
-  
-  </html>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+	</script>
+
+</body>
+
+</html>
