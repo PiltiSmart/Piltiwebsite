@@ -5,7 +5,7 @@ image: samueldebruyn/debian-git
 pipelines:
   default:
     - step:
-       script:
+       script: # steps
          - apt-get update
          - apt-get -qq install git-ftp
          - git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://pilti.in/public_html/beta.pilti.in/
