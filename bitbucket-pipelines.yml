@@ -8,4 +8,4 @@ pipelines:
        script: # steps
          - apt-get update
          - apt-get -qq install git-ftp
-         - git ftp init --user Umesh@pilti.in --passwd Mother-123 ftp://ftp.pilti.in/home/wzx51ig15kh5/public_html/beta.pilti.in
+         - git ftp init --user Umesh@pilti.in --passwd Mother-123 ftp://pilti.in/home/wzx51ig15kh5/public_html/beta.pilti.in
