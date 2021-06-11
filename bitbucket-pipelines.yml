@@ -1,0 +1,11 @@
+#Docker image pipline
+
+image: samueldebruyn/debian-git
+
+pipelines:
+  default:
+    - step:
+       script: # steps
+         - apt-get update
+         - apt-get -qq install git-ftp
+         - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://pilti.in/public_html/beta.pilti.in
