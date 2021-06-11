@@ -45,8 +45,8 @@
 		.vertical-tab .nav-tabs li a {
 			color: #333;
 			background-color: transparent;
-			font-size: 16px;
-			font-weight: 700;
+			font-size: 14px;
+			font-weight: 500;
 			line-height: 18px;
 			text-transform: capitalize;
 			text-align: center;
@@ -200,47 +200,53 @@
 			</div>
 		</header>
 		<!-- end header -->
+		<section id="content">
+			<div class="container">
+				<!-- end divider -->
+				<div class="row">
+					<div class="col-lg-2">
 
-		<div class="container" style="padding-top:20px">
-			<div class="row">
-					<div class="vertical-tab" role="tabpanel">
-						<!-- Nav tabs -->
-						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab"
-									data-toggle="tab"><i class="fa fa-cogs"></i> ThingsBoard</a></li>
-							<li role="presentation"><a href="#Section2" aria-controls="profile" role="tab"
-									data-toggle="tab"><i class="fa fa-calendar-o"></i> TimeTracker</a></li>
-							<li role="presentation"><a href="#Section3" aria-controls="messages" role="tab"
-									data-toggle="tab"><i class="fa fa-hdd-o"></i> CloudStorage</a></li>
-						</ul>
-						<!-- Tab panes -->
-						<div class="tab-content tabs">
-							
-							<div role="tabpanel" class="tab-pane fade in active" id="Section1">
-							<iframe height="600" width="1000px"
-							src="https://pilti-tbcloud.ddns.net/home" 
-							style="border:0;"></iframe>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="Section2">
-							<iframe  height="600" width="1000px"
-							src="http://timesheet-pilti.ddns.net:8001" 
-							style="border:0;"></iframe>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="Section3">
-							<iframe  height="600" width="1000px"
-							src="https://pilti-cloud.ddns.net/" 
-							style="border:0;"></iframe>
+						<div class="vertical-tab" role="tabpanel">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#Section1" aria-controls="home"
+										role="tab" data-toggle="tab"><i class="fa fa-cogs"></i> ThingsBoard</a></li>
+								<li role="presentation"><a href="#Section2" aria-controls="profile" role="tab"
+										data-toggle="tab"><i class="fa fa-calendar-o"></i> TimeTracker</a></li>
+								<li role="presentation"><a href="#Section3" aria-controls="messages" role="tab"
+										data-toggle="tab"><i class="fa fa-hdd-o"></i> CloudStorage</a></li>
+							</ul>
+						</div>
+						</div>
+						<div class="col-lg-10">
+							<!-- Tab panes -->
+							<div class="tab-content tabs">
+
+								<div role="tabpanel" class="tab-pane fade in active" id="Section1">
+									<iframe height="600" width="1000px" src="https://pilti-tbcloud.ddns.net/home"
+										style="border:0;"></iframe>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Section2">
+									<iframe height="600" width="1000px" src="http://timesheet-pilti.ddns.net:8001"
+										style="border:0;"></iframe>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Section3">
+									<iframe height="600" width="1000px" src="https://pilti-cloud.ddns.net/"
+										style="border:0;"></iframe>
+								</div>
 							</div>
 						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+	</div>
+	</section>
 
 
+	<?php include_once 'footer.php';?>
+	</div>
 
-
-		<?php include_once 'footer.php';?>
-	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
+	<a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
 	<!-- javascript
 	  ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
