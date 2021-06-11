@@ -41,9 +41,6 @@
                 <a href="about.php">About Us</a>
               </li>
               <li>
-                <a href="pilticloud.php">PiltiCloud</a>
-              </li>
-              <li>
                 <a href="services.php">Services</a>
               </li>
               <li>
@@ -51,6 +48,9 @@
               </li>
               <li>
                 <a href="contact.php">Contact</a>
+              </li>
+              <li>
+                <a href="pilticloud.php">PiltiCloud</a>
               </li>
             </ul>
           </div>
