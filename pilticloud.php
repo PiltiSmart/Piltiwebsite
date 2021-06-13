@@ -26,7 +26,6 @@
 		}
 
 		.vertical-tab {
-			font-family: 'Poppins', sans-serif;
 			display: table;
 			border-radius: 0;
 		}
@@ -35,7 +34,7 @@
 			display: table-cell;
 			width: 25%;
 			min-width: 25%;
-			border: none;
+			border-radius: 15px;
 		}
 
 		.vertical-tab .nav-tabs li {
@@ -43,10 +42,10 @@
 		}
 
 		.vertical-tab .nav-tabs li a {
-			color: #333;
-			background-color: transparent;
-			font-size: 14px;
-			font-weight: 500;
+			color: #fff;
+			background-color: #000;
+			font-size: 12px;
+			font-weight: 700;
 			line-height: 18px;
 			text-transform: capitalize;
 			text-align: center;
@@ -57,20 +56,15 @@
 			position: relative;
 			z-index: 1;
 			transition: all 0.3s ease 0s;
+			text-transform: uppercase;
+			line-height: 1em;
+			letter-spacing: -1px;
 		}
 
-		.vertical-tab .nav-tabs li a:hover,
-		.vertical-tab .nav-tabs li.active a,
-		.vertical-tab .nav-tabs li.active a:hover {
-			color: #000;
-			background-color: #fff;
-			border: none;
-		}
 
 		.vertical-tab .nav-tabs li a:before,
 		.vertical-tab .nav-tabs li a:after {
 			content: '';
-			background-color: #efefdc;
 			height: 100%;
 			width: 100%;
 			position: absolute;
@@ -80,20 +74,22 @@
 			transition: all 0.3s ease 0s;
 		}
 
-		.vertical-tab .nav-tabs li a:after {
+		.vertical-tab .nav-tabs li.active a {
 			background-color: #5DA5E4;
-			width: 4px;
-			transform: scaleY(0);
+			color: #fff !important;
+			border: none;
+
 		}
 
-		.vertical-tab .nav-tabs li a:hover:before,
-		.vertical-tab .nav-tabs li.active a:before {
-			transform: scaleY(0);
+		.vertical-tab .nav-tabs li.active a:hover {
+			background-color: #5DA5E4;
+			color: #ffff !important;
 		}
 
-		.vertical-tab .nav-tabs li a:hover:after,
-		.vertical-tab .nav-tabs li.active a:after {
-			transform: scaleY(1);
+		.vertical-tab .nav-tabs li a:hover {
+			background-color: #000;
+			color: #5DA5E4 !important;
+			border: none;
 		}
 
 		.vertical-tab .nav-tabs li a i {
@@ -103,10 +99,11 @@
 			transition: all 0.3s ease 0s;
 		}
 
-		.vertical-tab .nav-tabs li a:hover i,
 		.vertical-tab .nav-tabs li.active a i {
-			color: #5DA5E4;
+			background-color: #5DA5E4;
+			color: #fff;
 		}
+
 
 		.vertical-tab .tab-content {
 			color: #00639e;
@@ -141,22 +138,6 @@
 				margin: 0 0 1px;
 			}
 
-			.vertical-tab .nav-tabs li a:after {
-				width: 100%;
-				height: 4px;
-				transform: scaleY(1) scaleX(0);
-			}
-
-			.vertical-tab .nav-tabs li a:hover:before,
-			.vertical-tab .nav-tabs li.active a:before {
-				transform: scaleX(0);
-			}
-
-			.vertical-tab .nav-tabs li a:hover:after,
-			.vertical-tab .nav-tabs li.active a:after {
-				transform: scaleX(1);
-			}
-
 			.vertical-tab .tab-content {
 				font-size: 14px;
 				margin-top: 0;
@@ -166,6 +147,20 @@
 			.vertical-tab .tab-content h3 {
 				font-size: 18px;
 			}
+		}
+
+		.frame-area {
+			display: block;
+			width: 100%;
+			/* RESPONSIVE WIDTH */
+			max-width: 1200px;
+			height: 600px;
+			border-radius: 15px;
+			overflow: auto;
+			/* EDIT TO hidden FOR NO SCROLLBAR */
+			border: #999999 1px solid;
+			margin: 0px;
+			padding: 0px;
 		}
 	</style>
 </head>
@@ -200,48 +195,42 @@
 			</div>
 		</header>
 		<!-- end header -->
-		<section id="content">
-			<div class="container">
-				<!-- end divider -->
-				<div class="row">
-					<div class="col-lg-2">
+		<!-- end divider -->
+		<div class="row" style="padding:10px">
+			<div class="col-lg-2">
+				<div class="vertical-tab" role="tabpanel">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab"
+								data-toggle="tab"><i class="fa fa-cogs"></i> Things Board</a></li>
+						<li role="presentation"><a href="#Section2" aria-controls="profile" role="tab"
+								data-toggle="tab"><i class="fa fa-calendar-o"></i> Time Tracker</a></li>
+						<li role="presentation"><a href="#Section3" aria-controls="messages" role="tab"
+								data-toggle="tab"><i class="fa fa-hdd-o"></i> Cloud Storage</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-10">
+				<!-- Tab panes -->
+				<div class="tab-content tabs">
 
-						<div class="vertical-tab" role="tabpanel">
-							<!-- Nav tabs -->
-							<ul class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#Section1" aria-controls="home"
-										role="tab" data-toggle="tab"><i class="fa fa-cogs"></i> ThingsBoard</a></li>
-								<li role="presentation"><a href="#Section2" aria-controls="profile" role="tab"
-										data-toggle="tab"><i class="fa fa-calendar-o"></i> TimeTracker</a></li>
-								<li role="presentation"><a href="#Section3" aria-controls="messages" role="tab"
-										data-toggle="tab"><i class="fa fa-hdd-o"></i> CloudStorage</a></li>
-							</ul>
-						</div>
-						</div>
-						<div class="col-lg-10">
-							<!-- Tab panes -->
-							<div class="tab-content tabs">
-
-								<div role="tabpanel" class="tab-pane fade in active" id="Section1">
-									<iframe height="600" width="1000px" src="https://pilti-tbcloud.ddns.net/home"
-										style="border:0;"></iframe>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="Section2">
-									<iframe height="600" width="1000px" src="http://timesheet-pilti.ddns.net:8001"
-										style="border:0;"></iframe>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="Section3">
-									<iframe height="600" width="1000px" src="https://pilti-cloud.ddns.net/"
-										style="border:0;"></iframe>
-								</div>
-							</div>
-						</div>
+					<div role="tabpanel" class="tab-pane fade in active" id="Section1">
+						<iframe class="frame-area" height="600" width="1000px" src="https://pilti-tbcloud.ddns.net/home"
+							style="border:0;"></iframe>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Section2">
+						<iframe class="frame-area" height="600" width="1000px"
+							src="http://timesheet-pilti.ddns.net:8001" style="border:0;"></iframe>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Section3">
+						<iframe class="frame-area" height="600" width="1000px" src="https://pilti-cloud.ddns.net/"
+							style="border:0;"></iframe>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
-	</section>
-
+	</div>
 
 	<?php include_once 'footer.php';?>
 	</div>
