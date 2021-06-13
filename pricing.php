@@ -87,10 +87,10 @@
 					<div class="pricing-container">
 						<ul>
 							<li><i class="icon-ok"></i> Voice Greetings </li>
-							<li><i class="icon-ok"></i> Vedio Recordings </li>
+							<li><i class="icon-ok"></i> Video Recordings </li>
 							<li><i class="icon-ok"></i> Mobile App </li>
 							<li><i class="icon-ok"></i> Motion Detection </li>
-							<li><i class="icon-ok"></i> Animales Alerts </li>
+							<li><i class="icon-ok"></i> Animals Alerts </li>
 						</ul>
 					</div>
 					<div class="pricing-action">
@@ -110,7 +110,7 @@
 						<ul>
 							<li><i class="icon-ok"></i> Local Storage </li>
 							<li><i class="icon-ok"></i> BLE support </li>
-							<li><i class="icon-ok"></i> Battary Support </li>
+							<li><i class="icon-ok"></i> Battery Support </li>
 							<li><i class="icon-ok"></i> Upto 10 Device support </li>
 							<li><i class="icon-ok"></i> Offline data collection </li>
 						</ul>
@@ -131,7 +131,7 @@
 					<div class="pricing-container">
 						<ul>
 							<li><i class="icon-ok"></i> Computer on TV </li>
-							<li><i class="icon-ok"></i> Vedio Calling </li>
+							<li><i class="icon-ok"></i> Video Calling </li>
 							<li><i class="icon-ok"></i> Word, Excel and Power Point</li>
 							<li><i class="icon-ok"></i> Mobile App</li>
 							<li><i class="icon-ok"></i> Linux OS</li>
@@ -200,10 +200,10 @@
 					<div class="pricing-container">
 						<ul>
 							<li><i class="icon-ok"></i> Cost and waste reduction </li>
-							<li><i class="icon-ok"></i> Monitoring of climate conditions </li>
+							<li><i class="icon-ok"></i> Monitoring of climatic conditions </li>
 							<li><i class="icon-ok"></i> Greenhouse automation </li>
 							<li><i class="icon-ok"></i> Precision farming </li>
-							<li><i class="icon-ok"></i> Animales Alerts </li>
+							<li><i class="icon-ok"></i> Animals Alerts </li>
 						</ul>
 					</div>
 					<div class="pricing-action">
