@@ -152,12 +152,11 @@
 		.frame-area {
 			display: block;
 			width: 100%;
-			/* RESPONSIVE WIDTH */
 			max-width: 1300px;
+			max-height: 700px;
 			height: 650px;
 			border-radius: 15px;
 			overflow: auto;
-			/* EDIT TO hidden FOR NO SCROLLBAR */
 			border: #999999 1px solid;
 			margin: 0px;
 			padding: 0px;
