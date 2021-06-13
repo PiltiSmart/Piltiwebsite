@@ -45,7 +45,7 @@
 			color: #fff;
 			background-color: #000;
 			font-size: 12px;
-			font-weight: 700;
+			font-weight: 650;
 			line-height: 18px;
 			text-transform: capitalize;
 			text-align: center;
@@ -153,8 +153,8 @@
 			display: block;
 			width: 100%;
 			/* RESPONSIVE WIDTH */
-			max-width: 1200px;
-			height: 600px;
+			max-width: 1300px;
+			height: 650px;
 			border-radius: 15px;
 			overflow: auto;
 			/* EDIT TO hidden FOR NO SCROLLBAR */
@@ -215,15 +215,15 @@
 				<div class="tab-content tabs">
 
 					<div role="tabpanel" class="tab-pane fade in active" id="Section1">
-						<iframe class="frame-area" height="600" width="1000px" src="https://pilti-tbcloud.ddns.net/home"
+						<iframe class="frame-area" height="650" width="1300px" src="https://pilti-tbcloud.ddns.net/home"
 							style="border:0;"></iframe>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section2">
-						<iframe class="frame-area" height="600" width="1000px"
+						<iframe class="frame-area" height="650" width="1300px"
 							src="http://timesheet-pilti.ddns.net:8001" style="border:0;"></iframe>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section3">
-						<iframe class="frame-area" height="600" width="1000px" src="https://pilti-cloud.ddns.net/"
+						<iframe class="frame-area" height="650" width="1300px" src="https://pilti-cloud.ddns.net/"
 							style="border:0;"></iframe>
 					</div>
 				</div>
