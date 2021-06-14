@@ -48,7 +48,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li>
-                <a href="pilticloud.php">PiltiCloud</a>
+                <a href="pilticloud.php">My Pilti</a>
               </li>
             </ul>
           </div>

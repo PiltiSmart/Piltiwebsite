@@ -187,7 +187,7 @@
 							<!-- <li><a href="services.php">Services</a></li> -->
 							<li><a href="pricing.php">Pricing</a></li>
 							<li><a href="contact.php">Contact</a></li>
-							<li class="active"><a href="pilticloud.php">Pilti Cloud</a></li>
+							<li class="active"><a href="pilticloud.php">My Pilti</a></li>
 						</ul>
 					</div>
 				</div>
@@ -201,11 +201,11 @@
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab"
-								data-toggle="tab"><i class="fa fa-cogs"></i> Things Board</a></li>
+								data-toggle="tab"><i class="fa fa-cogs"></i> Pilti IoT Board</a></li>
 						<li role="presentation"><a href="#Section2" aria-controls="profile" role="tab"
 								data-toggle="tab"><i class="fa fa-calendar-o"></i> Time Tracker</a></li>
 						<li role="presentation"><a href="#Section3" aria-controls="messages" role="tab"
-								data-toggle="tab"><i class="fa fa-hdd-o"></i> Cloud Storage</a></li>
+								data-toggle="tab"><i class="fa fa-hdd-o"></i> Pilti Teams</a></li>
 					</ul>
 				</div>
 			</div>
@@ -222,7 +222,7 @@
 							src="http://timesheet-pilti.ddns.net:8001" style="border:0;"></iframe>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section3">
-						<iframe class="frame-area" height="650" width="1300px" src="https://pilti-cloud.ddns.net/"
+						<iframe class="frame-area" height="650" width="1300px" src="https://teams.microsoft.com/_?tenantId=c3348bbb-621c-4066-85d0-95e707b58d91"
 							style="border:0;"></iframe>
 					</div>
 				</div>
