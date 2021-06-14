@@ -27,7 +27,7 @@
 
 		.vertical-tab {
 			display: table;
-			border-radius: 0;
+			border-radius: 15px;
 		}
 
 		.vertical-tab .nav-tabs {
@@ -47,18 +47,18 @@
 			font-size: 12px;
 			font-weight: 650;
 			line-height: 18px;
-			text-transform: capitalize;
+			
 			text-align: center;
-			padding: 15px 10px;
-			margin: 0;
-			border-radius: 0;
+			padding: 10px 10px;
+			margin: 2px;
+			border-radius: 10px;
 			border: none;
 			position: relative;
 			z-index: 1;
 			transition: all 0.3s ease 0s;
-			text-transform: uppercase;
+			
 			line-height: 1em;
-			letter-spacing: -1px;
+			letter-spacing: 0px;
 		}
 
 
@@ -118,7 +118,7 @@
 		.vertical-tab .tab-content h3 {
 			font-size: 20px;
 			font-weight: 600;
-			text-transform: capitalize;
+			
 			margin: 0 0 4px;
 		}
 
@@ -155,10 +155,10 @@
 			max-width: 1300px;
 			max-height: 700px;
 			height: 650px;
-			border-radius: 15px;
+			border-radius: 10px;
 			overflow: auto;
-			border: #999999 1px solid;
-			margin: 0px;
+			border: #999999 0px solid;
+			margin: 2px;
 			padding: 0px;
 		}
 	</style>
@@ -195,17 +195,21 @@
 		</header>
 		<!-- end header -->
 		<!-- end divider -->
-		<div class="row" style="padding:10px">
+		<div class="row" style="padding:3px">
 			<div class="col-lg-2">
 				<div class="vertical-tab" role="tabpanel">
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab"
-								data-toggle="tab"><i class="fa fa-cogs"></i> Pilti IoT Board</a></li>
+								data-toggle="tab"><i class="fa fa-cogs"></i> IoT Board</a></li>
 						<li role="presentation"><a href="#Section2" aria-controls="profile" role="tab"
-								data-toggle="tab"><i class="fa fa-calendar-o"></i> Time Tracker</a></li>
-						<li role="presentation"><a href="#Section3" aria-controls="messages" role="tab"
-								data-toggle="tab"><i class="fa fa-hdd-o"></i> Pilti Teams</a></li>
+								data-toggle="tab"><i class="fa fa-users"></i>Teams</a></li>
+						<li role="presentation"><a href="#Section3" aria-controls="profile" role="tab"
+								data-toggle="tab"><i class="fa fa-tasks" aria-hidden="true"></i>Jira</a></li>
+						<li role="presentation"><a href="#Section4" aria-controls="profile" role="tab"
+								data-toggle="tab"><i class="fa fa-bitbucket" aria-hidden="true"></i>Code</a></li>
+						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab"
+								data-toggle="tab"><i class="fa fa-calendar-o"></i> Time Sheets</a></li>	
 					</ul>
 				</div>
 			</div>
@@ -215,15 +219,23 @@
 
 					<div role="tabpanel" class="tab-pane fade in active" id="Section1">
 						<iframe class="frame-area" height="650" width="1300px" src="https://pilti-tbcloud.ddns.net/home"
-							style="border:0;"></iframe>
+							style="border:3;"></iframe>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section2">
-						<iframe class="frame-area" height="650" width="1300px"
-							src="http://timesheet-pilti.ddns.net:8001" style="border:0;"></iframe>
+						<iframe class="frame-area" height="650" width="1300px" src="https://teams.microsoft.com/_#/"
+							style="border:3;"></iframe>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section3">
-						<iframe class="frame-area" height="650" width="1300px" src="https://teams.microsoft.com/_?tenantId=c3348bbb-621c-4066-85d0-95e707b58d91"
-							style="border:0;"></iframe>
+						<iframe class="frame-area" height="650" width="1300px" src="https://pilti.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SD&selectedIssue=SD-165&assignee=608f9ac0c87b5500699b6ec3"
+							style="border:3;"></iframe>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Section4">
+						<iframe class="frame-area" height="650" width="1300px" src="https://bitbucket.org/dashboard/overview"
+							style="border:3;"></iframe>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Section5">
+						<iframe class="frame-area" height="650" width="1300px"
+							src="http://timesheet-pilti.ddns.net:8001" style="border:3;"></iframe>
 					</div>
 				</div>
 			</div>
