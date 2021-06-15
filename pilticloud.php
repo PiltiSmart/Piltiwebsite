@@ -47,7 +47,7 @@
 			font-size: 12px;
 			font-weight: 650;
 			line-height: 18px;
-			
+
 			text-align: center;
 			padding: 10px 10px;
 			margin: 2px;
@@ -56,7 +56,7 @@
 			position: relative;
 			z-index: 1;
 			transition: all 0.3s ease 0s;
-			
+
 			line-height: 1em;
 			letter-spacing: 0px;
 		}
@@ -118,7 +118,7 @@
 		.vertical-tab .tab-content h3 {
 			font-size: 20px;
 			font-weight: 600;
-			
+
 			margin: 0 0 4px;
 		}
 
@@ -172,8 +172,7 @@
 			<div class="navbar navbar-default navbar-static-top">
 				<div class="container">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse"
-							data-target=".navbar-collapse">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -200,16 +199,12 @@
 				<div class="vertical-tab" role="tabpanel">
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab"
-								data-toggle="tab"><i class="fa fa-cogs"></i> IoT Board</a></li>
-						<li role="presentation"><a href="#Section2" aria-controls="profile" role="tab"
-								data-toggle="tab"><i class="fa fa-users"></i>Teams</a></li>
-						<li role="presentation"><a href="#Section3" aria-controls="profile" role="tab"
-								data-toggle="tab"><i class="fa fa-tasks" aria-hidden="true"></i>Jira</a></li>
-						<li role="presentation"><a href="#Section4" aria-controls="profile" role="tab"
-								data-toggle="tab"><i class="fa fa-bitbucket" aria-hidden="true"></i>Code</a></li>
-						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab"
-								data-toggle="tab"><i class="fa fa-calendar-o"></i> Time Sheets</a></li>	
+						<li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-cogs"></i> IoT Board</a></li>
+						<li role="presentation"><a href="#" onclick="return theFunction('https://teams.microsoft.com/_#/');"><i class="fa fa-users"></i>Teams</a></li>
+						<li role="presentation"><a href="#"
+						 onclick="return theFunction('https://pilti.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SD&selectedIssue=SD-165&assignee=608f9ac0c87b5500699b6ec3');"><i class=" fa fa-tasks" aria-hidden="true"></i>Jira</a></li>
+						<li role="presentation"><a href="#" onclick="return theFunction('https://bitbucket.org/dashboard/overview');"><i class="fa fa-bitbucket" aria-hidden="true"></i>Code</a></li>
+						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-calendar-o"></i> Time Sheets</a></li>
 					</ul>
 				</div>
 			</div>
@@ -218,24 +213,22 @@
 				<div class="tab-content tabs">
 
 					<div role="tabpanel" class="tab-pane fade in active" id="Section1">
-						<iframe class="frame-area" height="650" width="1300px" src="https://pilti-tbcloud.ddns.net/home"
-							style="border:3;"></iframe>
+						<iframe class="frame-area" height="650" width="1300px" src="https://pilti-tbcloud.ddns.net/home" style="border:3;"></iframe>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section2">
-						<iframe class="frame-area" height="650" width="1300px" src="https://teams.microsoft.com/_#/"
-							style="border:3;"></iframe>
+						<!-- <iframe class="frame-area" height="650" width="1300px" src="https://teams.microsoft.com/_#/"
+							style="border:3;"></iframe> -->
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section3">
-						<iframe class="frame-area" height="650" width="1300px" src="https://pilti.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SD&selectedIssue=SD-165&assignee=608f9ac0c87b5500699b6ec3"
-							style="border:3;"></iframe>
+						<!-- <iframe class="frame-area" height="650" width="1300px" src="https://pilti.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SD&selectedIssue=SD-165&assignee=608f9ac0c87b5500699b6ec3"
+							style="border:3;"></iframe> -->
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section4">
-						<iframe class="frame-area" height="650" width="1300px" src="https://bitbucket.org/dashboard/overview"
-							style="border:3;"></iframe>
+						<!-- <iframe class="frame-area" height="650" width="1300px" src="https://bitbucket.org/dashboard/overview"
+							style="border:3;"></iframe> -->
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section5">
-						<iframe class="frame-area" height="650" width="1300px"
-							src="http://timesheet-pilti.ddns.net:8001" style="border:3;"></iframe>
+						<iframe class="frame-area" height="650" width="1300px" src="http://timesheet-pilti.ddns.net:8001" style="border:3;"></iframe>
 					</div>
 				</div>
 			</div>
@@ -243,7 +236,7 @@
 	</div>
 	</div>
 
-	<?php include_once 'footer.php';?>
+	<?php include_once 'footer.php'; ?>
 	</div>
 
 	<a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
@@ -262,10 +255,15 @@
 	<script src="js/custom.js"></script>
 	<script src="js/owl-carousel/owl.carousel.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
 	</script>
-
+	<script type="text/javascript">
+		function theFunction(url) {
+			if (confirm("Click OK to open in new tab")) {
+				window.open(url, '_blank').focus();
+			}
+		}
+	</script>
 </body>
 
 </html>
