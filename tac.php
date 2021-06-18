@@ -104,7 +104,7 @@
 
 
 
-                    <p><strong>Smart Services and Services ******(needs update)******* </strong></p>
+                    <!-- <p><strong>Smart Services and Services ******(needs update)******* </strong></p>
 
 
 
@@ -142,7 +142,7 @@
 
                     <p>Please note: Once you approve a design it is considered final. After this any changes requested
                         will be quoted and billed seperately. Be sure to proof read carefully before approving the final
-                        design.</p>
+                        design.</p> -->
 
 
 
@@ -173,7 +173,7 @@
 
 
 
-                    <p><strong>Copyrights ******(needs update)******* </strong></p>
+                   <!-- <p><strong>Copyrights ******(needs update)******* </strong></p>
 
 
 
@@ -200,7 +200,7 @@
 
 
                     <p>I reserve the right, unless you specifically ask me not to, to display your project as part of my
-                        portfolio and for use on social media. </p>
+                        portfolio and for use on social media. </p> -->
 
 
 
