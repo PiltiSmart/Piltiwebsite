@@ -67,7 +67,7 @@
             </div>
           </li>
           <li>
-            <img alt="" src="img/slides/2.jpg">
+            <img alt="" src="img/slides/2.jpg" style="filter: blur(5px);-webkit-filter: blur(5px);">
             <div class="flex-caption wow fadeInRight animated" data-wow-animation-name="none">
               <h3>Best Quality</h3>
               <p>Reliable and Compact</p>
