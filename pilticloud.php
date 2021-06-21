@@ -259,7 +259,7 @@
 	</script>
 	<script type="text/javascript">
 		function theFunction(url) {
-			if (confirm("Click OK to open in new tab")) {
+			if (confirm("This will open in new browser tab, press OK to continue ")) {
 				window.open(url, '_blank').focus();
 			}
 		}

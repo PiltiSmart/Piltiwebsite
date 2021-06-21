@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Pilti - Everything can be Smart </title>
+  <title>Pilti - Everything can be SMART </title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="description">
   <!-- css -->
@@ -79,14 +79,12 @@
     <section id="content1">
       <div class="container text-center">
         <hr>
-        <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;letter-spacing: 2px;line-height: 20px;"> 
-          Pilti<sup>®</sup> offers a wide
-          verity of smart devices for smart home, smart office, smart industries and other smart fields.
+        <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;letter-spacing: 0px;line-height: 20px;"> 
+          Pilti<sup>®</sup> offers a wide variety of smart devices for Smart Home, Smart Office, Smart Industries and for other Smart ideas
           <hr>
           <li style="text-align:left"> &emsp; Whether it is your home, office or factory, our products make them smart and reliable!</li>
-          <li style="text-align:left" > &emsp; Pilti's advanced device functionalities, analytics and security ensures our customers comfort at their finger tips</li> 
-          <li style="text-align:left"> &emsp; Complete E2E IoT smart solutions, our customers have access user friendly tools and eye-catching
-          dashboards</li>
+          <li style="text-align:left" > &emsp; Pilti's advanced device Functionalities, Analytics and Security ensure our Customers’ comfort at their finger tips</li> 
+          <li style="text-align:left"> &emsp; We deliver E2E IoT Smart Solutions, user friendly Tools and eye-catching Dashboards</li>
         </h5>
         <hr>
 
@@ -104,15 +102,14 @@
                 class="col-lg-4 col-sm-4 wow fadeInRight animated" data-wow-animation-name="none">
               <h4 class="text-center" style="color:white">Our Smart Products</h4>
               <hr>
-              <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter swith
+              <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter switch
 
-                <p><i class="fa fa-check fa-lg pr-8"></i> SmartyTalkCamera - A Smart AI Camera with voice for better
-                  survaliance
+                <p><i class="fa fa-check fa-lg pr-8"></i> SmartyTalkCamera - A Smart AI Camera with voice assistant for better surveillance
 
-                  <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A SmartTV with computer
+                  <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A Smart TV with computer
 <br><br><br><br><br><br><br><br><br>
                     <hr>
-                    <a class="btn btn-purchase" href="pricing.php">Check Availability</a>
+                    <a class="btn btn-purchase" href="pricing.php">Check Pricing</a>
           </div>
           <div class="col-lg-5 col-sm-5 text-center wow fadeInLeft animated" data-wow-animation-name="none">
 <br><br>
