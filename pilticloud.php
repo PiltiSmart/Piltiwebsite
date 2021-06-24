@@ -200,11 +200,13 @@
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-cogs"></i> IoT Board</a></li>
-						<li role="presentation"><a href="#" onclick="return theFunction('https://teams.microsoft.com/_#/');"><i class="fa fa-users"></i>Teams</a></li>
+						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-desktop" aria-hidden="true"></i> WebTop</a></li>
+						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab" data-toggle="tab"><i></i> </a></li>
+						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-external-link" aria-hidden="true"></i> ⬇  Pilti external links ⬇ </a></li>
+						<li role="presentation"><a href="#" onclick="return theFunction('https://teams.microsoft.com/_#/');"><i class="fa fa-users"></i>Pilti Teams</a></li>
 						<li role="presentation"><a href="#"
-						 onclick="return theFunction('https://pilti.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SD&selectedIssue=SD-165&assignee=608f9ac0c87b5500699b6ec3');"><i class=" fa fa-tasks" aria-hidden="true"></i>Jira</a></li>
-						<li role="presentation"><a href="#" onclick="return theFunction('https://bitbucket.org/dashboard/overview');"><i class="fa fa-bitbucket" aria-hidden="true"></i>Code</a></li>
-						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-calendar-o"></i> Time Sheets</a></li>
+						 onclick="return theFunction('https://pilti.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SD&selectedIssue=SD-165&assignee=608f9ac0c87b5500699b6ec3');"><i class=" fa fa-tasks" aria-hidden="true"></i>Jira Board</a></li>
+						<li role="presentation"><a href="#" onclick="return theFunction('https://bitbucket.org/dashboard/overview');"><i class="fa fa-bitbucket" aria-hidden="true"></i>Code Repository</a></li>
 					</ul>
 				</div>
 			</div>
@@ -228,7 +230,7 @@
 							style="border:3;"></iframe> -->
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section5">
-						<iframe class="frame-area" height="650" width="1300px" src="http://timesheet-pilti.ddns.net:8001" style="border:3;"></iframe>
+						<iframe class="frame-area" height="650" width="1300px" src="http://178.128.173.86:3001" style="border:3;"></iframe>
 					</div>
 				</div>
 			</div>
