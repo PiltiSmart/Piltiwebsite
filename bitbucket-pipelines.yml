@@ -1,20 +1,22 @@
 #Docker image pipline
-
 image: samueldebruyn/debian-git
-
 pipelines:
   default:
-    name: Update
     - step:
-       script: # steps
+      name: Update
+      script: # steps
          - apt-get update
-    name: Test 
+         
     - step:
-    name: Insatll GIT FTP
+      name: Test
+      script:
+      
     - step:
-       script: # steps
+      name: Insatll GIT FTP
+      script: # steps
          - apt-get -qq install git-ftp
-    name: Deploy website
+         
     - step:
+       name: Deploy Website
        script: # steps
          - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://pilti.in/public_html/beta.pilti.in
