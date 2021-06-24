@@ -10,7 +10,7 @@ pipelines:
     - step:
        name: Test
        script:
-       - cat "Test"
+       - echo "Test Automation Stage"
       
     - step:
        name: Insatll GIT FTP
