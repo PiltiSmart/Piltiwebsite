@@ -3,17 +3,18 @@ image: samueldebruyn/debian-git
 pipelines:
   default:
     - step:
-      name: Update
-      script: # steps
+       name: Update
+       script: # steps
          - apt-get update
          
     - step:
-      name: Test
-      script:
+       name: Test
+       script:
+       - cat "Test"
       
     - step:
-      name: Insatll GIT FTP
-      script: # steps
+       name: Insatll GIT FTP
+       script: # steps
          - apt-get -qq install git-ftp
          
     - step:
