@@ -15,6 +15,7 @@ pipelines:
     - step:
        name: Insatll GIT FTP
        script: # steps
+         - apt-get update
          - apt-get -qq install git-ftp
          
     - step:
