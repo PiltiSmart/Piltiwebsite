@@ -47,10 +47,10 @@
 					<a href="#">SmartySwitch Prototype completed</a>
 				  </li>
 				  <li>
-					<a href="#">Pilti mobile app underdevelpment</a>
+					<a href="#">Pilti mobile app under develpment</a>
 				  </li>
 				  <li>
-					<a href="#">SmartyTV prototype underdevelpment</a>
+					<a href="#">SmartyTV prototype under develpment</a>
 				  </li>
 				</ul>
 			  </div>

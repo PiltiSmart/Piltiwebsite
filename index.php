@@ -102,11 +102,11 @@
                 class="col-lg-4 col-sm-4 wow fadeInRight animated" data-wow-animation-name="none">
               <h4 class="text-center" style="color:white">Our Smart Products</h4>
               <hr>
-              <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current meter switch
+              <p><i class="fa fa-check fa-lg pr-8"></i> SmartySwitch - A Smart WiFi current sensing switch with Anomaly detection.
 
                 <p><i class="fa fa-check fa-lg pr-8"></i> SmartyTalkCamera - A Smart AI Camera with voice assistant for better surveillance
 
-                  <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A Smart TV with computer
+                  <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A Smart TV with computer optimized for video calling
 <br><br><br><br><br><br><br><br><br>
                     <hr>
                     <a class="btn btn-purchase" href="pricing.php">Check Pricing</a>
@@ -159,10 +159,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="aligncenter">
-              <h2 class="aligncenter">Our Services</h2>Not every customer will tell you that they are walking away
-              unhappy — in fact, few will. So it’s important to make sure that the customer leaves satisfied. Ending
-              your emails without a closing message can be risky as it’s not inviting the customer to share further
-              issues — issues you sincerely want to hear about. Checkout our services
+              <h2 class="aligncenter">Our Services</h2>We always try to give people more than what they expect to get. We offer a range of SMART services based on customer needs. Checkout our services below
             </div><br>
           </div>
         </div>
@@ -174,11 +171,9 @@
                 <!-- <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
                 <div class="box-area">
                   <h3>Smart Home</h3>
-                  <p style="text-align: justify;"> State of the art, integrated smart automation systems. With a strong
-                    background in domestic, commercial and industrial electrical installation, We have the necessary
-                    skills to work with architects and builders and electricians to provide a hassle-free turn-key
-                    solution. Pilti can bring the very latest in smart lighting, switch, cinema, security and climate
-                    control to your home.</p>
+                  <p style="text-align: justify;"> Pilti can bring the latest technologies in smart lighting, smart switches, smart TV, smart security and smart temperature 
+                    control to your home. We work with architects, builders and electricians to provide a hassle-free turnkey
+                    solutions </p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
@@ -186,11 +181,9 @@
                 <!-- <span class="icons c1 fa fa-building" style="font-style: italic"></span> -->
                 <div class="box-area">
                   <h3>Smart Office</h3>
-                  <p style="text-align: justify;">A smart office creates value in different areas of the business,
-                    ranging from saving energy and better utilization of resources. A smarter use of resources means
-                    that less time and money is wasted. Our Smart office solution often generate value or savings on
-                    water, heating, cooling, and electricity spending. Counsult us on more smart office ideas,
-                    installations and many more.</p>
+                  <p style="text-align: justify;"> Pilti's Smart Office adds value in different areas of the business,
+                    ranging from  energy-savings and efficient utilization of resources. We aim at generating value or savings on
+                    water, heating, cooling, and electricity spending </p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
@@ -198,22 +191,18 @@
                 <span class="icons"><img src="img/farm.png"></span>
                 <div class="box-area">
                   <h3>Smart Farming</h3>
-                  <p style="text-align: justify;">Pilti helps in mitigating the shortage of food by optimum utilization
-                    of land at minimum cost. Our Smart farming solution offers an automated farming techniques, useful
-                    data collection and high-rigor crop control using IOT based sensors monitoring networks and forecast
-                    for better farming conditions. Counsult us on more smart farming ideas, home garderns, installations
-                    and many more</p>
+                  <p style="text-align: justify;">Pilti helps farmers to optimize utilization
+                    of land, water, fertilizers and other resorces at minimum cost. Our Smart Farming solution offers automated farming techniques,
+                    data collection and crop monitoring using sensor-networks to cater
+                    better farming conditions.</p>
                 </div>
               </div>
               <div class="col-md-3 text-center">
                 <span class="icons c4 fas fa-chalkboard-teacher style=" font-style: italic"></span>
                 <div class="box-area">
                   <h3>Smart Schools</h3>
-                  <p style="text-align: justify;">Smart Schools will bring together students and educators through
-                    connected devices that can lead to more meaningful interactions and can also improve or expand
-                    lesson plans. Students can take the skills and insights they learn from early exposure to IoT and
-                    use them in future challenges. Whether it’s video conferencing with a museum or tracking a student’s
-                    progress through an assignment.</p>
+                  <p style="text-align: justify;">Pilti's Smart School will allow students and educators to have smart interactions and better learning plans.
+                  </p>
                 </div>
               </div>
             </div>

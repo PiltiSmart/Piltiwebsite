@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Pilti - Everything can be Smart</title>
+<title>Pilti - Pricing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
@@ -154,11 +154,11 @@
 						<h6>Rs 1000.00 / month </h6>
 					</div>
 					<div class="pricing-container">
-						<ul>
+						<ul>    
 							<li><i class="icon-ok"></i> Smart Lighting</li>
 							<li><i class="icon-ok"></i> Energy Optimisation </li>
-							<li><i class="icon-ok"></i> Heating Control </li>
-							<li><i class="icon-ok"></i> Detect emergency</li>
+							<li><i class="icon-ok"></i> Temperature Control </li>
+							<li><i class="icon-ok"></i> Safety Hazards Detection</li>
 							<li><i class="icon-ok"></i> Early Fault detections</li>
 						</ul>
 					</div>
@@ -177,11 +177,11 @@
 					</div>
 					<div class="pricing-container">
 						<ul>
-							<li><i class="icon-ok"></i> Temperature Monitoring</li>
+							<li><i class="icon-ok"></i> Smart Lighting</li>
 							<li><i class="icon-ok"></i> Energy Optimisation </li>
+							<li><i class="icon-ok"></i> Temperature Control </li>
+							<li><i class="icon-ok"></i> Safety Hazards Detection</li>
 							<li><i class="icon-ok"></i> Indoor air quality monitoring </li>
-							<li><i class="icon-ok"></i> Smart locks</li>
-							<li><i class="icon-ok"></i> Occupancy detection </li>
 						</ul>
 					</div>
 					<div class="pricing-action">

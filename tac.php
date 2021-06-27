@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pilti - Everything can be Smart</title>
+    <title>Pilti - Terms and Conditions </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="http://webthemez.com" />
