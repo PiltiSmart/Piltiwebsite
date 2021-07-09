@@ -187,7 +187,7 @@
                 </div>
               </div>
               <div class="col-md-3 text-center">
-                <!-- <span class="icons c3 fa fa-desktop" style="font-style: italic"></span> -->
+                <!-- <span class="icons c3 fa fa-desktop" style="font-style: italic"></span>
                 <span class="icons"><img src="img/farm.png"></span> -->
                 <div class="box-area">
                   <h3>Smart Farming</h3>
