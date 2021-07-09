@@ -230,7 +230,7 @@
 							style="border:3;"></iframe> -->
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Section5">
-						<iframe class="frame-area" height="650" width="1300px" src="http://178.128.173.86:3001" style="border:3;"></iframe>
+						<iframe class="frame-area" height="650" width="1300px" src="http://34.254.249.126:3001" style="border:3;"></iframe>
 					</div>
 				</div>
 			</div>
