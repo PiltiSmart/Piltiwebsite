@@ -167,8 +167,8 @@
           <div class="skill-home">
             <div class="skill-home-solid clearfix">
               <div class="col-md-3 text-center">
-                <span class="icons c1 fas fa-laptop-house style=" font-style: italic"></span>
-                <!-- <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
+                <!-- <span class="icons c1 fas fa-laptop-house style=" font-style: italic"></span>
+                 <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
                 <div class="box-area">
                   <h3>Smart Home</h3>
                   <p style="text-align: justify;"> Pilti can bring the latest technologies in smart lighting, smart switches, smart TV, smart security and smart temperature 
@@ -177,8 +177,8 @@
                 </div>
               </div>
               <div class="col-md-3 text-center">
-                <span class="icons"><img src="img/ai.png"></span>
-                <!-- <span class="icons c1 fa fa-building" style="font-style: italic"></span> -->
+               <!--  <span class="icons"><img src="img/ai.png"></span>
+                <span class="icons c1 fa fa-building" style="font-style: italic"></span> -->
                 <div class="box-area">
                   <h3>Smart Office</h3>
                   <p style="text-align: justify;"> Pilti's Smart Office adds value in different areas of the business,
@@ -188,7 +188,7 @@
               </div>
               <div class="col-md-3 text-center">
                 <!-- <span class="icons c3 fa fa-desktop" style="font-style: italic"></span> -->
-                <span class="icons"><img src="img/farm.png"></span>
+                <span class="icons"><img src="img/farm.png"></span> -->
                 <div class="box-area">
                   <h3>Smart Farming</h3>
                   <p style="text-align: justify;">Pilti helps farmers to optimize utilization
@@ -198,7 +198,7 @@
                 </div>
               </div>
               <div class="col-md-3 text-center">
-                <span class="icons c4 fas fa-chalkboard-teacher style=" font-style: italic"></span>
+                <!-- <span class="icons c4 fas fa-chalkboard-teacher style=" font-style: italic"></span> -->
                 <div class="box-area">
                   <h3>Smart Schools</h3>
                   <p style="text-align: justify;">Pilti's Smart School will allow students and educators to have smart interactions and better learning plans.
