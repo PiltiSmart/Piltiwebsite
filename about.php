@@ -292,13 +292,10 @@
 
 					</div>
 
-
-
 					<br>
 					
 				</div>
 
-			</div>
 		</section>
 		<?php include_once 'footer.php';?>
 	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>
