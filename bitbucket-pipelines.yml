@@ -2,9 +2,9 @@
 image: samueldebruyn/debian-git
 pipelines:
   default:
-    - step:
-       name: Check Updates
-       script: # steps
+    # - step:
+       # name: Check Updates
+       # script: # steps
          
     - step:
        name: Deploy in to Beta Environment and Functional Test
