@@ -32,125 +32,117 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="img-epub/conversion-services.png" alt="ePlogo"/></a>
+                    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="img/logo.png" alt="ePlogo"/></a>
                 </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                    <li><a href="index.php">Home</a></li>  
-						<li><a href="about.php">About Us</a></li>
-						<li class="active"><a href="services.php">Services</a></li>
-            <li><a href="pricing.php">Pricing</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="pilticloud.php">My Pilti</a></li>
-                    </ul>
-                </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="index.php">Home</a>
+              </li>
+              <li>
+                <a href="about.php">About Us</a>
+              </li>
+              <li><a href="services.php">Services</a></li>
+	      <li class="active">
+		<a href="publishing.php">Publishing</a></li>
+              <li>
+                <a href="pricing.php">Pricing</a>
+              </li>
+              <li>
+                <a href="contact.php">Contact</a>
+              </li>
+              <li>
+                <a href="pilticloud.php">My Pilti</a>
+              </li>
+            </ul>
+	          </div>
             </div>
         </div>
 	</header><!-- end header -->
-	<section id="content">
-		<div class="container content">		
-        <!-- Service Blcoks -->
-		<div class="row mar-b-50">
-        <div class="col-lg-5">
-          <div class="about-carousel wow fadeInLeft animated" data-wow-animation-name="none" style="visibility: visible; -webkit-animation-name: none;">
-            <div id="myCarousel" class="carousel slide">
-              <!-- Carousel items -->
-              <div class="carousel-inner">
-                <div class="active item">
-                  <img src="img/service1.jpg" alt="">
-                  <div class="carousel-caption">
-                    <p>
-                      Donec luctus ullamcorper nulla
-                    </p>
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="img/service2.jpg" alt="">
-                  <div class="carousel-caption">
-                    <p>
-                      Blanditiis praesentium voluptatum
-                    </p>
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="img/service3.jpg" alt="">
-                  <div class="carousel-caption">
-                    <p>
-                      Blanditiis praesentium voluptatum
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-              <!-- Carousel nav -->
-              <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                <i class="fa fa-angle-left">
-                </i>
-              </a>
-              <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                <i class="fa fa-angle-right">
-                </i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-7 about wow fadeInRight animated" data-wow-animation-name="none" >
-          <h3>
-            What we offer
-          </h3>
-          <p>
-          Pilti offers a wide verity of smart devices and services that will enhance the user smart experiences. Whether it is your home or office, our products make them smart and reliable especially in device functionalities, communication and security. We offer a complete end-to- end IoT smart solutions, our customers have access to a comprehensive customer dashboards to user friendly tools through desktop apps and mobile apps
-          </p>
-		  <br/>
-		  <br/>
-        </div>
-      </div>
-	  
-		<div class="row">
-		<div class="skill-home"> <div class="skill-home-solid clearfix"> 
-		<div class="col-md-3 text-center">
-		<span class="icons c1"><i class="fa fa-trophy"></i></span> <div class="box-area">
-		<h3>Smart Homes</h3> <p>Smart home - fully managed services for home automation</p></div>
-		</div>
-		<div class="col-md-3 text-center"> 
-		<span class="icons c2"><i class="fa fa-picture-o"></i></span> <div class="box-area">
-		<h3>Smart Offices</h3> <p>Smart office - fully managed services for office automation</p></div>
-		</div>
-		<div class="col-md-3 text-center"> 
-		<span class="icons c3"><i class="fa fa-desktop"></i></span> <div class="box-area">
-		<h3>Smart Farming</h3> <p>Smart Farming - fully managed services for farm automation</p></div>
-		</div>
-		<div class="col-md-3 text-center"> 
-		<span class="icons c4"><i class="fa fa-globe"></i></span> <div class="box-area">
-		<h3>Smart Schools</h3> <p>Smart School - fully managed services for school automation</p>
-		</div></div>
-		</div></div>
-		</div>
-		 
- 
-
-        <div class="row service-v1 margin-bottom-40">
-            <div class="col-md-4 md-margin-bottom-40">
-               <img class="img-responsive" src="img/service1.jpg" alt="">   
-                <h2>Web Development</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
-            </div>
-            <div class="col-md-4">
-                <img class="img-responsive" src="img/service2.jpg" alt="">            
-                <h2>Mobile Development</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
-            </div>
-            <div class="col-md-4 md-margin-bottom-40">
-              <img class="img-responsive" src="img/service3.jpg" alt="">  
-                <h2>Responsive Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
-            </div>
-        </div>
-        <!-- End Service Blcoks -->
-        
-    </div>
-    </section>
-	<?php include_once 'footer.php';?>
+<div id="main" class="sidebar-none sidebar-divider-off"  >
+<div class="main-gradient">
+</div>
+<div class="wf-wrap">
+<div class="wf-container-main">
+<div id="content" class="content" role="main">
+<div class="vc_row wpb_row vc_row-fluid vc_custom_1641294721184">
+<div class="tcs-padding wpb_column vc_column_container vc_col-sm-12">
+<div class="vc_column-inner vc_custom_1640599880259">
+<div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  tcs-br-none" >
+<div class="wpb_wrapper">
+<h2 class="text-center text-success"><b>Finest epub conversion services for your files</b></h2>
+<p class="text-info text-center">Don&#8217;t trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and<br /> trained team at Pilti is prepared to provide customized conversion services with advanced epub conversion<br /> technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+</div>
+<div class="container">
+<table>
+  <tr>
+ <td><img  class="img-rounded" src="../img-epub/book-holding.jpg" alt="image" /><p class="text-center text-danger"><b>Physical Books</b></p></td>
+ <td><img  class="img-thumbnail" src="../img-epub/arrow.png" alt="image" /></td>
+ <td><img  class="img-rounded" src="../img-epub/epub-hold.jpg" alt="image" /><p class="text-center text-danger"><b>Digital Books</b></p></td>
+ </tr>
+</table>
+</div>
+<p></p>  
+<div class="container well">
+<h2 class="text-success text-center">What is an epub conversion service?</h2>
+<p class="text-info text-center"><b>Epub conversion service includes the process of converting digital manuscripts and printed books into ebooks in different publishing formats that are compatible with  popular e-readers like Kobo Reader, Nook Reader, Amazon Kindle, iPad/iPhone, etc</b></p>
+</div>
+<div class="container">
+<h2 class="text-success text-center">Types of epub conversion formats</h2>
+<table class="table table-hover">
+<tr>
+<td><p class="text-success"><b>Reflowable Format ePub2/ePub3</b></p></td>
+<td><p class="text-info ">This is the ePUB file for Apple, Kobo, Amazon, Google, all other retailers, e-libraries, and subscription services. Mostly suitable for textbooks and books with a simple format.</b><br/>(Supporting Platforms &#8211; Apple, Kindle, Google-Play, Kobo, Nook, etc.)</p></td>
+</tr>
+<tr>
+<td><p class="text-success"><b>ePub for VitalSource Bookshelf</b></p></td>
+<td><p class="text-info ">VitalSource is an online bookshelf program that is used to access eBooks for your courses.</p></td>
+</tr>
+<tr>
+<td><p class="text-success"><b>Fixed-layout format</b></p></td>
+<td><p class="text-info ">This format will be more appropriate for creating an ebook if your book includes illustrations, complex designs or a lot of images or if the style of the content need to be maintained.</p></td>
+</tr>
+<tr>
+<td><p class="text-success"><b>Audio ebooks</b></p></td>
+<td><p class="text-info ">Audio recording of a book is also known as read-aloud books. Audio recording is usually done by a well-known voice expert or by the author of the publication.</p></td>
+</tr>
+<tr>
+<td><p class="text-success"><b>Animated ebooks using css3/html5</b></p></td>
+<td><p class="text-info ">Widely used for multimedia books, books with a complex layout, interactive documents, and mathematical publications. Helps in creating media-rich and immersive ebooks.</p></td>
+</tr>
+<tr>
+<td><p class="text-success"><b>Print replica ebooks with Kindle create</b></p></td>
+<td><p class="text-info ">Print replica ebooks will maintain the layout and formatting of the print editions and provide a lot of benefits of standard kindle ebooks.</p></td>
+</tr>
+<tr>
+<td><p class="text-success"><b>Web-accessible ebooks</b></p></td>
+<td><p class="text-info ">Helps in creating ebooks that are visible to web browsers and clients. Therefore, readers can access the file at the time of publication</p></td>
+</tr>
+<tr>
+<td><p class="text-success"><b>PagePerfect and NOOK Kids for Barnes and Noble</b></p></td>
+<td><p class="text-info ">Suitable for Kid-targeted books with charming illustrations</p></td>
+</tr>
+<tr>
+<td><p class="text-success"><b>Interactive ebooks</b></p></td>
+<td><p class="text-info ">Used for producing ebooks that can be read on all types of devices and that include various elements for users to interact directly.</p></td>
+</tr> 
+</table>
+<div class="container text-center">
+<h2 class="text-success text-center">How does epub conversion work?</h2>
+<p class="text-center">Following is the general process we follow.</p>
+<div class="col-md-12 well text-success"><b>Step 1</b><br/>Customers send input files to Pilti via FTP (File Transfer Protocol) or WeTransfer (Free website for uploading and downloading files)</div>
+<div class="col-md-12 well text-success"><b>Step 2</b><br/>For eBook conversion, we need the input materials as editable PDF/Word Document/InDesign/Hard Book/Quark Xpress, Cover image, and eISBN</div>
+<div class="col-md-12 well text-success"><b>Step 3</b><br/>Pilti will then download the input files and send the quote to our customer based on the complexity</div>
+<div class="col-md-12 well text-success"><b>Step 4</b><br/>The customer will review the quote and then will approve for conversion</div>
+<div class="col-md-12 well text-success"><b>Step 5</b><br/>Pilti goes ahead with the conversion and delivers the output files to the customer</div>
+<div class="col-md-12 well text-success"><b>Step 6</b><br/>Customer reviews the files with ereaders Kindle, iPad, Adobe Digital Editions, etc.</div>
+<div class="col-md-12 well text-success"><b>Step 7</b><br/>If any revisions are needed, the customer will send the list of revisions to Pilti</div>
+<div class="col-md-12 well text-success"><b>Step 8</b><br/>Pilti will update the revisions and sends the revised files to the customer</div>
+<div class="col-md-12 well text-success"><b>Step 9</b><br/>Once the customer approves the files, Pilti will raise an invoice for the conversion work</div>
+</div>
+</div>
+<?php include_once 'footer.php';?>
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
