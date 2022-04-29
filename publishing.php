@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Pilti - Services </title>
+<title>PiltiSmart - Services </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
@@ -52,7 +52,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li>
-                <a href="pilticloud.php">My Pilti</a>
+                <a href="pilticloud.php">My PiltiSmart</a>
               </li>
             </ul>
 	          </div>
@@ -72,17 +72,20 @@
 <div class="wpb_text_column wpb_content_element  tcs-br-none" >
 <div class="wpb_wrapper">
 <h2 class="text-center text-success"><b>Finest epub conversion services for your files</b></h2>
-<p class="text-info text-center">Don&#8217;t trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and<br /> trained team at Pilti is prepared to provide customized conversion services with advanced epub conversion<br /> technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+<p class="text-info text-center">Don&#8217;t trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and<br /> trained team at PiltiSmart is prepared to provide customized conversion services with advanced epub conversion<br /> technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
 </div>
+<p>&#160;</p>
+<center>
 <div class="container">
 <table>
   <tr>
- <td><img  class="img-rounded" src="../img-epub/book-holding.jpg" alt="image" /><p class="text-center text-danger"><b>Physical Books</b></p></td>
+ <td><img  class="img-rounded" src="../img-epub/book-holding.jpg" alt="image" /><p class="text-center text-danger"><br/><b>Physical Books</b></p></td>
  <td><img  class="img-thumbnail" src="../img-epub/arrow.png" alt="image" /></td>
- <td><img  class="img-rounded" src="../img-epub/epub-hold.jpg" alt="image" /><p class="text-center text-danger"><b>Digital Books</b></p></td>
+ <td><img  class="img-rounded" src="../img-epub/epub-hold.jpg" alt="image" /><p class="text-center text-danger"><br/><b>Digital Books</b></p></td>
  </tr>
 </table>
 </div>
+</center>
 <p></p>  
 <div class="container well">
 <h2 class="text-success text-center">What is an epub conversion service?</h2>
@@ -131,15 +134,15 @@
 <div class="container text-center">
 <h2 class="text-success text-center">How does epub conversion work?</h2>
 <p class="text-center">Following is the general process we follow.</p>
-<div class="col-md-12 well text-success"><b>Step 1</b><br/>Customers send input files to Pilti via FTP (File Transfer Protocol) or WeTransfer (Free website for uploading and downloading files)</div>
+<div class="col-md-12 well text-success"><b>Step 1</b><br/>Customers send input files to PiltiSmart via FTP (File Transfer Protocol) or WeTransfer (Free website for uploading and downloading files)</div>
 <div class="col-md-12 well text-success"><b>Step 2</b><br/>For eBook conversion, we need the input materials as editable PDF/Word Document/InDesign/Hard Book/Quark Xpress, Cover image, and eISBN</div>
-<div class="col-md-12 well text-success"><b>Step 3</b><br/>Pilti will then download the input files and send the quote to our customer based on the complexity</div>
+<div class="col-md-12 well text-success"><b>Step 3</b><br/>PiltiSmart will then download the input files and send the quote to our customer based on the complexity</div>
 <div class="col-md-12 well text-success"><b>Step 4</b><br/>The customer will review the quote and then will approve for conversion</div>
-<div class="col-md-12 well text-success"><b>Step 5</b><br/>Pilti goes ahead with the conversion and delivers the output files to the customer</div>
+<div class="col-md-12 well text-success"><b>Step 5</b><br/>PiltiSmart goes ahead with the conversion and delivers the output files to the customer</div>
 <div class="col-md-12 well text-success"><b>Step 6</b><br/>Customer reviews the files with ereaders Kindle, iPad, Adobe Digital Editions, etc.</div>
-<div class="col-md-12 well text-success"><b>Step 7</b><br/>If any revisions are needed, the customer will send the list of revisions to Pilti</div>
-<div class="col-md-12 well text-success"><b>Step 8</b><br/>Pilti will update the revisions and sends the revised files to the customer</div>
-<div class="col-md-12 well text-success"><b>Step 9</b><br/>Once the customer approves the files, Pilti will raise an invoice for the conversion work</div>
+<div class="col-md-12 well text-success"><b>Step 7</b><br/>If any revisions are needed, the customer will send the list of revisions to PiltiSmart</div>
+<div class="col-md-12 well text-success"><b>Step 8</b><br/>PiltiSmart will update the revisions and sends the revised files to the customer</div>
+<div class="col-md-12 well text-success"><b>Step 9</b><br/>Once the customer approves the files, PiltiSmart will raise an invoice for the conversion work</div>
 </div>
 </div>
 <?php include_once 'footer.php';?>

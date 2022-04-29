@@ -5,16 +5,16 @@
 			  <div class="widget">
 				<h5 class="widgetheading">Our Contact</h5>
 				<address>
-					<strong>Pilti</strong><br> 78 South Veli Street<br> Madurai - 625001<br>India.</address>
-					<p><i class="icon-phone"></i> +91 (452) 2339787<br>
-					<i class="icon-envelope-alt"></i> enquiry@pilti.in</p>
+					<strong>PiltiSmart</strong><br> 143 South Veli Street<br>Tamil Nadu<br> Madurai - 625001<br>India.</address>
+					<p><i class="icon-phone"></i> +91 98948 63127<br>+91 98654 08655<br>
+					<i class="icon-envelope-alt"></i></p>
 				</div>
 			</div>
 			<div class="col-lg-3">
 				<div class="widget">
 					<h5 class="widgetheading">Ireland Contact</h5>
 					<address>
-					  <strong>Pilti</strong><br>104, Semple Court<br> Capel Street Dublin 01<br>Ireland.</address>
+					  <strong>PiltiSmart</strong><br>104, Semple Court<br> Capel Street Dublin 01<br>Ireland.</address>
 					<p><i class="icon-phone"></i> +353 892345949<br>
 					  <i class="icon-envelope-alt"></i> enquiry_ireland@pilti.in</p>
 				
@@ -47,7 +47,7 @@
 					<a href="#">SmartySwitch Prototype completed</a>
 				  </li>
 				  <li>
-					<a href="#">Pilti mobile app under develpment</a>
+					<a href="#">PiltiSmart mobile app under develpment</a>
 				  </li>
 				  <li>
 					<a href="#">SmartyTV prototype under develpment</a>
@@ -62,7 +62,7 @@
 			<div class="row">
 			  <div class="col-lg-6">
 				<div class="copyright">
-				  <p><span>© Pilti 2021 All right reserved.</p>
+				  <p><span>© PiltiSmart 2022 All right reserved.</p>
 				</div>
 			  </div>
 			  <div class="col-lg-6">

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Pilti - Services </title>
+<title>PiltiSmart - Services </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
@@ -52,7 +52,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li>
-                <a href="pilticloud.php">My Pilti</a>
+                <a href="pilticloud.php">My PiltiSmart</a>
               </li>
             </ul>
           </div>
@@ -111,7 +111,7 @@
             What we offer
           </h3>
           <p>
-          Pilti offers a wide verity of smart devices and services that will enhance the user smart experiences. Whether it is your home or office, our products make them smart and reliable especially in device functionalities, communication and security. We offer a complete end-to- end IoT smart solutions, our customers have access to a comprehensive customer dashboards to user friendly tools through desktop apps and mobile apps
+          PiltiSmart offers a wide verity of smart devices and services that will enhance the user smart experiences. Whether it is your home or office, our products make them smart and reliable especially in device functionalities, communication and security. We offer a complete end-to- end IoT smart solutions, our customers have access to a comprehensive customer dashboards to user friendly tools through desktop apps and mobile apps
           </p>
 		  <br/>
 		  <br/>

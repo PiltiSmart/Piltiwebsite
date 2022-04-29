@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Pilti - Everything can be SMART </title>
+  <title>PiltiSmart - Everything can be SMART </title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="description">
   <!-- css -->
@@ -49,7 +49,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li>
-                <a href="pilticloud.php">My Pilti</a>
+                <a href="pilticloud.php">My PiltiSmart</a>
               </li>
             </ul>
           </div>
@@ -63,7 +63,7 @@
           <li>
             <img alt="" src="img/slides/1.jpg">
             <div class="flex-caption wow fadeInLeft animated" data-wow-animation-name="none">
-              <h3>Pilti Smart</h3>
+              <h3>PiltiSmart</h3>
               <p>...Making Devices Smart...</p>
             </div>
           </li>
@@ -81,10 +81,10 @@
       <div class="container text-center">
         <hr>
         <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;letter-spacing: 0px;line-height: 20px;"> 
-          Pilti<sup>®</sup> offers a wide variety of smart devices for Smart Home, Smart Office, Smart Industries and for other Smart ideas
+          PiltiSmart<sup>®</sup> offers a wide variety of smart devices for Smart Home, Smart Office, Smart Industries and for other Smart ideas
           <hr>
           <li style="text-align:left"> &emsp; Whether it is your home, office or factory, our products make them smart and reliable!</li>
-          <li style="text-align:left" > &emsp; Pilti's advanced device Functionalities, Analytics and Security ensure our Customers’ comfort at their finger tips</li> 
+          <li style="text-align:left" > &emsp; PiltiSmart's advanced device Functionalities, Analytics and Security ensure our Customers’ comfort at their finger tips</li> 
           <li style="text-align:left"> &emsp; We deliver E2E IoT Smart Solutions, user friendly Tools and eye-catching Dashboards</li>
         </h5>
         <hr>
@@ -172,7 +172,7 @@
                  <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
                 <div class="box-area">
                   <h3>Smart Home</h3>
-                  <p style="text-align: justify;"> Pilti can bring the latest technologies in smart lighting, smart switches, smart TV, smart security and smart temperature 
+                  <p style="text-align: justify;"> PiltiSmart can bring the latest technologies in smart lighting, smart switches, smart TV, smart security and smart temperature 
                     control to your home. We work with architects, builders and electricians to provide a hassle-free turnkey
                     solutions </p>
                 </div>
@@ -182,7 +182,7 @@
                 <span class="icons c1 fa fa-building" style="font-style: italic"></span> -->
                 <div class="box-area">
                   <h3>Smart Office</h3>
-                  <p style="text-align: justify;"> Pilti's Smart Office adds value in different areas of the business,
+                  <p style="text-align: justify;"> PiltiSmart's Smart Office adds value in different areas of the business,
                     ranging from  energy-savings and efficient utilization of resources. We aim at generating value or savings on
                     water, heating, cooling, and electricity spending </p>
                 </div>
@@ -192,7 +192,7 @@
                 <span class="icons"><img src="img/farm.png"></span> -->
                 <div class="box-area">
                   <h3>Smart Farming</h3>
-                  <p style="text-align: justify;">Pilti helps farmers to optimize utilization
+                  <p style="text-align: justify;">PiltiSmart helps farmers to optimize utilization
                     of land, water, fertilizers and other resorces at minimum cost. Our Smart Farming solution offers automated farming techniques,
                     data collection and crop monitoring using sensor-networks to cater
                     better farming conditions.</p>
@@ -202,7 +202,7 @@
                 <!-- <span class="icons c4 fas fa-chalkboard-teacher style=" font-style: italic"></span> -->
                 <div class="box-area">
                   <h3>Smart Schools</h3>
-                  <p style="text-align: justify;">Pilti's Smart School will allow students and educators to have smart interactions and better learning plans.
+                  <p style="text-align: justify;">PiltiSmart's Smart School will allow students and educators to have smart interactions and better learning plans.
                   </p>
                 </div>
               </div>
@@ -272,5 +272,4 @@
   <script src="js/custom.js"></script>
   <script src="js/owl-carousel/owl.carousel.js"></script>
 </body>
-
 </html>

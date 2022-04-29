@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pilti - Privacy </title>
+    <title>PiltiSmart - Privacy </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="http://webthemez.com" />
@@ -44,7 +44,7 @@
                             <li class="active"><a href="services.php">Services</a></li>
                             <li><a href="pricing.php">Pricing</a></li>
                             <li><a href="contact.php">Contact</a></li>
-                            <li><a href="pilticloud.php">Pilti Cloud</a></li>
+                            <li><a href="pilticloud.php">PiltiSmart Cloud</a></li>
                         </ul>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
 
                     <div class="at-above-post-page addthis_tool" data-url="https://design.org/privacy-policy/"></div>
                     <p>Our Privacy Policy was last updated on 18 June 2021. It governs the privacy terms of our
-                        website, located at pilti.in, and the tools and forms we provide you (the “Website” or the
+                        website, located at PiltiSmart.com, and the tools and forms we provide you (the “Website” or the
                         “Service”).</p>
 
 
@@ -265,13 +265,13 @@
 
 
 
-                    <p>If you are from the European Economic Area (EEA), pilti.in legal basis for collecting and using
+                    <p>If you are from the European Economic Area (EEA), PiltiSmart.com legal basis for collecting and using
                         the personal information described in this Privacy Policy depends on the Personal Data we
                         collect and the specific context in which we collect it.</p>
 
 
 
-                    <p>Pilti.in may process your Personal Data because:</p>
+                    <p>PiltiSmart.com may process your Personal Data because:</p>
 
 
 
@@ -290,7 +290,7 @@
 
 
                     <p>If you are a resident of the European Economic Area (EEA), you have certain data protection
-                        rights. pilti.in aims to take reasonable steps to allow you to correct, amend, delete, or
+                        rights. PiltiSmart.com aims to take reasonable steps to allow you to correct, amend, delete, or
                         limit the use of your Personal Data.</p>
 
 
@@ -315,7 +315,7 @@
                         <li>The right to data portability. You have the right to be provided with a copy of your
                             Personal Data in a structured, machine-readable and commonly used format.</li>
                         <li>The right to withdraw consent. You also have the right to withdraw your consent at any time
-                            where pilti.in relied on your consent to process your personal information.</li>
+                            where PiltiSmart.com relied on your consent to process your personal information.</li>
                     </ul>
 
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Pilti - Pricing</title>
+<title>PiltiSmart - Pricing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
@@ -50,7 +50,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li>
-                <a href="pilticloud.php">My Pilti</a>
+                <a href="pilticloud.php">My PiltiSmart</a>
               </li>
             </ul>
 	          </div>

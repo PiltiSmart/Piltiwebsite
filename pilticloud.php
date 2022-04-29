@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Pilti - My Pilti </title>
+	<title>PiltiSmart - My PiltiSmart </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="" />
 	<meta name="author" content="http://webthemez.com" />
@@ -196,7 +196,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li class="active">
-                <a href="pilticloud.php">My Pilti</a>
+                <a href="pilticloud.php">My PiltiSmart</a>
               </li>
             </ul>
 			          </div>
@@ -213,8 +213,8 @@
 						<li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-cogs"></i> IoT Board</a></li>
 						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-desktop" aria-hidden="true"></i> WebTop</a></li>
 						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab" data-toggle="tab"><i></i> </a></li>
-						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-external-link" aria-hidden="true"></i> ⬇  Pilti external links ⬇ </a></li>
-						<li role="presentation"><a href="#" onclick="return theFunction('https://teams.microsoft.com/_#/');"><i class="fa fa-users"></i>Pilti Teams</a></li>
+						<li role="presentation"><a href="#Section5" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-external-link" aria-hidden="true"></i> ⬇  PiltiSmart external links ⬇ </a></li>
+						<li role="presentation"><a href="#" onclick="return theFunction('https://teams.microsoft.com/_#/');"><i class="fa fa-users"></i>PiltiSmart Teams</a></li>
 						<li role="presentation"><a href="#"
 						 onclick="return theFunction('https://pilti.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SD&selectedIssue=SD-165&assignee=608f9ac0c87b5500699b6ec3');"><i class=" fa fa-tasks" aria-hidden="true"></i>Jira Board</a></li>
 						<li role="presentation"><a href="#" onclick="return theFunction('https://bitbucket.org/dashboard/overview');"><i class="fa fa-bitbucket" aria-hidden="true"></i>Code Repository</a></li>

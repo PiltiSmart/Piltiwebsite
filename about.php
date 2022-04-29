@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Pilti - About </title>
+	<title>PiltiSmart - About </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="" />
 	<meta name="author" content="http://webthemez.com" />
@@ -54,7 +54,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li>
-                <a href="pilticloud.php">My Pilti</a>
+                <a href="pilticloud.php">My PiltiSmart</a>
               </li>
             </ul>
           </div>
@@ -73,15 +73,15 @@
 								<h3>We are awesome <span class="color">T-E-A-M</span></h3>
 								<p style="text-align: justify;">Everyone says it, but in our case it’s true: our team is
 									the secret to our success. Each of our employees is amazing in their own right, but
-									together they are what makes Pilti such a fun and rewarding place to work. The Pilti
+									together they are what makes PiltiSmart such a fun and rewarding place to work. The PiltiSmart
 									team is a tight-knit, talented group with a shared vision of delivering consistently
 									great results for our clients, as well as ensuring the company is a fun, inclusive,
 									challenging place to work and develop a rewarding career</p>
 								<p>We’re very proud of the team we’ve built – there’s more than ten of us now but it
-									still feels like it did when there were just a few of us. Pilti has always been an
+									still feels like it did when there were just a few of us. PiltiSmart has always been an
 									company defined by bringing together talented people with a shared vision and
 									passion for helping us to be the best we can be for our clients. But that doesn’t
-									mean Pilti is a cookie-cutter company. All of our employees are unique individuals
+									mean PiltiSmart is a cookie-cutter company. All of our employees are unique individuals
 									who are united by a set of five core values that apply to everything we do within
 									the company</p>
 							</div>
@@ -172,7 +172,7 @@
 							<div class="block-heading-two">
 								<h3><span>Why Choose Us?</span></h3>
 							</div>
-							<p>Pilti Group is committed to helping its clients reach their goals, to personalising their
+							<p>PiltiSmart Group is committed to helping its clients reach their goals, to personalising their
 								smart experiences, to providing an innovative environment, and to making a difference.
 							</p>
 							<ul>
@@ -203,8 +203,8 @@
 									<div id="collapseOne-alt3" class="panel-collapse collapse">
 										<!-- Panel body -->
 										<div class="panel-body">
-											Fully managed smart home service with Pilti smart devices. Optimization and
-											Recommendations through Pilti’s AI capabilities.
+											Fully managed smart home service with PiltiSmart devices. Optimization and
+											Recommendations through PiltiSmart’s AI capabilities.
 										</div>
 									</div>
 								</div>
@@ -219,9 +219,9 @@
 									</div>
 									<div id="collapseTwo-alt3" class="panel-collapse collapse">
 										<div class="panel-body">
-											Fully Managed smart office service with Pilti smart devices. Remote device
+											Fully Managed smart office service with PiltiSmart devices. Remote device
 											management, monitoring, data analytics with IOT data, auto scheduling with
-											pattern matching and early fault detection of devices using Pilti’s ML
+											pattern matching and early fault detection of devices using PiltiSmart’s ML
 											models and AI capabilities
 										</div>
 									</div>
@@ -237,10 +237,10 @@
 									</div>
 									<div id="collapseThree-alt3" class="panel-collapse collapse">
 										<div class="panel-body">
-											Fully managed smart farming service with Pilti smart devices. Remote weather
+											Fully managed smart farming service with PiltiSmart devices. Remote weather
 											monitoring Remote device management, monitoring, data analytics with IOT
 											data, auto scheduling with pattern matching and early fault detection of
-											devices using Pilti’s ML models and AI capabilities.
+											devices using PiltiSmart’s ML models and AI capabilities.
 										</div>
 									</div>
 								</div>
@@ -255,7 +255,7 @@
 									</div>
 									<div id="collapseFour-alt3" class="panel-collapse collapse">
 										<div class="panel-body">
-											Fully managed smart school service with Pilti smart devices. Virtual classrooms,
+											Fully managed smart school service with PiltiSmart devices. Virtual classrooms,
 											student tracking wristbands, smart attendance, play based ap development and
 											much more
 										</div>

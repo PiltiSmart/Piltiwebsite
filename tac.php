@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pilti - Terms and Conditions </title>
+    <title>PiltiSmart - Terms and Conditions </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="http://webthemez.com" />
@@ -44,7 +44,7 @@
                             <li class="active"><a href="services.php">Services</a></li>
                             <li><a href="pricing.php">Pricing</a></li>
                             <li><a href="contact.php">Contact</a></li>
-                            <li><a href="pilticloud.php">Pilti Cloud</a></li>
+                            <li><a href="pilticloud.php">PiltiSmart Cloud</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,8 +64,8 @@
 
 
 
-                    <p>The following Terms and Conditions apply to all products and services provided by Pilti Group
-                        (hereinafter referred to as Pilti)&nbsp;</p>
+                    <p>The following Terms and Conditions apply to all products and services provided by PiltiSmart Group
+                        (hereinafter referred to as PiltiSmart)&nbsp;</p>
 
 
 
@@ -78,17 +78,17 @@
 
 
                     <p>You agree that: You have the authority to enter into this contract on behalf of yourself, your
-                        company or your organization. You agree to provide pilti with everything that Pilti needs to complete
-                        the project including text, images and other information as and when pilti needs it, and in the
-                        format that Pilti asks for. You’ll review pilti's work and provide feedback and approval in a timely
+                        company or your organization. You agree to provide PiltiSmart with everything that PiltiSmart needs to complete
+                        the project including text, images and other information as and when PiltiSmart needs it, and in the
+                        format that PiltiSmart asks for. You’ll review PiltiSmart's work and provide feedback and approval in a timely
                         manner. You also agree to stick to the payment schedule set out in these terms and conditions.
                     </p>
 
 
 
-                    <p>Pilti team provide the services in a professional and timely manner. Along the way team will endeavour to meet
-                        all the deadlines set but team Pilti team can’t be responsible for a missed deadline if materials have been
-                        supplied late or have not approved or signed off the work on-time at any stage. Pilti will maintain
+                    <p>PiltiSmart team provide the services in a professional and timely manner. Along the way team will endeavour to meet
+                        all the deadlines set but team PiltiSmart team can’t be responsible for a missed deadline if materials have been
+                        supplied late or have not approved or signed off the work on-time at any stage. PiltiSmart will maintain
                         the confidentiality of any information provided.</p>
 
 
@@ -100,7 +100,7 @@
                     <p>If there is a hard deadline for your project, you must communicate it clearly up front before the
                         project begins. It is always my intention to complete your project on time. Revisions and your
                         response times play a major role in the amount of time it takes to complete your project.
-                        Therefore, the project completion date provided by Pilti is not a guarantee.</p>
+                        Therefore, the project completion date provided by PiltiSmart is not a guarantee.</p>
 
 
 
@@ -109,7 +109,7 @@
 
 
                     <p>These Terms and Conditions allow for up to three sets of revisions unless agreed otherwise prior
-                        to starting the project.&nbsp; Extra revisions are subject to additional charges at Pilti's
+                        to starting the project.&nbsp; Extra revisions are subject to additional charges at PiltiSmart's
                         discretion. &nbsp;</p>
 
 
@@ -136,7 +136,7 @@
 
                     <p>If a choice of designs is presented and one is chosen for your project, only that solution is
                         deemed to be given by us as fulfilling the contract. All other designs remain the property of
-                        Pilti, unless specifically agreed in writing.</p>
+                        PiltiSmart, unless specifically agreed in writing.</p>
 
 
 
@@ -151,7 +151,7 @@
 
 
                     <p>It is the Client’s responsibility to check devices and dashboards for accuracy in all respects
-                        including but not visual. Pilti is not liable for
+                        including but not visual. PiltiSmart is not liable for
                         errors or omissions. The Client’s written approval will be taken as
                         confirmation that the project is correct and complete.</p>
 
@@ -163,11 +163,11 @@
 
                     <p>Should something happen for any reason whatsoever that causes you to cancel this project once it
                         has begun, you are completely free to do so. You will simply be billed for any work completed up
-                        to the point of cancellation, and Pilti will send you invoice for any work completed up to that point.</p>
+                        to the point of cancellation, and PiltiSmart will send you invoice for any work completed up to that point.</p>
 
 
 
-                    <p>In the unlikely event that some life altering event happens to cause pilti to cancel this project, pilti
+                    <p>In the unlikely event that some life altering event happens to cause PiltiSmart to cancel this project, PiltiSmart
                         will hand over any work completed up to the point of cancellation and refund you for any
                         payments made on incomplete work.</p>
 
@@ -182,7 +182,7 @@
 
 
 
-                    <p>Copyright is retained by Pilti on all design work including words, pictures, ideas,
+                    <p>Copyright is retained by PiltiSmart on all design work including words, pictures, ideas,
                         visuals and illustrations until all costs have been settled. When your final payment has
                         cleared, copyright will be automatically assigned as follows:</p>
 
@@ -214,16 +214,16 @@
 
 
 
-                    <p>Publication and/or release of work done by Pilti on behalf of the client, may not take
+                    <p>Publication and/or release of work done by PiltiSmart on behalf of the client, may not take
                         place before cleared funds have been received.</p>
 
 
 
-                    <p>Pilti reserves the right to charge statutory interest of 12% under the late payment legislation on overdue balances.</p>
+                    <p>PiltiSmart reserves the right to charge statutory interest of 12% under the late payment legislation on overdue balances.</p>
 
 
 
-                    <p>Pilti is responsible for the payment of all government taxes with respect to the services
+                    <p>PiltiSmart is responsible for the payment of all government taxes with respect to the services
                         she performs for the Client</p>
 
 
@@ -232,8 +232,8 @@
 
 
 
-                    <p>Pilti will not be responsible for any damages your business may suffer. Pilti can not
-                        guarantee that any work will be error-free and so Pilti can’t be liable to clinets or any third-party for
+                    <p>PiltiSmart will not be responsible for any damages your business may suffer. PiltiSmart can not
+                        guarantee that any work will be error-free and so PiltiSmart can’t be liable to clinets or any third-party for
                         damages, including lost profits, lost savings or other incidental, consequential or special
                         damages. Finally, if any provision of this contract shall be
                         unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable
@@ -242,7 +242,7 @@
 
 
 
-                    <p>Pilti reserves the right to revise its policies, Terms and Conditions at any time.</p>
+                    <p>PiltiSmart reserves the right to revise its policies, Terms and Conditions at any time.</p>
 
 
 
