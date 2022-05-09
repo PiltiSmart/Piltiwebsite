@@ -48,9 +48,6 @@
               <li>
                 <a href="contact.php">Contact</a>
               </li>
-              <li>
-                <a href="pilticloud.php">My PiltiSmart</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -81,7 +78,7 @@
       <div class="container text-center">
         <hr>
         <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;letter-spacing: 0px;line-height: 20px;"> 
-          PiltiSmart<sup>®</sup> offers a wide variety of smart devices for Smart Home, Smart Office, Smart Industries and for other Smart ideas
+          PiltiSmart<sup>®</sup> offers a wide variety of smart devices/services for Smart Home, Smart Office, Smart Industries and Smart Publishing for other Smart ideas
           <hr>
           <li style="text-align:left"> &emsp; Whether it is your home, office or factory, our products make them smart and reliable!</li>
           <li style="text-align:left" > &emsp; PiltiSmart's advanced device Functionalities, Analytics and Security ensure our Customers’ comfort at their finger tips</li> 
@@ -160,24 +157,21 @@
         <div class="row">
           <div class="col-md-12">
             <div class="aligncenter">
-              <h2 class="aligncenter">Our Services</h2>We always try to give people more than what they expect to get. We offer a range of SMART services based on customer needs. Checkout our services below
-            </div><br>
+              <h2 class="aligncenter">Our Services</h2>We always try to give people more than what they expect to get. We offer a range of SMART services based on customer needs. Checkout our services below.</div><br>
           </div>
         </div>
-        <div class="row">
-          <div class="skill-home">
+       <div class="row well">
+<div class="skill-home">
             <div class="skill-home-solid clearfix">
-              <div class="col-md-3 text-center">
+              <div class="col-md-4 text-center">
                 <!-- <span class="icons c1 fas fa-laptop-house style=" font-style: italic"></span>
                  <span class="icons"><img src="img/slides/smart_factory.jpg"></span> -->
                 <div class="box-area">
                   <h3>Smart Home</h3>
-                  <p style="text-align: justify;"> PiltiSmart can bring the latest technologies in smart lighting, smart switches, smart TV, smart security and smart temperature 
-                    control to your home. We work with architects, builders and electricians to provide a hassle-free turnkey
-                    solutions </p>
+                  <p style="text-align: justify;"> PiltiSmart can bring the latest technologies in smart lighting, smart switches, smart TV, smart security and smart temperature control to your home. We work with architects, builders and electricians to provide a hassle-free turnkey solutions.</p>
                 </div>
               </div>
-              <div class="col-md-3 text-center">
+<div class="col-md-4 text-center">
                <!--  <span class="icons"><img src="img/ai.png"></span>
                 <span class="icons c1 fa fa-building" style="font-style: italic"></span> -->
                 <div class="box-area">
@@ -187,7 +181,7 @@
                     water, heating, cooling, and electricity spending </p>
                 </div>
               </div>
-              <div class="col-md-3 text-center">
+<div class="col-md-4 text-center">
                 <!-- <span class="icons c3 fa fa-desktop" style="font-style: italic"></span>
                 <span class="icons"><img src="img/farm.png"></span> -->
                 <div class="box-area">
@@ -198,7 +192,7 @@
                     better farming conditions.</p>
                 </div>
               </div>
-              <div class="col-md-3 text-center">
+              <div class="col-md-4 text-center">
                 <!-- <span class="icons c4 fas fa-chalkboard-teacher style=" font-style: italic"></span> -->
                 <div class="box-area">
                   <h3>Smart Schools</h3>
@@ -206,7 +200,20 @@
                   </p>
                 </div>
               </div>
-            </div>
+              <div class="col-md-4 text-center">
+                <div class="box-area">
+                  <h3>Smart Industries</h3>
+                  <p style="text-align: justify;">Don't trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and trained team at PiltiSmart is prepared to provide customized conversion services with advanced epub conversion technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+</div>
+</div>
+              <div class="col-md-4 text-center">
+                <div class="box-area">
+                  <h3>Smart Publishing</h3>
+                  <p style="text-align: justify;">Don't trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and trained team at PiltiSmart is prepared to provide customized conversion services with advanced epub conversion technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+</div>
+</div>
+
+           </div>
           </div>
         </div>
       </div>
@@ -243,11 +250,11 @@
                 <p style="font-weight: bold">- Michael Scott -</p>
               </div>
               <div class="item active">
-                <p>Machine learning will automate jobs that most people thought could only be done by people</p>
+                <p>Machine learning will automate jobs that most people thought could only be done by people.</p>
                 <p style="font-weight: bold">- Dave Waters -</p>
               </div>
               <div class="item">
-                <p>Computers are able to see, hear, and learn. If you teach them right way</p>
+                <p>Computers are able to see, hear, and learn. If you teach them right way.</p>
                 <p style="font-weight: bold">- Umesh Kandhalu -</p>
               </div>
             </div>

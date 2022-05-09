@@ -53,9 +53,6 @@
               <li>
                 <a href="contact.php">Contact</a>
               </li>
-              <li>
-                <a href="pilticloud.php">My PiltiSmart</a>
-              </li>
             </ul>
           </div>
 				</div>
@@ -166,7 +163,7 @@
 					</div>
 					<br>
 
-					<div class="row">
+					<div class="row-12">
 						<div class="col-md-4">
 							<!-- Heading and para -->
 							<div class="block-heading-two">
@@ -259,13 +256,49 @@
 											student tracking wristbands, smart attendance, play based ap development and
 											much more
 										</div>
+</div>
+</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseFive-alt3">
+												<i class="fa fa-angle-right"></i>Smart Industries
+											</a>
+										</h4>
+									</div>
+								<div id="collapseFive-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Fully managed Smart Industries service with PiltiSmart devices. Virtual Production Areas, Employee's work tracking wristbands, Employee's attendance, work based app development and much more.
+
+
+</div>
+</div>
+</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseSix-alt3">
+												<i class="fa fa-angle-right"></i>Smart Publishing
+											</a>
+										</h4>
+									</div>
+								<div id="collapseSix-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Fully Converted your Publishing services with PiltiSmart Team. Optimization and
+											Recommendations through PiltiSmart’s Teams.
+</div>
+</div>
+</div>
+							<div class="panel">
 									</div>
 								</div>
 							</div>
+</div>
 							<!-- Accordion ends -->
 
 						</div>
-
 						<div class="col-md-4">
 							<div class="block-heading-two">
 								<h3><span>Our Expertise</span></h3>
@@ -299,14 +332,36 @@
 									<span class="sr-only">100% Complete (success)</span>
 								</div>
 							</div>
+							<h6>Smart Industries</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80"
+									aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									<span class="sr-only">100% Complete (success)</span>
+								</div>
+							</div>
+							<h6>Smart Publishing</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+									aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									<span class="sr-only">100% Complete (success)</span>
+								</div>
+
+							</div>
 						</div>
-
+<div class="col-md-12">
+<div class="col-md-3">
+<img class="btn img-responsive" src="img/Suraj.jpg" alt="Emp1" /></div>
+<div class="col-md-3">
+<img class="btn img-responsive" src="img/rishi.jpg" alt="Emp2" /></div>
+<div class="col-md-3">
+<img class="btn img-responsive" src="img/mani.jpg" alt="Emp3" /></div>
+<div class="col-md-3">
+<img class="btn img-responsive" src="img/ashok.jpg" alt="Emp4" /></div>
+</div>
 					</div>
-
-					<br>
+					<br >
 					
-				</div>
-
+	</div>		
 		</section>
 		<?php include_once 'footer.php';?>
 	</div><a class="scrollup fa fa-angle-up active" href="#" style="font-style: italic"></a>

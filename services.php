@@ -51,9 +51,6 @@
               <li>
                 <a href="contact.php">Contact</a>
               </li>
-              <li>
-                <a href="pilticloud.php">My PiltiSmart</a>
-              </li>
             </ul>
           </div>
             </div>
@@ -120,7 +117,7 @@
 	  
 		<div class="row">
 		<div class="skill-home"> <div class="skill-home-solid clearfix"> 
-		<div class="col-md-3 text-center">
+		<div class="col-md-2 text-center">
 		<span class="icons c1"><i class="fa fa-trophy"></i></span> <div class="box-area">
 		<h3>Smart Homes</h3> <p>Smart home - fully managed services for home automation</p></div>
 		</div>
@@ -128,7 +125,7 @@
 		<span class="icons c2"><i class="fa fa-picture-o"></i></span> <div class="box-area">
 		<h3>Smart Offices</h3> <p>Smart office - fully managed services for office automation</p></div>
 		</div>
-		<div class="col-md-3 text-center"> 
+		<div class="col-md-2 text-center"> 
 		<span class="icons c3"><i class="fa fa-desktop"></i></span> <div class="box-area">
 		<h3>Smart Farming</h3> <p>Smart Farming - fully managed services for farm automation</p></div>
 		</div>
@@ -136,6 +133,10 @@
 		<span class="icons c4"><i class="fa fa-globe"></i></span> <div class="box-area">
 		<h3>Smart Schools</h3> <p>Smart School - fully managed services for school automation</p>
 		</div></div>
+		<div class="col-md-2 text-center"> 
+		<span class="icons c2"><i class="fa fa-picture-o"></i></span> <div class="box-area">
+		<h3>Smart Publishing</h3> <p>Smart Publishing - fully managed services for Publishing Digital Services.</p></div>
+		</div>
 		</div></div>
 		</div>
 		 
