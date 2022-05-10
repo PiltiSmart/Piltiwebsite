@@ -107,8 +107,7 @@
                   <p><i class="fa fa-check fa-lg pr-8"></i> SmartyCompTV - A Smart TV with computer optimized for video calling
 <br><br><br><br><br><br><br><br><br>
                     <hr>
-                    <a class="btn btn-purchase" href="pricing.php">Check Pricing</a>
-          </div>
+<a href="#" data-toggle="modal" data-target="#myModal1" value="Close"><button class="btn btn-default">Check Price</button></a></div>
           <div class="col-lg-5 col-sm-5 text-center wow fadeInLeft animated" data-wow-animation-name="none">
 <br><br>
             <div class="about-carousel wow fadeInLeft animated" data-wow-animation-name="none" style="padding:25px">
@@ -147,11 +146,29 @@
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </div>
-    </section>
+</section>
+<div class="col-md-12">
+<div class="modal fade" id="myModal1">
+<div class="modal-dialog modal-sm">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="text-primary">Info</h1>
+</div>
+<div class="modal-body">
+We are working Hard to bring the product to Market. Please check Later.
+</div>
+<div class="modal-footer">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="btn btn-primary">Close</span>
+        </button>
+</div>
+</div>
+</div>
+</div>
+<br >
     <section id="content">
       <div class="container">
         <div class="row">
@@ -203,13 +220,13 @@
               <div class="col-md-4 text-center">
                 <div class="box-area">
                   <h3>Smart Industries</h3>
-                  <p style="text-align: justify;">Don't trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and trained team at PiltiSmart is prepared to provide customized conversion services with advanced epub conversion technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+                  <p style="text-align: justify;">Don't trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and trained team at PiltiSmart is prepared to provide customized conversion services with advanced Smart Publishing Conversion technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
 </div>
 </div>
               <div class="col-md-4 text-center">
                 <div class="box-area">
                   <h3>Smart Publishing</h3>
-                  <p style="text-align: justify;">Don't trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and trained team at PiltiSmart is prepared to provide customized conversion services with advanced epub conversion technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+                  <p style="text-align: justify;">Don't trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and trained team at PiltiSmart is prepared to provide customized conversion services with advanced Smart Publishing Conversion technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
 </div>
 </div>
 

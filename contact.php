@@ -69,6 +69,7 @@
 								Your message has been sent. Thank you!
 							</div>
 						</div>
+
 						<div class="contact-form">
 
 							<form method="post" class="contact">
@@ -88,7 +89,7 @@
 									<textarea class="form-control" rows="6" name="comment" placeholder="" onblur="cError()"></textarea>
 									<i class="fa fa-pencil form-control-feedback"></i>
 								</div>
-								<input type="submit" value="Submit" id="submit" class="submit btn btn-default"">
+								<button type="button" value="Submit" id="submit" class="btn btn-default">Submit</button>
 							</form>
 
 

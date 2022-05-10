@@ -349,14 +349,18 @@
 							</div>
 						</div>
 <div class="col-md-12">
-<div class="col-md-3">
-<img class="btn img-responsive" src="img/Suraj.jpg" alt="Emp1" /></div>
-<div class="col-md-3">
-<img class="btn img-responsive" src="img/rishi.jpg" alt="Emp2" /></div>
-<div class="col-md-3">
-<img class="btn img-responsive" src="img/mani.jpg" alt="Emp3" /></div>
-<div class="col-md-3">
-<img class="btn img-responsive" src="img/ashok.jpg" alt="Emp4" /></div>
+<div class="col-md-3 text-primary">
+<img class="btn img-responsive well" src="img/Suraj.jpg" alt="Emp1" /><br>Micro-Control Programer [IoT]
+</div>
+<div class="col-md-3 text-primary">
+<img class="btn img-responsive well" src="img/rishi.jpg" alt="Emp2" /><br>Technical Lead [IoT]
+</div>
+<div class="col-md-3 text-primary">
+<img class="btn img-responsive well" src="img/mani.jpg" alt="Emp3" /><br>FrontEnd Programmer [IoT]
+</div>
+<div class="col-md-3 text-primary">
+<img class="btn img-responsive well" src="img/ashok.jpg" alt="Emp4" /><br>Backend Technical Lead [IoT]
+</div>
 </div>
 					</div>
 					<br >

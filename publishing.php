@@ -68,8 +68,8 @@
 <div class="wpb_wrapper">
 <div class="wpb_text_column wpb_content_element  tcs-br-none" >
 <div class="wpb_wrapper">
-<h2 class="text-center text-success"><b>Finest epub conversion services for your files</b></h2>
-<p class="text-info text-center">Don&#8217;t trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and<br /> trained team at PiltiSmart is prepared to provide customized conversion services with advanced epub conversion<br /> technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+<h2 class="text-center text-success"><b>Finest Smart Publishing Conversion services for your files</b></h2>
+<p class="text-info text-center">Don&#8217;t trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and<br /> trained team at PiltiSmart is prepared to provide customized conversion services with advanced Smart Publishing Conversion<br /> technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
 </div>
 <p>&#160;</p>
 <center>
@@ -85,11 +85,11 @@
 </center>
 <p></p>  
 <div class="container well">
-<h2 class="text-success text-center">What is an epub conversion service?</h2>
-<p class="text-info text-center"><b>Epub conversion service includes the process of converting digital manuscripts and printed books into ebooks in different publishing formats that are compatible with  popular e-readers like Kobo Reader, Nook Reader, Amazon Kindle, iPad/iPhone, etc</b></p>
+<h2 class="text-success text-center">What is an Smart Publishing Conversion service?</h2>
+<p class="text-info text-center"><b>Smart Publishing Conversion service includes the process of converting digital manuscripts and printed books into ebooks in different publishing formats that are compatible with  popular e-readers like Kobo Reader, Nook Reader, Amazon Kindle, iPad/iPhone, etc</b></p>
 </div>
 <div class="container">
-<h2 class="text-success text-center">Types of epub conversion formats</h2>
+<h2 class="text-success text-center">Types of Smart Publishing Conversion formats</h2>
 <table class="table table-hover">
 <tr>
 <td><p class="text-success"><b>Reflowable Format ePub2/ePub3</b></p></td>
@@ -129,7 +129,7 @@
 </tr> 
 </table>
 <div class="container text-center">
-<h2 class="text-success text-center">How does epub conversion work?</h2>
+<h2 class="text-success text-center">How does Smart Publishing Conversion work?</h2>
 <p class="text-center">Following is the general process we follow.</p>
 <div class="col-md-12 well text-success"><b>Step 1</b><br/>Customers send input files to PiltiSmart via FTP (File Transfer Protocol) or WeTransfer (Free website for uploading and downloading files)</div>
 <div class="col-md-12 well text-success"><b>Step 2</b><br/>For eBook conversion, we need the input materials as editable PDF/Word Document/InDesign/Hard Book/Quark Xpress, Cover image, and eISBN</div>

@@ -140,28 +140,34 @@
 		</div></div>
 		</div>
 		 
- 
-
-        <div class="row service-v1 margin-bottom-40">
-            <div class="col-md-4 md-margin-bottom-40">
+        <div class="col-md-12">
+<table>
+<tr>
+<td>            <div class="col-md-10 md-margin-bottom-40">
                <img class="img-responsive" src="img/service1.jpg" alt="">   
                 <h2>Web Development</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
-            </div>
-            <div class="col-md-4">
-                <img class="img-responsive" src="img/service2.jpg" alt="">            
-                <h2>Mobile Development</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
-            </div>
-            <div class="col-md-4 md-margin-bottom-40">
+            </div></td>
+<td>            <div class="col-md-9 md-margin-bottom-40">
+                <img class="img-responsive" src="img/service2.jpg" alt="">                            <h2>Mobile Development</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>
+            </div></td>
+<tr>
+<td>            <div class="col-md-10 md-margin-bottom-40">
               <img class="img-responsive" src="img/service3.jpg" alt="">  
                 <h2>Responsive Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
-            </div>
-        </div>
+            </div></td>
+<td>            <div class="col-md-9 sm-margin-top-10">
+              <img style="margin-top:1em;" class="img-responsive" src="img/service4.jpg" alt="">
+                <h2>Smart Publishing</h2>
+<p>Don&#8217;t trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and trained team at PiltiSmart is prepared to provide customized conversion services with advanced Smart Publishing Conversion technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+            </div></td>
+</tr>
+</table>
+
         <!-- End Service Blcoks -->
-        
-    </div>
+            </div>
     </section>
 	<?php include_once 'footer.php';?>
 </div>
