@@ -43,6 +43,7 @@
                 <a href="about.php">About Us</a>
               </li>
               <li><a href="services.php">Services</a></li>
+              <li><a href="products.php">Our Products</a></li>
 	      <li class="active">
 		<a href="publishing.php">Publishing</a></li>
               <li>
@@ -51,6 +52,10 @@
               <li>
                 <a href="contact.php">Contact</a>
               </li>
+              <li>
+                <a href="Login.php">Login</a>
+              </li>
+
             </ul>
 	          </div>
             </div>
@@ -68,17 +73,22 @@
 <div class="wpb_wrapper">
 <div class="wpb_text_column wpb_content_element  tcs-br-none" >
 <div class="wpb_wrapper">
-<h2 class="text-center text-success"><b>Finest Smart Publishing Conversion services for your files</b></h2>
+        <div class="col-lg-12 about wow fadeInLeft animated" data-wow-animation-name="none" >
+<h2 class="text-center text-success"><b>Finest Smart Publishing Conversion services for your files</b></h2></div>
+        <div class="col-lg-12 about wow fadeInRight animated" data-wow-animation-name="none" >
 <p class="text-info text-center">Don&#8217;t trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and<br /> trained team at PiltiSmart is prepared to provide customized conversion services with advanced Smart Publishing Conversion<br /> technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+</div>
 </div>
 <p>&#160;</p>
 <center>
 <div class="container">
 <table>
   <tr>
- <td><img  class="img-rounded" src="../img-epub/book-holding.jpg" alt="image" /><p class="text-center text-danger"><br/><b>Physical Books</b></p></td>
+ <td>
+        <div class="col-lg-12 about wow fadeInLeft animated" data-wow-animation-name="none" >
+<img  class="img-rounded" src="../img-epub/book-holding.jpg" alt="image" /><p class="text-center text-danger"><br/><b>Physical Books</b></p></div></td>
  <td><img  class="img-thumbnail" src="../img-epub/arrow.png" alt="image" /></td>
- <td><img  class="img-rounded" src="../img-epub/epub-hold.jpg" alt="image" /><p class="text-center text-danger"><br/><b>Digital Books</b></p></td>
+ <td>        <div class="col-lg-12 about wow fadeInRight animated" data-wow-animation-name="none" ><img  class="img-rounded" src="../img-epub/epub-hold.jpg" alt="image" /><p class="text-center text-danger"><br/><b>Digital Books</b></p></div></td>
  </tr>
 </table>
 </div>

@@ -42,12 +42,16 @@
                 <a href="about.php">About Us</a>
               </li>
               <li><a href="services.php">Services</a></li>
+              <li><a href="products.php">Our Products</a></li>
               <li><a href="publishing.php">Publishing</a></li>
 	      <li class="active">
                 <a href="pricing.php">Pricing</a>
               </li>
               <li>
                 <a href="contact.php">Contact</a>
+              </li>
+              <li>
+                <a href="Login.php">Login</a>
               </li>
             </ul>
 	          </div>
@@ -86,7 +90,7 @@
 						<h5><strong>SmartySwitch</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 699.00</h6>
+						<h6>&#8211;</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
@@ -108,7 +112,7 @@
 						<h5><strong>SmartyTalkCamera</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 1599.00</h6>
+						<h6>&#8211;</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
@@ -130,7 +134,7 @@
 						<h5><strong>SmartyGateway</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 4599.00</h6>
+						<h6>&#8211;</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
@@ -152,7 +156,7 @@
 						<h5><strong>SmartyCompTV - L1</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 9999</h6>
+						<h6>&#8211;</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
@@ -177,7 +181,7 @@
 						<h5><strong>Smart Home</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 1000.00 / month </h6>
+						<h6>&#8211;</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>    
@@ -199,7 +203,7 @@
 						<h5><strong>Smart Office</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 2500 / month</h6>
+						<h6>&#8211;</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
@@ -221,7 +225,7 @@
 						<h5><strong>Smart Farming</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 2000 / month </h6>
+						<h6>&#8211;</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>
@@ -243,7 +247,7 @@
 						<h5><strong>Smart Schools</strong></h5>
 					</div>
 					<div class="pricing-terms">
-						<h6>Rs 5000 / month</h6>
+						<h6>&#8211;</h6>
 					</div>
 					<div class="pricing-container">
 						<ul>

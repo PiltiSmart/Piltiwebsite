@@ -1,0 +1,164 @@
+body
+{
+	font-family: serif;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+a
+{
+	color: inherit;
+	text-decoration: none;
+}
+img
+{
+	max-height: 100%;
+	max-width: 100%;
+	margin: 0px;
+}
+small
+{
+	font-size: 75%;
+}
+em
+{
+	color: inherit;
+}
+strong
+{
+	color: inherit;
+}
+sup
+{
+	font-size:65%;
+	line-height:50%;
+}
+sub
+{
+	font-size:65%;
+	line-height:50%;
+}
+table
+{
+	margin-top:1em;
+	margin-bottom:1em;
+        border-collapse: collapse;
+        width: 100%;
+}
+td
+{
+	padding:0.3em;
+       vertical-align: top;
+}
+hr.hr1 {
+	margin-top:0em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-bottom:2em;
+}
+.box
+{
+width:100%;
+background-color:#012061;
+padding-top:1em;
+}
+.white
+{
+width:100%;
+background-color:#ffffff;
+border:2px solid black;
+}
+.gbox
+{
+background-color:grey;
+padding:4em;
+border:2px solid;
+}
+.h3
+{
+border-bottom:1px solid blue;
+font-family:sans-serif;
+font-size:180%;
+color:#ffffff;
+text-align:left;
+margin-bottom:0em;
+margin-left:0em;
+}
+.desig
+{
+font-family:sans-serif;
+font-size:100%;
+color:#ffffff;
+text-align:left;
+margin-left:0em;
+margin-top:0.3em;
+}
+.imaget
+{
+	text-align:left;
+	margin-top:0em;
+	margin-left:3em;
+}
+.tpara
+{
+	font-family:sans-serif;
+	font-size:90%;
+	margin-top:0.3em;
+	margin-left:2.2em;
+	margin-right:2em;
+	margin-bottom:0em;
+	text-indent:0em;
+	text-align:left;
+}
+.tpara1
+{
+	font-family:sans-serif;
+	font-size:90%;
+	margin-top:1em;
+	margin-left:2em;
+	margin-right:2em;
+	margin-bottom:0em;
+	text-indent:0em;
+	text-align:left;
+}
+span.borb
+{
+	border-bottom:4px solid;
+	border-style:doubled;
+}
+.tparah
+{
+	font-family:sans-serif;
+	font-size:100%;
+	color:#012061;
+	margin-top:1em;
+	margin-left:2em;
+	margin-right:2em;
+	margin-bottom:0.5em;
+	text-indent:0em;
+	text-align:left;
+}
+.thang
+{
+	vertical-align:top;
+	font-family:sans-serif;
+	font-size:80%;
+	margin-top:1em;
+	margin-left:2em;
+	margin-right:2em;
+	margin-bottom:0em;
+	text-indent:0em;
+	text-align:justify;
+}
+span.cf
+{
+vertical-align:top;
+float:left;
+margin-left:-2em;
+margin-right:1em;
+}
+li.sans
+{
+font-family:sans-serif;
+font-size:90%;
+margin-left:0.5em;
+}

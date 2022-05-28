@@ -44,12 +44,16 @@
                 <a href="about.php">About Us</a>
               </li>
               <li><a href="services.php">Services</a></li>
+              <li><a href="products.php">Our Products</a></li>
               <li><a href="publishing.php">Publishing</a></li>
               <li>
                 <a href="pricing.php">Pricing</a>
               </li>
               <li class="active">
                 <a href="contact.php">Contact</a>
+              </li>
+              <li>
+                <a href="Login.php">Login</a>
               </li>
             </ul>
 				          </div>

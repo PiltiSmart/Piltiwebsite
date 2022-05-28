@@ -46,12 +46,16 @@
                 <a href="about.php">About Us</a>
               </li>
               <li><a href="services.php">Services</a></li>
+              <li><a href="products.php">Our Products</a></li>
               <li><a href="publishing.php">Publishing</a></li>
               <li>
                 <a href="pricing.php">Pricing</a>
               </li>
               <li>
                 <a href="contact.php">Contact</a>
+              </li>
+              <li>
+                <a href="Login.php">Login</a>
               </li>
             </ul>
           </div>
@@ -126,30 +130,30 @@
 							<br>
 						
 							<ul style="margin:0 0 10px 0">
-								<li style="padding:0 0 4px 0; font-size:16px;">
+								<li style="padding:0 0 4px 0; font-size:14px;">
 																		
 									Our Customers First!
 								</li>
-								<li style="padding:0 0 4px 0; font-size:16px;">
+								<li style="padding:0 0 4px 0; font-size:14px;">
 									
 									We build products we believe in.
 								</li>
-								<li style="padding:0 0 4px 0; font-size:16px;">
+								<li style="padding:0 0 4px 0; font-size:14px;">
 									
 									We care about what we do.
 								</li>
-								<li style="padding:0 0 4px 0; font-size:16px;">
+								<li style="padding:0 0 4px 0; font-size:14px;">
 									
 									Each person has the opportunity and the obligation to make a
 									difference.
 								</li>
 								</li>
-								<li style="padding:0 0 4px 0; font-size:16px;">
+								<li style="padding:0 0 4px 0; font-size:14px;">
 									
 									We are all in it together to win.
 								</li>
 								</li>
-								<li style="padding:0 0 4px 0; font-size:16px;">
+								<li style="padding:0 0 4px 0; font-size:14px;">
 									
 									We are here to make a positive difference in society, as well as make a profit.
 								</li>
@@ -349,17 +353,17 @@
 							</div>
 						</div>
 <div class="col-md-12">
-<div class="col-md-3 text-primary">
-<img class="btn img-responsive well" src="img/Suraj.jpg" alt="Emp1" /><br>Micro-Control Programer [IoT]
+<div class="col-md-3 text-primary text-center">
+<img class="btn img-responsive well" src="img/Suraj.jpg" alt="Emp1" /><br>Micro-Control Programmer [IoT]<br/><a href="suraj.html" class="btn btn-primary">View Profile</a>
 </div>
-<div class="col-md-3 text-primary">
-<img class="btn img-responsive well" src="img/rishi.jpg" alt="Emp2" /><br>Technical Lead [IoT]
+<div class="col-md-3 text-primary text-center">
+<img class="btn img-responsive well" src="img/rishi.jpg" alt="Emp2" /><br>Technical Lead [IoT]<br/><a href="suraj.html" class="btn btn-primary">View Profile</a>
 </div>
-<div class="col-md-3 text-primary">
-<img class="btn img-responsive well" src="img/mani.jpg" alt="Emp3" /><br>FrontEnd Programmer [IoT]
+<div class="col-md-3 text-primary text-center">
+<img class="btn img-responsive well" src="img/mani.jpg" alt="Emp3" /><br>FrontEnd Programmer [IoT]<br/><a href="suraj.html" class="btn btn-primary">View Profile</a>
 </div>
-<div class="col-md-3 text-primary">
-<img class="btn img-responsive well" src="img/ashok.jpg" alt="Emp4" /><br>Backend Technical Lead [IoT]
+<div class="col-md-3 text-primary text-center">
+<img class="btn img-responsive well" src="img/ashok.jpg" alt="Emp4" /><br>Backend Technical Lead [IoT]<br/><a href="suraj.html" class="btn btn-primary">View Profile</a>
 </div>
 </div>
 					</div>
@@ -384,5 +388,4 @@
 	<script src="js/custom.js"></script>
 	<script src="js/owl-carousel/owl.carousel.js"></script>	
 </body>
-
 </html>

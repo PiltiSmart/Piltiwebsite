@@ -41,12 +41,16 @@
                 <a href="about.php">About Us</a>
               </li>
               <li><a href="services.php">Services</a></li>
+              <li><a href="products.php">Our Products</a></li>
               <li><a href="publishing.php">Publishing</a></li>
               <li>
                 <a href="pricing.php">Pricing</a>
               </li>
               <li>
                 <a href="contact.php">Contact</a>
+              </li>
+              <li>
+                <a href="Login.php">Login</a>
               </li>
             </ul>
           </div>
@@ -155,7 +159,7 @@
 <div class="modal-dialog modal-sm">
 <div class="modal-content">
 <div class="modal-header">
-<h1 class="text-primary">Info</h1>
+<h3 class="text-defualt">Info</h3>
 </div>
 <div class="modal-body">
 We are working Hard to bring the product to Market. Please check Later.
@@ -177,7 +181,7 @@ We are working Hard to bring the product to Market. Please check Later.
               <h2 class="aligncenter">Our Services</h2>We always try to give people more than what they expect to get. We offer a range of SMART services based on customer needs. Checkout our services below.</div><br>
           </div>
         </div>
-       <div class="row well">
+       <div class="row">
 <div class="skill-home">
             <div class="skill-home-solid clearfix">
               <div class="col-md-4 text-center">

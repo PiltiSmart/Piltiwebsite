@@ -44,12 +44,16 @@
               </li>
               <li class="active">
 		<a href="services.php">Services</a></li>
+              <li><a href="products.php">Our Products</a></li>
               <li><a href="publishing.php">Publishing</a></li>
               <li>
                 <a href="pricing.php">Pricing</a>
               </li>
               <li>
                 <a href="contact.php">Contact</a>
+              </li>
+              <li>
+                <a href="Login.php">Login</a>
               </li>
             </ul>
           </div>
@@ -107,8 +111,8 @@
           <h3>
             What we offer
           </h3>
-          <p>
-          PiltiSmart offers a wide verity of smart devices and services that will enhance the user smart experiences. Whether it is your home or office, our products make them smart and reliable especially in device functionalities, communication and security. We offer a complete end-to- end IoT smart solutions, our customers have access to a comprehensive customer dashboards to user friendly tools through desktop apps and mobile apps
+          <p class="text-justify">
+          PiltiSmart offers a wide verity of smart devices and services that will enhance the user smart experiences. Whether it is your home or office, our products make them smart and reliable especially in device functionalities, communication and security. We offer a complete end-to-end IoT smart solutions, our customers have access to a comprehensive customer dashboards to user friendly tools through desktop apps and mobile apps
           </p>
 		  <br/>
 		  <br/>
@@ -117,26 +121,17 @@
 	  
 		<div class="row">
 		<div class="skill-home"> <div class="skill-home-solid clearfix"> 
-		<div class="col-md-2 text-center">
-		<span class="icons c1"><i class="fa fa-trophy"></i></span> <div class="box-area">
-		<h3>Smart Homes</h3> <p>Smart home - fully managed services for home automation</p></div>
+		<div class="col-md-2 text-left">
+		<h3>Smart<br>Homes</h3> <p>Smart Home - Fully managed services for home automation</p></div>
+		<div class="col-md-3 text-left"> 
+		<h3>Smart<br>Offices</h3> <p>Smart Office - Fully managed services for office automation</p></div>
+		<div class="col-md-2 text-left"> 
+		<h3>Smart<br>Farming</h3> <p>Smart Farming - Fully managed services for farm automation</p></div>
+		<div class="col-md-3 text-left"> 
+		<h3>Smart<br>Schools</h3> <p>Smart School - Fully managed services for school automation</p>
 		</div>
-		<div class="col-md-3 text-center"> 
-		<span class="icons c2"><i class="fa fa-picture-o"></i></span> <div class="box-area">
-		<h3>Smart Offices</h3> <p>Smart office - fully managed services for office automation</p></div>
-		</div>
-		<div class="col-md-2 text-center"> 
-		<span class="icons c3"><i class="fa fa-desktop"></i></span> <div class="box-area">
-		<h3>Smart Farming</h3> <p>Smart Farming - fully managed services for farm automation</p></div>
-		</div>
-		<div class="col-md-3 text-center"> 
-		<span class="icons c4"><i class="fa fa-globe"></i></span> <div class="box-area">
-		<h3>Smart Schools</h3> <p>Smart School - fully managed services for school automation</p>
-		</div></div>
-		<div class="col-md-2 text-center"> 
-		<span class="icons c2"><i class="fa fa-picture-o"></i></span> <div class="box-area">
-		<h3>Smart Publishing</h3> <p>Smart Publishing - fully managed services for Publishing Digital Services.</p></div>
-		</div>
+		<div class="col-md-2 text-left"> 
+		<h3>Smart<br>Publishing</h3> <p>Smart Publishing - Fully managed services for Publishing Digital Services.</p></div>
 		</div></div>
 		</div>
 		 
@@ -146,22 +141,22 @@
 <td>            <div class="col-md-10 md-margin-bottom-40">
                <img class="img-responsive" src="img/service1.jpg" alt="">   
                 <h2>Web Development</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
             </div></td>
 <td>            <div class="col-md-9 md-margin-bottom-40">
                 <img class="img-responsive" src="img/service2.jpg" alt="">                            <h2>Mobile Development</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>
             </div></td>
 <tr>
 <td>            <div class="col-md-10 md-margin-bottom-40">
               <img class="img-responsive" src="img/service3.jpg" alt="">  
                 <h2>Responsive Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
             </div></td>
 <td>            <div class="col-md-9 sm-margin-top-10">
               <img style="margin-top:1em;" class="img-responsive" src="img/service4.jpg" alt="">
                 <h2>Smart Publishing</h2>
-<p>Don&#8217;t trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and trained team at PiltiSmart is prepared to provide customized conversion services with advanced Smart Publishing Conversion technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
+<p class="text-justify">Don&#8217;t trouble yourself with the quality struggles and other difficulties in publishing your ebook when the highly skilled and trained team at PiltiSmart is prepared to provide customized conversion services with advanced Smart Publishing Conversion technology at competitive pricing. Contact us now to publish your dream ebook today!</p>
             </div></td>
 </tr>
 </table>
