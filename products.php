@@ -16,6 +16,7 @@
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
+<link href="css/style1.css" rel="stylesheet" />
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,7 +35,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="img/logo.png" alt="ePlogo"/></a>
+                    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="img/logo-new.png" alt="ePlogo"/></a>
                 </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -61,59 +62,35 @@
             </div>
         </div>
 	</header><!-- end header -->
- <div class="container" style="margin-top:10px;">
-   <div class="col-xs-12">
-	<div class="panel">
-<div class="panel-heading">RFID</div>
-<div clas="panel-body">
-       <div class="col-xs-3 col-xs-3 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="img/works/rfid.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+    
+<div class="container" style="margin-top:25px;">
+  <div class="col-md-16 panel"> 
+    <h3>Radio-Frequency IDentification</h3>   
+<div class="row">
+                 <div class="col-md-3 col-md-3 d-flex flex-column align-items-left justify-content-left product-item my-3">
+               <div class="product"> <img src="img/works/rfid.jpg" alt="">
+                  <ul class="d-flex align-items-left justify-content-center list-unstyled icons">
                     <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
                     <li class="icon mx-3"><span class="far fa-heart"></span></li>
                     <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                </ul>
-		</div>
-	</div>
+                    </ul>
+                  </div>
+            </div>
+<div class="col-md-4" style="margin-top:50px;">
+         <p><b>Product description</b>
+<p>Feature:</p>
+<p>1. Features low power consumption, the standby current is less than 30mA.<br >2. Luminous keyboard, convenient to use at dark night.<br >3. Large user capacity, this access controller supports 2,000 users.<br >4. There are card, password, card + password 3 ways to open the door.<br >5. Independent password design, you can use a password that is not related to the card to open the door.</p>
 </div>
-<div class="panel-footer">Get Price</div>
-			</div>
+<div class="col-md-4" style="margin-top:50px;">
+<b>Specification:</b><br >Condition: 100% Brand New<br >Item Type: Access Controller<br >Material: Metal<br >Color: As picture shown<br >Operating Voltage: AC&DC9-28V<br >Static Current: =30mA<br >Reading Range: Approx. 3 - 8cm/1.2-3.1in<br >Capacity: 2000 Users<br >Ambient Temperature: -25&#186;C-60&#186;C<br >Ambient Humidity: 10% - 90%<br >Lock Output: =3A<br >Alarm Output: =20A<br >Output Short Circuit Protection Time: =100&#181;S<br >Open Time: 0 - 99 Seconds (Adjustable)</p>
+<div class="div col-md-12 text-right">
+     <button type="button" class="btn  btn-dark btn-md btn-black">Buy Now</div>
 </div>
-   <div class="col-md-12">
-        <div class="col-xs-3 col-xs-3 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="img/works/switch.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                    <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                </ul>
-		</div>
-	</div>
-			</div>
-   <div class="col-md-12">
-        <div class="col-xs-3 col-xs-3 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="img/works/ring.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                    <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                </ul>
-		</div>
-	</div>
-			</div>
-   <div class="col-md-12">
-        <div class="col-sm-3 col-sm-3 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <img src="img/works/gate.jpg" alt="">
-                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                    <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                    <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                </ul>
-		</div>
-	</div>
-			</div>
 </div>
-<?php include_once 'footer.php';?>
+     </div>
+     </div>
+</div>
+     <?php include_once 'footer.php';?>
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript

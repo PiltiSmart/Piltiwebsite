@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="img/logo.png" alt="ePlogo"/></a>
+                    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="img/logo-new.png" alt="ePlogo"/></a>
                 </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

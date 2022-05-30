@@ -8,7 +8,16 @@
 }
 
 body {
-    background-color: bisque
+    background-color: #ffffff;
+}
+.panel {
+    background-color: #ffffff;
+    color: #666;
+    box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    border-radius: 1em;
+    padding: 20px;
+    border: 1px solid #ccc;
 }
 
 .container {
