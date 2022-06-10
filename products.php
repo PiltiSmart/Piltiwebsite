@@ -21,7 +21,6 @@
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
 </head>
 <body>
 <div id="wrapper">
@@ -55,7 +54,7 @@
                 <a href="contacnt.php">Contact</a>
               </li>
               <li>
-                <a href="login.php">Login</a>
+                <a href="login.php">Pilti Cloud</a>
               </li>
             </ul>
 	          </div>
@@ -65,7 +64,7 @@
     
 <div class="container" style="margin-top:25px;">
   <div class="col-md-16 panel"> 
-    <h3>Radio-Frequency IDentification</h3>   
+    <h3>RFID Scanner</h3>   
 <div class="row">
                  <div class="col-md-3 col-md-3 d-flex flex-column align-items-left justify-content-left product-item my-3">
                <div class="product"> <img src="img/works/rfid.jpg" alt="">
