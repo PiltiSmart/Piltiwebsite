@@ -70,6 +70,7 @@
               <div class="brand-wrapper">
                 <img src="../img/logo-new.png" alt="logo" class="logo">
               </div>
+		<p class="login-card-description1">Welcome to PiltiCloud</p>
               <p class="login-card-description">Sign into your account</p>
               <form action="#!">
                   <div class="form-group">
