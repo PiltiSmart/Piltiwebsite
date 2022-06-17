@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>PiltiSmart - Product</title>
+<title>PiltiSmart - Product Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
- 
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="css/jcarousel.css" rel="stylesheet" />
@@ -18,11 +19,9 @@
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
 </head>
 <body>
 <div id="wrapper">
-
 	<!-- start header -->
 		<header>
         <div class="navbar navbar-default navbar-static-top">
@@ -61,23 +60,51 @@
             </div>
         </div>
 	</header><!-- end header -->
-		<div class="container">
-		<div class="col-md-12">
-<div class="sidebar" style="margin-top:10px;">
-<header>Our Smart Products</header>
-<ul>
-<li><a class="de" href="#menu1"><i class="fas fa-smarthomes"></i>Smart Homes</a></li>
-<li><a class="de" href="#"><i class="fas fa-smartschools"></i>Smart Schools</a></li>
-<li><a class="de" href="#"><i class="fas fa-smartoffices"></i>Smart Offices</a></li>
-<li><a class="de" href="#"><i class="fas fa-smartfarms"></i>Smart Farms</a></li></li>
-<li><a class="de" href="#"><i class="fas fa-smartindustries"></i>Smart Industries</a></li>
-</ul>
+<div class="container-fluid">
+<div class="row">
+<table>
+<tr>
+<td class="bg">
+<div class="sidebar">
+  <ul class="nav nav-tabs nav-stacked">
+    	<li class="active"><a class="de" data-toggle="tab" href="#1">SMART HOMES</a></li>
+    	<li><a class="de" data-toggle="tab" href="#2">SMART SCHOOLS</a></li>
+    	<li><a class="de" data-toggle="tab" href="#3">SMART OFFICES</a></li>
+    	<li><a class="de" data-toggle="tab" href="#4">SMART FARMS</a></li>
+    	<li><a class="de" data-toggle="tab" href="#5">SMART INDUSTRIES</a></li>     
+      </ul>
+</div></td>
+<td class="left">
+  <div class="tab-content">
+    <div id="1" class="tab-pane fade in active">
+      <h3>SMART HOMES</h3>
+      <p>Smart Home - Fully managed services for home automation.</p>
+    </div>
+    <div id="2" class="tab-pane fade">
+      <h3>SMART SCHOOLS</h3>
+      <p>Smart School - Fully managed services for school automation.</p>
+    </div>
+    <div id="3" class="tab-pane fade">
+      <h3>SMART OFFICES</h3>
+      <p>Smart Office - Fully managed services for office automation.</p>
+    </div>    
+<div id="4" class="tab-pane fade">
+      <h3>SMART FARMS</h3>
+      <p>Smart Farming - Fully managed services for farm automation.</p>
+    </div>
+<div id="5" class="tab-pane fade">
+      <h3>SMART INDUSTRIES</h3>
+      <p>Smart Industries - Fully managed services for Industries automation.</p>
+    </div></td>
+</tr>
+</table>
 </div>
- </div>
 </div>
-	<?php include_once 'footer.php';?>
 </div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+</div>
+<?php include_once 'footer.php';?>
+</div>
+<a class="de" href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -92,6 +119,7 @@
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
