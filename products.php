@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css"/>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+<head>
+<meta charset="utf-8">
+<title>PiltiSmart - Product Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://webthemez.com" />
 
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
@@ -14,15 +13,8 @@
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
 
-    <title>PiltiSmart - Product Page</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets1/css/fontawesome.css">
-    <link rel="stylesheet" href="assets1/css/templatemo-style.css">
-    <link rel="stylesheet" href="assets1/css/owl.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
   </head>
 
 <body class="is-preload">
@@ -154,11 +146,11 @@
   <!-- Menu -->
             <nav id="menu">
               <ul>
-                <li><a class="de" href="smarthome.php">Smart Homes</a></li>
-                <li><a class="de" href="smartschool.php">Smart Schools</a></li>
-                <li><a class="de" href="smartoffice.php">Smart Offices</a></li>
-                <li><a class="de" href="smartfarm.php">Smart Farms</a></li>
-                <li><a class="de" href="smartindus.php">Smart Industries</a></li>
+                <li style="font-weight:bold;"><a class="de" href="smarthome.php">Smart Homes</a></li>
+                <li style="font-weight:bold;"><a class="de" href="smartschool.php">Smart Schools</a></li>
+                <li style="font-weight:bold;"><a class="de" href="smartoffice.php">Smart Offices</a></li>
+                <li style="font-weight:bold;"><a class="de" href="smartfarm.php">Smart Farms</a></li>
+                <li style="font-weight:bold;"><a class="de" href="smartindus.php">Smart Industries</a></li>
               </ul>
             </nav>
           </div>
@@ -172,11 +164,12 @@
     ================================================== -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/transition.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/custom1.js"></script>
 
 <script src="js/jquery.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>

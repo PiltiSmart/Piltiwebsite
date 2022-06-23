@@ -49,7 +49,7 @@ button {
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
-    background-color: transparent;
+	background-color: transparent;
 	display: inline-block;
 	padding: 8px 20px;
 	color: #535ba0;
@@ -1275,7 +1275,7 @@ section.buttons .container-fluid {
 
 #menu ul a:hover,
 #menu ul span:hover {
-    color: #535ba0;
+    color: #0b4ae9;
 }
 
 #menu ul a.opener,
@@ -1358,9 +1358,9 @@ section.buttons .container-fluid {
     padding-top: 0;
 }
 ul li:hover a.de{
-	margin-left:20px;
+	margin-left:30px;
 	color: #FC3;
 	padding-right:20px;
-	transition:.2s;
+	transition:.4s;
 	font-weight:bold;
 }
