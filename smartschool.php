@@ -7,13 +7,11 @@
     <meta name="author" content="">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
-
     <title>PiltiSmart - Product Page</title>
 
     <!-- Bootstrap core CSS -->
@@ -47,8 +45,7 @@
                 <a href="about.php">About Us</a>
               </li>
               <li><a href="services.php">Services</a></li>
-              <li class="active">
-		<a href="products.php">Our Products</a></li>
+              <li class="active"><a href="products.php">Our Products</a></li>
 	      <li>
 		<a href="publishing.php">Publishing</a></li>
               <li>
@@ -81,9 +78,9 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="banner-caption">
-                            <h4>Hello!!!!!</h4>
+                            <h4>Smart Schools Products</h4>
                             <span class="text-primary">Welcome to PiltiSmart</span>
-                            <p class="text-info">Our Smart Products for Home, School, Office, farms, Industries.</p>
+                            <p class="text-info">Our Smart device is manage your entire school and generating reports for entire schools.</p>
                             <div class="primary-button">
                               <a href="#">Read More</a>
                             </div>
