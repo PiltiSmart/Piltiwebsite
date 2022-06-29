@@ -32,7 +32,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="img/logo-new.png" alt="logo"/></a>
+                    <a class="navbar-brand" href="index.php"><img src="img/logo-new1.png" alt="logo"/></a>
                 </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -44,7 +44,7 @@
               </li>
               <li class="active">
 		<a href="services.php">Services</a></li>
-              <li><a href="products.php">Our Products</a></li>
+              <li><a href="product-new.php">Our Products</a></li>
               <li><a href="publishing.php">Publishing</a></li>
               <li>
                 <a href="pricing.php">Pricing</a>
@@ -170,6 +170,7 @@
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+
 <script src="js/jquery.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>

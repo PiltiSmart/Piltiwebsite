@@ -12,15 +12,12 @@
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
-  </head>
-
-<body class="is-preload">
+<link rel="stylesheet" href="css/templatemo-style.css">
+</head>
+<body>
 	<!-- start header -->
 		<header>
-        <div class="navbar navbar-expand navbar-static-top">
+        <div class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,7 +25,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="img/logo-new.png" alt="ePlogo"/></a>
+                    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="img/logo-new1.png" alt="ePlogo"/></a>
                 </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -40,7 +37,7 @@
               </li>
               <li><a href="services.php">Services</a></li>
               <li class="active">
-		<a href="products.php">Our Products</a></li>
+		<a href="product-new.php">Our Products</a></li>
 	      <li>
 		<a href="publishing.php">Publishing</a></li>
               <li>
@@ -52,7 +49,6 @@
               <li>
                 <a href="Login.php">PiltiCloud</a>
               </li>
-
             </ul>
 	          </div>
             </div>
@@ -87,7 +83,21 @@
                 </div>
               </div>
             </section>
-
+  <!-- Sidebar -->
+        <div id="sidebar">
+          <div class="inner">
+  <!-- Menu -->
+            <nav id="menu">
+              <ul>
+                <li style="font-weight:bold;"><a class="de" href="smarthome.php">Smart Homes</a></li>
+                <li style="font-weight:bold;"><a class="de" href="smartschool.php">Smart Schools</a></li>
+                <li style="font-weight:bold;"><a class="de" href="smartoffice.php">Smart Offices</a></li>
+                <li style="font-weight:bold;"><a class="de" href="smartfarm.php">Smart Farms</a></li>
+                <li style="font-weight:bold;"><a class="de" href="smartindus.php">Smart Industries</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
             <!-- Services -->
             <section class="services">
               <div class="container-fluid">
@@ -139,24 +149,8 @@
             </section>
          </div>
         </div>
-
-      <!-- Sidebar -->
-        <div id="sidebar">
-          <div class="inner">
-  <!-- Menu -->
-            <nav id="menu">
-              <ul>
-                <li style="font-weight:bold;"><a class="de" href="smarthome.php">Smart Homes</a></li>
-                <li style="font-weight:bold;"><a class="de" href="smartschool.php">Smart Schools</a></li>
-                <li style="font-weight:bold;"><a class="de" href="smartoffice.php">Smart Offices</a></li>
-                <li style="font-weight:bold;"><a class="de" href="smartfarm.php">Smart Farms</a></li>
-                <li style="font-weight:bold;"><a class="de" href="smartindus.php">Smart Industries</a></li>
-              </ul>
-            </nav>
-          </div>
         </div>
-
-    </div>
+</div>
 <?php include_once 'footer.php';?>
 </div>
 <a class="de" href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
@@ -180,5 +174,7 @@
 <script src="js/portfolio/setting.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/custom1.js"></script>
 </body>
 </html>

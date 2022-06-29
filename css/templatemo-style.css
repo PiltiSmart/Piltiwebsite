@@ -84,6 +84,7 @@ section {
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
     min-height: 100vh;
+    min-width: 100vh;
 }
 
 
@@ -915,7 +916,7 @@ section.buttons .container-fluid {
 
 /* Sidebar */
 
-#sidebar {
+#sidebar1 {
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
     -ms-flex-grow: 0;
@@ -931,6 +932,7 @@ section.buttons .container-fluid {
     background-color: #000000;
     position: relative;
     width: 420px;
+    padding-top:10px;
 }
 
 #sidebar > .inner {
@@ -1017,7 +1019,7 @@ section.buttons .container-fluid {
 }
 
 #sidebar.inactive {
-    margin-left: -420px;
+    margin-left: 420px;
 }
 
 @media screen and (max-width: 1680px) {
@@ -1037,7 +1039,7 @@ section.buttons .container-fluid {
         font-size: 24px;
     }
     #sidebar.inactive {
-        margin-left: -380px;
+        margin-left: 0px;
     }
     #sidebar > .inner > #search  {
 	    width: 380px;
@@ -1054,11 +1056,11 @@ section.buttons .container-fluid {
 }
 
 @media screen and (max-width: 1280px) {
-    #sidebar {
+    #sidebar1 {
         box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
         height: 100%;
         left: 0;
-        position: fixed;
+        position: absolute;
         top: 0;
         z-index: 10000;
     }
@@ -1071,7 +1073,7 @@ section.buttons .container-fluid {
         left: 0;
         overflow-x: hidden;
         overflow-y: auto;
-        position: absolute;
+        position: fixed;
         top: 0;
     }
     #sidebar > .inner:after {
@@ -1260,7 +1262,7 @@ section.buttons .container-fluid {
 
 #menu ul a,
 #menu ul span {
-	color: #fff;
+    color: #fff;
     border-bottom: 0;
     cursor: pointer;
     display: block;
@@ -1286,7 +1288,7 @@ section.buttons .container-fluid {
     transition: color 0.2s ease-in-out;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    position: relative;
+    position: absolute;
 }
 
 #menu ul a.opener:before,

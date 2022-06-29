@@ -30,7 +30,7 @@
           <div class="navbar-header">
             <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span
                 class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a
-              class="navbar-brand" href="index.php"><img alt="logo" src="img/logo-new.png"></a>
+              class="navbar-brand" href="index.php"><img alt="logo" src="img/logo-new1.png"></a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -50,7 +50,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li>
-                <a href="login.php">Pilti Cloud</a>
+                <a href="Login.php">Login</a>
               </li>
             </ul>
           </div>

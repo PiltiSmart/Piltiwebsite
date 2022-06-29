@@ -1,0 +1,44 @@
+*
+{
+margin:0;
+padding:0;
+font-family:sans-serif;
+color:white;
+font-size:12px;
+}
+.sidebar
+{
+position:absolute;
+width:250px;
+height:100%;
+background-color:#000000;
+left:0px;
+color:blue;
+padding:1em;
+}
+.sidebar ul li
+{
+color:#fff;
+list-style:none;
+padding:10px 10px;
+border-bottom:0.5px solid #fff;
+}
+.sidebar ul li:hover a.de
+{
+text-color:blue;
+background-color:#000;
+padding-right:20px;
+margin-left:10px;
+transition:.4s;
+}
+#wrapper1 {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    min-height: 100vh;
+}

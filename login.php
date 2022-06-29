@@ -32,7 +32,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="img/logo-new.png" alt="ePlogo"/></a>
+                    <a class="navbar-brand" href="index.php"><img class="img-responsive" src="img/logo-new1.png" alt="ePlogo"/></a>
                 </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -43,7 +43,7 @@
                 <a href="about.php">About Us</a>
               </li>
               <li><a href="services.php">Services</a></li>
-              <li><a href="products.php">Our Products</a></li>
+              <li><a href="product-new.php">Our Products</a></li>
 	      <li><a href="publishing.php">Publishing</a></li>
               <li>
                 <a href="pricing.php">Pricing</a>
@@ -69,7 +69,7 @@
           <div class="col-md-7">
             <div class="card-body">
               <div class="brand-wrapper">
-                <img src="../img/logo-new.png" alt="logo" class="logo">
+                <img src="../img/logo-new1.png" alt="logo" class="logo">
               </div>
               <p class="login-card-description">Sign into your account</p>
               <form action="#!">
