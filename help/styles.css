@@ -4,8 +4,11 @@
     }
 }
 
-
-
 table{
     width: 100%;
+}
+
+b {
+    font-size: 3vw;
+    word-wrap: break-word;
 }
