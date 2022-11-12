@@ -11,9 +11,9 @@ function execPrint($command) {
    print("</pre>");
 }
 if ($queries["username"] == "Manikandan" && $queries["password"] == "123456"){
-   execPrint("sudo git status");
-   execPrint("sudo git pull origin develop");
-   execPrint("sudo git status");
+   execPrint("git status");
+   execPrint("git pull origin develop");
+   execPrint("git status");
 } else{
    print_r("Unverfied");
 }
