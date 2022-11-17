@@ -197,3 +197,8 @@ p {
   justify-content: center;
   padding: 5%;
 }
+
+div {
+  display: flex;
+  justify-content: space-between;
+}
