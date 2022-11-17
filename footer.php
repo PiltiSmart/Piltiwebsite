@@ -36,6 +36,9 @@
 				  <li>
 					<a href="contact.php">Contact us</a>
 				  </li>
+				  <li>
+					<a href="help/help.html">Mobile Help Page</a>
+				  </li>
 				</ul>
 			  </div>
 			</div>			
