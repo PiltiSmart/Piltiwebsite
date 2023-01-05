@@ -39,6 +39,9 @@
 				  <li>
 					<a href="help/help.html">Mobile Help Page</a>
 				  </li>
+				  <li>
+					<a href="wifimanager/index.html/wifimanager.html/style.css">Wifi Manager</a>
+				  </li>
 				</ul>
 			  </div>
 			</div>			

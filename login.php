@@ -52,7 +52,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li class="active">
-                <a href="login.php">Pilti Cloud</a>
+                <a href="login.php">SmartyApp Help</a>
               </li>
             </ul>
 	          </div>
