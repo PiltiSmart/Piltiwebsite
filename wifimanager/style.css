@@ -35,7 +35,7 @@ html {
   }
   
   .card { 
-    background-color: white; 
+    background-color: rgba(255, 255, 255, 0.597); 
     box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
   }
   
@@ -53,7 +53,7 @@ html {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 10px;
     width: 100px;
     margin-right: 10px;
     border-radius: 4px;
@@ -76,7 +76,7 @@ html {
   
   label {
     font-size: 0.9rem; 
-    text-indent: 3%;
+    text-align: left;
   }
   .value{
     font-size: 1.2rem;
@@ -89,9 +89,9 @@ html {
   button {
     border: none;
     color: #FEFCFB;
-    padding: 15px 32px;
+    padding: 11px 30px;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     width: 100px;
     border-radius: 4px;
     transition-duration: 0.4s;
@@ -108,7 +108,3 @@ html {
   .button-off:hover {
     background-color: #252524;
   } 
-  .left{
-position: absolute;
-  }
-  
