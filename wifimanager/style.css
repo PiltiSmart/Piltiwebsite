@@ -11,6 +11,7 @@ html {
   
   p { 
     font-size: 1.4rem;
+   
   }
   
   .topnav { 
@@ -30,7 +31,7 @@ html {
     max-width: 800px; 
     margin: 0 auto; 
     display: grid; 
-    grid-gap: 2rem; 
+    grid-gap: 1.5rem; 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   
@@ -75,7 +76,8 @@ html {
   }
   
   label {
-    font-size: 1.2rem; 
+    font-size: 0.9rem; 
+    text-indent: 3%;
   }
   .value{
     font-size: 1.2rem;
@@ -107,3 +109,7 @@ html {
   .button-off:hover {
     background-color: #252524;
   } 
+  .left{
+position: absolute;
+  }
+  
