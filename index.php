@@ -52,6 +52,9 @@
               <li>
                 <a href="Login.php">Login</a>
               </li>
+              <li>
+                <a href="Mobile_Help.php">Mobile Help</a>
+              </li>
             </ul>
           </div>
         </div>

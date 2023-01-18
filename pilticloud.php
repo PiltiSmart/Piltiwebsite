@@ -198,6 +198,9 @@
               <li class="active">
                 <a href="pilticloud.php">My PiltiSmart</a>
               </li>
+			  <li>
+                <a href="Mobile_Help.php">Mobile Help</a>
+              </li>
             </ul>
 			          </div>
 				</div>

@@ -45,6 +45,9 @@
                             <li><a href="pricing.php">Pricing</a></li>
                             <li><a href="contact.php">Contact</a></li>
                             <li><a href="pilticloud.php">PiltiSmart Cloud</a></li>
+                            <li>
+                <a href="Mobile_Help.php">Mobile Help</a>
+              </li>
                         </ul>
                     </div>
                 </div>
