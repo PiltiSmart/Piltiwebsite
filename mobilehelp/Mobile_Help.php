@@ -54,7 +54,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li class="active">
-                <a href="mobilehelp/Mobile_Help.php">SmartyApp Help</a>
+                <a href="Mobile_Help.php">SmartyApp Help</a>
               </li>
             </ul>
 	          </div>
@@ -168,12 +168,12 @@
             <details>
                 <summary>Products</summary>
                 <ul>
-                    <li><div>
+                    <li1><div>
                         <span><a href="../help/Products/viewProducts.html">View Products List</a></span>
                         <span><a href="https://www.youtube.com/watch?v=JSl06tm1k_w"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li>
+                    </div></li1>
                     </ul>
-            </li>
+            </li1>
             </details>
             <details>
             <summary>Registry</summary>

@@ -134,7 +134,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-li{
+li {
   margin: 5px 0;
   padding: 5px 10px;
   background-color: #dfe7ec;
@@ -198,7 +198,7 @@ p {
   padding: 5%;
 }
 
-  div {
-    display: flex;
-    justify-content: space-between;
-  }
+div {
+  display: flex;
+  justify-content: space-between;
+}

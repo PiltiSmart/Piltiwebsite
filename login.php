@@ -52,7 +52,7 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li class="active">
-                <a href="login.php">SmartyApp Help</a>
+                <a href="login.php">Mobile Help</a>
               </li>
             </ul>
 	          </div>
