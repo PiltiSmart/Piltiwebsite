@@ -14,7 +14,7 @@
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
-<link href="styles.css" rel="stylesheet" />
+
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -63,13 +63,13 @@
 	</header><!-- end header -->
 
             <!-- Service Blcoks -->		
-
+<head><link href="styles.css" rel="stylesheet" /></head>
       <body>
         <h1>Smarty App - Help Topics</h1>
         <details>
         <summary>Users</summary>
                 <ul>
-                    <li1><div>
+                    <li><div>
                         <span>
                             <a href="../help/Users/newCustomerRegistration.html">Register a new User</a>
                         </span>
@@ -77,45 +77,45 @@
                             <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" width="25" height="25"></a>
                         </span>
                     </div>
-                        </li1>
-                    <li1><div>
+                        </li>
+                    <li><div>
                     <span><a href="../help/Users/viewUsers.html">View Users</a></span>
                     <span><a href="https://www.youtube.com/watch?v=v6YhG0hD0og"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li1>
-                    <li1><div>
+                    </div></li>
+                    <li><div>
                        <span><a href="../help/Users/editUsers.html">Update User Details</a></span>
                        <span><a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li1>
-                    <li1><div>
+                    </div></li>
+                    <li><div>
                         <span><a href="../help/Users/changePhoto.html">Add or Update User Photo</a></span>
                         <span><a href="https://www.youtube.com/watch?v=QbElXdgjqz8"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li1>
-                    <li1><div>
+                    </div></li>
+                    <li><div>
                        <span><a href="../help/Users/changePassword.html">Change Password</a></span>
                        <span><a href="https://www.youtube.com/watch?v=mqp1iBb5hKs"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li1>
-                    <li1><div>
+                    </div></li>
+                    <li><div>
                         <span><a href="../help/Users/forgotPassword.html">Forgot Password</a></span>
                         <span><a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li1>
-                    <li1><div>
+                    </div></li>
+                    <li><div>
                         <span><a href="../help/Users/viewUsersAuditLogs.html">View User Actions</a></span>
                         <span><a href="https://www.youtube.com/watch?v=H3BGDTcf52c"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li1>
-                    <li1><div>
+                    </div></li>
+                    <li><div>
                         <span><a href="../help/Users/addUser.html">Add User/Member</a></span>
                         <span><a href="https://www.youtube.com/watch?v=hu-lMYci6Iw"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li1>
-                    <li1><div>
+                    </div></li>
+                    <li><div>
                         <span><a href="../help/Users/changeUserStatus.html">Change UserStatus</a></span>
                         <span><a href="https://www.youtube.com/watch?v=JFQnciO20Hg"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li1>
-                    <li1><div>
+                    </div></li>
+                    <li><div>
                         <span><a href="../help/Users/viewCustomerAuditLogs.html">View Customer Actions</a></span>
                         <span><a href="https://www.youtube.com/watch?v=_zi2o_afp7s"><img src="youtube.png" width="25" height="25"></a></span>
-                    </div></li1>
+                    </div></li>
                 </ul>
-            </li1>
+            </li>
             </details>
             <details>
                 <summary>Devices</summary>
