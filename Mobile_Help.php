@@ -127,7 +127,7 @@
                 </ul>
             </li>
        
-                <summary>Asset's</summary>
+                <summary>Assets</summary>
                 <ul>
                     <li>
                         <a href="../help/Assets/viewTree.html">View Asset Relation tree</a></span>
