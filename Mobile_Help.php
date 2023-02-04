@@ -53,6 +53,8 @@
               <li>
                 <a href="contact.php">Contact</a>
               </li>
+
+              
               <li class="active">
                 <a href="mobilehelp/Mobile_Help.php">SmartyApp Help</a>
               </li>
