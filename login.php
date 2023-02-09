@@ -44,7 +44,7 @@
               </li>
               <li><a href="services.php">Services</a></li>
               <li><a href="product-new.php">Our Products</a></li>
-	      <li><a href="publishing.php">Publishing</a></li>
+	    
               <li>
                 <a href="pricing.php">Pricing</a>
               </li>
