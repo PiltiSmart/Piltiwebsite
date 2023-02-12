@@ -85,7 +85,7 @@
       <div class="container text-center">
         <hr>
         <h5 class="wow fadeInRight animated" data-wow-animation-name="none" style="color:#FFF;letter-spacing: 0px;line-height: 20px;"> 
-          PiltiSmart<sup>®</sup> offers a wide variety of smart devices/services for Smart Home, Smart Office, Smart Industries and Smart Publishing for other Smart ideas
+          PiltiSmart<sup>®</sup> offers  a wide variety of smart devices/services for Smart Home, Smart Office, Smart Industries and Smart Publishing for other Smart ideas
           <hr>
           <li style="text-align:left"> &emsp; Whether it is your home, office or factory, our products make them smart and reliable!</li>
           <li style="text-align:left" > &emsp; PiltiSmart's advanced device Functionalities, Analytics and Security ensure our Customers’ comfort at their finger tips</li> 
