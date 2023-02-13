@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 h1{
+  color: aliceblue;
   font-size: 20px;
   padding-right: 10%;
   padding-left: 10%;
@@ -23,9 +24,14 @@ summary{
     margin-right: 500px;
  }
   span{
-    margin: 5px 0;
-    padding: 5px 10px;
-    border-radius: 3px;
+    background-color: beige;
+    border: 4PX beige;
+    margin: 0px 30px;
+    padding: 3px 9px;
+    border-radius: 1px;
     margin-left: 500px;
+ 
   }
-  
+body{
+    background-color: black;
+  }

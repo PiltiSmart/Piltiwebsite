@@ -66,72 +66,72 @@
 
             <!-- Service Blcoks -->		
 <head><link href="styles.css" rel="stylesheet" /></head>
-<body>
+<body >
      
         <h1>Smarty App - Help Topics</h1>
         
         <summary>Users</summary>
   <li><span><a href="../help/Users/newCustomerRegistration.html">Register a new User</a>
-    <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" width="25" height="25"></a></span></li>
+    <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" style="margin-left: 9.79em; width="25" height="25"></a></span></li>
 <li><span><a href="../help/Users/viewUsers.html">View Users</a>
-    <a href="https://www.youtube.com/watch?v=v6YhG0hD0og"><img src="youtube.png" width="25" height="25"></a></span></li>
+    <a href="https://www.youtube.com/watch?v=v6YhG0hD0og"><img src="youtube.png" style="margin-left: 14em; width="25" height="25"></a></span></li>
     <li><span><a href="../help/Users/editUsers.html">Update User Details</a>
-    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" width="25" height="25"></a></span></li>
+    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 9.7em; width="25" height="25"></a></span></li>
     <li><span><a href="../help/Users/changePhoto.html">Add or Update User Photo</a>
-    <a href="https://www.youtube.com/watch?v=QbElXdgjqz8"><img src="youtube.png" width="25" height="25"></a></span></li>         
+    <a href="https://www.youtube.com/watch?v=QbElXdgjqz8"><img src="youtube.png" style="margin-left: 6.7em; width="25" height="25"></a></span></li>         
     <li><span><a href="../help/Users/changePassword.html">Change Password</a>
-    <a href="https://www.youtube.com/watch?v=mqp1iBb5hKs"><img src="youtube.png" width="25" height="25"></a></span></li>          
+    <a href="https://www.youtube.com/watch?v=mqp1iBb5hKs"><img src="youtube.png" style="margin-left: 10.6em; width="25" height="25"></a></span></li>          
     <li><span><a href="../help/Users/forgotPassword.html">Forgot Password</a>
-    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" width="25" height="25"></a></span></li>
+    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 11em; width="25" height="25"></a></span></li>
     <li><span><a href="../help/Users/viewUsersAuditLogs.html">View User Actions</a>
-    <a href="https://www.youtube.com/watch?v=H3BGDTcf52c"><img src="youtube.png" width="25" height="25"></a></span></li> 
+    <a href="https://www.youtube.com/watch?v=H3BGDTcf52c"><img src="youtube.png" style="margin-left: 10.5em; width="25" height="25"></a></span></li> 
     <li><span><a href="../help/Users/addUser.html">Add User/Member</a>
-    <a href="https://www.youtube.com/watch?v=hu-lMYci6Iw"><img src="youtube.png" width="25" height="25"></a></span></li>        
+    <a href="https://www.youtube.com/watch?v=hu-lMYci6Iw"><img src="youtube.png" style="margin-left: 10.2em; width="25" height="25"></a></span></li>        
     <li><span><a href="../help/Users/changeUserStatus.html">Change UserStatus</a>
-    <a href="https://www.youtube.com/watch?v=JFQnciO20Hg"><img src="youtube.png" width="25" height="25"></a></span></li>      
+    <a href="https://www.youtube.com/watch?v=JFQnciO20Hg"><img src="youtube.png" style="margin-left: 9.8em; width="25" height="25"></a></span></li>      
     <li><span><a href="../help/Users/viewCustomerAuditLogs.html">View Customer Actions</a>
-    <a href="https://www.youtube.com/watch?v=_zi2o_afp7s"><img src="youtube.png" width="25" height="25"></a></li>         
+    <a href="https://www.youtube.com/watch?v=_zi2o_afp7s"><img src="youtube.png" style="margin-left: 8em; width="25" height="25"></a></li>         
           
         </li>
             
         <summary>Devices</summary>
                     <li><span>
-                        <a href="../help/Devices/addDevice.html">Add Device</a>
-                        <a href="https://www.youtube.com/watch?v=skX43IomAHg"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="../help/Devices/addDevice.html">Add Device</a>    
+                        <a href="https://www.youtube.com/watch?v=skX43IomAHg"><img src="youtube.png" style="margin-left: 13.5em; width="25" height="25"></a></span></li>
                      <li><span>   <a href="../help/Devices/viewAttributes.html">View Device Attributes</a>
-                        <a href="https://www.youtube.com/watch?v=rJOyBLuA_Z4"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=rJOyBLuA_Z4"><img src="youtube.png" style="margin-left: 8.2em; width="25" height="25"></a></span></li>
                       <li><span> <a href="../help/Devices/viewTelemetry.html">View Device Telemetry</a>
-                       <a href="https://www.youtube.com/watch?v=5hu9iMQuHnY"><img src="youtube.png" width="25" height="25"></a></span></li>
+                       <a href="https://www.youtube.com/watch?v=5hu9iMQuHnY"><img src="youtube.png" style="margin-left: 8.1em; width="25" height="25"></a></span></li>
                       <li><span> <a href="../help/Devices/deleteDevice.html">Delete Device</a>
-                       <a href="https://www.youtube.com/watch?v=ebx1EStevi8"><img src="youtube.png" width="25" height="25"></a></span></li>
+                       <a href="https://www.youtube.com/watch?v=ebx1EStevi8"><img src="youtube.png" style="margin-left: 12.2em; width="25" height="25"></a></span></li>
                 
             </li>
                <summary>Assets</summary>
                     <li><span><a href="../help/Assets/viewTree.html">View Asset Relation tree</a>
-                        <a href="https://www.youtube.com/watch?v=PxwAOg7qWAw"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=PxwAOg7qWAw"><img src="youtube.png" style="margin-left: 7.7em; width="25" height="25"></a></span></li>
                      <li><span><a href="../help/Assets/addAsset.html">Add Asset</a>
-                        <a href="https://www.youtube.com/watch?v=Uzaq1KlW0Hg"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=Uzaq1KlW0Hg"><img src="youtube.png" style="margin-left: 14.2em; width="25" height="25"></a></span></li>
                       <li><span><a href="../help/Assets/editAssets.html">Edit Asset</a>
-                        <a href="https://www.youtube.com/watch?v=hjhLkFbKATk"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=hjhLkFbKATk"><img src="youtube.png" style="margin-left: 14.2em; width="25" height="25"></a></span></li>
                     <li><span><a href="../help/Assets/pinUnpin.html">How to pin / unpin assets to dashboard</a>
-                        <a href="https://www.youtube.com/watch?v=LDg6OmDHNOY"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=LDg6OmDHNOY"><img src="youtube.png" style="margin-left: 0.4em; width="25" height="25"></a></span></li>
                         <li><span><a href="../help/Assets/deleteAsset.html">Delete Asset</a>
-                        <a href="https://www.youtube.com/watch?v=Aqk2Ttf9cv8"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=Aqk2Ttf9cv8"><img src="youtube.png" style="margin-left: 13em; width="25" height="25"></a></span></li>
                 
             </li>
                <summary>Products</summary>
                     <li><span>
                         <a href="../help/Products/viewProducts.html">View Products List</a>
-                        <a href="https://www.youtube.com/watch?v=JSl06tm1k_w"><img src="youtube.png" width="25" height="25"></a></span></li>    
+                        <a href="https://www.youtube.com/watch?v=JSl06tm1k_w"><img src="youtube.png" style="margin-left: 10em; width="25" height="25"></a></span></li>    
             </li>
             <summary>Registry</summary>
                     <li><span>
                         <a href="../help/registry/viewRegistryEntries.html">View Device Registry details </a>
-                        <a href="https://www.youtube.com/watch?v=voo7uNpdM2Q"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=voo7uNpdM2Q"><img src="youtube.png" style="margin-left: 5.8em; width="25" height="25"></a></span></li>
      <li><span>                   <a href="../help/registry/addRegistryEntry.html">Create Device Registry Entry</a>
-                        <a href="https://www.youtube.com/watch?v=GeP5RNUiCSo"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=GeP5RNUiCSo"><img src="youtube.png" style="margin-left: 5.6em; width="25" height="25"></a></span></li>
      <li><span>               <a href="../help/registry/deleteRegistryEntry.html">Delete Device Registry Entry</a>
-                        <a href="https://www.youtube.com/watch?v=rii-EQaKhV0"><img src="youtube.png" width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=rii-EQaKhV0"><img src="youtube.png" style="margin-left: 5.6em; width="25" height="25"></a></span></li>
                 
 </li>         
         </head>
