@@ -72,21 +72,21 @@
         
         <summary>Users</summary>
   <li><span><a href="../help/Users/newCustomerRegistration.html">Register a new User</a>
-    <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" style="margin-left: 9.6em; width="25" height="25"></a></span></li>
+    <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" style="margin-left: 9.42em; width="25" height="25"></a></span></li>
 <li><span><a href="../help/Users/viewUsers.html">View Users</a>
-    <a href="https://www.youtube.com/watch?v=v6YhG0hD0og"><img src="youtube.png" style="margin-left: 13.8em; width="25" height="25"></a></span></li>
+    <a href="https://www.youtube.com/watch?v=v6YhG0hD0og"><img src="youtube.png" style="margin-left: 13.6em; width="25" height="25"></a></span></li>
     <li><span><a href="../help/Users/editUsers.html">Update User Details</a>
-    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 9.56em; width="25" height="25"></a></span></li>
+    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 9.4em; width="25" height="25"></a></span></li>
     <li><span><a href="../help/Users/changePhoto.html">Add or Update User Photo</a>
-    <a href="https://www.youtube.com/watch?v=QbElXdgjqz8"><img src="youtube.png" style="margin-left: 6.6em; width="25" height="25"></a></span></li>         
+    <a href="https://www.youtube.com/watch?v=QbElXdgjqz8"><img src="youtube.png" style="margin-left: 6.41em; width="25" height="25"></a></span></li>         
     <li><span><a href="../help/Users/changePassword.html">Change Password</a>
-    <a href="https://www.youtube.com/watch?v=mqp1iBb5hKs"><img src="youtube.png" style="margin-left: 10.6em; width="25" height="25"></a></span></li>          
+    <a href="https://www.youtube.com/watch?v=mqp1iBb5hKs"><img src="youtube.png" style="margin-left: 10.4em; width="25" height="25"></a></span></li>          
     <li><span><a href="../help/Users/forgotPassword.html">Forgot Password</a>
-    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 11em; width="25" height="25"></a></span></li>
+    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 10.9em; width="25" height="25"></a></span></li>
     <li><span><a href="../help/Users/viewUsersAuditLogs.html">View User Actions</a>
-    <a href="https://www.youtube.com/watch?v=H3BGDTcf52c"><img src="youtube.png" style="margin-left: 10.5em; width="25" height="25"></a></span></li> 
+    <a href="https://www.youtube.com/watch?v=H3BGDTcf52c"><img src="youtube.png" style="margin-left: 10.4em; width="25" height="25"></a></span></li> 
     <li><span><a href="../help/Users/addUser.html">Add User/Member</a>
-    <a href="https://www.youtube.com/watch?v=hu-lMYci6Iw"><img src="youtube.png" style="margin-left: 10.1em; width="25" height="25"></a></span></li>        
+    <a href="https://www.youtube.com/watch?v=hu-lMYci6Iw"><img src="youtube.png" style="margin-left: 10.06em; width="25" height="25"></a></span></li>        
     <li><span><a href="../help/Users/changeUserStatus.html">Change UserStatus</a>
     <a href="https://www.youtube.com/watch?v=JFQnciO20Hg"><img src="youtube.png" style="margin-left: 9.8em; width="25" height="25"></a></span></li>      
     <li><span><a href="../help/Users/viewCustomerAuditLogs.html">View Customer Actions</a>
@@ -97,13 +97,13 @@
         <summary>Devices</summary>
                     <li><span>
                         <a href="../help/Devices/addDevice.html">Add Device</a>    
-                        <a href="https://www.youtube.com/watch?v=skX43IomAHg"><img src="youtube.png" style="margin-left: 13.5em; width="25" height="25"></a></span></li>
+                        <a href="https://www.youtube.com/watch?v=skX43IomAHg"><img src="youtube.png" style="margin-left: 13.42em; width="25" height="25"></a></span></li>
                      <li><span>   <a href="../help/Devices/viewAttributes.html">View Device Attributes</a>
                         <a href="https://www.youtube.com/watch?v=rJOyBLuA_Z4"><img src="youtube.png" style="margin-left: 8.2em; width="25" height="25"></a></span></li>
                       <li><span> <a href="../help/Devices/viewTelemetry.html">View Device Telemetry</a>
                        <a href="https://www.youtube.com/watch?v=5hu9iMQuHnY"><img src="youtube.png" style="margin-left: 8.1em; width="25" height="25"></a></span></li>
                       <li><span> <a href="../help/Devices/deleteDevice.html">Delete Device</a>
-                       <a href="https://www.youtube.com/watch?v=ebx1EStevi8"><img src="youtube.png" style="margin-left: 12.2em; width="25" height="25"></a></span></li>
+                       <a href="https://www.youtube.com/watch?v=ebx1EStevi8"><img src="youtube.png" style="margin-left: 12.25em; width="25" height="25"></a></span></li>
                 
             </li>
                <summary>Assets</summary>
@@ -158,5 +158,3 @@
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
-</body>
-</html>

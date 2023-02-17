@@ -14,42 +14,67 @@
   <div class="content">
     <div class="card-grid">
       <div class="card">
-        <form action="/" method="POST">
           <h1>PILTISMART WIFI MANAGER</h1>
           <p>
-            <table   align="center">
+            <table align="center">
           <tr>
-            <td></td>
            <td align="right"><label for="ssid">Wifi Name(SSID)</label></td>
            <td align="left"><input type="text" id ="ssid" name="ssid"></td><br>
           </tr>
           <tr>
-            <td></td>
             <td align="right"><label for="pass">Password</label></td>
             <td align="left"><input type="text" id ="pass" name="pass"></td><br>
           </tr>
           <tr>
-            <td></td>
-            <td  align="right"><label for="ip">IP Address</label></td>
+            <td align="right"><label for="ip">IP Address</label></td>
               <td align="left"><input type="text" id ="ip" name="ip" value="192.168.4.1"><br></td>
           </tr>
           <tr>
-            <td></td>
             <td align="right"><label for="port">Port</label></td>
               <td align="left"><input type="text" id ="port" name="port" value="233"><br></td>
           </tr>
           <!-- 
           <tr>
-            <td></td>
             <td align="right"><label for="gateway">Gateway Address</label></td>
               <td align="left"><input type="text" id ="gateway" name="gateway" value="192.168.1.1"><br></td>
           </tr>-->
             </table>
-            <a href="https://www.youtube.com/watch?v=PJxgEaXByx0">
-            <input type ="submit" value ="Submit">
-          </a>
+              <input type="submit" value="Start" onclick="submit()">
+            
+
+
+              <script type="text/javascript">
+                  function submit() {
+                    let ssid = document.getElementById("ssid").value
+                    if(ssid == ""){
+                    alert("SSID is Required");
+                  }
+                    let pass = document.getElementById("pass").value
+                    if(pass == ""){
+                    alert("PASSWORD is Required");
+                    }
+                    let ip = document.getElementById("ip").value
+                    if(ip == ""){
+                    alert("IP Address is Required");
+                    }
+                    let port = document.getElementById("port").value
+                    if(port == ""){
+                    alert("PORT is Required");
+                    }
+                    let url = "http://" + ip + ":" + port + "/updateWifiDetails" + "?SSID=" + ssid +"&PSSWD=" + pass
+                    alert(url);
+                      var xhr = new XMLHttpRequest();
+                      xhr.onreadystatechange = function () {
+                          if (xhr.readyState === 4) {
+                              alert(xhr.response);
+                          }
+                      }
+                      xhr.open('get', url, true);
+                      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+                      xhr.send();
+                  }
+              </script>
           </p>
-        </form>
       </div>
     </div>
   </div>
