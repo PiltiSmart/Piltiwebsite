@@ -62,11 +62,12 @@
                     alert("PORT is Required");
                     }
                     let url = "http://" + ip + ":" + port + "/updateWifiDetails" + "?SSID=" + ssid +"&PSSWD=" + pass
+                    //let url = "http://" + ip + ":" + port + "/me"
                     alert(url);
                       var xhr = new XMLHttpRequest();
                       xhr.onreadystatechange = function () {
                           if (xhr.readyState === 4) {
-                              alert(xhr.response);
+                              alert(xhr.responseText);
                           }
                       }
                       xhr.open('get', url, true);
