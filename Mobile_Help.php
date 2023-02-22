@@ -21,7 +21,6 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-
 <body>
 <div id="wrapper">
 	<!-- start header -->
@@ -65,11 +64,16 @@
 	</header><!-- end header -->
 
             <!-- Service Blcoks -->		
-<head><link href="styles.css" rel="stylesheet" /></head>
+
 <body >
      
         <h1>Smarty App - Help Topics</h1>
-        <table align="center">
+       
+        <div id="sidebar">
+          <div class="inner">
+  
+            <nav id="menu">
+              <table align="center">
           <tr>
       <td><summary>Users</summary></td>
   
@@ -77,127 +81,108 @@
   <tr>
     <td><li><span><a href="../help/Users/newCustomerRegistration.html">Register a new User</a>
     <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" style="margin-left: 9.42em; width="25" height="25"></a></span></li></td>
-    <td><iframe src="../help/Users/newCustomerRegistration.html" height="200" width="500" title="Iframe Example"></iframe></td>
-</tr>
+   
+    <td><iframe src="../help/Devices/addDevice.html"></iframe></td> </tr>
 <tr>
 <td><li><span><a href="../help/Users/viewUsers.html">View Users</a>
     <a href="https://www.youtube.com/watch?v=v6YhG0hD0og"><img src="youtube.png" style="margin-left: 13.6em; width="25" height="25"></a></span></li></td>
-    <td><iframe src="../help/Users/viewUsers.html" height="200" width="500" title="Iframe Example"></iframe></td>
-</tr>
+    </tr>
 <tr>
 <td><li><span><a href="../help/Users/editUsers.html">Update User Details</a>
     <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 9.4em; width="25" height="25"></a></span></li></td>
-    <td><iframe src="../help/Users/editUsers.html" height="200" width="500" title="Iframe Example"></iframe></td>
-</tr>
+    </tr>
 <tr>
 <td><li><span><a href="../help/Users/changePhoto.html">Add or Update User Photo</a>
     <a href="https://www.youtube.com/watch?v=QbElXdgjqz8"><img src="youtube.png" style="margin-left: 6.41em; width="25" height="25"></a></span></li></td>         
-    <td><iframe src="../help/Users/changePhoto.html" height="200" width="500" title="Iframe Example"></iframe></td>
-</tr>
+    </tr>
 <tr>
 <td><li><span><a href="../help/Users/changePassword.html">Change Password</a>
     <a href="https://www.youtube.com/watch?v=mqp1iBb5hKs"><img src="youtube.png" style="margin-left: 10.4em; width="25" height="25"></a></span></li></td>          
-    <td> <iframe src="../help/Users/changePassword.html" height="200" width="500" title="Iframe Example"></iframe></td>
-</tr>
+    </tr>
 <tr>
 <td><li><span><a href="../help/Users/forgotPassword.html">Forgot Password</a>
     <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 10.9em; width="25" height="25"></a></span></li></td>
-    <td><iframe src="../help/Users/forgotPassword.html" height="200" width="500" title="Iframe Example"></iframe></td>
-</tr>
+    </tr>
 <tr>
 <td><li><span><a href="../help/Users/viewUsersAuditLogs.html">View User Actions</a>
     <a href="https://www.youtube.com/watch?v=H3BGDTcf52c"><img src="youtube.png" style="margin-left: 10.4em; width="25" height="25"></a></span></li></td> 
-    <td><iframe src="../help/Users/viewUsersAuditLogs.html" height="200" width="500" title="Iframe Example"></iframe></td>
-</tr>
+    </tr>
 <tr>
 <td><li><span><a href="../help/Users/addUser.html">Add User/Member</a>
     <a href="https://www.youtube.com/watch?v=hu-lMYci6Iw"><img src="youtube.png" style="margin-left: 10.06em; width="25" height="25"></a></span></li></td>        
-    <td><iframe src="../help/Users/addUser.html" height="200" width="500" title="Iframe Example"></iframe></td>
-</tr>
+    </tr>
 <tr>
 <td><li><span><a href="../help/Users/changeUserStatus.html">Change UserStatus</a>
     <a href="https://www.youtube.com/watch?v=JFQnciO20Hg"><img src="youtube.png" style="margin-left: 9.8em; width="25" height="25"></a></span></li></td>      
-    <td><iframe src="../help/Users/changeUserStatus.html" height="200" width="500" title="Iframe Example"></iframe></td>
-</tr>
+    </tr>
 <tr>
 <td><li><span><a href="../help/Users/viewCustomerAuditLogs.html">View Customer Actions</a>
     <a href="https://www.youtube.com/watch?v=_zi2o_afp7s"><img src="youtube.png" style="margin-left: 8em; width="25" height="25"></a></li></td>         
-    <td><iframe src="../help/Users/viewCustomerAuditLogs.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>         
+           
         
-          
-        <th><summary>Devices</summary></th>
-      
+    <tr> 
+        <td><summary>Devices</summary></td>
+        </tr>
         <tr>
                    <td> <li><span>
                         <a href="../help/Devices/addDevice.html">Add Device</a>    
                         <a href="https://www.youtube.com/watch?v=skX43IomAHg"><img src="youtube.png" style="margin-left: 13.42em; width="25" height="25"></a></span></li></td>
-                        <td><iframe src="../help/Devices/addDevice.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr> 
+                        </tr>     
+                   
 <tr><td>
                         <li><span>   <a href="../help/Devices/viewAttributes.html">View Device Attributes</a>
                        <a href="https://www.youtube.com/watch?v=rJOyBLuA_Z4"><img src="youtube.png" style="margin-left: 8.2em; width="25" height="25"></a></span></li></td>
-                       <td><iframe src="../help/Devices/viewAttributes.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr> 
+                       </tr>
 <tr><td>   <li><span> <a href="../help/Devices/viewTelemetry.html">View Device Telemetry</a>
                        <a href="https://www.youtube.com/watch?v=5hu9iMQuHnY"><img src="youtube.png" style="margin-left: 8.1em; width="25" height="25"></a></span></li></td>
-                       <td><iframe src="../help/Devices/viewTelemetry.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>      
+                       </tr>
 <tr><td><li><span> <a href="../help/Devices/deleteDevice.html">Delete Device</a>
                        <a href="https://www.youtube.com/watch?v=ebx1EStevi8"><img src="youtube.png" style="margin-left: 12.25em; width="25" height="25"></a></span></li></td>
-                       <td><iframe src="../help/Devices/deleteDevice.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>   
+                       </tr>
 <tr>              
                      <td><summary>Assets</summary></td>
 </tr>
 <tr><td> <li><span><a href="../help/Assets/viewTree.html">View Asset Relation tree</a>
                         <a href="https://www.youtube.com/watch?v=PxwAOg7qWAw"><img src="youtube.png" style="margin-left: 7.7em; width="25" height="25"></a></span></li></td>
-                        <td><iframe src="../help/Assets/viewTree.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>                
+                        </tr>
 <tr><td><li><span><a href="../help/Assets/addAsset.html">Add Asset</a>
                         <a href="https://www.youtube.com/watch?v=Uzaq1KlW0Hg"><img src="youtube.png" style="margin-left: 14.25em; width="25" height="25"></a></span></li></td>
-                        <td><iframe src="../help/Assets/addAsset.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>                
+                        </tr>
 <tr><td><li><span><a href="../help/Assets/editAssets.html">Edit Asset</a>
                         <a href="https://www.youtube.com/watch?v=hjhLkFbKATk"><img src="youtube.png" style="margin-left: 14.34em; width="25" height="25"></a></span></li></td>
-                        <td><iframe src="../help/Assets/editAssets.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>                
+                        </tr>
 <tr><td><li><span><a href="../help/Assets/pinUnpin.html">How to pin / unpin assets to dashboard</a>
                         <a href="https://www.youtube.com/watch?v=LDg6OmDHNOY"><img src="youtube.png" style="margin-left: 0.46em; width="25" height="25"></a></span></li></td>
-                        <td><iframe src="../help/Assets/pinUnpin.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>                
+                        </tr>
 <tr><td><li><span><a href="../help/Assets/deleteAsset.html">Delete Asset</a>
                         <a href="https://www.youtube.com/watch?v=Aqk2Ttf9cv8"><img src="youtube.png" style="margin-left: 13em; width="25" height="25"></a></span></li></td>
-                        <td><iframe src="../help/Assets/deleteAsset.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>   
+                        </tr>
 <tr>             
                <td><summary>Products</summary></td>
 </tr>
 <tr><td> <li><span>
                         <a href="../help/Products/viewProducts.html">View Products List</a>
                         <a href="https://www.youtube.com/watch?v=JSl06tm1k_w"><img src="youtube.png" style="margin-left: 10em; width="25" height="25"></a></span></li></td>    
-                        <td><iframe src="../help/Products/viewProducts.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>                
+                        </tr>
 <tr>
                         <td><summary>Registry</summary></td>
                         <td></td>
                         <tr><td><li><span>
                         <a href="../help/registry/viewRegistryEntries.html">View Device Registry details </a>
                         <a href="https://www.youtube.com/watch?v=voo7uNpdM2Q"><img src="youtube.png" style="margin-left: 5.8em; width="25" height="25"></a></span></li></td>
-                        <td><iframe src="../help/registry/viewRegistryEntries.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>                
+                        </tr>
 <tr><td><li><span><a href="../help/registry/addRegistryEntry.html">Create Device Registry Entry</a>
                         <a href="https://www.youtube.com/watch?v=GeP5RNUiCSo"><img src="youtube.png" style="margin-left: 5.5em; width="25" height="25"></a></span></li></td>
-                        <td><iframe src="../help/registry/addRegistryEntry.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>                
+                        </tr>
 <tr><td><li><span><a href="../help/registry/deleteRegistryEntry.html">Delete Device Registry Entry</a>
                         <a href="https://www.youtube.com/watch?v=rii-EQaKhV0"><img src="youtube.png" style="margin-left: 5.6em; width="25" height="25"></a></span></li></td>
-                        <td><iframe src="../help/registry/deleteRegistryEntry.html" height="200" width="500" title="Iframe Example"></iframe> </td>
-</tr>                
+                        </tr>
+</div>
+</div>
+</nav>
         </head>
         </table>
-      </body>
-
+</body>
 </html>
 </section>
 
