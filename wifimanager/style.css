@@ -8,6 +8,7 @@ html {
     font-size: 1.5rem; 
     padding-top: 5%;
     color: rgba(17, 1, 1, 0.954);
+    margin-bottom: -5;
   }
   
   p { 
@@ -116,4 +117,7 @@ html {
   } 
   .right{
     text-align: right;
+  }
+  .th{
+    text-align: center;
   }
