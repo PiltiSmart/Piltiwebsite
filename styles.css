@@ -17,7 +17,7 @@ summary{
     color: white;
     padding: 1px;
     background-color: #2196F3;
-    border: 4px solid #2196F3;
+    border: 6px solid #eff2f5;
     border-radius: 3px;
     padding-left: 43%;
 }
@@ -26,5 +26,6 @@ summary{
     border: 2PX #dfe7ec;
     margin: 0px 40px;
     padding: 3px 25px;
+    color: black;
   }
   
