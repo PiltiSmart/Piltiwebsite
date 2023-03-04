@@ -11,10 +11,7 @@ html {
     margin-bottom: -5;
   }
   
-  p { 
-    margin-top: 3%;
-    font-size: 1rem;
-  }
+
   
   .topnav { 
     overflow: hidden; 
@@ -59,7 +56,7 @@ html {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.5rem;
     width: 90px;
     margin-right: 10px;
     border-radius: 4px;
@@ -83,7 +80,7 @@ html {
   }
   
   label {
-    font-size: 1rem; 
+    font-size: 1.5rem; 
     text-align: left;
   }
   .value{

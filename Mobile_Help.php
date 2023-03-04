@@ -55,7 +55,7 @@
 
 
               <li class="active">
-                <a href="mobilehelp/Mobile_Help.php">SmartyApp Help</a>
+                <a href="Mobile_Help.php">SmartyApp Help</a>
               </li>
             </ul>
 	          </div>
@@ -173,7 +173,7 @@
 </html>
 
 <?php include_once 'footer.php';?>
-</div>
+
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
     ================================================== -->
@@ -189,3 +189,4 @@
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
+

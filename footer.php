@@ -40,7 +40,7 @@
 					<a href="help/help.html">Mobile Help Page</a>
 				  </li>
 				  <li>
-					<a href="wifimanager/wifimanager.html">Wifi Manager</a>
+					<a href="wifimanager.php">Wifi Manager</a>
 				  </li>
 				</ul>
 			  </div>
