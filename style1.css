@@ -10,9 +10,6 @@ html {
     color: rgba(17, 1, 1, 0.954);
     margin-bottom: -5;
   }
-  
-
-  
   .topnav { 
     overflow: hidden; 
     background-color: #0A1128;
@@ -61,7 +58,7 @@ html {
     margin-right: 10px;
     border-radius: 4px;
     transition-duration: 0.4s;
-    margin-top: 2%;
+    margin-top: 4%;
     }
   
   input[type=submit]:hover {

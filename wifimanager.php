@@ -55,9 +55,10 @@
   <div class="content">
     <div class="card-grid">
       <div class="card">
-          <h1>PILTISMART WIFI MANAGER</h1>
+        
           <p>
             <table align="center">
+              <h1>PILTISMART WIFI DETAILS</h1>
           <tr>
            <td align="right"><label for="ssid">Wifi Name(SSID)</label></td>
            <td align="left"><input type="text" id ="ssid" name="ssid"></td><br>
