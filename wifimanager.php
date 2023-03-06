@@ -13,6 +13,7 @@
   <link href="css/jcarousel.css" rel="stylesheet" />
   <link href="css/flexslider.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
+  <link href="style1.css" rel="stylesheet" />
       <header>
     <div class="navbar navbar-expand navbar-static-top">
               <div class="container">
