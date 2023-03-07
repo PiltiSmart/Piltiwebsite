@@ -77,23 +77,23 @@
   </tr>
 <tr>
 <td><span><a href="/help/Users/viewUsers.html" target="icontainer">View Users</a>
-    <a href="https://www.youtube.com/watch?v=v6YhG0hD0og"><img src="youtube.png" style="margin-left: 13.6em; width="25" height="25"></a></span></li></td>
+    <a href="https://www.youtube.com/watch?v=v6YhG0hD0og"><img src="youtube.png" style="margin-left: 9.42em; width="25" height="25"></a></span></li></td>
   </tr>
 <tr>
 <td><span><a href="../help/Users/editUsers.html" target="icontainer">Update User Details</a>
-    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 9.4em; width="25" height="25"></a></span></li></td>
+    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 9.42em; width="25" height="25"></a></span></li></td>
     </tr>
 <tr>
 <td><span><a href="../help/Users/changePhoto.html" target="icontainer">Add or Update User Photo</a>
-    <a href="https://www.youtube.com/watch?v=QbElXdgjqz8"><img src="youtube.png" style="margin-left: 6.41em; width="25" height="25"></a></span></li></td>         
+    <a href="https://www.youtube.com/watch?v=QbElXdgjqz8"><img src="youtube.png" style="margin-left: 9.42em; width="25" height="25"></a></span></li></td>         
     </tr>
 <tr>
 <td><span><a href="../help/Users/changePassword.html" target="icontainer">Change Password</a>
-    <a href="https://www.youtube.com/watch?v=mqp1iBb5hKs"><img src="youtube.png" style="margin-left: 10.4em; width="25" height="25"></a></span></li></td>          
+    <a href="https://www.youtube.com/watch?v=mqp1iBb5hKs"><img src="youtube.png" style="margin-left: 9.42em; width="25" height="25"></a></span></li></td>          
     </tr>
 <tr>
 <td><span><a href="../help/Users/forgotPassword.html" target="icontainer" >Forgot Password</a>
-    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 10.9em; width="25" height="25"></a></span></li></td>
+    <a href="https://www.youtube.com/watch?v=fbzkEy5Eqfs&t=2458"><img src="youtube.png" style="margin-left: 9.42em; width="25" height="25"></a></span></li></td>
     </tr>
 <tr>
 <td><span><a href="../help/Users/viewUsersAuditLogs.html" target="icontainer">View User Actions</a>
