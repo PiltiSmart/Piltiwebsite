@@ -41,7 +41,7 @@
                 <a href="about.php">About Us</a>
               </li>
               <li><a href="services.php">Services</a></li>
-              <li><a href="products.php">Our Products</a></li>
+         	<!--     <li><a href="products.php">Our Products</a></li>	-->
               
               <li>
                 <a href="pricing.php">Pricing</a>
