@@ -71,12 +71,12 @@
       <td><summary>Smarty App-Help Topics</summary></td>
 </tr>
 <tr>
-    <td align="right"><span><a href="/help/Users/newCustomerRegistration.html" target="icontainer">Register a new User</a>
-    <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" width="25" height="25"></a></span></li></td>
+    <td align="center"><span><a href="/help/Users/newCustomerRegistration.html" target="icontainer">Register a new User</a>
+    <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" style="margin-left: 9.42em; width="25" height="25"></a></span></li></td>
     <td rowspan=0><iframe name="icontainer" height=750 width=850 style="border:0px solid black"></iframe></td>  
   </tr>
 <tr>
-<td align="right"><span><a href="/help/Users/viewUsers.html" target="icontainer">View Users</a>
+<td align="center"><span><a href="/help/Users/viewUsers.html" target="icontainer">View Users</a>
     <a href="https://www.youtube.com/watch?v=v6YhG0hD0og"><img src="youtube.png" style="margin-left: 13.6em; width="25" height="25"></a></span></li></td>
   </tr>
 <tr>
@@ -135,7 +135,7 @@
 <tr><td align="right"> <span><a href="../help/Assets/viewTree.html" target="icontainer">View Asset Relation tree</a>
                         <a href="https://www.youtube.com/watch?v=PxwAOg7qWAw"><img src="youtube.png" style="margin-left: 7.7em; width="25" height="25"></a></span></li></td>
                         </tr>
-<tr><td align="right"><span><a href="../help/Assets/addAsset.html" target="icontainer">Add Asset</a>
+<tr><td align="center"><span><a href="../help/Assets/addAsset.html" target="icontainer">Add Asset</a>
                         <a href="https://www.youtube.com/watch?v=Uzaq1KlW0Hg"><img src="youtube.png" style="margin-left: 14.25em; width="25" height="25"></a></span></li></td>
                         </tr>
 <tr><td align="right"><span><a href="../help/Assets/editAssets.html" target="icontainer">Edit Asset</a>
