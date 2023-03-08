@@ -72,7 +72,7 @@
 </tr>
 <tr>
     <td align="right"><span><a href="/help/Users/newCustomerRegistration.html" target="icontainer">Register a new User</a>
-    <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" style="margin-left: 9.42em; width="25" height="25"></a></span></li></td>
+    <a href="https://www.youtube.com/watch?v=4TpGpYjktYc"><img src="youtube.png" width="25" height="25"></a></span></li></td>
     <td rowspan=0><iframe name="icontainer" height=750 width=850 style="border:0px solid black"></iframe></td>  
   </tr>
 <tr>
