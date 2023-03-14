@@ -89,7 +89,7 @@
     </tr>
 <tr>
 <td align="center"><span><a href="../help/Users/changePassword.html" target="icontainer">Change Password</a>
-    <a href="https://www.youtube.com/watch?v=mqp1iBb5hKs"><img src="youtube.png" style="margin-left: 10.4em; width="25" height="25"></a></span></li></td>          
+    <a href="https://www.youtube.com/watch?v=9qz8lSEiajc"><img src="youtube.png" style="margin-left: 10.4em; width="25" height="25"></a></span></li></td>          
     </tr>
 <tr>
 <td align="center"><span><a href="../help/Users/forgotPassword.html" target="icontainer" >Forgot Password</a>
