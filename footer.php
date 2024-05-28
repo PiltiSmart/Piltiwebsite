@@ -1,7 +1,7 @@
 <footer>
 		<div class="container">
 		  <div class="row">
-			<div class="col-lg-3">
+			<!--<div class="col-lg-3">
 			  <div class="widget">
 				<h5 class="widgetheading">Our Contact</h5>
 				<address>
@@ -9,7 +9,7 @@
 					<p><i class="icon-phone"></i> +91 98948 63127<br>+91 98654 08655<br>
 					<i class="icon-envelope-alt"></i></p>
 				</div>
-			</div>
+			</div>-->
 			<div class="col-lg-3">
 				<div class="widget">
 					<h5 class="widgetheading">Ireland Contact</h5>
