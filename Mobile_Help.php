@@ -53,7 +53,10 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li>
-                <a href="login.php">Login</a>
+                  <a href="https://piltistore.com">PiltiStore</a>
+              </li>
+              <li>
+                  <a href="download.php">App Download</a>
               </li>
               <li class="active">
                 <a href="Mobile_Help.php">Mobile Help</a>

@@ -41,6 +41,12 @@
 						<!--  <li><a href="services.php">Services</a></li> -->
                         <li><a href="pricing.php">Pricing</a></li>
                         <li><a href="contact.php">Contact</a></li>
+                        <li>
+                            <a href="https://piltistore.com">PiltiStore</a>
+                         </li>
+                         <li>
+                               <a href="download.php">App Download</a>
+                          </li>
                         <li><a href="pilticloud.php">My PiltiSmart</a></li>
                         <li>
                 <a href="Mobile_Help.php">Mobile Help</a>

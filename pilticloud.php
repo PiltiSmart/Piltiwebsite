@@ -198,6 +198,12 @@
               <li class="active">
                 <a href="pilticloud.php">My PiltiSmart</a>
               </li>
+             <li>
+                <a href="https://piltistore.com">PiltiStore</a>
+              </li>
+              <li>
+                  <a href="download.php">App Download</a>
+               </li>
 			  <li>
                 <a href="Mobile_Help.php">Mobile Help</a>
               </li>

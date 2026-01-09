@@ -47,7 +47,12 @@
               <li><a href="publishing.php">Publishing</a></li>
               <li><a href="pricing.php">Pricing</a></li>
               <li><a href="contact.php">Contact</a></li>
-              <li><a href="login.php">Pilti Cloud</a></li>
+              <li>
+                <a href="https://piltistore.com">PiltiStore</a>
+              </li>
+              <li>
+                <a href="download.php">App Download</a>
+              </li>
             </ul>
           </div>
 	</div>

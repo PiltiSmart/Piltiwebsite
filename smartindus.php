@@ -51,9 +51,11 @@
                 <a href="contact.php">Contact</a>
               </li>
               <li>
-                <a href="Login.php">PiltiCloud</a>
+                  <a href="https://piltistore.com">PiltiStore</a>
               </li>
-
+              <li>
+                 <a href="download.php">App Download</a>
+             </li>
             </ul>
 	          </div>
             </div>
