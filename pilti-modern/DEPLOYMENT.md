@@ -1,7 +1,7 @@
 # Production Deployment Guide - PiltiSmart Modern Website
 
 ## Branch Information
-- **Branch Name**: `production-deployment`
+- **Branch Name**: `new-develop`
 - **Purpose**: Production-ready version of pilti-modern for deployment
 - **Created**: 2026-02-04
 
@@ -58,7 +58,30 @@ npm run start
 
 ### 4. Deployment Options
 
-#### Option A: Vercel (Recommended for Next.js)
+#### Option A: Docker (Recommended for Production)
+This project includes a multi-stage `Dockerfile` optimized for production.
+
+**Build and Run (Locally):**
+```bash
+# Build the image
+docker build -t pilti-modern .
+
+# Run the container
+docker run -p 3000:3000 -e RESEND_API_KEY=your_key pilti-modern
+```
+
+**GitHub Container Registry (Automated):**
+The included workflow (`.github/workflows/docker-release.yml`) automatically builds and pushes the image to GitHub Container Registry (GHCR) when you:
+1. Push to `main` branch
+2. Create a GitHub Release
+
+**Deploying from GHCR:**
+```bash
+docker pull ghcr.io/yourusername/pilti-modern:latest
+docker run -d -p 3000:3000 -e RESEND_API_KEY=your_key ghcr.io/yourusername/pilti-modern:latest
+```
+
+#### Option B: Vercel (Next.js Native)
 ```bash
 npm install -g vercel
 vercel --prod
@@ -129,5 +152,5 @@ For deployment assistance, contact the development team or refer to:
 ---
 
 **Last Updated**: 2026-02-04
-**Branch**: production-deployment
+**Branch**: new-develop
 **Next.js Version**: 16.1.6
