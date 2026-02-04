@@ -120,6 +120,10 @@ export default function Footer() {
                         <Link href="/terms" className="hover:underline">Terms of use</Link>
                         <Link href="/trademarks" className="hover:underline">Trademarks</Link>
                         <span>&copy; PiltiSmart {new Date().getFullYear()}</span>
+                        <span className="opacity-50 text-[10px] ml-2 font-mono">
+                            v{process.env.NEXT_PUBLIC_APP_VERSION}
+                            {process.env.NEXT_PUBLIC_GIT_HASH && ` (${process.env.NEXT_PUBLIC_GIT_HASH})`}
+                        </span>
                     </div>
                 </div>
             </div>
