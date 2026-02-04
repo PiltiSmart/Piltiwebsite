@@ -259,8 +259,8 @@ export default function Navbar() {
                       ))}
                       {filteredResults.length === 0 && (
                         <div className="text-center py-24">
-                          <p className="text-[18px] text-[#616161]">No results found for "{searchQuery}"</p>
-                          <p className="text-[14px] text-[#616161] mt-2 text-balance">Try checking your spelling or use more general terms like "app" or "help".</p>
+                          <p className="text-[18px] text-[#616161]">No results found for &quot;{searchQuery}&quot;</p>
+                          <p className="text-[14px] text-[#616161] mt-2 text-balance">Try checking your spelling or use more general terms like &quot;app&quot; or &quot;help&quot;.</p>
                         </div>
                       )}
                     </div>

@@ -13,7 +13,7 @@ interface DownloadLink {
 interface OSSection {
     os: string;
     desc: string;
-    icon: any;
+    icon: React.ElementType;
     links: DownloadLink[];
     isPlayStore?: boolean;
 }

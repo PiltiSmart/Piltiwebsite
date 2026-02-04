@@ -216,7 +216,7 @@ export default function ServicesPage() {
                         </h1>
                         <p className="text-[18px] text-[#616161] leading-relaxed max-w-2xl">
                             PiltiSmart delivers high-fidelity SMART ecosystems engineered for
-                            the world's most demanding environments. We bridge the gap between
+                            the world&apos;s most demanding environments. We bridge the gap between
                             complex hardware and intuitive digital oversight.
                         </p>
                     </motion.div>
