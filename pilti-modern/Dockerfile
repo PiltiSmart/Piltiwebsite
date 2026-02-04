@@ -11,7 +11,15 @@ RUN npm ci
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
+# Set build arguments for version info
+ARG NEXT_PUBLIC_APP_VERSION
+ARG NEXT_PUBLIC_GIT_HASH
+
+# Make them available as environment variables during build
+ENV NEXT_PUBLIC_APP_VERSION=$NEXT_PUBLIC_APP_VERSION
+ENV NEXT_PUBLIC_GIT_HASH=$NEXT_PUBLIC_GIT_HASH
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
