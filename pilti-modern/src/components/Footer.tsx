@@ -114,16 +114,19 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                    <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 items-center">
                         <Link href="/contact" className="hover:underline">Contact PiltiSmart</Link>
                         <Link href="/privacy" className="hover:underline">Privacy</Link>
                         <Link href="/terms" className="hover:underline">Terms of use</Link>
                         <Link href="/trademarks" className="hover:underline">Trademarks</Link>
-                        <span>&copy; PiltiSmart {new Date().getFullYear()}</span>
-                        <span className="opacity-50 text-[10px] ml-2 font-mono">
-                            v{process.env.NEXT_PUBLIC_APP_VERSION}
-                            {process.env.NEXT_PUBLIC_GIT_HASH && ` (${process.env.NEXT_PUBLIC_GIT_HASH})`}
-                        </span>
+                        <div className="flex items-center gap-2">
+                            <span>&copy; PiltiSmart {new Date().getFullYear()}</span>
+                            {process.env.NEXT_PUBLIC_APP_VERSION && (
+                                <span className="opacity-40 text-[9px] font-mono tracking-tighter">
+                                    {process.env.NEXT_PUBLIC_APP_VERSION}
+                                </span>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,19 +1,23 @@
 import type { NextConfig } from "next";
 import { execSync } from "child_process";
 
-const getGitHash = () => {
+const getGitInfo = () => {
   try {
-    return execSync("git rev-parse --short HEAD").toString().trim();
+    const version = execSync("git describe --tags --always").toString().trim();
+    const hash = execSync("git rev-parse --short HEAD").toString().trim();
+    return { version, hash };
   } catch (e) {
-    return "dev";
+    return { version: "1.0.0", hash: "dev" };
   }
 };
+
+const gitInfo = getGitInfo();
 
 const nextConfig: NextConfig = {
   output: 'standalone',
   env: {
-    NEXT_PUBLIC_APP_VERSION: process.env.npm_package_version || "1.0.0",
-    NEXT_PUBLIC_GIT_HASH: getGitHash(),
+    NEXT_PUBLIC_APP_VERSION: gitInfo.version,
+    NEXT_PUBLIC_GIT_HASH: gitInfo.hash,
   },
 };
 
