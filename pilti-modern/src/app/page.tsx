@@ -22,6 +22,7 @@ const services = [
     desc: "Bring the latest technologies in smart lighting, security, and temperature control to your home.",
     icon: HomeIcon,
     img: "/img/premium_smart_home.png",
+    gridImg: "/img/landing_smart_home.png",
     link: "/services",
     category: "Consumer"
   },
@@ -30,6 +31,7 @@ const services = [
     desc: "Energy-savings and efficient utilization of resources for modern business environments.",
     icon: Briefcase,
     img: "/img/premium_smart_office.png",
+    gridImg: "/img/landing_smart_office.png",
     link: "/services",
     category: "Business"
   },
@@ -38,6 +40,7 @@ const services = [
     desc: "Optimize land, water, and fertilizers utilization with precision IoT sensing and data.",
     icon: Sprout,
     img: "/img/premium_smart_farming.png",
+    gridImg: "/img/landing_smart_farming.png",
     link: "/services",
     category: "Agriculture"
   },
@@ -46,6 +49,7 @@ const services = [
     desc: "Empower students and educators with smart interactions and virtual classroom tools.",
     icon: GraduationCap,
     img: "/img/premium_smart_school.png",
+    gridImg: "/img/landing_smart_school.png",
     link: "/services",
     category: "Education"
   },
@@ -54,6 +58,7 @@ const services = [
     desc: "Edge-to-cloud industrial automation for quality control and operational excellence.",
     icon: Cpu,
     img: "/img/premium_smart_industry.png",
+    gridImg: "/img/landing_smart_industry.png",
     link: "/services",
     category: "Industrial"
   },
@@ -62,6 +67,7 @@ const services = [
     desc: "Advanced digital conversion services to publish your dream ebook with ease.",
     icon: BookOpen,
     img: "/img/premium_smart_publishing.png",
+    gridImg: "/img/landing_smart_publishing.png",
     link: "/services",
     category: "Digital"
   }
@@ -129,7 +135,7 @@ export default function Home() {
                 href="/services"
                 className="px-8 py-2 bg-[#0078D4] text-white font-semibold rounded-[2px] hover:bg-[#0067B8] transition-all flex items-center gap-2 group"
               >
-                Shop now
+                Explore More
                 <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -193,7 +199,7 @@ export default function Home() {
               >
                 <div className="aspect-video bg-[#F2F2F2] dark:bg-muted/10 relative overflow-hidden flex items-center justify-center">
                   <img
-                    src={`/img/service${i + 1}.jpg`}
+                    src={(service as any).gridImg || service.img}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
@@ -313,10 +319,15 @@ export default function Home() {
       {/* Secondary Banner - Wide Style */}
       <section className="bg-white dark:bg-background pb-24">
         <div className="container mx-auto px-6">
-          <div className="relative h-[480px] bg-[#262626] text-white flex items-center px-12 overflow-hidden shadow-2xl">
+          <div className="relative h-[480px] bg-[#262626] text-white flex items-center px-12 overflow-hidden shadow-2xl rounded-[2px]">
+            <img
+              src="/img/premium_smart_industry.png"
+              alt="Professional Engineering"
+              className="absolute inset-0 w-full h-full object-cover opacity-30"
+            />
             <div className="max-w-lg relative z-10">
               <h2 className="text-[30px] font-semibold mb-6">Built for Excellence</h2>
-              <p className="text-[15px] opacity-80 mb-10 leading-relaxed">
+              <p className="text-[15px] opacity-90 mb-10 leading-relaxed font-medium">
                 Our Customers First! We build products we believe in and care about what we do.
                 Each person has the opportunity and the obligation to make a difference.
               </p>
@@ -327,10 +338,7 @@ export default function Home() {
                 About our values
               </Link>
             </div>
-            <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-[#0078D4]/20 to-transparent" />
-            <div className="absolute right-[-10%] top-[-10%] opacity-10">
-              <Cpu size={600} />
-            </div>
+            <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-[#0078D4]/30 to-transparent" />
           </div>
         </div>
       </section>

@@ -6,19 +6,19 @@ import Link from "next/link";
 import { Users, ShieldCheck, Award, Zap, ChevronRight, Target, Rocket } from "lucide-react";
 
 const coreValues = [
-    { title: "Our Customers First!", desc: "We prioritize our customers' needs and comfort above all else." },
-    { title: "We build products we believe in.", desc: "Quality and reliability are at the core of everything we create." },
-    { title: "We care about what we do.", desc: "Passion drives our innovation and attention to detail." },
-    { title: "Make a difference.", desc: "Each person has the opportunity and obligation to contribute meaningfully." },
-    { title: "Win together.", desc: "We are a tight-knit team united by a shared vision of success." },
-    { title: "Positive impact.", desc: "We aim to make a positive difference in society through smart technology." }
+    { title: "Strategic Client Centricity", desc: "Prioritizing long-term success through mission-critical solutions that exceed enterprise expectations." },
+    { title: "Integrity in Engineering", desc: "Architecting every solution with uncompromising quality and state-of-the-art IoT frameworks." },
+    { title: "Operational Mastery", desc: "Delivering high-fidelity results across every sector through technical precision and execution excellence." },
+    { title: "Impact-Driven Innovation", desc: "Empowering our professionals to contribute meaningfully and make a strategic global difference." },
+    { title: "Collaborative Synergy", desc: "Operating as a unified ecosystem committed to collective success and a shared technological vision." },
+    { title: "Purposeful Digitalization", desc: "Accelerating project progress through intelligent technologies that enhance productivity and sustainability." }
 ];
 
 const team = [
-    { name: "Suraj", role: "Micro-Control Programmer [IoT]", img: "/img/Suraj.jpg" },
-    { name: "Rishi", role: "Technical Lead [IoT]", img: "/img/rishi.jpg" },
-    { name: "Mani", role: "FrontEnd Programmer [IoT]", img: "/img/mani.jpg" },
-    { name: "Ashok", role: "Backend Technical Lead [IoT]", img: "/img/ashok.jpg" },
+    { name: "Suraj", role: "Micro-Control Programmer [IoT]", img: "/img/team4.jpg" },
+    { name: "Rishi", role: "Technical Lead [IoT]", img: "/img/team2.jpg" },
+    { name: "Mani", role: "FrontEnd Programmer [IoT]", img: "/img/team1.jpg" },
+    { name: "Ashok", role: "Backend Technical Lead [IoT]", img: "/img/team3.jpg" },
 ];
 
 export default function AboutPage() {
@@ -47,12 +47,13 @@ export default function AboutPage() {
                             quality and integrity.
                         </p>
                     </motion.div>
-                    <div className="relative aspect-video bg-[#F2F2F2] rounded-[2px] overflow-hidden group">
+                    <div className="relative aspect-[16/10] bg-[#F2F2F2] rounded-[24px] overflow-hidden shadow-2xl group border border-[#0078D4]/10">
                         <img
-                            src="/img/corevalues.jpg"
-                            alt="PiltiSmart Team"
-                            className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+                            src="/img/premium_about_hero.png"
+                            alt="PiltiSmart Professional Team"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-[#0078D4]/10 to-transparent opacity-60 pointer-events-none" />
                     </div>
                 </div>
             </section>
@@ -120,11 +121,11 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {team.map((member) => (
                             <div key={member.name} className="flex flex-col items-center text-center group">
-                                <div className="w-48 h-48 rounded-full overflow-hidden bg-white mb-6 border-4 border-white shadow-sm ring-1 ring-border group-hover:ring-[#0078D4] transition-all">
+                                <div className="w-48 h-48 rounded-full overflow-hidden bg-white mb-6 border-4 border-white shadow-md ring-1 ring-[#0078D4]/10 group-hover:ring-[#0078D4] transition-all">
                                     <img
                                         src={member.img}
                                         alt={member.name}
-                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
                                     />
                                 </div>
                                 <h4 className="text-[18px] font-semibold text-[#262626] dark:text-foreground">{member.name}</h4>

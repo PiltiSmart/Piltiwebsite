@@ -24,7 +24,7 @@ const downloadLinks: OSSection[] = [
         desc: "Intel / AMD",
         icon: Monitor,
         links: [
-            { name: "Windows (x86)", href: "downloads/windows/SMARTY-WIN-x86.exe" }
+            { name: "Windows (x86)", href: "/downloads/windows/SMARTY-WIN-x86.exe" }
         ]
     },
     {
@@ -32,8 +32,8 @@ const downloadLinks: OSSection[] = [
         desc: "Intel & Apple Silicon",
         icon: Apple,
         links: [
-            { name: "macOS (Intel)", href: "downloads/mac/SMARTY-MAC-INTEL.dmg" },
-            { name: "macOS (Apple Silicon)", href: "downloads/mac/SMARTY-MAC-SILICON.dmg" }
+            { name: "macOS (Intel)", href: "/downloads/mac/SMARTY-MAC-INTEL.dmg" },
+            { name: "macOS (Apple Silicon)", href: "/downloads/mac/SMARTY-MAC-SILICON.dmg" }
         ]
     },
     {
@@ -49,7 +49,7 @@ const downloadLinks: OSSection[] = [
         desc: "Android (Direct / Store)",
         icon: Smartphone,
         links: [
-            { name: "Android APK", href: "downloads/mobile/SMARTY-MOBILE.apk" }
+            { name: "Android APK", href: "/downloads/mobile/SMARTY-MOBILE.apk" }
         ],
         isPlayStore: true
     }
@@ -153,21 +153,27 @@ export default function DownloadPage() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="mt-12 bg-[#262626] text-white p-12 rounded-[40px] relative overflow-hidden"
+                                className="mt-12 bg-[#262626] text-white p-12 rounded-[40px] relative overflow-hidden group shadow-xl"
                             >
+                                <img
+                                    src="/img/premium_smart_industry.png"
+                                    alt="Professional Industrial Background"
+                                    className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-1000"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#262626] via-[#262626]/80 to-transparent" />
+
                                 <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
                                     <div className="text-center md:text-left">
-                                        <h2 className="text-3xl font-bold mb-3">Enterprise Deployment?</h2>
-                                        <p className="text-white/60">Dedicated installation support for industrial registries.</p>
+                                        <h2 className="text-3xl font-bold mb-3 tracking-tight">Enterprise Deployment?</h2>
+                                        <p className="text-white/70 max-w-sm font-medium">Dedicated installation support for industrial registries and complex edge-network configurations.</p>
                                     </div>
                                     <a
                                         href="/contact"
-                                        className="px-10 py-4 bg-accent text-white rounded-2xl font-bold hover:bg-white hover:text-black transition-all whitespace-nowrap"
+                                        className="px-10 py-4 bg-[#0078D4] text-white rounded-2xl font-bold hover:bg-white hover:text-black transition-all whitespace-nowrap shadow-lg shadow-[#0078D4]/20"
                                     >
                                         Consult an Expert
                                     </a>
                                 </div>
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 blur-[80px]" />
                             </motion.div>
                         </div>
                     </div>

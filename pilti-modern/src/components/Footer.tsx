@@ -1,7 +1,9 @@
 "use client";
 
+import React, { useState } from "react";
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Globe } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Globe, ExternalLink, ArrowRight, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const footerLinks = [
     {
@@ -16,10 +18,9 @@ const footerLinks = [
     {
         title: "PiltiSmart Store",
         links: [
-            { name: "Account Profile", href: "https://piltistore.com" },
-            { name: "Download Center", href: "/download" },
-            { name: "Returns", href: "/help" },
-            { name: "Order Tracking", href: "https://piltistore.com" },
+            { name: "Account Profile", href: "https://piltistore.com/customer/login" },
+            { name: "Returns", href: "https://piltistore.com/page/return-policy" },
+            { name: "Order Tracking", href: "https://piltistore.com/customer/account/orders" },
         ]
     },
     {
@@ -60,6 +61,15 @@ const footerLinks = [
 ];
 
 export default function Footer() {
+    const [isRedirectOpen, setIsRedirectOpen] = useState(false);
+    const [pendingUrl, setPendingUrl] = useState("https://piltistore.com");
+
+    const handleStoreRedirect = (e: React.MouseEvent, url: string = "https://piltistore.com") => {
+        e.preventDefault();
+        setPendingUrl(url);
+        setIsRedirectOpen(true);
+    };
+
     return (
         <footer className="bg-[#F2F2F2] dark:bg-muted/10 pt-10 text-[11px] text-[#616161] dark:text-muted-foreground">
             <div className="container mx-auto px-6">
@@ -70,9 +80,18 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 {group.links.map((link) => (
                                     <li key={link.name}>
-                                        <Link href={link.href} className="hover:underline transition-all">
-                                            {link.name}
-                                        </Link>
+                                        {link.href.startsWith("https://piltistore.com") ? (
+                                            <button
+                                                onClick={(e) => handleStoreRedirect(e, link.href)}
+                                                className="hover:underline transition-all text-left"
+                                            >
+                                                {link.name}
+                                            </button>
+                                        ) : (
+                                            <Link href={link.href} className="hover:underline transition-all">
+                                                {link.name}
+                                            </Link>
+                                        )}
                                     </li>
                                 ))}
                             </ul>
@@ -89,7 +108,9 @@ export default function Footer() {
                         <div className="flex gap-4">
                             <Facebook size={16} className="cursor-pointer hover:opacity-70" />
                             <Twitter size={16} className="cursor-pointer hover:opacity-70" />
-                            <Linkedin size={16} className="cursor-pointer hover:opacity-70" />
+                            <a href="https://www.linkedin.com/company/piltismart" target="_blank" rel="noopener noreferrer">
+                                <Linkedin size={16} className="cursor-pointer hover:opacity-70" />
+                            </a>
                         </div>
                     </div>
 
@@ -102,6 +123,67 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+            {/* Store Redirect Modal */}
+            <AnimatePresence>
+                {isRedirectOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-6"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.95, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.95, opacity: 0, y: 20 }}
+                            className="bg-white max-w-md w-full p-8 shadow-2xl rounded-[2px] relative overflow-hidden"
+                        >
+                            {/* Decorative Accent */}
+                            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0078D4] to-[#00BCF2]" />
+
+                            <div className="flex items-center gap-4 mb-6 text-[#0078D4]">
+                                <div className="w-12 h-12 bg-[#0078D4]/5 flex items-center justify-center rounded-full">
+                                    <ExternalLink size={24} />
+                                </div>
+                                <h3 className="text-[20px] font-bold text-[#262626]">Redirecting to PiltiStore</h3>
+                            </div>
+
+                            <p className="text-[14px] text-[#616161] leading-relaxed mb-8">
+                                You are now leaving piltismart.com and being redirected to our official commerce platform, <span className="font-semibold text-[#262626]">PiltiStore</span>.
+                                Your session will continue in a new secure window.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row gap-3">
+                                <a
+                                    href={pendingUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => setIsRedirectOpen(false)}
+                                    className="flex-1 bg-[#0078D4] text-white px-6 py-3 text-[13px] font-bold uppercase tracking-wider hover:bg-[#0067B8] transition-all flex items-center justify-center gap-2 rounded-[2px] no-underline"
+                                >
+                                    Continue to Store
+                                    <ArrowRight size={16} />
+                                </a>
+                                <button
+                                    onClick={() => setIsRedirectOpen(false)}
+                                    className="flex-1 bg-[#F2F2F2] text-[#262626] px-6 py-3 text-[13px] font-bold uppercase tracking-wider hover:bg-[#E5E5E5] transition-all rounded-[2px]"
+                                >
+                                    Stay on PiltiSmart
+                                </button>
+                            </div>
+
+                            <button
+                                onClick={() => setIsRedirectOpen(false)}
+                                className="absolute top-6 right-6 text-[#616161] hover:text-[#262626] transition-colors"
+                                aria-label="Close modal"
+                            >
+                                <X size={20} />
+                            </button>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </footer>
     );
 }

@@ -15,7 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "PiltiSmart - Everything can be SMART",
+  title: "PiltiSmart - Empowering a Smarter World",
   description: "Next Generation IoT Solutions for Smart Home, Office, and Industry.",
 };
 
