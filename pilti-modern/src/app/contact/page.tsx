@@ -16,7 +16,7 @@ export default function ContactPage() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        
+
         // Validate form
         if (!formData.name || !formData.email || !formData.message) {
             alert("Please fill in all required fields.");
@@ -44,7 +44,7 @@ export default function ContactPage() {
 
             // Show success modal
             setShowSuccess(true);
-            
+
             // Reset form
             setFormData({
                 name: "",
@@ -74,10 +74,10 @@ export default function ContactPage() {
                         className="max-w-3xl"
                     >
                         <h1 className="text-[46px] font-semibold leading-tight text-[#262626] mb-6">
-                            Let's build a smarter world together.
+                            Let&apos;s build a smarter world together.
                         </h1>
                         <p className="text-[17px] text-[#616161] leading-relaxed">
-                            Whether you're looking for enterprise IoT scaling or high-fidelity
+                            Whether you&apos;re looking for enterprise IoT scaling or high-fidelity
                             residential automation, our technical team is ready to collaborate.
                             Reach out to start your digital transformation.
                         </p>

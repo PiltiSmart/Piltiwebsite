@@ -16,7 +16,17 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const services = [
+interface Service {
+  title: string;
+  desc: string;
+  icon: React.ElementType;
+  img: string;
+  gridImg: string;
+  link: string;
+  category: string;
+}
+
+const services: Service[] = [
   {
     title: "Smart Home",
     desc: "Bring the latest technologies in smart lighting, security, and temperature control to your home.",
@@ -199,7 +209,7 @@ export default function Home() {
               >
                 <div className="aspect-video bg-[#F2F2F2] dark:bg-muted/10 relative overflow-hidden flex items-center justify-center">
                   <img
-                    src={(service as any).gridImg || service.img}
+                    src={service.gridImg || service.img}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {

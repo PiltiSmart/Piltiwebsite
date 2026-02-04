@@ -105,7 +105,7 @@ export default function CareersPage() {
                         <div className="lg:w-1/2 space-y-8">
                             <h2 className="text-[32px] font-semibold text-[#262626] dark:text-foreground">Our Culture of Excellence</h2>
                             <p className="text-[15px] text-[#616161] dark:text-muted-foreground leading-relaxed">
-                                We believe in "Purposeful Digitalization." Our professionals are fostered
+                                We believe in &quot;Purposeful Digitalization.&quot; Our professionals are fostered
                                 within an environment that promotes technical precision and execution excellence.
                             </p>
                             <div className="grid grid-cols-1 gap-8 pt-4">
