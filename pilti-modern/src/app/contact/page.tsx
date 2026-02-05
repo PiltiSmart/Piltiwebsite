@@ -150,6 +150,7 @@ export default function ContactPage() {
                                         <label className="text-[13px] font-semibold uppercase tracking-wider text-[#616161]">Full Name</label>
                                         <input
                                             type="text"
+                                            name="name"
                                             placeholder="John Doe"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -161,6 +162,7 @@ export default function ContactPage() {
                                         <label className="text-[13px] font-semibold uppercase tracking-wider text-[#616161]">Email Address</label>
                                         <input
                                             type="email"
+                                            name="email"
                                             placeholder="john@business.com"
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -172,6 +174,7 @@ export default function ContactPage() {
                                 <div className="space-y-3">
                                     <label className="text-[13px] font-semibold uppercase tracking-wider text-[#616161]">Service of Interest</label>
                                     <select
+                                        name="service"
                                         value={formData.service}
                                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                                         className="w-full px-0 py-3 bg-transparent border-b border-border focus:outline-none focus:border-[#0078D4] transition-all font-medium text-[16px] appearance-none"
@@ -187,6 +190,7 @@ export default function ContactPage() {
                                     <label className="text-[13px] font-semibold uppercase tracking-wider text-[#616161]">Your Message</label>
                                     <textarea
                                         rows={4}
+                                        name="message"
                                         placeholder="How can we assist with your project?"
                                         value={formData.message}
                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
