@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Search, UserCircle2, ArrowRight, FileText, ExternalLink } from "lucide-react";
+import { Menu, X, Search, UserCircle2, ArrowRight, FileText, ExternalLink, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -10,6 +10,13 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
+  {
+    name: "Products",
+    href: "#",
+    children: [
+      { name: "Pilti Clinical Support System", href: "/products/pilti-css" }
+    ]
+  },
   { name: "Contact", href: "/contact" },
   { name: "Store", href: "https://piltistore.com" },
   { name: "Download", href: "/download" },
@@ -20,6 +27,7 @@ const searchIndex = [
   { title: "Home", href: "/", category: "Page", tags: "piltismart smart home office school farm" },
   { title: "About PiltiSmart", href: "/about", category: "Page", tags: "mission vision team company" },
   { title: "Our Services", href: "/services", category: "Page", tags: "automation smart solutions enterprise" },
+  { title: "PCSS (X-Ray Probe)", href: "/products/pilti-css", category: "Product", tags: "medical ai radiology cardiology x-ray ecg" },
   { title: "Contact Support", href: "/contact", category: "Page", tags: "email phone address location" },
   { title: "Smarty App Download", href: "/download", category: "App", tags: "ios android windows mac linux mobile" },
   { title: "Knowledge Base", href: "/help", category: "Support", tags: "videos documentation tutorials" },
@@ -35,8 +43,11 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
   const [searchQuery, setSearchQuery] = useState("");
   const [isRedirectOpen, setIsRedirectOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [pendingUrl, setPendingUrl] = useState("https://piltistore.com");
 
   const handleStoreRedirect = (e: React.MouseEvent, url: string = "https://piltistore.com") => {
@@ -92,13 +103,49 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center">
             <ul className="flex items-center gap-1 text-[13px]">
               {navLinks.filter(link => link.name !== "Store").map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="px-4 py-3 transition-colors hover:underline decoration-2 underline-offset-4 text-foreground/90 whitespace-nowrap"
-                  >
-                    {link.name}
-                  </Link>
+                <li
+                  key={link.name}
+                  className="relative"
+                  onMouseEnter={() => link.children && setActiveDropdown(link.name)}
+                  onMouseLeave={() => link.children && setActiveDropdown(null)}
+                >
+                  {link.children ? (
+                    <button
+                      className="px-4 py-3 transition-colors hover:text-[#0078D4] text-foreground/90 whitespace-nowrap flex items-center gap-1 group"
+                    >
+                      {link.name}
+                      <ChevronDown size={12} className={cn("transition-transform duration-200", activeDropdown === link.name ? "rotate-180" : "")} />
+                    </button>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="px-4 py-3 transition-colors hover:underline decoration-2 underline-offset-4 text-foreground/90 whitespace-nowrap"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+
+                  {/* Desktop Dropdown */}
+                  <AnimatePresence>
+                    {activeDropdown === link.name && link.children && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 bg-white border border-border shadow-xl rounded-[2px] min-w-[260px] py-2 z-50"
+                      >
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className="block px-6 py-3 text-[13px] text-[#616161] hover:text-[#0078D4] hover:bg-gray-50 transition-colors"
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </li>
               ))}
             </ul>
@@ -141,13 +188,44 @@ export default function Navbar() {
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.name}>
-                {link.name === "Store" ? (
+                {link.children ? (
+                  <div>
+                    <button
+                      onClick={() => setMobileExpanded(mobileExpanded === link.name ? null : link.name)}
+                      className="flex items-center justify-between w-full text-base font-medium hover:text-primary transition-colors py-2"
+                    >
+                      {link.name}
+                      <ChevronDown size={16} className={cn("transition-transform", mobileExpanded === link.name ? "rotate-180" : "")} />
+                    </button>
+                    <AnimatePresence>
+                      {mobileExpanded === link.name && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden bg-gray-50 rounded-md"
+                        >
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              href={child.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className="block px-4 py-3 text-sm text-[#616161] hover:text-primary border-l-2 border-transparent hover:border-primary pl-4"
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : link.name === "Store" ? (
                   <button
                     onClick={(e) => {
                       setIsMobileMenuOpen(false);
                       handleStoreRedirect(e, link.href);
                     }}
-                    className="text-base font-medium hover:text-primary transition-colors text-left w-full"
+                    className="text-base font-medium hover:text-primary transition-colors text-left w-full py-2"
                   >
                     {link.name}
                   </button>
@@ -155,7 +233,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-base font-medium hover:text-primary transition-colors"
+                    className="text-base font-medium hover:text-primary transition-colors block py-2"
                   >
                     {link.name}
                   </Link>

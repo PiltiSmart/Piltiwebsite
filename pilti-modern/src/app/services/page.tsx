@@ -16,13 +16,25 @@ import {
     Cloud,
     X,
     ArrowRight,
-    Info
+    Info,
+    Stethoscope
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
-const categories = [
+interface ServiceCategory {
+    id: string;
+    title: string;
+    desc: string;
+    icon: any;
+    img: string;
+    features: string[];
+    productLink?: string;
+    productLinkText?: string;
+}
+
+const categories: ServiceCategory[] = [
     {
         id: "home",
         title: "Intelligent Residential Ecosystems",
@@ -70,6 +82,16 @@ const categories = [
         icon: BookOpen,
         img: "/img/premium_smart_publishing.png",
         features: ["Ebook Conversion", "Digital Formatting", "Quality Assurance", "Direct Distribution"]
+    },
+    {
+        id: "hospital",
+        title: "Smart Hospital Ecosystems",
+        desc: "Redefine patient care with PiltiSmart’s intelligent healthcare solutions. We integrate advanced AI clinical support, real-time patient monitoring, and automated asset tracking to create responsive, healing environments. Our systems empower medical professionals with data-driven insights, ensuring operational efficiency and superior patient outcomes.",
+        icon: Stethoscope,
+        img: "/img/premium_smart_hospital.png",
+        features: ["AI Clinical Support", "Patient Monitoring Setup", "Medical Asset Tracking", "Smart Wards"],
+        productLink: "/products/pilti-css",
+        productLinkText: "Explore PCSS Platform"
     }
 ];
 
@@ -193,6 +215,26 @@ const featureDetails: Record<string, { title: string; explanation: string; pilti
         title: "Direct Distribution",
         explanation: "Direct distribution platforms enable publishers to deliver digital content to readers without intermediaries, maximizing revenue and maintaining customer relationships. These systems handle payment processing, DRM, and analytics.",
         piltiValue: "PiltiSmart provides white-label distribution solutions with secure DRM, global payment gateway integration, and comprehensive sales analytics. Our platform supports subscription models, pre-orders, and promotional campaigns with full author control."
+    },
+    "AI Clinical Support": {
+        title: "AI Clinical Support",
+        explanation: "AI clinical support systems provide real-time diagnostic aids, treatment recommendations, and risk predictions by analyzing patient data against vast medical databases. These tools act as a second pair of eyes for clinicians, reducing diagnostic errors and improving treatment accuracy.",
+        piltiValue: "PiltiSmart's clinical support platform integrates seamlessly with Electronic Health Records (EHR) to deliver context-aware insights directly to the point of care. our algorithms continuously learn from outcomes to refine predictions, ensuring that medical decisions are supported by the latest evidence-based medicine."
+    },
+    "Patient Monitoring Setup": {
+        title: "Patient Monitoring Setup",
+        explanation: "Advanced patient monitoring utilizes wearable sensors and non-invasive devices to track vital signs continuously. This data is transmitted to a centralized hub, allowing for remote surveillance and early detection of deterioration.",
+        piltiValue: "PiltiSmart deploys a comprehensive monitoring mesh that connects bedside devices, wearables, and nursing stations. Our system prioritizes alarms based on clinical severity, reducing alarm fatigue and ensuring that critical events receive immediate attention."
+    },
+    "Medical Asset Tracking": {
+        title: "Medical Asset Tracking",
+        explanation: "Medical asset tracking uses RFID, Bluetooth, and Wi-Fi triangulation to locate critical equipment like infusion pumps, wheelchairs, and portable scanners in real-time. This visibility prevents hoarding, reduces search times, and ensures equipment is available when needed.",
+        piltiValue: "PiltiSmart's asset tracking solution provides room-level accuracy and automated maintenance scheduling. We help hospitals optimize their equipment utilization rates, reduce capital procurement costs, and prevent the loss of high-value assets."
+    },
+    "Smart Wards": {
+        title: "Smart Wards",
+        explanation: "Smart wards integrate IoT environmental controls, automated lighting, and patient-centric design to create a healing environment. These spaces adapt to patient needs, promoting rest and recovery while providing staff with efficient workflows.",
+        piltiValue: "PiltiSmart transforms traditional wards into intelligent care environments. Our systems allow patients to control their environment via bedside tablets, while automated workflows streamline task management for nurses, allowing them to spend more time on direct patient care."
     }
 };
 
@@ -230,6 +272,7 @@ export default function ServicesPage() {
                         {categories.map((cat, i) => (
                             <motion.div
                                 key={cat.id}
+                                id={cat.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -272,6 +315,15 @@ export default function ServicesPage() {
                                                 </li>
                                             ))}
                                         </ul>
+                                        {cat.productLink && (
+                                            <Link
+                                                href={cat.productLink}
+                                                className="text-[#0078D4] font-semibold text-[13px] hover:underline flex items-center gap-2 group/link mb-3"
+                                            >
+                                                {cat.productLinkText || "Explore Product"}
+                                                <ChevronRight size={14} className="group-hover/link:translate-x-1 transition-transform" />
+                                            </Link>
+                                        )}
                                         <Link
                                             href="/contact"
                                             className="text-[#0078D4] font-semibold text-[13px] hover:underline flex items-center gap-2 group/link"

@@ -11,8 +11,10 @@ import {
   GraduationCap,
   BookOpen,
   ArrowRight,
+
   Search,
-  ChevronRight
+  ChevronRight,
+  Stethoscope
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -33,7 +35,7 @@ const services: Service[] = [
     icon: HomeIcon,
     img: "/img/premium_smart_home.png",
     gridImg: "/img/landing_smart_home.png",
-    link: "/services",
+    link: "/services#home",
     category: "Consumer"
   },
   {
@@ -42,7 +44,7 @@ const services: Service[] = [
     icon: Briefcase,
     img: "/img/premium_smart_office.png",
     gridImg: "/img/landing_smart_office.png",
-    link: "/services",
+    link: "/services#office",
     category: "Business"
   },
   {
@@ -51,7 +53,7 @@ const services: Service[] = [
     icon: Sprout,
     img: "/img/premium_smart_farming.png",
     gridImg: "/img/landing_smart_farming.png",
-    link: "/services",
+    link: "/services#farming",
     category: "Agriculture"
   },
   {
@@ -60,7 +62,7 @@ const services: Service[] = [
     icon: GraduationCap,
     img: "/img/premium_smart_school.png",
     gridImg: "/img/landing_smart_school.png",
-    link: "/services",
+    link: "/services#school",
     category: "Education"
   },
   {
@@ -69,7 +71,7 @@ const services: Service[] = [
     icon: Cpu,
     img: "/img/premium_smart_industry.png",
     gridImg: "/img/landing_smart_industry.png",
-    link: "/services",
+    link: "/services#industry",
     category: "Industrial"
   },
   {
@@ -78,8 +80,17 @@ const services: Service[] = [
     icon: BookOpen,
     img: "/img/premium_smart_publishing.png",
     gridImg: "/img/landing_smart_publishing.png",
-    link: "/services",
+    link: "/services#publishing",
     category: "Digital"
+  },
+  {
+    title: "Smart Hospitals",
+    desc: "Redefine patient care with intelligent healthcare ecosystems, AI clinical support, and real-time monitoring.",
+    icon: Stethoscope,
+    img: "/img/premium_smart_hospital.png",
+    gridImg: "/img/premium_smart_hospital.png",
+    link: "/services#hospital",
+    category: "Healthcare"
   }
 ];
 
@@ -172,7 +183,7 @@ export default function Home() {
               >
                 <h4 className="font-bold mb-1 text-[#262626]">{services[activeImgIndex].title}</h4>
                 <p className="text-[11px] text-[#616161] mb-3 line-clamp-2">{services[activeImgIndex].desc}</p>
-                <Link href="/services" className="text-[12px] text-[#0078D4] font-semibold hover:underline flex items-center gap-1">
+                <Link href={services[activeImgIndex].link} className="text-[12px] text-[#0078D4] font-semibold hover:underline flex items-center gap-1">
                   Explore solution <ArrowRight size={12} />
                 </Link>
               </motion.div>
@@ -198,7 +209,7 @@ export default function Home() {
       <section className="py-24 bg-white dark:bg-background">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.slice(0, 4).map((service, i) => (
+            {services.map((service, i) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -353,25 +364,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bottom Grid for More Items */}
-      <section className="py-24 bg-[#F2F2F2] dark:bg-muted/5">
-        <div className="container mx-auto px-6">
-          <h2 className="text-[24px] font-semibold mb-12 text-[#262626] dark:text-foreground">Advanced Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.slice(4).map((service, i) => (
-              <Link key={service.title} href={service.link} className="flex gap-6 items-start group">
-                <div className="p-3 bg-white dark:bg-muted/10 shadow-sm border border-border group-hover:border-[#0078D4] transition-all">
-                  <service.icon size={24} className="text-[#0078D4]" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-[#262626] dark:text-foreground mb-1 group-hover:underline">{service.title}</h4>
-                  <p className="text-[13px] text-muted-foreground line-clamp-2">{service.desc}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }

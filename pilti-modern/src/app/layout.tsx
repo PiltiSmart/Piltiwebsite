@@ -28,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased selection:bg-accent/30`}
+        suppressHydrationWarning={true}
       >
         <Navbar />
         <main className="min-h-screen">
