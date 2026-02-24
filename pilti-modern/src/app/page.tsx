@@ -126,6 +126,32 @@ export default function Home() {
   const [activeImgIndex, setActiveImgIndex] = useState(0);
 
   useEffect(() => {
+  const BASE_URL = "https://pilticonnect.piltismart.com";
+ 
+  // Prevent loading twice
+  if ((window as any).chatwootSDK) return;
+ 
+  (window as any).chatwootSettings = {
+    position: "right",
+    type: "standard",
+    launcherTitle: "Chat with us"
+  };
+ 
+  const script = document.createElement("script");
+  script.src = BASE_URL + "/packs/js/sdk.js";
+  script.async = true;
+ 
+  script.onload = () => {
+    (window as any).chatwootSDK.run({
+      websiteToken: "UT153uVfVZHpXoZN36QNokTs",
+      baseUrl: BASE_URL
+    });
+  };
+ 
+  document.body.appendChild(script);
+}, []);
+
+  useEffect(() => {
     const timer = setInterval(() => {
       setActiveImgIndex((prev) => (prev + 1) % services.length);
     }, 5000);
