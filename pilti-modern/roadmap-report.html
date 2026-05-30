@@ -623,7 +623,7 @@
         </div>
 
         <div class="video-container">
-          <video id="e2e-video-player" controls autoplay muted loop>
+          <video id="e2e-video-player" controls muted loop>
             <source id="video-source" src="" type="video/webm">
             Your browser does not support the video tag.
           </video>
@@ -991,9 +991,6 @@
         document.getElementById("meta-path").innerText = match.video;
 
         player.load();
-        player.play().catch(err => {
-          console.log("Autoplay blocked or load issue: ", err);
-        });
       }
     }
 
