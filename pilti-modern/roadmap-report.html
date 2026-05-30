@@ -329,15 +329,15 @@
     }
 
     .test-bullet {
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: bold;
-      shrink: 0;
+      flex-shrink: 0;
     }
 
     .test-bullet.pass {
@@ -915,7 +915,7 @@
         return;
       }
 
-      filtered.forEach(t => {
+      filtered.forEach((t, idx) => {
         const row = document.createElement("div");
         row.id = "test-row-" + t.id;
         row.className = "test-row" + (t.id === selectedId ? " active" : "");
@@ -923,10 +923,11 @@
 
         row.innerHTML = `
           <div class="test-left">
-            <div class="test-bullet pass">✓</div>
+            <div class="test-bullet pass">${idx + 1}</div>
             <div class="test-meta">
               <div class="test-title-text" title="${t.title}">${t.title}</div>
               <div class="test-bottom-meta">
+                <span style="font-family: monospace; font-size: 10px; color: #818CF8; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.15); padding: 1px 4.5px; border-radius: 3px; font-weight: bold; margin-right: 4px; display: inline-block;">ID: #${t.id}</span>
                 <span class="test-tag ${t.category}">${t.category}</span>
                 <span class="test-suite-path">${t.suite}</span>
               </div>
