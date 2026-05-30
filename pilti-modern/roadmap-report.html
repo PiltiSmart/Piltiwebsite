@@ -608,6 +608,24 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    .test-row.running {
+      border-color: rgba(99, 102, 241, 0.6) !important;
+      background: rgba(99, 102, 241, 0.06) !important;
+      box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+      animation: pulse-row 1.5s infinite alternate;
+    }
+
+    @keyframes pulse-row {
+      from { border-color: rgba(99, 102, 241, 0.3); }
+      to { border-color: rgba(99, 102, 241, 0.8); }
+    }
+
+    .test-row.running .test-bullet {
+      background: rgba(99, 102, 241, 0.2) !important;
+      color: #FFFFFF !important;
+      border-color: var(--accent-indigo) !important;
+    }
   </style>
 </head>
 <body>
@@ -1090,6 +1108,16 @@
       text.innerText = "Running Playwright E2E Suite (1.3m)...";
       icon.outerHTML = `<span class="spinner" id="icon-rerun-all"></span>`;
 
+      // Visual feedback: mark all E2E rows as running
+      const rows = document.querySelectorAll(".test-row");
+      rows.forEach(row => {
+        row.classList.add("running");
+        const bullet = row.querySelector(".test-bullet");
+        if (bullet) {
+          bullet.innerHTML = `<span class="spinner" style="width: 10px; height: 10px; border-width: 1.5px;"></span>`;
+        }
+      });
+
       // Clear console and show starting indicator
       const consoleBody = document.querySelector(".console-body");
       consoleBody.innerHTML = `
@@ -1122,6 +1150,10 @@
           <div class="console-line text-rose-400">Detail: ${err.message}</div>
         `;
       } finally {
+        // Re-render to restore normal passed numbers
+        renderTestCases();
+        selectTest(selectedId);
+
         // Restore button state
         const freshBtn = document.getElementById("btn-rerun-all");
         freshBtn.disabled = false;
@@ -1145,6 +1177,16 @@
       btn.style.opacity = 0.7;
       text.innerText = "Executing Selected Test Case...";
       icon.outerHTML = `<span class="spinner" id="icon-run-single"></span>`;
+
+      // Visual feedback: mark active E2E row as running
+      const activeRow = document.getElementById("test-row-" + selectedId);
+      if (activeRow) {
+        activeRow.classList.add("running");
+        const bullet = activeRow.querySelector(".test-bullet");
+        if (bullet) {
+          bullet.innerHTML = `<span class="spinner" style="width: 10px; height: 10px; border-width: 1.5px;"></span>`;
+        }
+      }
 
       const consoleBody = document.querySelector(".console-body");
       consoleBody.innerHTML = `
@@ -1181,6 +1223,10 @@
           <div class="console-line text-rose-400">Detail: ${err.message}</div>
         `;
       } finally {
+        // Restore row visual state
+        renderTestCases();
+        selectTest(selectedId);
+
         const freshBtn = document.getElementById("btn-run-single");
         freshBtn.disabled = false;
         freshBtn.style.opacity = 1;
