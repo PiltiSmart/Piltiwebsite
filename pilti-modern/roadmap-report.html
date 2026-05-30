@@ -1146,62 +1146,126 @@
       text.innerText = "Running Playwright E2E Suite...";
       icon.outerHTML = `<span class="spinner" id="icon-rerun-all"></span>`;
 
-      // Visual feedback: mark all E2E rows as running
-      const rows = document.querySelectorAll(".test-row");
-      rows.forEach(row => {
-        row.classList.add("running");
-        const bullet = row.querySelector(".test-bullet");
-        if (bullet) {
-          bullet.innerHTML = `<span class="spinner" style="width: 10px; height: 10px; border-width: 1.5px;"></span>`;
-        }
-      });
-
-      // Clear console and show starting indicator
       const consoleBody = document.querySelector(".console-body");
-      consoleBody.innerHTML = `
-        <div class="console-line header">[START] Initiating full E2E test runner execution on umeshbranch...</div>
-        <div class="console-line system">[SYS] Executing local command: npx playwright test${isParallel ? "" : " --workers=1"}</div>
-        <div class="console-line system">[SYS] Concurrency Model: ${isParallel ? "Parallel Multi-worker (5 Workers)" : "Sequential (Single Worker Sequential Verification)"}</div>
-        <div class="console-line system">[SYS] Awaiting execution logs...</div>
-      `;
 
-      try {
-        const res = await fetch("http://localhost:3000/api/run-tests?parallel=" + isParallel);
-        const data = await res.json();
-        
-        if (data.success) {
-          consoleBody.innerHTML += `
-            <div class="console-line success">[PASSED] E2E Playwright Run Completed successfully!</div>
-            <div class="console-line"></div>
-            <div class="console-line">${data.stdout.replace(/\n/g, '<br>')}</div>
-          `;
-        } else {
-          consoleBody.innerHTML += `
-            <div class="console-line text-rose-500">[ERROR] Playwright tests failed or exited with failure status:</div>
-            <div class="console-line"></div>
-            <div class="console-line">${(data.stdout || '').replace(/\n/g, '<br>')}</div>
-            <div class="console-line text-rose-500">${(data.stderr || '').replace(/\n/g, '<br>')}</div>
-          `;
-        }
-      } catch (err) {
-        consoleBody.innerHTML += `
-          <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js Route Handler at http://localhost:3000/api/run-tests. Please make sure the app development server is active!</div>
-          <div class="console-line text-rose-400">Detail: ${err.message}</div>
+      if (isParallel) {
+        // Parallel Concurrency Mode: Mark all rows as running and run whole suite in one go
+        const rows = document.querySelectorAll(".test-row");
+        rows.forEach(row => {
+          row.classList.add("running");
+          const bullet = row.querySelector(".test-bullet");
+          if (bullet) {
+            bullet.innerHTML = `<span class="spinner" style="width: 10px; height: 10px; border-width: 1.5px;"></span>`;
+          }
+        });
+
+        consoleBody.innerHTML = `
+          <div class="console-line header">[START] Initiating full E2E test runner execution on umeshbranch...</div>
+          <div class="console-line system">[SYS] Executing local command: npx playwright test</div>
+          <div class="console-line system">[SYS] Concurrency Model: Parallel Multi-worker (5 Workers)</div>
+          <div class="console-line system">[SYS] Awaiting execution logs...</div>
         `;
-      } finally {
-        // Re-render to restore normal passed numbers
+
+        try {
+          const res = await fetch("http://localhost:3000/api/run-tests?parallel=true");
+          const data = await res.json();
+          
+          if (data.success) {
+            consoleBody.innerHTML += `
+              <div class="console-line success">[PASSED] E2E Playwright Run Completed successfully!</div>
+              <div class="console-line"></div>
+              <div class="console-line">${data.stdout.replace(/\n/g, '<br>')}</div>
+            `;
+          } else {
+            consoleBody.innerHTML += `
+              <div class="console-line text-rose-500">[ERROR] Playwright tests failed or exited with failure status:</div>
+              <div class="console-line"></div>
+              <div class="console-line">${(data.stdout || '').replace(/\n/g, '<br>')}</div>
+              <div class="console-line text-rose-500">${(data.stderr || '').replace(/\n/g, '<br>')}</div>
+            `;
+          }
+        } catch (err) {
+          consoleBody.innerHTML += `
+            <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js Route Handler at http://localhost:3000/api/run-tests. Please make sure the app development server is active!</div>
+            <div class="console-line text-rose-400">Detail: ${err.message}</div>
+          `;
+        } finally {
+          // Re-render to restore normal passed numbers
+          renderTestCases();
+          selectTest(selectedId);
+        }
+      } else {
+        // Sequential Mode: Run tests one-by-one in sequence
+        consoleBody.innerHTML = `
+          <div class="console-line header">[START] Initiating sequential E2E test execution...</div>
+          <div class="console-line system">[SYS] Concurrency Model: Sequential (Single Worker Serial Execution)</div>
+          <div class="console-line system">[SYS] Running each test case individually. View progression below...</div>
+          <div class="console-line"></div>
+        `;
+
+        // Loop over the filtered list of tests
+        let filtered = testCases.filter(t => {
+          const matchesCategory = currentCategory === 'all' || t.category === currentCategory;
+          const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                t.suite.toLowerCase().includes(searchQuery.toLowerCase());
+          return matchesCategory && matchesSearch;
+        });
+
+        for (let idx = 0; idx < filtered.length; idx++) {
+          const t = filtered[idx];
+          
+          // Mark ONLY this specific row as running
+          const row = document.getElementById("test-row-" + t.id);
+          if (row) {
+            row.classList.add("running");
+            const bullet = row.querySelector(".test-bullet");
+            if (bullet) {
+              bullet.innerHTML = `<span class="spinner" style="width: 10px; height: 10px; border-width: 1.5px;"></span>`;
+            }
+          }
+
+          consoleBody.innerHTML += `<div class="console-line system">[RUNNING] Test ${idx + 1}/${filtered.length}: "${t.title}"...</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight; // Auto-scroll to bottom
+
+          try {
+            const res = await fetch("http://localhost:3000/api/run-tests?title=" + encodeURIComponent(t.title) + "&parallel=false");
+            const data = await res.json();
+
+            if (data.success) {
+              consoleBody.innerHTML += `<div class="console-line success">  ✓ Passed (${t.duration})</div>`;
+            } else {
+              consoleBody.innerHTML += `<div class="console-line text-rose-500">  ✗ Failed (Check terminal log)</div>`;
+            }
+          } catch (err) {
+            consoleBody.innerHTML += `<div class="console-line text-rose-400">  ✗ Network Error: ${err.message}</div>`;
+          } finally {
+            // Remove running state immediately from this row
+            if (row) {
+              row.classList.remove("running");
+              const bullet = row.querySelector(".test-bullet");
+              if (bullet) {
+                bullet.innerHTML = (idx + 1).toString();
+              }
+            }
+            consoleBody.scrollTop = consoleBody.scrollHeight;
+          }
+        }
+
+        consoleBody.innerHTML += `<div class="console-line header" style="margin-top: 10px;">[FINISHED] All sequential tests have completed their sweeps!</div>`;
+        
+        // Re-render and select active
         renderTestCases();
         selectTest(selectedId);
-
-        // Restore button state
-        const freshBtn = document.getElementById("btn-rerun-all");
-        freshBtn.disabled = false;
-        freshBtn.style.opacity = 1;
-        document.getElementById("text-rerun-all").innerText = "Re-run All 25 E2E Tests";
-        document.getElementById("icon-rerun-all").outerHTML = `
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-rerun-all"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
-        `;
       }
+
+      // Restore button state
+      const freshBtn = document.getElementById("btn-rerun-all");
+      freshBtn.disabled = false;
+      freshBtn.style.opacity = 1;
+      document.getElementById("text-rerun-all").innerText = "Re-run All 25 E2E Tests";
+      document.getElementById("icon-rerun-all").outerHTML = `
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-rerun-all"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
+      `;
     }
 
     async function triggerRerunCurrent() {
