@@ -1119,6 +1119,31 @@
       }
     }
 
+    function updateActiveBadgeState(isRunning, testTitle = "") {
+      const badge = document.querySelector(".video-badge");
+      const dot = document.querySelector(".video-badge-dot");
+      const label = document.getElementById("player-format-badge");
+      const videoPanel = document.querySelector(".video-panel");
+
+      if (isRunning) {
+        badge.style.backgroundColor = "rgba(245, 158, 11, 0.12)";
+        badge.style.color = "#F59E0B";
+        badge.style.borderColor = "rgba(245, 158, 11, 0.3)";
+        dot.style.backgroundColor = "#F59E0B";
+        label.innerHTML = `Running E2E: "${testTitle.substring(0, 24)}..."`;
+        videoPanel.style.borderColor = "rgba(245, 158, 11, 0.4)";
+        videoPanel.style.boxShadow = "0 10px 45px rgba(245, 158, 11, 0.08)";
+      } else {
+        badge.style.backgroundColor = "";
+        badge.style.color = "";
+        badge.style.borderColor = "";
+        dot.style.backgroundColor = "";
+        label.innerHTML = "WebM Video";
+        videoPanel.style.borderColor = "";
+        videoPanel.style.boxShadow = "";
+      }
+    }
+
     let isParallel = true;
 
     function toggleParallelState() {
@@ -1159,6 +1184,9 @@
           }
         });
 
+        // Show running indicator badge on right video header
+        updateActiveBadgeState(true, "Full Suite");
+
         consoleBody.innerHTML = `
           <div class="console-line header">[START] Initiating full E2E test runner execution on umeshbranch...</div>
           <div class="console-line system">[SYS] Executing local command: npx playwright test</div>
@@ -1190,6 +1218,9 @@
             <div class="console-line text-rose-400">Detail: ${err.message}</div>
           `;
         } finally {
+          // Clear visual E2E running badge
+          updateActiveBadgeState(false);
+
           // Re-render to restore normal passed numbers
           renderTestCases();
           selectTest(selectedId);
@@ -1224,6 +1255,9 @@
             }
           }
 
+          // Show running indicator badge on right video header
+          updateActiveBadgeState(true, t.title);
+
           consoleBody.innerHTML += `<div class="console-line system">[RUNNING] Test ${idx + 1}/${filtered.length}: "${t.title}"...</div>`;
           consoleBody.scrollTop = consoleBody.scrollHeight; // Auto-scroll to bottom
 
@@ -1239,6 +1273,9 @@
           } catch (err) {
             consoleBody.innerHTML += `<div class="console-line text-rose-400">  ✗ Network Error: ${err.message}</div>`;
           } finally {
+            // Clear visual E2E running badge
+            updateActiveBadgeState(false);
+
             // Remove running state immediately from this row
             if (row) {
               row.classList.remove("running");
@@ -1291,6 +1328,9 @@
         }
       }
 
+      // Show running indicator badge on right video header
+      updateActiveBadgeState(true, match.title);
+
       const consoleBody = document.querySelector(".console-body");
       consoleBody.innerHTML = `
         <div class="console-line header">[START] Initiating specific test execution...</div>
@@ -1326,6 +1366,9 @@
           <div class="console-line text-rose-400">Detail: ${err.message}</div>
         `;
       } finally {
+        // Clear visual E2E running badge
+        updateActiveBadgeState(false);
+
         // Restore row visual state
         renderTestCases();
         selectTest(selectedId);
