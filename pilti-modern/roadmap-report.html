@@ -699,6 +699,28 @@
           <span id="text-rerun-all">Re-run All 25 E2E Tests</span>
         </button>
 
+        <!-- Concurrency settings panel -->
+        <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.015); border: 1px solid var(--border-color); padding: 12px 14px; border-radius: 8px; margin-bottom: 16px;">
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <span style="font-size: 12.5px; font-weight: 600; color: #FFFFFF; display: flex; align-items: center; gap: 5px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-indigo);"><path d="M12 2v20"/><path d="m17 5-5-5-5 5"/><path d="m17 19-5 5-5-5"/></svg>
+              Parallel Concurrency
+            </span>
+            <span style="font-size: 10px; color: var(--text-secondary);">Run tests concurrently using multiple workers</span>
+          </div>
+          <!-- Sliding toggle switch -->
+          <div
+            id="parallel-concurrency-toggle"
+            onclick="toggleParallelState()"
+            style="width: 42px; height: 22px; border-radius: 9999px; padding: 2.5px; cursor: pointer; transition: all 0.2s ease; background-color: #6366F1; display: flex; align-items: center;"
+          >
+            <div
+              id="parallel-concurrency-dot"
+              style="width: 17px; height: 17px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.3); transform: translateX(20px); transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);"
+            ></div>
+          </div>
+        </div>
+
         <!-- Scrollable Test Cases List -->
         <div class="test-list-scroll" id="test-cases-container">
           <!-- Dynamically filled by JS -->
@@ -1097,6 +1119,22 @@
       }
     }
 
+    let isParallel = true;
+
+    function toggleParallelState() {
+      isParallel = !isParallel;
+      const toggle = document.getElementById("parallel-concurrency-toggle");
+      const dot = document.getElementById("parallel-concurrency-dot");
+
+      if (isParallel) {
+        toggle.style.backgroundColor = "#6366F1";
+        dot.style.transform = "translateX(20px)";
+      } else {
+        toggle.style.backgroundColor = "rgba(255,255,255,0.08)";
+        dot.style.transform = "translateX(0px)";
+      }
+    }
+
     async function triggerRerunAll() {
       const btn = document.getElementById("btn-rerun-all");
       const text = document.getElementById("text-rerun-all");
@@ -1105,7 +1143,7 @@
       // Update state to loading
       btn.disabled = true;
       btn.style.opacity = 0.7;
-      text.innerText = "Running Playwright E2E Suite (1.3m)...";
+      text.innerText = "Running Playwright E2E Suite...";
       icon.outerHTML = `<span class="spinner" id="icon-rerun-all"></span>`;
 
       // Visual feedback: mark all E2E rows as running
@@ -1122,12 +1160,13 @@
       const consoleBody = document.querySelector(".console-body");
       consoleBody.innerHTML = `
         <div class="console-line header">[START] Initiating full E2E test runner execution on umeshbranch...</div>
-        <div class="console-line system">[SYS] Executing local command: npx playwright test</div>
-        <div class="console-line system">[SYS] This will run all 26 test files. Awaiting execution logs...</div>
+        <div class="console-line system">[SYS] Executing local command: npx playwright test${isParallel ? "" : " --workers=1"}</div>
+        <div class="console-line system">[SYS] Concurrency Model: ${isParallel ? "Parallel Multi-worker (5 Workers)" : "Sequential (Single Worker Sequential Verification)"}</div>
+        <div class="console-line system">[SYS] Awaiting execution logs...</div>
       `;
 
       try {
-        const res = await fetch("http://localhost:3000/api/run-tests");
+        const res = await fetch("http://localhost:3000/api/run-tests?parallel=" + isParallel);
         const data = await res.json();
         
         if (data.success) {
@@ -1197,7 +1236,7 @@
       `;
 
       try {
-        const res = await fetch("http://localhost:3000/api/run-tests?title=" + encodeURIComponent(match.title));
+        const res = await fetch("http://localhost:3000/api/run-tests?title=" + encodeURIComponent(match.title) + "&parallel=" + isParallel);
         const data = await res.json();
 
         if (data.success) {

@@ -7,9 +7,14 @@ const execAsync = promisify(exec);
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const testTitle = searchParams.get("title");
+  const parallel = searchParams.get("parallel") !== "false";
   
   // Build Playwright command
   let command = 'PATH="$HOME/node/bin:$PATH" npx playwright test';
+  if (!parallel) {
+    command += " --workers=1";
+  }
+  
   if (testTitle) {
     // Sanitize title parameters to secure local execution against injection
     const sanitizedTitle = testTitle.replace(/[^a-zA-Z0-9\s™\-]/g, "");
