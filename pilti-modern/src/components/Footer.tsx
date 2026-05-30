@@ -9,9 +9,9 @@ const footerLinks = [
     {
         title: "What's new",
         links: [
-            { name: "SmartySwitch", href: "/services" },
-            { name: "SmartyTalkCamera", href: "/services" },
-            { name: "SmartyCompTV", href: "/services" },
+            { name: "SmartySwitch™", href: "/products/smart-home" },
+            { name: "Precision Sensing Grid", href: "/products/smart-farming" },
+            { name: "SmartyTalkCamera™", href: "/services" },
             { name: "Next Gen IoT", href: "/" },
         ]
     },
@@ -26,18 +26,18 @@ const footerLinks = [
     {
         title: "Education",
         links: [
-            { name: "Smart Schools", href: "/services" },
-            { name: "Virtual Classrooms", href: "/services" },
-            { name: "Learning Plans", href: "/services" },
+            { name: "Smart Schools", href: "/services#school" },
+            { name: "Virtual Classrooms", href: "/services#school" },
+            { name: "Learning Plans", href: "/services#school" },
         ]
     },
     {
         title: "Business",
         links: [
-            { name: "Smart Office", href: "/services" },
-            { name: "Smart Industries", href: "/services" },
-            { name: "Edge Computing", href: "/services" },
-            { name: "Data Analytics", href: "/services" },
+            { name: "Smart Office", href: "/products/smart-office" },
+            { name: "Smart Industries", href: "/products/smart-industrial" },
+            { name: "Edge Computing", href: "/services#industry" },
+            { name: "Data Analytics", href: "/services#industry" },
         ]
     },
     {

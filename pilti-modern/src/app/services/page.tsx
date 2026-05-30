@@ -38,10 +38,12 @@ const categories: ServiceCategory[] = [
     {
         id: "home",
         title: "Intelligent Residential Ecosystems",
-        desc: "Elevate your living experience with PiltiSmart’s advanced residential automation ecosystems. We specialize in the seamless integration of intelligent lighting, high-fidelity security protocols, and precision climate control systems. By collaborating closely with architects and engineers, we deliver bespoke, turnkey solutions that transform conventional houses into intuitive, responsive environments, ensuring unparalleled comfort and security for modern homeowners.",
+        desc: "Elevate your living experience with PiltiSmart’s advanced residential automation ecosystems. We specialize in the seamless integration of intelligent lighting, high-fidelity security protocols, and precision climate control systems. By collaborating closely with architects and engineers, we deliver turnkey, bespoke solutions that transform conventional houses into intuitive, responsive environments, ensuring unparalleled comfort and security for modern homeowners.",
         icon: Home,
         img: "/img/premium_smart_home.png",
-        features: ["Intelligent Lighting", "Security Systems", "Voice Control", "Climate Management"]
+        features: ["Intelligent Lighting", "Security Systems", "Voice Control", "Climate Management"],
+        productLink: "/products/smart-home",
+        productLinkText: "Explore SmartySwitch™"
     },
     {
         id: "office",
@@ -49,7 +51,9 @@ const categories: ServiceCategory[] = [
         desc: "Optimize corporate efficiency and resource management through our comprehensive Smart Office solutions. PiltiSmart empowers enterprises to monitor and calibrate energy consumption across lighting, HVAC, and water systems in real-time. Our intelligent workplace frameworks not only reduce operational overhead but also foster a more productive, sustainable environment by leveraging data-driven insights to manage resource utilization effectively.",
         icon: Briefcase,
         img: "/img/premium_smart_office.png",
-        features: ["Presence Monitoring", "Resource Tracking", "Energy Efficiency", "Remote Management"]
+        features: ["Presence Monitoring", "Resource Tracking", "Energy Efficiency", "Remote Management"],
+        productLink: "/products/smart-office",
+        productLinkText: "Explore Calibration Suite"
     },
     {
         id: "farming",
@@ -57,7 +61,9 @@ const categories: ServiceCategory[] = [
         desc: "Revolutionize agricultural productivity with precision IoT sensing and automated management systems. PiltiSmart enables farmers to maximize crop yields while minimizing resource expenditure through sophisticated soil analytics, moisture tracking, and automated irrigation networks. Our data-centric approach provides actionable insights into weather patterns and land vitality, ensuring sustainable, high-efficiency farming operations in an evolving climate.",
         icon: Sprout,
         img: "/img/premium_smart_farming.png",
-        features: ["Crop Monitoring", "Automated Irrigation", "Soil Analytics", "Weather Insight"]
+        features: ["Crop Monitoring", "Automated Irrigation", "Soil Analytics", "Weather Insight"],
+        productLink: "/products/smart-farming",
+        productLinkText: "Explore Sensing Grid"
     },
     {
         id: "school",
@@ -73,12 +79,14 @@ const categories: ServiceCategory[] = [
         desc: "Unlock the full potential of Industry 4.0 with our specialized industrial automation and IIoT integration services. PiltiSmart’s expert team designs and deploys custom edge-to-cloud frameworks that enable predictive maintenance, real-time asset tracking, and comprehensive operational visibility. We help manufacturers eliminate quality bottlenecks and optimize production cycles, ensuring peak performance and safety in complex industrial landscapes.",
         icon: Cpu,
         img: "/img/premium_smart_industry.png",
-        features: ["Predictive Maintenance", "Operational Visibility", "Safe Production", "Asset Tracking"]
+        features: ["Predictive Maintenance", "Operational Visibility", "Safe Production", "Asset Tracking"],
+        productLink: "/products/smart-industrial",
+        productLinkText: "Explore IIoT Diagnostics"
     },
     {
         id: "publishing",
         title: "Advanced Digital Media Conversion",
-        desc: "Streamline your digital transition with our high-fidelity Smart Publishing technology. PiltiSmart offers sophisticated digital conversion services that transform manuscripts into professionally formatted, market-ready ebooks with precision and scale. Our quality-assurance protocols and direct distribution strategies handle the complexities of digital media, allowing authors and publishers to reach global audiences with ease and excellence.",
+        desc: "Streamline your digital transition with our high-fidelity Smart Publishing technology. PiltiSmart offers digital conversion services that transform manuscripts into professionally formatted, market-ready ebooks with precision and scale. Our quality-assurance protocols and direct distribution strategies handle the complexities of digital media, allowing authors and publishers to reach global audiences with ease and excellence.",
         icon: BookOpen,
         img: "/img/premium_smart_publishing.png",
         features: ["Ebook Conversion", "Digital Formatting", "Quality Assurance", "Direct Distribution"]

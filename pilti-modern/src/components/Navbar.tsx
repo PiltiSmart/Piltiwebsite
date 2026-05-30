@@ -14,7 +14,11 @@ const navLinks = [
     name: "Products",
     href: "#",
     children: [
-      { name: "Pilti Clinical Support System", href: "/products/pilti-css" }
+      { name: "Pilti Clinical Support System (PCSS)", href: "/products/pilti-css" },
+      { name: "SmartySwitch™ (Smart Home)", href: "/products/smart-home" },
+      { name: "Precision Sensing Grid (Smart Farming)", href: "/products/smart-farming" },
+      { name: "Resource Calibrator (Smart Office)", href: "/products/smart-office" },
+      { name: "IIoT Diagnostic Hub (Smart Industrial)", href: "/products/smart-industrial" }
     ]
   },
   { name: "Contact", href: "/contact" },
@@ -28,6 +32,10 @@ const searchIndex = [
   { title: "About PiltiSmart", href: "/about", category: "Page", tags: "mission vision team company" },
   { title: "Our Services", href: "/services", category: "Page", tags: "automation smart solutions enterprise" },
   { title: "PCSS (X-Ray Probe)", href: "/products/pilti-css", category: "Product", tags: "medical ai radiology cardiology x-ray ecg" },
+  { title: "SmartySwitch™ (Smart Home)", href: "/products/smart-home", category: "Product", tags: "home switch light power anomaly detection residential" },
+  { title: "Sensing Grid (Smart Farming)", href: "/products/smart-farming", category: "Product", tags: "farming soil moisture agronomy crop agricultural lora solar" },
+  { title: "Resource Calibrator (Smart Office)", href: "/products/smart-office", category: "Product", tags: "office presence hvac lighting corporate space" },
+  { title: "IIoT Diagnostic Hub (Smart Industrial)", href: "/products/smart-industrial", category: "Product", tags: "industrial vibration telemetry scada motor anomaly edge predictive" },
   { title: "Contact Support", href: "/contact", category: "Page", tags: "email phone address location" },
   { title: "Smarty App Download", href: "/download", category: "App", tags: "ios android windows mac linux mobile" },
   { title: "Knowledge Base", href: "/help", category: "Support", tags: "videos documentation tutorials" },

@@ -99,8 +99,7 @@ export default function DownloadPage() {
                                     <motion.div
                                         key={item.os}
                                         initial={{ opacity: 0, y: 10 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
+                                        animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: i * 0.1 }}
                                         className="bg-[#F6F6F6] p-4 lg:p-6 rounded-[16px] border border-transparent hover:border-[#0078D4]/10 transition-all flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6 group"
                                     >
@@ -151,8 +150,7 @@ export default function DownloadPage() {
                             {/* Help Banner Integrated below List */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 className="mt-12 bg-[#262626] text-white p-12 rounded-[40px] relative overflow-hidden group shadow-xl"
                             >
                                 <img

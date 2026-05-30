@@ -125,37 +125,46 @@ function HeroSlideshow({ images }: { images: string[] }) {
 export default function Home() {
   const [activeImgIndex, setActiveImgIndex] = useState(0);
 
- useEffect(() => {
-  const BASE_URL = process.env.NEXT_PUBLIC_CHATWOOT_BASE_URL;
-  const WEBSITE_TOKEN = process.env.NEXT_PUBLIC_CHATWOOT_WEBSITE_TOKEN;
+  // Hero slideshow timer
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveImgIndex((prev) => (prev + 1) % services.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
-  if (!BASE_URL || !WEBSITE_TOKEN) {
-    console.error("Chatwoot env variables missing");
-    return;
-  }
+  // Chatwoot live widget loader
+  useEffect(() => {
+    const BASE_URL = process.env.NEXT_PUBLIC_CHATWOOT_BASE_URL;
+    const WEBSITE_TOKEN = process.env.NEXT_PUBLIC_CHATWOOT_WEBSITE_TOKEN;
 
-  // Prevent loading twice
-  if ((window as any).chatwootSDK) return;
+    if (!BASE_URL || !WEBSITE_TOKEN) {
+      console.error("Chatwoot env variables missing");
+      return;
+    }
 
-  (window as any).chatwootSettings = {
-    position: "right",
-    type: "standard",
-    launcherTitle: "Chat with us",
-  };
+    // Prevent loading twice
+    if ((window as any).chatwootSDK) return;
 
-  const script = document.createElement("script");
-  script.src = `${BASE_URL}/packs/js/sdk.js`;
-  script.async = true;
+    (window as any).chatwootSettings = {
+      position: "right",
+      type: "standard",
+      launcherTitle: "Chat with us",
+    };
 
-  script.onload = () => {
-    (window as any).chatwootSDK.run({
-      websiteToken: WEBSITE_TOKEN,
-      baseUrl: BASE_URL,
-    });
-  };
+    const script = document.createElement("script");
+    script.src = `${BASE_URL}/packs/js/sdk.js`;
+    script.async = true;
 
-  document.body.appendChild(script);
-}, []);
+    script.onload = () => {
+      (window as any).chatwootSDK.run({
+        websiteToken: WEBSITE_TOKEN,
+        baseUrl: BASE_URL,
+      });
+    };
+
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <div className="pt-12">
