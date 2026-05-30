@@ -536,6 +536,78 @@
     .report-link:hover svg {
       transform: translateX(4px);
     }
+
+    .rerun-all-btn {
+      background: linear-gradient(135deg, var(--accent-indigo) 0%, var(--accent-blue) 100%);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-family: var(--font-outfit);
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
+      margin-bottom: 16px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .rerun-all-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .rerun-all-btn:active {
+      transform: translateY(0);
+    }
+
+    .run-single-btn {
+      background: rgba(255, 255, 255, 0.02);
+      color: #A5B4FC;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-family: var(--font-outfit);
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .run-single-btn:hover {
+      background: rgba(99, 102, 241, 0.08);
+      color: #FFFFFF;
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 0 12px rgba(99, 102, 241, 0.15);
+    }
+
+    /* Loading Spinner */
+    .spinner {
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-left-color: #FFFFFF;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -603,6 +675,12 @@
           <div id="tab-forms" class="filter-tab" onclick="setCategoryFilter('forms')">Forms & Theme</div>
         </div>
 
+        <!-- Rerun all button -->
+        <button onclick="triggerRerunAll()" id="btn-rerun-all" class="rerun-all-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-rerun-all"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
+          <span id="text-rerun-all">Re-run All 25 E2E Tests</span>
+        </button>
+
         <!-- Scrollable Test Cases List -->
         <div class="test-list-scroll" id="test-cases-container">
           <!-- Dynamically filled by JS -->
@@ -634,7 +712,7 @@
         </div>
 
         <!-- Metadata Info box -->
-        <div class="video-metadata-grid">
+        <div class="video-metadata-grid" style="margin-bottom: 8px;">
           <div class="video-meta-item">
             Category
             <strong id="meta-category">-</strong>
@@ -648,6 +726,12 @@
             <strong id="meta-path" style="word-break: break-all; font-family: monospace; font-size: 10px; margin-top: 4px;">-</strong>
           </div>
         </div>
+
+        <!-- Run single test button -->
+        <button id="btn-run-single" onclick="triggerRerunCurrent()" class="run-single-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-run-single"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span id="text-run-single">Re-run This Selected Test Case</span>
+        </button>
 
         <!-- Links Panel -->
         <div class="links-panel">
@@ -992,6 +1076,118 @@
         document.getElementById("meta-path").innerText = match.video;
 
         player.load();
+      }
+    }
+
+    async function triggerRerunAll() {
+      const btn = document.getElementById("btn-rerun-all");
+      const text = document.getElementById("text-rerun-all");
+      const icon = document.getElementById("icon-rerun-all");
+      
+      // Update state to loading
+      btn.disabled = true;
+      btn.style.opacity = 0.7;
+      text.innerText = "Running Playwright E2E Suite (1.3m)...";
+      icon.outerHTML = `<span class="spinner" id="icon-rerun-all"></span>`;
+
+      // Clear console and show starting indicator
+      const consoleBody = document.querySelector(".console-body");
+      consoleBody.innerHTML = `
+        <div class="console-line header">[START] Initiating full E2E test runner execution on umeshbranch...</div>
+        <div class="console-line system">[SYS] Executing local command: npx playwright test</div>
+        <div class="console-line system">[SYS] This will run all 26 test files. Awaiting execution logs...</div>
+      `;
+
+      try {
+        const res = await fetch("http://localhost:3000/api/run-tests");
+        const data = await res.json();
+        
+        if (data.success) {
+          consoleBody.innerHTML += `
+            <div class="console-line success">[PASSED] E2E Playwright Run Completed successfully!</div>
+            <div class="console-line"></div>
+            <div class="console-line">${data.stdout.replace(/\n/g, '<br>')}</div>
+          `;
+        } else {
+          consoleBody.innerHTML += `
+            <div class="console-line text-rose-500">[ERROR] Playwright tests failed or exited with failure status:</div>
+            <div class="console-line"></div>
+            <div class="console-line">${(data.stdout || '').replace(/\n/g, '<br>')}</div>
+            <div class="console-line text-rose-500">${(data.stderr || '').replace(/\n/g, '<br>')}</div>
+          `;
+        }
+      } catch (err) {
+        consoleBody.innerHTML += `
+          <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js Route Handler at http://localhost:3000/api/run-tests. Please make sure the app development server is active!</div>
+          <div class="console-line text-rose-400">Detail: ${err.message}</div>
+        `;
+      } finally {
+        // Restore button state
+        const freshBtn = document.getElementById("btn-rerun-all");
+        freshBtn.disabled = false;
+        freshBtn.style.opacity = 1;
+        document.getElementById("text-rerun-all").innerText = "Re-run All 25 E2E Tests";
+        document.getElementById("icon-rerun-all").outerHTML = `
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-rerun-all"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
+        `;
+      }
+    }
+
+    async function triggerRerunCurrent() {
+      const btn = document.getElementById("btn-run-single");
+      const text = document.getElementById("text-run-single");
+      const icon = document.getElementById("icon-run-single");
+
+      const match = testCases.find(t => t.id === selectedId);
+      if (!match) return;
+
+      btn.disabled = true;
+      btn.style.opacity = 0.7;
+      text.innerText = "Executing Selected Test Case...";
+      icon.outerHTML = `<span class="spinner" id="icon-run-single"></span>`;
+
+      const consoleBody = document.querySelector(".console-body");
+      consoleBody.innerHTML = `
+        <div class="console-line header">[START] Initiating specific test execution...</div>
+        <div class="console-line system">[SYS] Test Title: "${match.title}"</div>
+        <div class="console-line system">[SYS] Command: npx playwright test -g "${match.title}"</div>
+        <div class="console-line system">[SYS] Awaiting compiler and runner outputs...</div>
+      `;
+
+      try {
+        const res = await fetch("http://localhost:3000/api/run-tests?title=" + encodeURIComponent(match.title));
+        const data = await res.json();
+
+        if (data.success) {
+          consoleBody.innerHTML += `
+            <div class="console-line success">[PASSED] Selected test case executed perfectly!</div>
+            <div class="console-line"></div>
+            <div class="console-line">${data.stdout.replace(/\n/g, '<br>')}</div>
+          `;
+          // Reload player video to catch fresh execution recording
+          const player = document.getElementById("e2e-video-player");
+          player.load();
+        } else {
+          consoleBody.innerHTML += `
+            <div class="console-line text-rose-500">[FAILED] Playwright run failed:</div>
+            <div class="console-line"></div>
+            <div class="console-line">${(data.stdout || '').replace(/\n/g, '<br>')}</div>
+            <div class="console-line text-rose-500">${(data.stderr || '').replace(/\n/g, '<br>')}</div>
+          `;
+        }
+      } catch (err) {
+        consoleBody.innerHTML += `
+          <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js server at http://localhost:3000. Please ensure it is running in background.</div>
+          <div class="console-line text-rose-400">Detail: ${err.message}</div>
+        `;
+      } finally {
+        const freshBtn = document.getElementById("btn-run-single");
+        freshBtn.disabled = false;
+        freshBtn.style.opacity = 1;
+        document.getElementById("text-run-single").innerText = "Re-run This Selected Test Case";
+        document.getElementById("icon-run-single").outerHTML = `
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-run-single"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        `;
       }
     }
 
