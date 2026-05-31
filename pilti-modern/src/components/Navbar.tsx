@@ -165,12 +165,12 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-6">
-            <button
-              onClick={(e) => handleStoreRedirect(e, "https://piltistore.com")}
+            <Link
+              href="/store"
               className="text-[13px] hover:underline decoration-2 underline-offset-4 pr-4 border-r whitespace-nowrap"
             >
               Store
-            </button>
+            </Link>
             <div className="relative">
               <Search
                 size={18}
@@ -230,16 +230,6 @@ export default function Navbar() {
                       )}
                     </AnimatePresence>
                   </div>
-                ) : link.name === "Store" ? (
-                  <button
-                    onClick={(e) => {
-                      setIsMobileMenuOpen(false);
-                      handleStoreRedirect(e, link.href);
-                    }}
-                    className="text-base font-medium hover:text-primary transition-colors text-left w-full py-2"
-                  >
-                    {link.name}
-                  </button>
                 ) : (
                   <Link
                     href={link.href}
