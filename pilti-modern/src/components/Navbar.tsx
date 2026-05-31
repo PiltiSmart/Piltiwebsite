@@ -23,7 +23,7 @@ const navLinks = [
   },
   { name: "Contact", href: "/contact" },
   { name: "SmartyApp", href: "/smartyapp" },
-  { name: "Store", href: "https://piltistore.com" },
+  { name: "Store", href: "/store" },
   { name: "Download", href: "/download" },
   { name: "Help", href: "/help" },
 ];
@@ -47,6 +47,7 @@ const searchIndex = [
   { title: "Terms of Service", href: "/terms", category: "Legal", tags: "usage license" },
   { title: "Careers", href: "/careers", category: "Company", tags: "jobs hiring opportunities roles culture" },
   { title: "SmartyApp™ Dashboard", href: "/smartyapp", category: "App", tags: "smartyapp live dashboard control panel iot embed app" },
+  { title: "Pilti Store Dashboard", href: "/store", category: "Store", tags: "piltistore shop ecommerce catalog devices products store" },
 ];
 
 export default function Navbar() {
