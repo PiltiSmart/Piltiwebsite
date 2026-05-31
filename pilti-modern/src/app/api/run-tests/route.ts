@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
   
   if (testTitle) {
     // Sanitize title parameters to secure local execution against injection
-    const sanitizedTitle = testTitle.replace(/[^a-zA-Z0-9\s™\-]/g, "");
+    const sanitizedTitle = testTitle.replace(/[^a-zA-Z0-9\s™\-|]/g, "");
     command += ` -g "${sanitizedTitle}"`;
   }
 

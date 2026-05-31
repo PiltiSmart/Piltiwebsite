@@ -22,6 +22,7 @@ const navLinks = [
     ]
   },
   { name: "Contact", href: "/contact" },
+  { name: "SmartyApp", href: "/smartyapp" },
   { name: "Store", href: "https://piltistore.com" },
   { name: "Download", href: "/download" },
   { name: "Help", href: "/help" },
@@ -45,6 +46,7 @@ const searchIndex = [
   { title: "Privacy Policy", href: "/privacy", category: "Legal", tags: "data security terms" },
   { title: "Terms of Service", href: "/terms", category: "Legal", tags: "usage license" },
   { title: "Careers", href: "/careers", category: "Company", tags: "jobs hiring opportunities roles culture" },
+  { title: "SmartyApp™ Dashboard", href: "/smartyapp", category: "App", tags: "smartyapp live dashboard control panel iot embed app" },
 ];
 
 export default function Navbar() {

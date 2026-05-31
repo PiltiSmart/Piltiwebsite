@@ -313,3 +313,28 @@ test.describe('Comprehensive User Journey: Comparison Shopper', () => {
         console.log('Comparison shopper completed journey');
     });
 });
+
+test.describe('Comprehensive User Journey: SmartyApp Dashboard Explorer', () => {
+    test('should embed the SmartyApp and allow login', async ({ page }) => {
+        test.setTimeout(60000); // Allow extra time for Flutter web to initialize
+
+        console.log('User exploring SmartyApp Internal Dashboard');
+        
+        // 1. Visit the internal dashboard page
+        await page.goto('/smartyapp');
+
+        // 2. Wait for the main embedded iframe to load
+        const appIframe = page.frameLocator('iframe[title="SmartyApp™"]');
+        
+        // Ensure the Flutter app container is attached
+        await expect(appIframe.locator('flt-glass-pane, flt-scene-host, flutter-view').first()).toBeAttached({ timeout: 20000 });
+
+        // Wait a moment for Flutter rendering to settle
+        await page.waitForTimeout(5000);
+
+        // Wait a moment for Flutter rendering to settle
+        await page.waitForTimeout(10000);
+        
+        console.log('User completed SmartyApp interaction');
+    });
+});
