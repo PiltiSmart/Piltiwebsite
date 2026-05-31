@@ -23,7 +23,7 @@ const navLinks = [
   },
   { name: "Contact", href: "/contact" },
   { name: "SmartyApp", href: "/smartyapp" },
-  { name: "Store", href: "/store" },
+  { name: "PiltiStore", href: "https://piltistore.com" },
   { name: "Download", href: "/download" },
   { name: "Help", href: "/help" },
 ];
@@ -47,7 +47,6 @@ const searchIndex = [
   { title: "Terms of Service", href: "/terms", category: "Legal", tags: "usage license" },
   { title: "Careers", href: "/careers", category: "Company", tags: "jobs hiring opportunities roles culture" },
   { title: "SmartyApp™ Dashboard", href: "/smartyapp", category: "App", tags: "smartyapp live dashboard control panel iot embed app" },
-  { title: "Pilti Store Dashboard", href: "/store", category: "Store", tags: "piltistore shop ecommerce catalog devices products store" },
 ];
 
 export default function Navbar() {
@@ -113,7 +112,7 @@ export default function Navbar() {
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center">
             <ul className="flex items-center gap-1 text-[13px]">
-              {navLinks.filter(link => link.name !== "Store").map((link) => (
+              {navLinks.filter(link => link.name !== "PiltiStore" && link.name !== "SmartyApp").map((link) => (
                 <li
                   key={link.name}
                   className="relative"
@@ -166,11 +165,17 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-6">
             <Link
-              href="/store"
+              href="/smartyapp"
+              className="text-[13px] hover:underline decoration-2 underline-offset-4 whitespace-nowrap"
+            >
+              SmartyApp
+            </Link>
+            <button
+              onClick={(e) => handleStoreRedirect(e, "https://piltistore.com")}
               className="text-[13px] hover:underline decoration-2 underline-offset-4 pr-4 border-r whitespace-nowrap"
             >
-              Store
-            </Link>
+              PiltiStore
+            </button>
             <div className="relative">
               <Search
                 size={18}
@@ -230,6 +235,16 @@ export default function Navbar() {
                       )}
                     </AnimatePresence>
                   </div>
+                ) : link.name === "PiltiStore" ? (
+                  <button
+                    onClick={(e) => {
+                      setIsMobileMenuOpen(false);
+                      handleStoreRedirect(e, link.href);
+                    }}
+                    className="text-base font-medium hover:text-primary transition-colors text-left w-full py-2"
+                  >
+                    {link.name}
+                  </button>
                 ) : (
                   <Link
                     href={link.href}

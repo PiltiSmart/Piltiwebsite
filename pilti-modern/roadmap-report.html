@@ -364,6 +364,8 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
+      min-width: 0;
     }
 
     .test-tag {
@@ -373,6 +375,7 @@
       letter-spacing: 0.02em;
       padding: 1px 6px;
       border-radius: 3px;
+      flex-shrink: 0;
     }
 
     .test-tag.simulators { background: rgba(99, 102, 241, 0.1); color: #C7D2FE; border: 1px solid rgba(99, 102, 241, 0.15); }
@@ -384,6 +387,10 @@
     .test-suite-path {
       font-size: 11px;
       color: var(--text-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
     }
 
     .test-duration {
@@ -626,6 +633,137 @@
       color: #FFFFFF !important;
       border-color: var(--accent-indigo) !important;
     }
+
+    /* Play button on hover inside list row */
+    .run-row-btn {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: #A5B4FC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-left: 8px;
+      flex-shrink: 0;
+    }
+    .run-row-btn:hover {
+      background: var(--accent-indigo);
+      color: #FFFFFF;
+      border-color: var(--accent-indigo);
+      transform: scale(1.1);
+      box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+    }
+    .run-row-btn svg {
+      transition: transform 0.2s ease;
+    }
+    .run-row-btn:hover svg {
+      transform: scale(1.05);
+    }
+
+    /* Terminal Console Panel */
+    .console-panel {
+      background: #04060E;
+      border: 1px solid rgba(99, 102, 241, 0.18);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .console-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    
+    .console-controls {
+      display: flex;
+      gap: 6px;
+    }
+    
+    .console-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    
+    .console-dot.red { background: #EF4444; }
+    .console-dot.yellow { background: #F59E0B; }
+    .console-dot.green { background: #10B981; }
+    
+    .console-title {
+      font-family: var(--font-outfit);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .console-body {
+      height: 160px;
+      overflow-y: auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #D1D5DB;
+      padding: 4px 6px;
+    }
+    
+    /* Console scrollbar */
+    .console-body::-webkit-scrollbar {
+      width: 5px;
+    }
+    .console-body::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .console-body::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 4px;
+    }
+    .console-body::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .console-line {
+      margin-bottom: 4px;
+      word-break: break-all;
+    }
+    
+    .console-line.header {
+      color: #A5B4FC;
+      font-weight: bold;
+    }
+    
+    .console-line.system {
+      color: #60A5FA;
+    }
+    
+    .console-line.success {
+      color: #34D399;
+    }
+    
+    .console-line.warning {
+      color: #FBBF24;
+    }
+    
+    .console-line.text-rose-500 {
+      color: #F87171;
+    }
+    .console-line.text-rose-400 {
+      color: #FB7185;
+    }
   </style>
 </head>
 <body>
@@ -782,6 +920,25 @@
           </a>
         </div>
       </div>
+
+      <!-- Terminal Console Panel (Full Width Grid Spanning) -->
+      <div class="console-panel" style="grid-column: 1 / -1;">
+        <div class="console-header">
+          <div class="console-controls">
+            <div class="console-dot red"></div>
+            <div class="console-dot yellow"></div>
+            <div class="console-dot green"></div>
+          </div>
+          <div class="console-title">Live Playwright E2E Execution Console Logs</div>
+          <div style="width: 42px;"></div> <!-- balance -->
+        </div>
+        <div class="console-body">
+          <div style="color: var(--text-secondary); text-align: center; padding-top: 50px; font-style: italic;">
+            Console standby. Trigger a test run above to stream automated execution telemetry logs.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -1012,6 +1169,15 @@
         category: "comprehensive",
         video: "test-results/user-journey-comprehensive-d0b22-ooter-links-and-legal-pages-chromium/video.webm",
         caption: "<strong>Footer Explorer Spec</strong>: Playwright sweeps footer rows, visits terms of service, trademarks, and privacy pages."
+      },
+      {
+        id: 25,
+        title: "should embed the SmartyApp and allow login",
+        suite: "tests/user-journey-comprehensive.spec.ts:317",
+        duration: "33.0s",
+        category: "comprehensive",
+        video: "test-results/user-journey-comprehensive-58fa9-e-SmartyApp-and-allow-login-chromium/video.webm",
+        caption: "<strong>SmartyApp Dashboard Explorer</strong>: Playwright penetrates the internal SmartyApp iframe and validates the Flutter login credentials."
       }
     ];
 
@@ -1033,6 +1199,16 @@
 
       // Update badge counts
       document.getElementById("pass-count").innerText = filtered.length;
+
+      // Update button text to match filtered count
+      const rerunBtnText = document.getElementById("text-rerun-all");
+      if (rerunBtnText) {
+        if (filtered.length === testCases.length) {
+          rerunBtnText.innerText = "Re-run All 25 E2E Tests";
+        } else {
+          rerunBtnText.innerText = `Re-run ${filtered.length} Filtered Tests`;
+        }
+      }
 
       if (filtered.length === 0) {
         container.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-secondary); font-size: 13px;">No matching E2E test cases found.</div>`;
@@ -1057,7 +1233,12 @@
               </div>
             </div>
           </div>
-          <span class="test-duration">${t.duration}</span>
+          <div style="display: flex; align-items: center; flex-shrink: 0;">
+            <span class="test-duration">${t.duration}</span>
+            <div class="run-row-btn" onclick="event.stopPropagation(); triggerRerunCurrent(${t.id})" title="Run this E2E test case">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+            </div>
+          </div>
         `;
         container.appendChild(row);
       });
@@ -1086,36 +1267,68 @@
       renderTestCases();
     }
 
-    // Swaps video element source based on selection
-    function selectTest(id) {
-      // Remove old active states
+    let userHasNavigated = false;
+
+    // Swaps video element source based on selection.
+    // isAuto = true means the call comes from the automated sequential loop.
+    // Manual row clicks always update both highlight AND video.
+    // Auto calls only update the highlight (so the sidebar tracks progress),
+    // and only update the video if the user hasn't manually navigated yet.
+    function selectTest(id, isAuto = false) {
+      if (!isAuto) {
+        // User clicked — mark that they've taken control
+        userHasNavigated = true;
+      }
+
+      // Always update the sidebar active-row highlight so the runner
+      // progress is visually tracked regardless of who called selectTest.
       const previousActive = document.querySelector(".test-row.active");
       if (previousActive) {
         previousActive.classList.remove("active");
       }
-
       selectedId = id;
       const targetCard = document.getElementById("test-row-" + id);
       if (targetCard) {
         targetCard.classList.add("active");
+        // Scroll the row into view smoothly so the user can always see which one is active
+        targetCard.scrollIntoView({ block: "nearest", behavior: "smooth" });
       }
 
-      // Update player parameters
+      // Only update the video player if:
+      //   - It's a manual click (user explicitly chose this test), OR
+      //   - It's an auto call AND the user hasn't manually navigated yet
+      if (isAuto && userHasNavigated) {
+        return; // Don't hijack the video the user is currently watching
+      }
+
       const player = document.getElementById("e2e-video-player");
       const source = document.getElementById("video-source");
       const captionBox = document.getElementById("video-caption-box");
 
       const match = testCases.find(t => t.id === id);
       if (match) {
-        source.src = match.video;
         captionBox.innerHTML = match.caption;
-
-        // Update Info widgets
         document.getElementById("meta-category").innerText = match.category;
         document.getElementById("meta-duration").innerText = match.duration;
         document.getElementById("meta-path").innerText = match.video;
 
+        // 1. Pause before changing source to prevent AbortError from
+        //    interrupting an in-progress load cycle.
+        player.pause();
+
+        // 2. Set src directly on the <video> element (takes priority over
+        //    <source> children; most reliable cross-browser approach).
+        player.src = match.video;
+        source.src = match.video;
+
+        // 3. Start loading the new source.
         player.load();
+
+        // 4. Play only once the browser has actually buffered the first frame.
+        //    Using { once: true } so the listener is removed after it fires.
+        player.addEventListener("loadeddata", () => {
+          player.play().catch(() => {});
+        }, { once: true });
       }
     }
 
@@ -1161,6 +1374,7 @@
     }
 
     async function triggerRerunAll() {
+      userHasNavigated = false;
       const btn = document.getElementById("btn-rerun-all");
       const text = document.getElementById("text-rerun-all");
       const icon = document.getElementById("icon-rerun-all");
@@ -1173,29 +1387,60 @@
 
       const consoleBody = document.querySelector(".console-body");
 
+      // Loop over the filtered list of tests to run only what's active in the UI
+      let filtered = testCases.filter(t => {
+        const matchesCategory = currentCategory === 'all' || t.category === currentCategory;
+        const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                              t.suite.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        // Restore button state and exit gracefully if no tests match
+        const freshBtn = document.getElementById("btn-rerun-all");
+        freshBtn.disabled = false;
+        freshBtn.style.opacity = 1;
+        document.getElementById("text-rerun-all").innerText = "Re-run All 25 E2E Tests";
+        document.getElementById("icon-rerun-all").outerHTML = `
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-rerun-all"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
+        `;
+        return;
+      }
+
       if (isParallel) {
-        // Parallel Concurrency Mode: Mark all rows as running and run whole suite in one go
-        const rows = document.querySelectorAll(".test-row");
-        rows.forEach(row => {
-          row.classList.add("running");
-          const bullet = row.querySelector(".test-bullet");
-          if (bullet) {
-            bullet.innerHTML = `<span class="spinner" style="width: 10px; height: 10px; border-width: 1.5px;"></span>`;
+        // Parallel Concurrency Mode: Mark only filtered rows as running and run in one go
+        filtered.forEach(t => {
+          const row = document.getElementById("test-row-" + t.id);
+          if (row) {
+            row.classList.add("running");
+            const bullet = row.querySelector(".test-bullet");
+            if (bullet) {
+              bullet.innerHTML = `<span class="spinner" style="width: 10px; height: 10px; border-width: 1.5px;"></span>`;
+            }
           }
         });
 
         // Show running indicator badge on right video header
-        updateActiveBadgeState(true, "Full Suite");
+        const runningLabel = filtered.length === testCases.length ? "Full Suite" : `${filtered.length} Filtered Tests`;
+        updateActiveBadgeState(true, runningLabel);
 
+        const isFilteredOnly = filtered.length < testCases.length;
         consoleBody.innerHTML = `
-          <div class="console-line header">[START] Initiating full E2E test runner execution on umeshbranch...</div>
-          <div class="console-line system">[SYS] Executing local command: npx playwright test</div>
+          <div class="console-line header">[START] Initiating parallel E2E execution on umeshbranch...</div>
           <div class="console-line system">[SYS] Concurrency Model: Parallel Multi-worker (5 Workers)</div>
+          <div class="console-line system">[SYS] Executing Command: npx playwright test${isFilteredOnly ? ` -g "[filtered pattern]"` : ''}</div>
+          <div class="console-line system">[SYS] Running ${filtered.length} of ${testCases.length} E2E tests...</div>
           <div class="console-line system">[SYS] Awaiting execution logs...</div>
         `;
 
         try {
-          const res = await fetch("http://localhost:3000/api/run-tests?parallel=true");
+          let url = "http://localhost:3000/api/run-tests?parallel=true";
+          if (isFilteredOnly) {
+            const titlesPattern = filtered.map(t => t.title).join('|');
+            url += "&title=" + encodeURIComponent(titlesPattern);
+          }
+
+          const res = await fetch(url);
           const data = await res.json();
           
           if (data.success) {
@@ -1221,9 +1466,9 @@
           // Clear visual E2E running badge
           updateActiveBadgeState(false);
 
-          // Re-render to restore normal passed numbers
+          // Re-render to restore normal passed numbers (isAuto=true: don't hijack user's choice)
           renderTestCases();
-          selectTest(selectedId);
+          selectTest(selectedId, true);
         }
       } else {
         // Sequential Mode: Run tests one-by-one in sequence
@@ -1234,17 +1479,16 @@
           <div class="console-line"></div>
         `;
 
-        // Loop over the filtered list of tests
-        let filtered = testCases.filter(t => {
-          const matchesCategory = currentCategory === 'all' || t.category === currentCategory;
-          const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                                t.suite.toLowerCase().includes(searchQuery.toLowerCase());
-          return matchesCategory && matchesSearch;
-        });
-
         for (let idx = 0; idx < filtered.length; idx++) {
           const t = filtered[idx];
           
+          // Reset so the auto-select always updates the video for the current test.
+          // This makes the video player a live-ticker that follows each running test.
+          // If the user clicks a row while the suite is paused between fetches,
+          // userHasNavigated becomes true again and the next auto-select is skipped.
+          userHasNavigated = false;
+          selectTest(t.id, true);
+
           // Mark ONLY this specific row as running
           const row = document.getElementById("test-row-" + t.id);
           if (row) {
@@ -1290,22 +1534,34 @@
 
         consoleBody.innerHTML += `<div class="console-line header" style="margin-top: 10px;">[FINISHED] All sequential tests have completed their sweeps!</div>`;
         
-        // Re-render and select active
+        // Re-render and select active (isAuto=true: system restore, not a user click)
         renderTestCases();
-        selectTest(selectedId);
+        selectTest(selectedId, true);
       }
 
       // Restore button state
       const freshBtn = document.getElementById("btn-rerun-all");
       freshBtn.disabled = false;
       freshBtn.style.opacity = 1;
-      document.getElementById("text-rerun-all").innerText = "Re-run All 25 E2E Tests";
+
+      const restoredFilteredCount = testCases.filter(t => {
+        const matchesCategory = currentCategory === 'all' || t.category === currentCategory;
+        const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                              t.suite.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      }).length;
+
+      document.getElementById("text-rerun-all").innerText = 
+        restoredFilteredCount === testCases.length ? "Re-run All 25 E2E Tests" : `Re-run ${restoredFilteredCount} Filtered Tests`;
       document.getElementById("icon-rerun-all").outerHTML = `
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-rerun-all"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
       `;
     }
 
-    async function triggerRerunCurrent() {
+    async function triggerRerunCurrent(id = null) {
+      if (id !== null) {
+        selectTest(id);
+      }
       const btn = document.getElementById("btn-run-single");
       const text = document.getElementById("text-run-single");
       const icon = document.getElementById("icon-run-single");
@@ -1369,9 +1625,9 @@
         // Clear visual E2E running badge
         updateActiveBadgeState(false);
 
-        // Restore row visual state
+        // Restore row visual state (isAuto=true: system restore after single-run, not a user click)
         renderTestCases();
-        selectTest(selectedId);
+        selectTest(selectedId, true);
 
         const freshBtn = document.getElementById("btn-run-single");
         freshBtn.disabled = false;
@@ -1383,10 +1639,11 @@
       }
     }
 
-    // Start with selecting index 0
+    // Start with selecting index 0 — pass isAuto=true so the initial
+    // load doesn't mark userHasNavigated and block sequential auto-selects later.
     document.addEventListener("DOMContentLoaded", () => {
       renderTestCases();
-      selectTest(0);
+      selectTest(0, true);
     });
   </script>
 
