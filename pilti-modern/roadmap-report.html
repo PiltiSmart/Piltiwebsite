@@ -922,7 +922,7 @@
 
         <div class="video-container" style="position: relative;">
           <!-- Live Stream Overlay -->
-          <div id="live-stream-overlay" style="display: none; position: absolute; top: 12px; left: 12px; align-items: center; gap: 6px; background: rgba(239, 68, 68, 0.25); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.45); padding: 5px 10px; border-radius: 6px; font-size: 10.5px; font-weight: bold; text-transform: uppercase; z-index: 10; letter-spacing: 0.5px; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+          <div id="live-stream-overlay" style="display: none; position: absolute; top: 12px; left: 12px; align-items: center; gap: 6px; background: rgba(239, 68, 68, 0.25); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.45); padding: 5px 10px; border-radius: 6px; font-size: 10.5px; font-weight: bold; text-transform: uppercase; z-index: 10; letter-spacing: 0.5px; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.5); pointer-events: none;">
             <span style="width: 8px; height: 8px; border-radius: 50%; background: #EF4444; animation: pulse 1s infinite alternate; box-shadow: 0 0 8px #EF4444;"></span>
             <span id="live-stream-text">Live Telemetry Stream</span>
           </div>
@@ -1407,6 +1407,7 @@
         // 4. Play only once the browser has actually buffered the first frame.
         //    Using { once: true } so the listener is removed after it fires.
         player.addEventListener("loadeddata", () => {
+          player.currentTime = 0;
           player.play().catch(() => {});
         }, { once: true });
       }
@@ -1765,6 +1766,12 @@
       updateActiveBadgeState(true, match.title);
       if (isHeaded) {
         toggleLiveStreamOverlay("running");
+        // Reset and trigger video playback live during E2E background execution
+        const player = document.getElementById("e2e-video-player");
+        if (player) {
+          player.currentTime = 0;
+          player.play().catch(() => {});
+        }
       }
 
       const consoleBody = document.querySelector(".console-body");
