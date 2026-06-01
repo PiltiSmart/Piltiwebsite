@@ -8,11 +8,15 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const testTitle = searchParams.get("title");
   const parallel = searchParams.get("parallel") !== "false";
+  const headed = searchParams.get("headed") === "true";
   
   // Build Playwright command
   let command = 'PATH="$HOME/node/bin:$PATH" npx playwright test';
   if (!parallel) {
     command += " --workers=1";
+  }
+  if (headed) {
+    command += " --headed";
   }
   
   if (testTitle) {

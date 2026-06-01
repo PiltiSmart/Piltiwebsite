@@ -843,25 +843,52 @@
           <span id="text-rerun-all">Re-run All 29 E2E Tests</span>
         </button>
 
-        <!-- Concurrency settings panel -->
-        <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.015); border: 1px solid var(--border-color); padding: 12px 14px; border-radius: 8px; margin-bottom: 16px;">
-          <div style="display: flex; flex-direction: column; gap: 2px;">
-            <span style="font-size: 12.5px; font-weight: 600; color: #FFFFFF; display: flex; align-items: center; gap: 5px;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-indigo);"><path d="M12 2v20"/><path d="m17 5-5-5-5 5"/><path d="m17 19-5 5-5-5"/></svg>
-              Parallel Concurrency
-            </span>
-            <span style="font-size: 10px; color: var(--text-secondary);">Run tests concurrently using multiple workers</span>
-          </div>
-          <!-- Sliding toggle switch -->
-          <div
-            id="parallel-concurrency-toggle"
-            onclick="toggleParallelState()"
-            style="width: 42px; height: 22px; border-radius: 9999px; padding: 2.5px; cursor: pointer; transition: all 0.2s ease; background-color: #6366F1; display: flex; align-items: center;"
-          >
+        <!-- Concurrency and Headed settings panel -->
+        <div style="display: flex; flex-direction: column; gap: 10px; background: rgba(255,255,255,0.015); border: 1px solid var(--border-color); padding: 14px; border-radius: 8px; margin-bottom: 16px;">
+          <!-- Parallel Concurrency Toggle -->
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-size: 12.5px; font-weight: 600; color: #FFFFFF; display: flex; align-items: center; gap: 5px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-indigo);"><path d="M12 2v20"/><path d="m17 5-5-5-5 5"/><path d="m17 19-5 5-5-5"/></svg>
+                Parallel Concurrency
+              </span>
+              <span style="font-size: 10px; color: var(--text-secondary);">Run tests concurrently using multiple workers</span>
+            </div>
+            <!-- Sliding toggle switch -->
             <div
-              id="parallel-concurrency-dot"
-              style="width: 17px; height: 17px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.3); transform: translateX(20px); transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);"
-            ></div>
+              id="parallel-concurrency-toggle"
+              onclick="toggleParallelState()"
+              style="width: 42px; height: 22px; border-radius: 9999px; padding: 2.5px; cursor: pointer; transition: all 0.2s ease; background-color: #6366F1; display: flex; align-items: center;"
+            >
+              <div
+                id="parallel-concurrency-dot"
+                style="width: 17px; height: 17px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.3); transform: translateX(20px); transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);"
+              ></div>
+            </div>
+          </div>
+
+          <div style="height: 1px; background: var(--border-color); margin: 2px 0;"></div>
+
+          <!-- Headed Execution Toggle -->
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="font-size: 12.5px; font-weight: 600; color: #FFFFFF; display: flex; align-items: center; gap: 5px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #F59E0B;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg>
+                Headed Browser Window
+              </span>
+              <span style="font-size: 10px; color: var(--text-secondary);">Launch browser window visually during test run</span>
+            </div>
+            <!-- Sliding toggle switch -->
+            <div
+              id="headed-execution-toggle"
+              onclick="toggleHeadedState()"
+              style="width: 42px; height: 22px; border-radius: 9999px; padding: 2.5px; cursor: pointer; transition: all 0.2s ease; background-color: rgba(255,255,255,0.08); display: flex; align-items: center;"
+            >
+              <div
+                id="headed-execution-dot"
+                style="width: 17px; height: 17px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.3); transform: translateX(0px); transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);"
+              ></div>
+            </div>
           </div>
         </div>
 
@@ -1398,6 +1425,7 @@
     }
 
     let isParallel = true;
+    let isHeaded = false;
 
     function toggleParallelState() {
       isParallel = !isParallel;
@@ -1406,6 +1434,20 @@
 
       if (isParallel) {
         toggle.style.backgroundColor = "#6366F1";
+        dot.style.transform = "translateX(20px)";
+      } else {
+        toggle.style.backgroundColor = "rgba(255,255,255,0.08)";
+        dot.style.transform = "translateX(0px)";
+      }
+    }
+
+    function toggleHeadedState() {
+      isHeaded = !isHeaded;
+      const toggle = document.getElementById("headed-execution-toggle");
+      const dot = document.getElementById("headed-execution-dot");
+
+      if (isHeaded) {
+        toggle.style.backgroundColor = "#F59E0B";
         dot.style.transform = "translateX(20px)";
       } else {
         toggle.style.backgroundColor = "rgba(255,255,255,0.08)";
@@ -1468,13 +1510,14 @@
         consoleBody.innerHTML = `
           <div class="console-line header">[START] Initiating parallel E2E execution on umeshbranch...</div>
           <div class="console-line system">[SYS] Concurrency Model: Parallel Multi-worker (5 Workers)</div>
-          <div class="console-line system">[SYS] Executing Command: npx playwright test${isFilteredOnly ? ` -g "[filtered pattern]"` : ''}</div>
+          <div class="console-line system">[SYS] Headed Browser: ${isHeaded ? 'ENABLED (Opening visual browser window on host Mac)' : 'DISABLED (Background headless mode)'}</div>
+          <div class="console-line system">[SYS] Executing Command: npx playwright test${isHeaded ? ' --headed' : ''}${isFilteredOnly ? ` -g "[filtered pattern]"` : ''}</div>
           <div class="console-line system">[SYS] Running ${filtered.length} of ${testCases.length} E2E tests...</div>
           <div class="console-line system">[SYS] Awaiting execution logs...</div>
         `;
 
         try {
-          let url = apiBaseUrl + "/api/run-tests?parallel=true";
+          let url = apiBaseUrl + `/api/run-tests?parallel=true&headed=${isHeaded}`;
           if (isFilteredOnly) {
             const titlesPattern = filtered.map(t => t.title).join('|');
             url += "&title=" + encodeURIComponent(titlesPattern);
@@ -1515,6 +1558,7 @@
         consoleBody.innerHTML = `
           <div class="console-line header">[START] Initiating sequential E2E test execution...</div>
           <div class="console-line system">[SYS] Concurrency Model: Sequential (Single Worker Serial Execution)</div>
+          <div class="console-line system">[SYS] Headed Browser: ${isHeaded ? 'ENABLED (Opening visual browser window on host Mac)' : 'DISABLED (Background headless mode)'}</div>
           <div class="console-line system">[SYS] Running each test case individually. View progression below...</div>
           <div class="console-line"></div>
         `;
@@ -1546,7 +1590,7 @@
           consoleBody.scrollTop = consoleBody.scrollHeight; // Auto-scroll to bottom
 
           try {
-            const res = await fetch(apiBaseUrl + "/api/run-tests?title=" + encodeURIComponent(t.title) + "&parallel=false");
+            const res = await fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(t.title)}&parallel=false&headed=${isHeaded}`);
             const data = await res.json();
 
             if (data.success) {
@@ -1631,12 +1675,13 @@
       consoleBody.innerHTML = `
         <div class="console-line header">[START] Initiating specific test execution...</div>
         <div class="console-line system">[SYS] Test Title: "${match.title}"</div>
-        <div class="console-line system">[SYS] Command: npx playwright test -g "${match.title}"</div>
+        <div class="console-line system">[SYS] Headed Browser: ${isHeaded ? 'ENABLED (Opening visual browser window on host Mac)' : 'DISABLED (Background headless mode)'}</div>
+        <div class="console-line system">[SYS] Command: npx playwright test -g "${match.title}"${isHeaded ? ' --headed' : ''}</div>
         <div class="console-line system">[SYS] Awaiting compiler and runner outputs...</div>
       `;
 
       try {
-        const res = await fetch(apiBaseUrl + "/api/run-tests?title=" + encodeURIComponent(match.title) + "&parallel=" + isParallel);
+        const res = await fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(match.title)}&parallel=${isParallel}&headed=${isHeaded}`);
         const data = await res.json();
 
         if (data.success) {
