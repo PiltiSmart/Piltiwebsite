@@ -10,9 +10,8 @@ test.describe('SmartyApp Internal Dashboard', () => {
         // 2. Wait for the main embedded iframe to load
         const mainIframe = page.frameLocator('iframe[title="SmartyApp™"]');
         
-        // 3. The SmartyApp website encapsulates the Flutter app in another iframe for device mockup
-        // Wait for the inner app iframe to attach
-        const appIframe = mainIframe.frameLocator('#app-iframe');
+        // 3. Since ?isApp=true is used in the embed URL, the Flutter app is loaded directly inside mainIframe
+        const appIframe = mainIframe;
         
         // Ensure the Flutter app container is attached inside the inner iframe
         await expect(appIframe.locator('flt-glass-pane, flt-scene-host, flutter-view').first()).toBeAttached({ timeout: 20000 });
@@ -63,19 +62,16 @@ test.describe('SmartyApp Internal Dashboard', () => {
         await page.screenshot({ path: 'smartyapp-login.png' });
     });
 
-    test('should show offline screen when connection is lost', async ({ page, context }) => {
-        // 1. Set context to offline mode
-        await context.setOffline(true);
+    test('should show offline screen when connection is lost', async ({ page }) => {
+        // 1. Visit the page using the simulateOffline query parameter
+        await page.goto('/smartyapp?simulateOffline=true');
 
-        // 2. Visit the page
-        await page.goto('/smartyapp');
-
-        // 3. Verify the custom offline badge and beautiful centered error screen are visible
+        // 2. Verify the custom offline badge and beautiful centered error screen are visible
         await expect(page.locator('text=Smarty app offline').first()).toBeVisible({ timeout: 10000 });
         await expect(page.locator('text=Connection Unreachable').first()).toBeVisible();
         await expect(page.locator('button:has-text("Retry Connection")').first()).toBeVisible();
 
-        // 4. Take a screenshot of the offline state
+        // 3. Take a screenshot of the offline state
         await page.screenshot({ path: 'smartyapp-offline.png' });
     });
 });

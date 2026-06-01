@@ -5,10 +5,8 @@ test.describe('User Journey: Switching Theme Preference', () => {
         await page.goto('/');
         await page.waitForLoadState('networkidle');
 
-        // User prefers dark mode and toggles it
-        const themeButton = page.locator('button').filter({
-            hasText: /theme|dark|light|sun|moon/i
-        }).or(page.locator('[aria-label*="theme" i]')).first();
+        // User prefers dark mode and toggles it using the explicit accessibility descriptor
+        const themeButton = page.locator('[aria-label="Toggle Theme"]').first();
 
         if (await themeButton.isVisible({ timeout: 2000 }).catch(() => false)) {
             await themeButton.click();
