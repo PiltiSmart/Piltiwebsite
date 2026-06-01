@@ -1446,12 +1446,29 @@
       const toggle = document.getElementById("headed-execution-toggle");
       const dot = document.getElementById("headed-execution-dot");
 
+      const parallelToggle = document.getElementById("parallel-concurrency-toggle");
+      const parallelDot = document.getElementById("parallel-concurrency-dot");
+
       if (isHeaded) {
         toggle.style.backgroundColor = "#F59E0B";
         dot.style.transform = "translateX(20px)";
+
+        // Force sequential mode to prevent opening 28 parallel visual browsers and overwhelming the system
+        isParallel = false;
+        parallelToggle.style.backgroundColor = "rgba(255,255,255,0.08)";
+        parallelDot.style.transform = "translateX(0px)";
+        parallelToggle.style.opacity = "0.4";
+        parallelToggle.style.pointerEvents = "none";
       } else {
         toggle.style.backgroundColor = "rgba(255,255,255,0.08)";
         dot.style.transform = "translateX(0px)";
+
+        // Restore and re-enable parallel concurrency toggle settings
+        parallelToggle.style.opacity = "1";
+        parallelToggle.style.pointerEvents = "auto";
+        isParallel = true;
+        parallelToggle.style.backgroundColor = "#6366F1";
+        parallelDot.style.transform = "translateX(20px)";
       }
     }
 
