@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import {
     Users,
     Zap,
@@ -126,10 +127,12 @@ export default function CareersPage() {
                         </div>
                         <div className="lg:w-1/2">
                             <div className="relative aspect-square bg-white dark:bg-muted/10 rounded-[2px] overflow-hidden border border-border/50 shadow-xl p-4">
-                                <img
+                                <Image
                                     src="/img/premium_about_hero.png"
                                     alt="PiltiSmart Culture"
-                                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-700"
+                                    fill
+                                    className="object-cover opacity-90 group-hover:scale-105 transition-all duration-700"
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
                                 />
                                 <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
                                     <p className="text-white text-[20px] font-semibold">100% Commitment to Engineering Integrity.</p>

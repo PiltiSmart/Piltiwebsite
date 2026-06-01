@@ -12,6 +12,7 @@ export default function StorePage() {
   const [isOnline, setIsOnline] = useState<boolean>(true);
   const [hasError, setHasError] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
+  const [iframeSrc, setIframeSrc] = useState(STORE_URL);
 
   // Monitor network status using navigator.onLine and a non-blocking check
   useEffect(() => {
@@ -127,18 +128,14 @@ export default function StorePage() {
     setIsLoading(true);
     setHasError(false);
     setRetryCount((c) => c + 1);
-    if (iframeRef.current) {
-      iframeRef.current.src = `${STORE_URL}?t=${Date.now()}`;
-    }
+    setIframeSrc(`${STORE_URL}?t=${Date.now()}`);
   }, []);
 
   const handleClearCache = useCallback(() => {
     setIsLoading(true);
     setHasError(false);
     setRetryCount((c) => c + 1);
-    if (iframeRef.current) {
-      iframeRef.current.src = `${STORE_URL}?clear_cache=${Date.now()}&nocache=${Math.random()}&logout=true`;
-    }
+    setIframeSrc(`${STORE_URL}?clear_cache=${Date.now()}&nocache=${Math.random()}&logout=true`);
   }, []);
 
   const toggleFullscreen = useCallback(() => {
@@ -201,11 +198,12 @@ export default function StorePage() {
 
               {/* Keep the iframe in DOM to prevent blocking or unmounting issues */}
               <iframe
+                key={retryCount}
                 ref={iframeRef}
-                src={STORE_URL}
+                src={iframeSrc}
                 onLoad={handleLoad}
-                title="Pilti Store™"
-                className={`w-full h-full border-0 block ${(hasError || isLoading) ? "hidden" : ""}`}
+                title="PiltiStore"
+                className={`w-full h-full border-0 block bg-white ${isLoading ? "hidden" : ""}`}
                 allow="geolocation; fullscreen; clipboard-read; clipboard-write"
               />
 

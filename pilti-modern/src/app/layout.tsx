@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <SchemaMarkup />
+      </head>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased selection:bg-accent/30`}
         suppressHydrationWarning={true}

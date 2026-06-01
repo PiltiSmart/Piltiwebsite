@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Users, ShieldCheck, Award, Zap, ChevronRight, Target, Rocket } from "lucide-react";
 
 const coreValues = [
@@ -48,10 +49,13 @@ export default function AboutPage() {
                         </p>
                     </motion.div>
                     <div className="relative aspect-[16/10] bg-[#F2F2F2] rounded-[24px] overflow-hidden shadow-2xl group border border-[#0078D4]/10">
-                        <img
+                        <Image
                             src="/img/premium_about_hero.png"
                             alt="PiltiSmart Professional Team"
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            fill
+                            priority
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
                         />
                         <div className="absolute inset-0 bg-gradient-to-tr from-[#0078D4]/10 to-transparent opacity-60 pointer-events-none" />
                     </div>
@@ -121,11 +125,13 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {team.map((member) => (
                             <div key={member.name} className="flex flex-col items-center text-center group">
-                                <div className="w-48 h-48 rounded-full overflow-hidden bg-white mb-6 border-4 border-white shadow-md ring-1 ring-[#0078D4]/10 group-hover:ring-[#0078D4] transition-all">
-                                    <img
+                                <div className="w-48 h-48 rounded-full overflow-hidden bg-white mb-6 border-4 border-white shadow-md ring-1 ring-[#0078D4]/10 group-hover:ring-[#0078D4] transition-all relative">
+                                    <Image
                                         src={member.img}
                                         alt={member.name}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-all duration-500"
+                                        sizes="192px"
                                     />
                                 </div>
                                 <h4 className="text-[18px] font-semibold text-[#262626] dark:text-foreground">{member.name}</h4>

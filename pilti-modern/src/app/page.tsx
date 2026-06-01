@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   Home as HomeIcon,
   Briefcase,
@@ -94,6 +95,8 @@ const services: Service[] = [
   }
 ];
 
+const MotionImage = motion(Image);
+
 function HeroSlideshow({ images }: { images: string[] }) {
   const [index, setIndex] = useState(0);
 
@@ -107,14 +110,18 @@ function HeroSlideshow({ images }: { images: string[] }) {
   return (
     <div className="absolute inset-0">
       <AnimatePresence mode="wait">
-        <motion.img
+        <MotionImage
           key={index}
           src={images[index]}
+          alt="Smart solutions slideshow"
+          fill
+          priority
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="object-cover"
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
       </AnimatePresence>
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
@@ -253,13 +260,12 @@ export default function Home() {
                 className="group flex flex-col h-full bg-white dark:bg-muted/5 border border-transparent hover:shadow-xl transition-all"
               >
                 <div className="aspect-video bg-[#F2F2F2] dark:bg-muted/10 relative overflow-hidden flex items-center justify-center">
-                  <img
+                  <Image
                     src={service.gridImg || service.img}
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/img/smartfullhome.jpg';
-                    }}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
@@ -375,10 +381,12 @@ export default function Home() {
       <section className="bg-white dark:bg-background pb-24">
         <div className="container mx-auto px-6">
           <div className="relative h-[480px] bg-[#262626] text-white flex items-center px-12 overflow-hidden shadow-2xl rounded-[2px]">
-            <img
+            <Image
               src="/img/premium_smart_industry.png"
               alt="Professional Engineering"
-              className="absolute inset-0 w-full h-full object-cover opacity-30"
+              fill
+              className="object-cover opacity-30"
+              sizes="100vw"
             />
             <div className="max-w-lg relative z-10">
               <h2 className="text-[30px] font-semibold mb-6">Built for Excellence</h2>
