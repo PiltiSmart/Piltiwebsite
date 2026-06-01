@@ -622,6 +622,11 @@
       100% { transform: rotate(360deg); }
     }
 
+    @keyframes pulse {
+      0% { opacity: 0.35; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1.05); }
+    }
+
     .test-row.running {
       border-color: rgba(99, 102, 241, 0.6) !important;
       background: rgba(99, 102, 241, 0.06) !important;
@@ -874,9 +879,9 @@
             <div style="display: flex; flex-direction: column; gap: 2px;">
               <span style="font-size: 12.5px; font-weight: 600; color: #FFFFFF; display: flex; align-items: center; gap: 5px;">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #F59E0B;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg>
-                Headed Browser Window
+                Embed Live Stream
               </span>
-              <span style="font-size: 10px; color: var(--text-secondary);">Launch browser window visually during test run</span>
+              <span style="font-size: 10px; color: var(--text-secondary);">Stream visual execution live inside video panel</span>
             </div>
             <!-- Sliding toggle switch -->
             <div
@@ -915,7 +920,12 @@
           Select a test case from the list on the left to watch its automated E2E video recording and trace details.
         </div>
 
-        <div class="video-container">
+        <div class="video-container" style="position: relative;">
+          <!-- Live Stream Overlay -->
+          <div id="live-stream-overlay" style="display: none; position: absolute; top: 12px; left: 12px; align-items: center; gap: 6px; background: rgba(239, 68, 68, 0.25); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.45); padding: 5px 10px; border-radius: 6px; font-size: 10.5px; font-weight: bold; text-transform: uppercase; z-index: 10; letter-spacing: 0.5px; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #EF4444; animation: pulse 1s infinite alternate; box-shadow: 0 0 8px #EF4444;"></span>
+            <span id="live-stream-text">Live Telemetry Stream</span>
+          </div>
           <video id="e2e-video-player" controls muted loop>
             <source id="video-source" src="" type="video/webm">
             Your browser does not support the video tag.
@@ -1364,8 +1374,8 @@
       // Only update the video player if:
       //   - It's a manual click (user explicitly chose this test), OR
       //   - It's an auto call AND the user hasn't manually navigated yet
-      if (isAuto && userHasNavigated) {
-        return; // Don't hijack the video the user is currently watching
+      if (isAuto && userHasNavigated && !isHeaded) {
+        return; // Don't hijack the video unless live stream is enabled
       }
 
       const player = document.getElementById("e2e-video-player");
@@ -1438,6 +1448,56 @@
       } else {
         toggle.style.backgroundColor = "rgba(255,255,255,0.08)";
         dot.style.transform = "translateX(0px)";
+      }
+    }
+
+    function toggleLiveStreamOverlay(state, isSuccess = null) {
+      const overlay = document.getElementById("live-stream-overlay");
+      const label = document.getElementById("live-stream-text");
+      const dot = overlay ? overlay.querySelector("span") : null;
+
+      if (!overlay) return;
+
+      if (state === "running") {
+        overlay.style.display = "flex";
+        overlay.style.background = "rgba(239, 68, 68, 0.25)";
+        overlay.style.color = "#EF4444";
+        overlay.style.borderColor = "rgba(239, 68, 68, 0.45)";
+        if (dot) {
+          dot.style.background = "#EF4444";
+          dot.style.boxShadow = "0 0 8px #EF4444";
+          dot.style.animation = "pulse 1s infinite alternate";
+        }
+        label.innerText = "Live Telemetry Stream";
+      } else if (state === "finished") {
+        overlay.style.display = "flex";
+        if (isSuccess) {
+          overlay.style.background = "rgba(16, 185, 129, 0.25)";
+          overlay.style.color = "#10B981";
+          overlay.style.borderColor = "rgba(16, 185, 129, 0.45)";
+          if (dot) {
+            dot.style.background = "#10B981";
+            dot.style.boxShadow = "0 0 8px #10B981";
+            dot.style.animation = "none";
+          }
+          label.innerText = "Capture Completed";
+        } else {
+          overlay.style.background = "rgba(244, 63, 94, 0.25)";
+          overlay.style.color = "#F43F5E";
+          overlay.style.borderColor = "rgba(244, 63, 94, 0.45)";
+          if (dot) {
+            dot.style.background = "#F43F5E";
+            dot.style.boxShadow = "0 0 8px #F43F5E";
+            dot.style.animation = "none";
+          }
+          label.innerText = "Execution Failed";
+        }
+        // Fade out after 2.5 seconds
+        setTimeout(() => {
+          overlay.style.display = "none";
+        }, 2500);
+      } else {
+        overlay.style.display = "none";
       }
     }
 
@@ -1527,14 +1587,16 @@
         consoleBody.innerHTML = `
           <div class="console-line header">[START] Initiating parallel E2E execution on umeshbranch...</div>
           <div class="console-line system">[SYS] Concurrency Model: Parallel Multi-worker (5 Workers)</div>
-          <div class="console-line system">[SYS] Headed Browser: ${isHeaded ? 'ENABLED (Opening visual browser window on host Mac)' : 'DISABLED (Background headless mode)'}</div>
-          <div class="console-line system">[SYS] Executing Command: npx playwright test${isHeaded ? ' --headed' : ''}${isFilteredOnly ? ` -g "[filtered pattern]"` : ''}</div>
+          <div class="console-line system">[SYS] Headed Browser: DISABLED (Background headless execution)</div>
+          <div class="console-line system">[SYS] Live Dashboard Cast: ${isHeaded ? 'ENABLED (Streaming visual telemetry inside panel)' : 'DISABLED'}</div>
+          <div class="console-line system">[SYS] Executing Command: npx playwright test${isFilteredOnly ? ` -g "[filtered pattern]"` : ''}</div>
           <div class="console-line system">[SYS] Running ${filtered.length} of ${testCases.length} E2E tests...</div>
           <div class="console-line system">[SYS] Awaiting execution logs...</div>
         `;
 
         try {
-          let url = apiBaseUrl + `/api/run-tests?parallel=true&headed=${isHeaded}`;
+          // Always run headlessly under the hood for a clean, non-disruptive dashboard embed stream
+          let url = apiBaseUrl + `/api/run-tests?parallel=true&headed=false`;
           if (isFilteredOnly) {
             const titlesPattern = filtered.map(t => t.title).join('|');
             url += "&title=" + encodeURIComponent(titlesPattern);
@@ -1565,6 +1627,9 @@
         } finally {
           // Clear visual E2E running badge
           updateActiveBadgeState(false);
+          if (isHeaded) {
+            toggleLiveStreamOverlay("finished", true);
+          }
 
           // Re-render to restore normal passed numbers (isAuto=true: don't hijack user's choice)
           renderTestCases();
@@ -1575,7 +1640,8 @@
         consoleBody.innerHTML = `
           <div class="console-line header">[START] Initiating sequential E2E test execution...</div>
           <div class="console-line system">[SYS] Concurrency Model: Sequential (Single Worker Serial Execution)</div>
-          <div class="console-line system">[SYS] Headed Browser: ${isHeaded ? 'ENABLED (Opening visual browser window on host Mac)' : 'DISABLED (Background headless mode)'}</div>
+          <div class="console-line system">[SYS] Headed Browser: DISABLED (Background headless execution)</div>
+          <div class="console-line system">[SYS] Live Dashboard Cast: ${isHeaded ? 'ENABLED (Streaming visual telemetry inside panel)' : 'DISABLED'}</div>
           <div class="console-line system">[SYS] Running each test case individually. View progression below...</div>
           <div class="console-line"></div>
         `;
@@ -1602,21 +1668,28 @@
 
           // Show running indicator badge on right video header
           updateActiveBadgeState(true, t.title);
+          if (isHeaded) {
+            toggleLiveStreamOverlay("running");
+          }
 
           consoleBody.innerHTML += `<div class="console-line system">[RUNNING] Test ${idx + 1}/${filtered.length}: "${t.title}"...</div>`;
           consoleBody.scrollTop = consoleBody.scrollHeight; // Auto-scroll to bottom
 
           try {
-            const res = await fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(t.title)}&parallel=false&headed=${isHeaded}`);
+            // Always run background headless for visual dashboard integration
+            const res = await fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(t.title)}&parallel=false&headed=false`);
             const data = await res.json();
 
             if (data.success) {
               consoleBody.innerHTML += `<div class="console-line success">  ✓ Passed (${t.duration})</div>`;
+              if (isHeaded) toggleLiveStreamOverlay("finished", true);
             } else {
               consoleBody.innerHTML += `<div class="console-line text-rose-500">  ✗ Failed (Check terminal log)</div>`;
+              if (isHeaded) toggleLiveStreamOverlay("finished", false);
             }
           } catch (err) {
             consoleBody.innerHTML += `<div class="console-line text-rose-400">  ✗ Network Error: ${err.message}</div>`;
+            if (isHeaded) toggleLiveStreamOverlay("finished", false);
           } finally {
             // Clear visual E2E running badge
             updateActiveBadgeState(false);
@@ -1687,21 +1760,27 @@
 
       // Show running indicator badge on right video header
       updateActiveBadgeState(true, match.title);
+      if (isHeaded) {
+        toggleLiveStreamOverlay("running");
+      }
 
       const consoleBody = document.querySelector(".console-body");
       consoleBody.innerHTML = `
         <div class="console-line header">[START] Initiating specific test execution...</div>
         <div class="console-line system">[SYS] Test Title: "${match.title}"</div>
-        <div class="console-line system">[SYS] Headed Browser: ${isHeaded ? 'ENABLED (Opening visual browser window on host Mac)' : 'DISABLED (Background headless mode)'}</div>
-        <div class="console-line system">[SYS] Command: npx playwright test -g "${match.title}"${isHeaded ? ' --headed' : ''}</div>
+        <div class="console-line system">[SYS] Headed Browser: DISABLED (Background headless execution)</div>
+        <div class="console-line system">[SYS] Live Dashboard Cast: ${isHeaded ? 'ENABLED (Streaming visual telemetry inside panel)' : 'DISABLED'}</div>
+        <div class="console-line system">[SYS] Command: npx playwright test -g "${match.title}"</div>
         <div class="console-line system">[SYS] Awaiting compiler and runner outputs...</div>
       `;
 
       try {
-        const res = await fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(match.title)}&parallel=${isParallel}&headed=${isHeaded}`);
+        // Run background headless for local non-disruptive embedded player integration
+        const res = await fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(match.title)}&parallel=${isParallel}&headed=false`);
         const data = await res.json();
 
         if (data.success) {
+          if (isHeaded) toggleLiveStreamOverlay("finished", true);
           consoleBody.innerHTML += `
             <div class="console-line success">[PASSED] Selected test case executed perfectly!</div>
             <div class="console-line"></div>
@@ -1717,12 +1796,14 @@
             <div class="console-line">${(data.stdout || '').replace(/\n/g, '<br>')}</div>
             <div class="console-line text-rose-500">${(data.stderr || '').replace(/\n/g, '<br>')}</div>
           `;
+          if (isHeaded) toggleLiveStreamOverlay("finished", false);
         }
       } catch (err) {
         consoleBody.innerHTML += `
           <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js server at ${apiBaseUrl}. Please ensure it is running in background.</div>
           <div class="console-line text-rose-400">Detail: ${err.message}</div>
         `;
+        if (isHeaded) toggleLiveStreamOverlay("finished", false);
       } finally {
         // Clear visual E2E running badge
         updateActiveBadgeState(false);
