@@ -30,6 +30,12 @@ export async function GET(req: NextRequest) {
 
   try {
     const { stdout, stderr } = await execAsync(command, { cwd });
+    // Synchronize the fresh video telemetry recordings into our stable playback directory
+    try {
+      await execAsync("cp -R test-results/* video-telemetry/ 2>/dev/null || true", { cwd });
+    } catch (err) {
+      console.error("Failed to copy fresh test videos to telemetry cache:", err);
+    }
     return NextResponse.json(
       { success: true, stdout, stderr },
       {

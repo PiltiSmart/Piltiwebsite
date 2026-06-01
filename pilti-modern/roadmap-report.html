@@ -1384,10 +1384,13 @@
 
       const match = testCases.find(t => t.id === id);
       if (match) {
+        // Use stable video-telemetry path so visual playback is never locked/disrupted during background runs
+        const stableVideoPath = match.video.replace("test-results/", "video-telemetry/");
+
         captionBox.innerHTML = match.caption;
         document.getElementById("meta-category").innerText = match.category;
         document.getElementById("meta-duration").innerText = match.duration;
-        document.getElementById("meta-path").innerText = match.video;
+        document.getElementById("meta-path").innerText = stableVideoPath;
 
         // 1. Pause before changing source to prevent AbortError from
         //    interrupting an in-progress load cycle.
@@ -1395,8 +1398,8 @@
 
         // 2. Set src directly on the <video> element (takes priority over
         //    <source> children; most reliable cross-browser approach).
-        player.src = match.video;
-        source.src = match.video;
+        player.src = stableVideoPath;
+        source.src = stableVideoPath;
 
         // 3. Start loading the new source.
         player.load();
