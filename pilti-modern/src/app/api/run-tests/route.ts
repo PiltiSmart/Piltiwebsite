@@ -12,7 +12,8 @@ async function saveRunHistory({
   stderr,
   testTitle,
   parallel,
-  cwd
+  cwd,
+  testIds
 }: {
   success: boolean;
   stdout: string;
@@ -20,6 +21,7 @@ async function saveRunHistory({
   testTitle: string | null;
   parallel: boolean;
   cwd: string;
+  testIds: number[];
 }) {
   try {
     const runId = `run-${Date.now()}`;
@@ -65,7 +67,8 @@ async function saveRunHistory({
       type: runType,
       success,
       stdout,
-      stderr
+      stderr,
+      testIds
     });
 
     // Prune history list to last 50 runs to keep disk usage under control
@@ -94,6 +97,8 @@ export async function GET(req: NextRequest) {
   const testTitle = searchParams.get("title");
   const parallel = searchParams.get("parallel") !== "false";
   const headed = searchParams.get("headed") === "true";
+  const testIdsParam = searchParams.get("testIds");
+  const testIds = testIdsParam ? testIdsParam.split(",").map(id => parseInt(id, 10)) : [];
   
   // Build Playwright command
   let command = 'PATH="$HOME/node/bin:$PATH" npx playwright test';
@@ -123,7 +128,7 @@ export async function GET(req: NextRequest) {
     }
 
     // Save run event history asynchronously
-    await saveRunHistory({ success: true, stdout, stderr, testTitle, parallel, cwd });
+    await saveRunHistory({ success: true, stdout, stderr, testTitle, parallel, cwd, testIds });
 
     return NextResponse.json(
       { success: true, stdout, stderr },
@@ -147,7 +152,7 @@ export async function GET(req: NextRequest) {
     }
 
     // Save run event history asynchronously
-    await saveRunHistory({ success: false, stdout, stderr, testTitle, parallel, cwd });
+    await saveRunHistory({ success: false, stdout, stderr, testTitle, parallel, cwd, testIds });
 
     // Playwright exits with non-zero on test failures; capture logs and return gracefully
     return NextResponse.json(
