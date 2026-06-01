@@ -1465,6 +1465,41 @@
     let isHeaded = false;
     let currentAbortController = null;
     let activeSimulationTimeoutIds = [];
+    let consoleTimerId = null;
+
+    function startConsoleTimer(lineId, prefix) {
+      if (consoleTimerId) clearInterval(consoleTimerId);
+      
+      const consoleBody = document.querySelector(".console-body");
+      if (!consoleBody) return;
+      
+      // Remove any existing timer line
+      const existing = document.getElementById(lineId);
+      if (existing) existing.remove();
+      
+      const startTime = Date.now();
+      consoleBody.innerHTML += `
+        <div class="console-line system" id="${lineId}" style="color: #F59E0B; font-weight: bold; animation: pulse 1s infinite alternate; margin-top: 4px;">
+          ${prefix}... [0.0s]
+        </div>
+      `;
+      consoleBody.scrollTop = consoleBody.scrollHeight;
+      
+      consoleTimerId = setInterval(() => {
+        const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+        const timerLine = document.getElementById(lineId);
+        if (timerLine) {
+          timerLine.innerHTML = `${prefix}... [${elapsed}s]`;
+        }
+      }, 100);
+    }
+
+    function stopConsoleTimer() {
+      if (consoleTimerId) {
+        clearInterval(consoleTimerId);
+        consoleTimerId = null;
+      }
+    }
 
     function toggleParallelState() {
       isParallel = !isParallel;
@@ -1566,6 +1601,9 @@
       activeSimulationTimeoutIds.forEach(id => clearTimeout(id));
       activeSimulationTimeoutIds = [];
       
+      // Stop live console running timer
+      stopConsoleTimer();
+      
       // Abort the backend fetch call if it is active
       if (currentAbortController) {
         currentAbortController.abort();
@@ -1597,6 +1635,9 @@
     }
 
     function resetButtonStates() {
+      // Stop live console running timer
+      stopConsoleTimer();
+
       // Hide the iframe and virtual cursor, restore video player
       const iframe = document.getElementById("live-e2e-iframe");
       const cursor = document.getElementById("virtual-cursor");
@@ -2049,6 +2090,8 @@
           <div class="console-line system">[SYS] Awaiting execution logs...</div>
         `;
 
+        startConsoleTimer("parallel-timer", "[RUNNING] Playwright multi-worker parallel execution active");
+
         // If headed mode/visual stream is enabled, start the first simulation visually in parallel
         if (isHeaded) {
           startLiveIframeSimulation(filtered[0]);
@@ -2136,6 +2179,8 @@
 
           if (isHeaded) {
             startLiveIframeSimulation(t);
+          } else {
+            startConsoleTimer("seq-timer-" + t.id, `  [RUNNING] Playwright executing "${t.title.substring(0, 30)}..."`);
           }
 
           fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(t.title)}&parallel=false&headed=false`, { signal })
@@ -2158,6 +2203,8 @@
               if (isHeaded) toggleLiveStreamOverlay("finished", false);
             })
             .finally(() => {
+              stopConsoleTimer();
+
               // Remove running state immediately from this row
               if (row) {
                 row.classList.remove("running");
@@ -2231,6 +2278,10 @@
         <div class="console-line system">[SYS] Command: npx playwright test -g "${match.title}"</div>
         <div class="console-line system">[SYS] Awaiting compiler and runner outputs...</div>
       `;
+
+      if (!isHeaded) {
+        startConsoleTimer("single-timer", "[RUNNING] Playwright compiler compiling and executing");
+      }
 
       currentAbortController = new AbortController();
       const signal = currentAbortController.signal;
