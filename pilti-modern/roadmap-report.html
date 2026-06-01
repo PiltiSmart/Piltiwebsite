@@ -943,6 +943,11 @@
   </div>
 
   <script>
+    // Dynamically resolve API host, falling back to localhost:3000 if opened as a local file (file://)
+    const apiBaseUrl = window.location.protocol.startsWith('http') 
+      ? window.location.origin 
+      : 'http://localhost:3000';
+
     // All 25 passed test cases mapped directly to their recorded webm file directories
     const testCases = [
       {
@@ -1434,8 +1439,7 @@
         `;
 
         try {
-          const origin = window.location.origin;
-          let url = origin + "/api/run-tests?parallel=true";
+          let url = apiBaseUrl + "/api/run-tests?parallel=true";
           if (isFilteredOnly) {
             const titlesPattern = filtered.map(t => t.title).join('|');
             url += "&title=" + encodeURIComponent(titlesPattern);
@@ -1459,9 +1463,8 @@
             `;
           }
         } catch (err) {
-          const origin = window.location.origin;
           consoleBody.innerHTML += `
-            <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js Route Handler at ${origin}/api/run-tests. Please make sure the app development server is active!</div>
+            <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js Route Handler at ${apiBaseUrl}/api/run-tests. Please make sure the app development server is active!</div>
             <div class="console-line text-rose-400">Detail: ${err.message}</div>
           `;
         } finally {
@@ -1508,8 +1511,7 @@
           consoleBody.scrollTop = consoleBody.scrollHeight; // Auto-scroll to bottom
 
           try {
-            const origin = window.location.origin;
-            const res = await fetch(origin + "/api/run-tests?title=" + encodeURIComponent(t.title) + "&parallel=false");
+            const res = await fetch(apiBaseUrl + "/api/run-tests?title=" + encodeURIComponent(t.title) + "&parallel=false");
             const data = await res.json();
 
             if (data.success) {
@@ -1599,8 +1601,7 @@
       `;
 
       try {
-        const origin = window.location.origin;
-        const res = await fetch(origin + "/api/run-tests?title=" + encodeURIComponent(match.title) + "&parallel=" + isParallel);
+        const res = await fetch(apiBaseUrl + "/api/run-tests?title=" + encodeURIComponent(match.title) + "&parallel=" + isParallel);
         const data = await res.json();
 
         if (data.success) {
@@ -1621,9 +1622,8 @@
           `;
         }
       } catch (err) {
-        const origin = window.location.origin;
         consoleBody.innerHTML += `
-          <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js server at ${origin}. Please ensure it is running in background.</div>
+          <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js server at ${apiBaseUrl}. Please ensure it is running in background.</div>
           <div class="console-line text-rose-400">Detail: ${err.message}</div>
         `;
       } finally {
