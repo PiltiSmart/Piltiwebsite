@@ -926,10 +926,15 @@
             <span style="width: 8px; height: 8px; border-radius: 50%; background: #EF4444; animation: pulse 1s infinite alternate; box-shadow: 0 0 8px #EF4444;"></span>
             <span id="live-stream-text">Live Telemetry Stream</span>
           </div>
+          <!-- Virtual Mouse Cursor Overlay for Live execution casting -->
+          <div id="virtual-cursor" style="display: none; position: absolute; width: 16px; height: 16px; background: rgba(245, 158, 11, 0.85); border: 2px solid #FFFFFF; border-radius: 50%; pointer-events: none; z-index: 20; transform: translate(-50%, -50%); transition: left 0.8s cubic-bezier(0.25, 1, 0.5, 1), top 0.8s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 0 10px #F59E0B, 0 0 20px #F59E0B;"></div>
+
           <video id="e2e-video-player" controls muted loop>
             <source id="video-source" src="" type="video/webm">
             Your browser does not support the video tag.
           </video>
+          
+          <iframe id="live-e2e-iframe" style="display: none; width: 100%; height: 100%; border: none; background: #020204;" sandbox="allow-same-origin allow-scripts allow-forms"></iframe>
         </div>
 
         <!-- Metadata Info box -->
@@ -948,11 +953,17 @@
           </div>
         </div>
 
-        <!-- Run single test button -->
-        <button id="btn-run-single" onclick="triggerRerunCurrent()" class="run-single-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-run-single"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          <span id="text-run-single">Re-run This Selected Test Case</span>
-        </button>
+        <!-- Run single test button and Cancel button -->
+        <div style="display: flex; gap: 10px; width: 100%; margin-top: 10px; margin-bottom: 4px;">
+          <button id="btn-run-single" onclick="triggerRerunCurrent()" class="run-single-btn" style="flex: 1; margin: 0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-run-single"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span id="text-run-single">Re-run This Selected Test Case</span>
+          </button>
+          <button id="btn-cancel-run" onclick="cancelActiveRun()" onmouseover="this.style.background='rgba(239, 68, 68, 0.25)'" onmouseout="this.style.background='rgba(239, 68, 68, 0.15)'" style="display: none; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); color: #EF4444; padding: 10px 16px; border-radius: 6px; cursor: pointer; align-items: center; justify-content: center; gap: 8px; font-size: 13px; font-weight: 600; transition: all 0.2s ease;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="9" x2="15" y1="9" y2="15"/><line x1="15" x2="9" y1="9" y2="15"/></svg>
+            <span>Cancel Run</span>
+          </button>
+        </div>
 
         <!-- Links Panel -->
         <div class="links-panel">
@@ -1440,6 +1451,8 @@
 
     let isParallel = true;
     let isHeaded = false;
+    let currentAbortController = null;
+    let activeSimulationTimeoutIds = [];
 
     function toggleParallelState() {
       isParallel = !isParallel;
@@ -1536,7 +1549,424 @@
       }
     }
 
+    function clearActiveSimulation() {
+      // Clear any pending timeouts for the active simulation
+      activeSimulationTimeoutIds.forEach(id => clearTimeout(id));
+      activeSimulationTimeoutIds = [];
+      
+      // Abort the backend fetch call if it is active
+      if (currentAbortController) {
+        currentAbortController.abort();
+        currentAbortController = null;
+      }
+
+      // Hide the iframe and virtual cursor, restore video player
+      const iframe = document.getElementById("live-e2e-iframe");
+      const cursor = document.getElementById("virtual-cursor");
+      const player = document.getElementById("e2e-video-player");
+      
+      if (iframe) iframe.style.display = "none";
+      if (cursor) cursor.style.display = "none";
+      if (player) player.style.display = "block";
+    }
+
+    function cancelActiveRun() {
+      const consoleBody = document.querySelector(".console-body");
+      if (consoleBody) {
+        consoleBody.innerHTML += `<div class="console-line text-rose-500">[CANCELED] Active E2E execution aborted by user.</div>`;
+        consoleBody.scrollTop = consoleBody.scrollHeight;
+      }
+      
+      // Abort background processes and clear simulation
+      clearActiveSimulation();
+
+      // Reset button states back to normal
+      resetButtonStates();
+    }
+
+    function resetButtonStates() {
+      // Restore run-single button
+      const singleBtn = document.getElementById("btn-run-single");
+      if (singleBtn) {
+        singleBtn.disabled = false;
+        singleBtn.style.opacity = 1;
+        const textSpan = document.getElementById("text-run-single");
+        if (textSpan) textSpan.innerText = "Re-run This Selected Test Case";
+        const icon = document.getElementById("icon-run-single");
+        if (icon) {
+          icon.outerHTML = `
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-run-single"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          `;
+        }
+      }
+
+      // Hide cancel button
+      const cancelBtn = document.getElementById("btn-cancel-run");
+      if (cancelBtn) {
+        cancelBtn.style.display = "none";
+      }
+
+      // Restore run-all button
+      const allBtn = document.getElementById("btn-rerun-all");
+      if (allBtn) {
+        allBtn.disabled = false;
+        allBtn.style.opacity = 1;
+        const restoredFilteredCount = testCases.filter(t => {
+          const matchesCategory = currentCategory === 'all' || t.category === currentCategory;
+          const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                t.suite.toLowerCase().includes(searchQuery.toLowerCase());
+          return matchesCategory && matchesSearch;
+        }).length;
+        const allText = document.getElementById("text-rerun-all");
+        if (allText) {
+          allText.innerText = restoredFilteredCount === testCases.length ? `Re-run All ${testCases.length} E2E Tests` : `Re-run ${restoredFilteredCount} Filtered Tests`;
+        }
+        const allIcon = document.getElementById("icon-rerun-all");
+        if (allIcon) {
+          allIcon.outerHTML = `
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-rerun-all"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
+          `;
+        }
+      }
+
+      // Restore row visual state
+      renderTestCases();
+      selectTest(selectedId, true);
+      updateActiveBadgeState(false);
+    }
+
+    function driveIframeDOM(iframe, selector, action, value) {
+      try {
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        if (!doc) return false;
+        const el = doc.querySelector(selector);
+        if (!el) return false;
+        
+        if (action === 'click') {
+          el.click();
+        } else if (action === 'fill') {
+          el.value = value;
+          el.dispatchEvent(new Event('input', { bubbles: true }));
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+        return true;
+      } catch (e) {
+        // Safe fallback for cross-origin (e.g. if opened as file://)
+        console.warn("Iframe DOM access blocked due to Same-Origin Policy. Using visual cursor cast simulation.", e);
+        return false;
+      }
+    }
+
+    function getTargetRoute(t) {
+      const title = t.title.toLowerCase();
+      if (title.includes("smart home") || title.includes("smartyswitch")) {
+        return "/products/smart-home";
+      } else if (title.includes("smart farming") || title.includes("irrigation")) {
+        return "/products/smart-farming";
+      } else if (title.includes("smart office") || title.includes("presence")) {
+        return "/products/smart-office";
+      } else if (title.includes("smart industrial") || title.includes("vibration")) {
+        return "/products/smart-industrial";
+      } else if (title.includes("about")) {
+        return "/about";
+      } else if (title.includes("services")) {
+        return "/services";
+      } else if (title.includes("careers")) {
+        return "/careers";
+      } else if (title.includes("contact")) {
+        return "/contact";
+      } else if (title.includes("pricing")) {
+        return "/pricing";
+      } else if (title.includes("privacy")) {
+        return "/privacy";
+      } else if (title.includes("terms")) {
+        return "/terms";
+      } else if (title.includes("trademarks")) {
+        return "/trademarks";
+      } else if (title.includes("smartyapp")) {
+        return "/smartyapp";
+      } else if (title.includes("store")) {
+        return "/store";
+      } else if (title.includes("theme")) {
+        return "/";
+      }
+      return "/";
+    }
+
+    function startLiveIframeSimulation(t) {
+      // Clear any running simulation first
+      activeSimulationTimeoutIds.forEach(id => clearTimeout(id));
+      activeSimulationTimeoutIds = [];
+      
+      const iframe = document.getElementById("live-e2e-iframe");
+      const player = document.getElementById("e2e-video-player");
+      const cursor = document.getElementById("virtual-cursor");
+      
+      if (!iframe || !player || !cursor) return;
+      
+      // Swap views
+      player.style.display = "none";
+      iframe.style.display = "block";
+      cursor.style.display = "block";
+      
+      // Set iframe source
+      const route = getTargetRoute(t);
+      iframe.src = apiBaseUrl + route;
+      
+      // Reset cursor to center
+      cursor.style.left = "50%";
+      cursor.style.top = "50%";
+      
+      // Define standard helper to move cursor
+      const moveCursor = (leftPct, topPct) => {
+        cursor.style.left = leftPct + "%";
+        cursor.style.top = topPct + "%";
+      };
+      
+      // Define standard helper to click (pulsate cursor visual and click DOM)
+      const clickCursor = (selector = null) => {
+        cursor.style.transform = "translate(-50%, -50%) scale(0.7)";
+        setTimeout(() => {
+          cursor.style.transform = "translate(-50%, -50%) scale(1)";
+        }, 150);
+        
+        if (selector) {
+          driveIframeDOM(iframe, selector, 'click');
+        }
+      };
+
+      const fillInput = (selector, value) => {
+        cursor.style.transform = "translate(-50%, -50%) scale(0.8)";
+        setTimeout(() => {
+          cursor.style.transform = "translate(-50%, -50%) scale(1)";
+        }, 200);
+        driveIframeDOM(iframe, selector, 'fill', value);
+      };
+
+      // Turn on Live stream overlay
+      toggleLiveStreamOverlay("running");
+      
+      // Step-by-step timed execution timeline
+      const delay = (ms, fn) => {
+        const id = setTimeout(fn, ms);
+        activeSimulationTimeoutIds.push(id);
+      };
+      
+      const consoleBody = document.querySelector(".console-body");
+      
+      // Log starting
+      consoleBody.innerHTML += `<div class="console-line system" style="color: #6366F1;">[LIVE] [0.0s] Simulating visual execution for "${t.title}"...</div>`;
+      consoleBody.scrollTop = consoleBody.scrollHeight;
+      
+      // Timeline steps
+      delay(800, () => {
+        consoleBody.innerHTML += `<div class="console-line system">[LIVE] [0.8s] Loaded internal browser frame at ${route}</div>`;
+        consoleBody.scrollTop = consoleBody.scrollHeight;
+        moveCursor(30, 20); // Move to header area
+      });
+      
+      const titleLower = t.title.toLowerCase();
+      if (titleLower.includes("smart home") || titleLower.includes("smartyswitch")) {
+        // Smart Home Simulator Execution Timeline
+        delay(1800, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Locating elements: input range slider & current readings</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(35, 60); // Move to range slider
+        });
+        
+        delay(2600, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [2.6s] Dragging load slider to 16.0 Amps (Safety Cutoff limit: 15A)</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          fillInput("input[type='range']", "16");
+          moveCursor(48, 60); // Slide action visual movement
+        });
+        
+        delay(3600, () => {
+          consoleBody.innerHTML += `<div class="console-line text-amber-500" style="color: #F59E0B;">[LIVE] [3.6s] ANOMALY DETECTED: SmartySwitch™ AUTOMATIC CUTOFF TRIPPED (OFFLINE)</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+        });
+        
+        delay(4800, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [4.8s] Locating element: button.reset-fuse ("Reset Fuse")</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(62, 70); // Move to reset button
+        });
+        
+        delay(5600, () => {
+          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [5.6s] Clicking "Reset Fuse" button to restore telemetry flow</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          let resetTriggered = driveIframeDOM(iframe, "#reset-fuse-button", 'click');
+          if (!resetTriggered) {
+            resetTriggered = driveIframeDOM(iframe, "button", 'click'); // Fallback click first button
+          }
+          clickCursor();
+        });
+        
+        delay(6600, () => {
+          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [6.6s] Telemetry healthy! SmartHome state restored to OPERATIONAL (ON)</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(50, 50); // Restore to center
+        });
+      }
+      else if (titleLower.includes("smart farming") || titleLower.includes("irrigation")) {
+        // Smart Farming Simulator Execution Timeline
+        delay(1800, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Locating element: input range slider (Soil Hydration level)</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(35, 60); // Move to range slider
+        });
+        
+        delay(2600, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [2.6s] Depleting moisture level to 20% (Automatic trigger threshold: <30%)</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          fillInput("input[type='range']", "20");
+          moveCursor(25, 60); // Slide left visual movement
+        });
+        
+        delay(3600, () => {
+          consoleBody.innerHTML += `<div class="console-line text-blue-400" style="color: #60A5FA;">[LIVE] [3.6s] VALVE TRIPPED: Closed-Loop Solenoid Open (IRRIGATING ACTIVE)</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+        });
+        
+        delay(5000, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [5.0s] Awaiting closed-loop replenishment loop (20% -> 65%+)</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(50, 45); // Float near telemetry chart
+        });
+        
+        delay(6800, () => {
+          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [6.8s] Closed-loop hydration complete! Valve shut down.</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(50, 50);
+        });
+      }
+      else if (titleLower.includes("smart office") || titleLower.includes("presence")) {
+        // Smart Office Simulator Execution Timeline
+        delay(1800, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Locating occupancy sensor card: "Main Open Workspace"</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(40, 45); // Move to card
+        });
+        
+        delay(2800, () => {
+          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [2.8s] Toggling presence state to VACANT to dim workplace lights</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          
+          let clicked = false;
+          try {
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            if (doc) {
+              const cards = Array.from(doc.querySelectorAll("div"));
+              const targetCard = cards.find(c => c.textContent.includes("Main Open Workspace") || c.textContent.includes("Workspace"));
+              if (targetCard) {
+                targetCard.click();
+                clicked = true;
+              }
+            }
+          } catch(e) {}
+          
+          if (!clicked) {
+            driveIframeDOM(iframe, ".workspace-card", 'click');
+          }
+          clickCursor();
+        });
+        
+        delay(4000, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [4.0s] Verifying adaptive savings ratio dial</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(65, 45); // Move to dial
+        });
+        
+        delay(5500, () => {
+          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [5.5s] Confirmed: Utility Savings increased above 40%!</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(50, 50);
+        });
+      }
+      else if (titleLower.includes("smart industrial") || titleLower.includes("vibration")) {
+        // Smart Industrial Simulator Execution Timeline
+        delay(1800, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Locating element: #anomaly-spike-toggle (Vibration Overdrive Switch)</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(30, 55); // Move to toggle
+        });
+        
+        delay(2600, () => {
+          consoleBody.innerHTML += `<div class="console-line text-rose-500" style="color: #F43F5E;">[LIVE] [2.6s] Toggling anomaly spike overdrive switch to inject motor vibration</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          driveIframeDOM(iframe, "#anomaly-spike-toggle", 'click');
+          clickCursor();
+        });
+        
+        delay(3600, () => {
+          consoleBody.innerHTML += `<div class="console-line text-rose-500" style="color: #F43F5E;">[LIVE] [3.6s] ALERT: PREDICTIVE CRITICAL ALARM TRIPPED! MOTOR VIBRATION SPIKED!</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(50, 30); // Inspect alarm
+        });
+        
+        delay(4800, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [4.8s] Locating Emergency shutoff switch: #estop-motor-button</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(50, 70); // Move to E-Stop button
+        });
+        
+        delay(5600, () => {
+          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [5.6s] Pressing E-STOP button to perform motor shutdown</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          driveIframeDOM(iframe, "#estop-motor-button", 'click');
+          clickCursor();
+        });
+        
+        delay(6600, () => {
+          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [6.6s] Confirmed: Motor RPM returned to 0 (SYSTEM STANDBY)</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(50, 50);
+        });
+      }
+      else {
+        // Generic walkthrough visual cursor automation path
+        delay(1800, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Scanning DOM elements for accessibility & nav trees...</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(45, 15); // Move to navbar
+        });
+        
+        delay(3000, () => {
+          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [3.0s] Scrolling viewport down to inspect landing layouts...</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          try {
+            const win = iframe.contentWindow;
+            if (win) {
+              win.scrollTo({ top: 350, behavior: 'smooth' });
+            }
+          } catch(e) {}
+          moveCursor(50, 80); // Move down
+        });
+        
+        delay(4500, () => {
+          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [4.5s] Verifying component visibility & CSS boundary compliance</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          moveCursor(70, 40);
+        });
+        
+        delay(5800, () => {
+          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [5.8s] Navigating viewport to top coordinates</div>`;
+          consoleBody.scrollTop = consoleBody.scrollHeight;
+          try {
+            const win = iframe.contentWindow;
+            if (win) {
+              win.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          } catch(e) {}
+          moveCursor(50, 50);
+        });
+      }
+    }
+
     async function triggerRerunAll() {
+      // Abort any active run/simulation first
+      clearActiveSimulation();
+
       userHasNavigated = false;
       const btn = document.getElementById("btn-rerun-all");
       const text = document.getElementById("text-rerun-all");
@@ -1547,6 +1977,10 @@
       btn.style.opacity = 0.7;
       text.innerText = "Running Playwright E2E Suite...";
       icon.outerHTML = `<span class="spinner" id="icon-rerun-all"></span>`;
+
+      // Show cancel button
+      const cancelBtn = document.getElementById("btn-cancel-run");
+      if (cancelBtn) cancelBtn.style.display = "flex";
 
       const consoleBody = document.querySelector(".console-body");
 
@@ -1559,16 +1993,12 @@
       });
 
       if (filtered.length === 0) {
-        // Restore button state and exit gracefully if no tests match
-        const freshBtn = document.getElementById("btn-rerun-all");
-        freshBtn.disabled = false;
-        freshBtn.style.opacity = 1;
-        document.getElementById("text-rerun-all").innerText = `Re-run All ${testCases.length} E2E Tests`;
-        document.getElementById("icon-rerun-all").outerHTML = `
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-rerun-all"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
-        `;
+        resetButtonStates();
         return;
       }
+
+      currentAbortController = new AbortController();
+      const signal = currentAbortController.signal;
 
       if (isParallel) {
         // Parallel Concurrency Mode: Mark only filtered rows as running and run in one go
@@ -1598,49 +2028,53 @@
           <div class="console-line system">[SYS] Awaiting execution logs...</div>
         `;
 
-        try {
-          // Always run headlessly under the hood for a clean, non-disruptive dashboard embed stream
-          let url = apiBaseUrl + `/api/run-tests?parallel=true&headed=false`;
-          if (isFilteredOnly) {
-            const titlesPattern = filtered.map(t => t.title).join('|');
-            url += "&title=" + encodeURIComponent(titlesPattern);
-          }
-
-          const res = await fetch(url);
-          const data = await res.json();
-          
-          if (data.success) {
-            consoleBody.innerHTML += `
-              <div class="console-line success">[PASSED] E2E Playwright Run Completed successfully!</div>
-              <div class="console-line"></div>
-              <div class="console-line">${data.stdout.replace(/\n/g, '<br>')}</div>
-            `;
-          } else {
-            consoleBody.innerHTML += `
-              <div class="console-line text-rose-500">[ERROR] Playwright tests failed or exited with failure status:</div>
-              <div class="console-line"></div>
-              <div class="console-line">${(data.stdout || '').replace(/\n/g, '<br>')}</div>
-              <div class="console-line text-rose-500">${(data.stderr || '').replace(/\n/g, '<br>')}</div>
-            `;
-          }
-        } catch (err) {
-          consoleBody.innerHTML += `
-            <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js Route Handler at ${apiBaseUrl}/api/run-tests. Please make sure the app development server is active!</div>
-            <div class="console-line text-rose-400">Detail: ${err.message}</div>
-          `;
-        } finally {
-          // Clear visual E2E running badge
-          updateActiveBadgeState(false);
-          if (isHeaded) {
-            toggleLiveStreamOverlay("finished", true);
-          }
-
-          // Re-render to restore normal passed numbers (isAuto=true: don't hijack user's choice)
-          renderTestCases();
-          selectTest(selectedId, true);
+        // If headed mode/visual stream is enabled, start the first simulation visually in parallel
+        if (isHeaded) {
+          startLiveIframeSimulation(filtered[0]);
         }
+
+        let url = apiBaseUrl + `/api/run-tests?parallel=true&headed=false`;
+        if (isFilteredOnly) {
+          const titlesPattern = filtered.map(t => t.title).join('|');
+          url += "&title=" + encodeURIComponent(titlesPattern);
+        }
+
+        fetch(url, { signal })
+          .then(res => res.json())
+          .then(data => {
+            if (data.success) {
+              consoleBody.innerHTML += `
+                <div class="console-line success">[PASSED] E2E Playwright Run Completed successfully!</div>
+                <div class="console-line"></div>
+                <div class="console-line">${data.stdout.replace(/\n/g, '<br>')}</div>
+              `;
+              if (isHeaded) toggleLiveStreamOverlay("finished", true);
+            } else {
+              consoleBody.innerHTML += `
+                <div class="console-line text-rose-500">[ERROR] Playwright tests failed or exited with failure status:</div>
+                <div class="console-line"></div>
+                <div class="console-line">${(data.stdout || '').replace(/\n/g, '<br>')}</div>
+                <div class="console-line text-rose-500">${(data.stderr || '').replace(/\n/g, '<br>')}</div>
+              `;
+              if (isHeaded) toggleLiveStreamOverlay("finished", false);
+            }
+          })
+          .catch(err => {
+            if (err.name === 'AbortError') {
+              consoleBody.innerHTML += `<div class="console-line text-rose-500">[CANCELED] Parallel execution aborted by user.</div>`;
+            } else {
+              consoleBody.innerHTML += `
+                <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js Route Handler at ${apiBaseUrl}/api/run-tests. Please make sure the app development server is active!</div>
+                <div class="console-line text-rose-400">Detail: ${err.message}</div>
+              `;
+            }
+            if (isHeaded) toggleLiveStreamOverlay("finished", false);
+          })
+          .finally(() => {
+            resetButtonStates();
+          });
       } else {
-        // Sequential Mode: Run tests one-by-one in sequence
+        // Sequential Mode: Run tests one-by-one in sequence (asynchronous, non-blocking)
         consoleBody.innerHTML = `
           <div class="console-line header">[START] Initiating sequential E2E test execution...</div>
           <div class="console-line system">[SYS] Concurrency Model: Sequential (Single Worker Serial Execution)</div>
@@ -1650,13 +2084,16 @@
           <div class="console-line"></div>
         `;
 
-        for (let idx = 0; idx < filtered.length; idx++) {
+        let idx = 0;
+        
+        function runNextSequential() {
+          if (idx >= filtered.length) {
+            consoleBody.innerHTML += `<div class="console-line header" style="margin-top: 10px;">[FINISHED] All sequential tests have completed their sweeps!</div>`;
+            resetButtonStates();
+            return;
+          }
+
           const t = filtered[idx];
-          
-          // Reset so the auto-select always updates the video for the current test.
-          // This makes the video player a live-ticker that follows each running test.
-          // If the user clicks a row while the suite is paused between fetches,
-          // userHasNavigated becomes true again and the next auto-select is skipped.
           userHasNavigated = false;
           selectTest(t.id, true);
 
@@ -1672,71 +2109,62 @@
 
           // Show running indicator badge on right video header
           updateActiveBadgeState(true, t.title);
-          if (isHeaded) {
-            toggleLiveStreamOverlay("running");
-          }
 
           consoleBody.innerHTML += `<div class="console-line system">[RUNNING] Test ${idx + 1}/${filtered.length}: "${t.title}"...</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight; // Auto-scroll to bottom
+          consoleBody.scrollTop = consoleBody.scrollHeight;
 
-          try {
-            // Always run background headless for visual dashboard integration
-            const res = await fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(t.title)}&parallel=false&headed=false`);
-            const data = await res.json();
-
-            if (data.success) {
-              consoleBody.innerHTML += `<div class="console-line success">  ✓ Passed (${t.duration})</div>`;
-              if (isHeaded) toggleLiveStreamOverlay("finished", true);
-            } else {
-              consoleBody.innerHTML += `<div class="console-line text-rose-500">  ✗ Failed (Check terminal log)</div>`;
-              if (isHeaded) toggleLiveStreamOverlay("finished", false);
-            }
-          } catch (err) {
-            consoleBody.innerHTML += `<div class="console-line text-rose-400">  ✗ Network Error: ${err.message}</div>`;
-            if (isHeaded) toggleLiveStreamOverlay("finished", false);
-          } finally {
-            // Clear visual E2E running badge
-            updateActiveBadgeState(false);
-
-            // Remove running state immediately from this row
-            if (row) {
-              row.classList.remove("running");
-              const bullet = row.querySelector(".test-bullet");
-              if (bullet) {
-                bullet.innerHTML = (idx + 1).toString();
-              }
-            }
-            consoleBody.scrollTop = consoleBody.scrollHeight;
+          if (isHeaded) {
+            startLiveIframeSimulation(t);
           }
+
+          fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(t.title)}&parallel=false&headed=false`, { signal })
+            .then(res => res.json())
+            .then(data => {
+              if (data.success) {
+                consoleBody.innerHTML += `<div class="console-line success">  ✓ Passed (${t.duration})</div>`;
+                if (isHeaded) toggleLiveStreamOverlay("finished", true);
+              } else {
+                consoleBody.innerHTML += `<div class="console-line text-rose-500">  ✗ Failed (Check terminal log)</div>`;
+                if (isHeaded) toggleLiveStreamOverlay("finished", false);
+              }
+            })
+            .catch(err => {
+              if (err.name === 'AbortError') {
+                consoleBody.innerHTML += `<div class="console-line text-rose-400">  ✗ Cancelled by user</div>`;
+              } else {
+                consoleBody.innerHTML += `<div class="console-line text-rose-400">  ✗ Network Error: ${err.message}</div>`;
+              }
+              if (isHeaded) toggleLiveStreamOverlay("finished", false);
+            })
+            .finally(() => {
+              // Remove running state immediately from this row
+              if (row) {
+                row.classList.remove("running");
+                const bullet = row.querySelector(".test-bullet");
+                if (bullet) {
+                  bullet.innerHTML = (idx + 1).toString();
+                }
+              }
+              updateActiveBadgeState(false);
+              consoleBody.scrollTop = consoleBody.scrollHeight;
+
+              // Check if we were aborted midway; if so, stop queue recursion
+              if (signal.aborted) {
+                resetButtonStates();
+              } else {
+                idx++;
+                runNextSequential();
+              }
+            });
         }
-
-        consoleBody.innerHTML += `<div class="console-line header" style="margin-top: 10px;">[FINISHED] All sequential tests have completed their sweeps!</div>`;
-        
-        // Re-render and select active (isAuto=true: system restore, not a user click)
-        renderTestCases();
-        selectTest(selectedId, true);
+        runNextSequential();
       }
-
-      // Restore button state
-      const freshBtn = document.getElementById("btn-rerun-all");
-      freshBtn.disabled = false;
-      freshBtn.style.opacity = 1;
-
-      const restoredFilteredCount = testCases.filter(t => {
-        const matchesCategory = currentCategory === 'all' || t.category === currentCategory;
-        const matchesSearch = t.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                              t.suite.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCategory && matchesSearch;
-      }).length;
-
-      document.getElementById("text-rerun-all").innerText = 
-        restoredFilteredCount === testCases.length ? `Re-run All ${testCases.length} E2E Tests` : `Re-run ${restoredFilteredCount} Filtered Tests`;
-      document.getElementById("icon-rerun-all").outerHTML = `
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-rerun-all"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
-      `;
     }
 
     async function triggerRerunCurrent(id = null) {
+      // Abort any active run/simulation first
+      clearActiveSimulation();
+
       if (id !== null) {
         selectTest(id);
       }
@@ -1752,6 +2180,10 @@
       text.innerText = "Executing Selected Test Case...";
       icon.outerHTML = `<span class="spinner" id="icon-run-single"></span>`;
 
+      // Show cancel button
+      const cancelBtn = document.getElementById("btn-cancel-run");
+      if (cancelBtn) cancelBtn.style.display = "flex";
+
       // Visual feedback: mark active E2E row as running
       const activeRow = document.getElementById("test-row-" + selectedId);
       if (activeRow) {
@@ -1764,14 +2196,9 @@
 
       // Show running indicator badge on right video header
       updateActiveBadgeState(true, match.title);
+      
       if (isHeaded) {
-        toggleLiveStreamOverlay("running");
-        // Reset and trigger video playback live during E2E background execution
-        const player = document.getElementById("e2e-video-player");
-        if (player) {
-          player.currentTime = 0;
-          player.play().catch(() => {});
-        }
+        startLiveIframeSimulation(match);
       }
 
       const consoleBody = document.querySelector(".console-body");
@@ -1784,52 +2211,47 @@
         <div class="console-line system">[SYS] Awaiting compiler and runner outputs...</div>
       `;
 
-      try {
-        // Run background headless for local non-disruptive embedded player integration
-        const res = await fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(match.title)}&parallel=${isParallel}&headed=false`);
-        const data = await res.json();
+      currentAbortController = new AbortController();
+      const signal = currentAbortController.signal;
 
-        if (data.success) {
-          if (isHeaded) toggleLiveStreamOverlay("finished", true);
-          consoleBody.innerHTML += `
-            <div class="console-line success">[PASSED] Selected test case executed perfectly!</div>
-            <div class="console-line"></div>
-            <div class="console-line">${data.stdout.replace(/\n/g, '<br>')}</div>
-          `;
-          // Reload player video to catch fresh execution recording
-          const player = document.getElementById("e2e-video-player");
-          player.load();
-        } else {
-          consoleBody.innerHTML += `
-            <div class="console-line text-rose-500">[FAILED] Playwright run failed:</div>
-            <div class="console-line"></div>
-            <div class="console-line">${(data.stdout || '').replace(/\n/g, '<br>')}</div>
-            <div class="console-line text-rose-500">${(data.stderr || '').replace(/\n/g, '<br>')}</div>
-          `;
+      // Run background headless for local non-disruptive embedded player integration without blocking UI thread
+      fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(match.title)}&parallel=${isParallel}&headed=false`, { signal })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            consoleBody.innerHTML += `
+              <div class="console-line success">[PASSED] Selected test case executed perfectly!</div>
+              <div class="console-line"></div>
+              <div class="console-line">${data.stdout.replace(/\n/g, '<br>')}</div>
+            `;
+            // Reload player video to catch fresh execution recording
+            const player = document.getElementById("e2e-video-player");
+            if (player) player.load();
+            if (isHeaded) toggleLiveStreamOverlay("finished", true);
+          } else {
+            consoleBody.innerHTML += `
+              <div class="console-line text-rose-500">[FAILED] Playwright run failed:</div>
+              <div class="console-line"></div>
+              <div class="console-line">${(data.stdout || '').replace(/\n/g, '<br>')}</div>
+              <div class="console-line text-rose-500">${(data.stderr || '').replace(/\n/g, '<br>')}</div>
+            `;
+            if (isHeaded) toggleLiveStreamOverlay("finished", false);
+          }
+        })
+        .catch(err => {
+          if (err.name === 'AbortError') {
+            consoleBody.innerHTML += `<div class="console-line text-rose-500">[CANCELED] Execution aborted by user.</div>`;
+          } else {
+            consoleBody.innerHTML += `
+              <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js server at ${apiBaseUrl}. Please ensure it is running in background.</div>
+              <div class="console-line text-rose-400">Detail: ${err.message}</div>
+            `;
+          }
           if (isHeaded) toggleLiveStreamOverlay("finished", false);
-        }
-      } catch (err) {
-        consoleBody.innerHTML += `
-          <div class="console-line text-rose-500">[NETWORK ERROR] Could not connect to local Next.js server at ${apiBaseUrl}. Please ensure it is running in background.</div>
-          <div class="console-line text-rose-400">Detail: ${err.message}</div>
-        `;
-        if (isHeaded) toggleLiveStreamOverlay("finished", false);
-      } finally {
-        // Clear visual E2E running badge
-        updateActiveBadgeState(false);
-
-        // Restore row visual state (isAuto=true: system restore after single-run, not a user click)
-        renderTestCases();
-        selectTest(selectedId, true);
-
-        const freshBtn = document.getElementById("btn-run-single");
-        freshBtn.disabled = false;
-        freshBtn.style.opacity = 1;
-        document.getElementById("text-run-single").innerText = "Re-run This Selected Test Case";
-        document.getElementById("icon-run-single").outerHTML = `
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" id="icon-run-single"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        `;
-      }
+        })
+        .finally(() => {
+          resetButtonStates();
+        });
     }
 
     // Start with selecting index 0 — pass isAuto=true so the initial
