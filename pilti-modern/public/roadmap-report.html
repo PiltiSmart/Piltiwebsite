@@ -698,6 +698,31 @@
       margin-bottom: 10px;
     }
     
+    .console-tab {
+      font-family: var(--font-outfit);
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+      opacity: 0.7;
+    }
+    
+    .console-tab.active {
+      opacity: 1;
+      color: #FFFFFF !important;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .console-tab:hover {
+      opacity: 1;
+      color: #FFFFFF;
+    }
+    
     .console-controls {
       display: flex;
       gap: 6px;
@@ -927,6 +952,13 @@
             <span id="live-stream-text">Headed Browser Active</span>
           </div>
 
+          <!-- History Mode Active Overlay -->
+          <div id="history-mode-overlay" style="display: none; position: absolute; top: 12px; right: 12px; align-items: center; gap: 8px; background: rgba(99, 102, 241, 0.22); color: #818CF8; border: 1px solid rgba(99, 102, 241, 0.4); padding: 5px 12px; border-radius: 6px; font-size: 10px; font-weight: bold; text-transform: uppercase; z-index: 10; letter-spacing: 0.5px; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.45);">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #818CF8; animation: pulse 1.2s infinite alternate; box-shadow: 0 0 8px #818CF8;"></span>
+            <span id="history-mode-text">Viewing History: 2026-06-01</span>
+            <button onclick="exitHistoryMode()" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #FFFFFF; font-size: 8.5px; font-weight: bold; padding: 2px 6px; border-radius: 4px; cursor: pointer; margin-left: 6px; text-transform: uppercase; transition: all 0.2s;">Exit</button>
+          </div>
+
           <video id="e2e-video-player" controls muted loop style="width: 100%; height: 100%; object-fit: contain;">
             <source id="video-source" src="" type="video/webm">
             Your browser does not support the video tag.
@@ -973,18 +1005,26 @@
 
       <!-- Terminal Console Panel (Full Width Grid Spanning) -->
       <div class="console-panel" style="grid-column: 1 / -1;">
-        <div class="console-header">
+        <div class="console-header" style="justify-content: flex-start; gap: 20px;">
           <div class="console-controls">
             <div class="console-dot red"></div>
             <div class="console-dot yellow"></div>
             <div class="console-dot green"></div>
           </div>
-          <div class="console-title">Live Playwright E2E Execution Console Logs</div>
-          <div style="width: 42px;"></div> <!-- balance -->
+          <div style="display: flex; gap: 15px; margin-left: 10px;">
+            <div id="tab-console-live" onclick="switchConsoleTab('live')" class="console-tab active">Live Execution Console</div>
+            <div id="tab-console-history" onclick="switchConsoleTab('history')" class="console-tab">Execution History Archive</div>
+          </div>
+          <button id="history-clear-btn" onclick="clearExecutionHistory()" style="display: none; margin-left: auto; font-family: var(--font-outfit); font-size: 10px; color: #F43F5E; background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.3); padding: 4px 10px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px;">Clear Archive</button>
         </div>
-        <div class="console-body">
+        <div class="console-body" id="console-live-body">
           <div style="color: var(--text-secondary); text-align: center; padding-top: 50px; font-style: italic;">
             Console standby. Trigger a test run above to stream automated execution telemetry logs.
+          </div>
+        </div>
+        <div class="console-body" id="console-history-body" style="display: none;">
+          <div style="color: var(--text-secondary); text-align: center; padding-top: 50px; font-style: italic;">
+            Loading archived executions history...
           </div>
         </div>
       </div>
@@ -1392,7 +1432,9 @@
       const match = testCases.find(t => t.id === id);
       if (match) {
         // Use stable video-telemetry path so visual playback is never locked/disrupted during background runs
-        const stableVideoPath = match.video.replace("test-results/", "video-telemetry/");
+        const stableVideoPath = activeHistoryRunId
+          ? match.video.replace("test-results/", "run-history/runs/" + activeHistoryRunId + "/video-telemetry/")
+          : match.video.replace("test-results/", "video-telemetry/");
 
         captionBox.innerHTML = match.caption;
         document.getElementById("meta-category").innerText = match.category;
@@ -1960,6 +2002,193 @@
         })
         .finally(() => {
           resetButtonStates();
+        });
+    }
+
+    let activeHistoryRunId = null;
+
+    function switchConsoleTab(tab) {
+      const liveTab = document.getElementById("tab-console-live");
+      const historyTab = document.getElementById("tab-console-history");
+      const liveBody = document.getElementById("console-live-body");
+      const historyBody = document.getElementById("console-history-body");
+      const clearBtn = document.getElementById("history-clear-btn");
+
+      if (tab === "live") {
+        liveTab.classList.add("active");
+        historyTab.classList.remove("active");
+        liveBody.style.display = "block";
+        historyBody.style.display = "none";
+        clearBtn.style.display = "none";
+      } else {
+        liveTab.classList.remove("active");
+        historyTab.classList.add("active");
+        liveBody.style.display = "none";
+        historyBody.style.display = "block";
+        clearBtn.style.display = "block";
+        loadExecutionHistory();
+      }
+    }
+
+    function loadExecutionHistory() {
+      const historyBody = document.getElementById("console-history-body");
+      if (!historyBody) return;
+
+      historyBody.innerHTML = `
+        <div style="color: var(--text-secondary); text-align: center; padding-top: 50px; font-style: italic;">
+          Loading archived executions history...
+        </div>
+      `;
+
+      fetch(apiBaseUrl + "/api/run-history")
+        .then(res => res.json())
+        .then(data => {
+          if (!data || data.length === 0) {
+            historyBody.innerHTML = `
+              <div style="color: var(--text-secondary); text-align: center; padding-top: 50px; font-style: italic;">
+                No historical run records found. Execute a test run above to populate the archive.
+              </div>
+            `;
+            return;
+          }
+
+          let html = `
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-family: var(--font-outfit); font-size: 12.5px;">
+              <thead>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); color: var(--text-secondary); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">
+                  <th style="padding: 8px 12px;">Timestamp</th>
+                  <th style="padding: 8px 12px;">Run Type</th>
+                  <th style="padding: 8px 12px;">Status</th>
+                  <th style="padding: 8px 12px; text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+          `;
+
+          data.forEach(run => {
+            const dateStr = new Date(run.timestamp).toLocaleString();
+            const statusColor = run.success ? "#10B981" : "#EF4444";
+            const statusBg = run.success ? "rgba(16, 185, 129, 0.1)" : "rgba(239, 68, 68, 0.1)";
+            const statusBorder = run.success ? "rgba(16, 185, 129, 0.25)" : "rgba(239, 68, 68, 0.25)";
+            const statusLabel = run.success ? "Passed" : "Failed";
+
+            // Safe serialization
+            const safeRunId = run.runId;
+            const safeDateStr = dateStr.replace(/'/g, "\\'");
+            const safeStdout = encodeURIComponent(run.stdout);
+            const safeStderr = encodeURIComponent(run.stderr);
+
+            html += `
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='transparent'">
+                <td style="padding: 10px 12px; color: #FFFFFF; font-weight: 500;">${dateStr}</td>
+                <td style="padding: 10px 12px; color: var(--text-secondary);">${run.type}</td>
+                <td style="padding: 10px 12px;">
+                  <span style="display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 4px; font-size: 10.5px; font-weight: bold; background: ${statusBg}; color: ${statusColor}; border: 1px solid ${statusBorder};">
+                    <span style="width: 5px; height: 5px; border-radius: 50%; background: ${statusColor};"></span>
+                    ${statusLabel}
+                  </span>
+                </td>
+                <td style="padding: 10px 12px; text-align: right;">
+                  <button onclick="selectHistoryRun('${safeRunId}', '${safeDateStr}', '${safeStdout}', '${safeStderr}')" style="background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.3); color: #818CF8; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 5px; cursor: pointer; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px;" onmouseover="this.style.background='rgba(99, 102, 241, 0.22)'" onmouseout="this.style.background='rgba(99, 102, 241, 0.12)'">
+                    Load View
+                  </button>
+                </td>
+              </tr>
+            `;
+          });
+
+          html += `
+              </tbody>
+            </table>
+          `;
+          historyBody.innerHTML = html;
+        })
+        .catch(err => {
+          historyBody.innerHTML = `
+            <div style="color: #EF4444; text-align: center; padding-top: 50px; font-family: var(--font-outfit); font-size: 13px;">
+              Failed to load run history entries: ${err.message}
+            </div>
+          `;
+        });
+    }
+
+    function selectHistoryRun(runId, timestamp, stdoutEncoded, stderrEncoded) {
+      activeHistoryRunId = runId;
+
+      // Show history mode overlay
+      const overlay = document.getElementById("history-mode-overlay");
+      const text = document.getElementById("history-mode-text");
+      if (overlay && text) {
+        text.innerText = `Viewing Run: ${timestamp}`;
+        overlay.style.display = "flex";
+      }
+
+      // Populate console live body with the archived stdout/stderr
+      const liveBody = document.getElementById("console-live-body");
+      if (liveBody) {
+        const stdout = decodeURIComponent(stdoutEncoded);
+        const stderr = decodeURIComponent(stderrEncoded);
+        let logHtml = `
+          <div class="console-line system" style="color: #818CF8; font-weight: bold;">[HISTORY MODE] Loading execution logs for run ${runId} [${timestamp}]...</div>
+          <div class="console-line"></div>
+          <div class="console-line">${stdout.replace(/\n/g, '<br>')}</div>
+        `;
+        if (stderr) {
+          logHtml += `
+            <div class="console-line text-rose-500" style="margin-top: 10px;">[STDERR LOGS]:</div>
+            <div class="console-line text-rose-400">${stderr.replace(/\n/g, '<br>')}</div>
+          `;
+        }
+        liveBody.innerHTML = logHtml;
+      }
+
+      // Switch tab back to Live Console to let user view the loaded logs
+      switchConsoleTab("live");
+
+      // Reload currently selected test to play the archived video version
+      selectTest(selectedId);
+    }
+
+    function exitHistoryMode() {
+      activeHistoryRunId = null;
+
+      // Hide history overlay
+      const overlay = document.getElementById("history-mode-overlay");
+      if (overlay) {
+        overlay.style.display = "none";
+      }
+
+      // Reset console live body to default standby view
+      const liveBody = document.getElementById("console-live-body");
+      if (liveBody) {
+        liveBody.innerHTML = `
+          <div style="color: var(--text-secondary); text-align: center; padding-top: 50px; font-style: italic;">
+            Console standby. Trigger a test run above to stream automated execution telemetry logs.
+          </div>
+        `;
+      }
+
+      // Reload player with the latest/active stable video
+      selectTest(selectedId);
+    }
+
+    function clearExecutionHistory() {
+      if (!confirm("Are you sure you want to clear the entire execution run history and delete all archived videos? This cannot be undone.")) {
+        return;
+      }
+
+      fetch(apiBaseUrl + "/api/run-history", { method: "DELETE" })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            exitHistoryMode();
+            loadExecutionHistory();
+          } else {
+            alert("Failed to clear history database: " + data.error);
+          }
+        })
+        .catch(err => {
+          alert("Error clearing history database: " + err.message);
         });
     }
 
