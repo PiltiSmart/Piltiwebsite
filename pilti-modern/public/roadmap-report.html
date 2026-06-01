@@ -878,10 +878,10 @@
           <div style="display: flex; align-items: center; justify-content: space-between;">
             <div style="display: flex; flex-direction: column; gap: 2px;">
               <span style="font-size: 12.5px; font-weight: 600; color: #FFFFFF; display: flex; align-items: center; gap: 5px;">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #F59E0B;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg>
-                Embed Live Stream
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #F59E0B;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2 2V8a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg>
+                Headed Browser Mode
               </span>
-              <span style="font-size: 10px; color: var(--text-secondary);">Stream visual execution live inside video panel</span>
+              <span style="font-size: 10px; color: var(--text-secondary);">Open native browser window during execution</span>
             </div>
             <!-- Sliding toggle switch -->
             <div
@@ -894,18 +894,6 @@
                 style="width: 17px; height: 17px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.3); transform: translateX(0px); transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);"
               ></div>
             </div>
-          </div>
-        </div>
-
-        <!-- Friendly Warning Banner for file:// protocol same-origin security policy -->
-        <div id="file-protocol-warning" style="display: none; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px; padding: 12px; margin: 12px 16px 4px 16px; font-size: 11px; color: #F59E0B; line-height: 1.5; backdrop-filter: blur(4px);">
-          <span style="font-weight: bold; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; font-size: 12px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
-            Same-Origin Security Alert
-          </span>
-          You have opened this dashboard directly as a local file (`file://`). Browser security policies will block loading the live iframe from a different origin. For full visual casting and clicks to work, open via the local server instead.
-          <div style="margin-top: 8px;">
-            <a href="http://localhost:3000/roadmap-report.html" target="_blank" style="background: #F59E0B; color: #020204; font-weight: bold; text-decoration: none; padding: 4px 8px; border-radius: 4px; font-size: 10px; display: inline-block;">Open via http://localhost:3000</a>
           </div>
         </div>
 
@@ -933,20 +921,16 @@
         </div>
 
         <div class="video-container" style="position: relative;">
-          <!-- Live Stream Overlay -->
-          <div id="live-stream-overlay" style="display: none; position: absolute; top: 12px; left: 12px; align-items: center; gap: 6px; background: rgba(239, 68, 68, 0.25); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.45); padding: 5px 10px; border-radius: 6px; font-size: 10.5px; font-weight: bold; text-transform: uppercase; z-index: 10; letter-spacing: 0.5px; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.5); pointer-events: none;">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background: #EF4444; animation: pulse 1s infinite alternate; box-shadow: 0 0 8px #EF4444;"></span>
-            <span id="live-stream-text">Live Telemetry Stream</span>
+          <!-- Live Stream Active Overlay -->
+          <div id="live-stream-overlay" style="display: none; position: absolute; top: 12px; left: 12px; align-items: center; gap: 6px; background: rgba(245, 158, 11, 0.25); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.45); padding: 5px 10px; border-radius: 6px; font-size: 10.5px; font-weight: bold; text-transform: uppercase; z-index: 10; letter-spacing: 0.5px; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.5); pointer-events: none;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; animation: pulse 1s infinite alternate; box-shadow: 0 0 8px #F59E0B;"></span>
+            <span id="live-stream-text">Headed Browser Active</span>
           </div>
-          <!-- Virtual Mouse Cursor Overlay for Live execution casting -->
-          <div id="virtual-cursor" style="display: none; position: absolute; width: 16px; height: 16px; background: rgba(245, 158, 11, 0.85); border: 2px solid #FFFFFF; border-radius: 50%; pointer-events: none; z-index: 20; transform: translate(-50%, -50%); transition: left 0.8s cubic-bezier(0.25, 1, 0.5, 1), top 0.8s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 0 10px #F59E0B, 0 0 20px #F59E0B;"></div>
 
-          <video id="e2e-video-player" controls muted loop>
+          <video id="e2e-video-player" controls muted loop style="width: 100%; height: 100%; object-fit: contain;">
             <source id="video-source" src="" type="video/webm">
             Your browser does not support the video tag.
           </video>
-          
-          <iframe id="live-e2e-iframe" style="display: none; width: 100%; height: 100%; border: none; background: #020204;" sandbox="allow-same-origin allow-scripts allow-forms"></iframe>
         </div>
 
         <!-- Metadata Info box -->
@@ -1524,15 +1508,15 @@
 
       if (state === "running") {
         overlay.style.display = "flex";
-        overlay.style.background = "rgba(239, 68, 68, 0.25)";
-        overlay.style.color = "#EF4444";
-        overlay.style.borderColor = "rgba(239, 68, 68, 0.45)";
+        overlay.style.background = "rgba(245, 158, 11, 0.25)";
+        overlay.style.color = "#F59E0B";
+        overlay.style.borderColor = "rgba(245, 158, 11, 0.45)";
         if (dot) {
-          dot.style.background = "#EF4444";
-          dot.style.boxShadow = "0 0 8px #EF4444";
+          dot.style.background = "#F59E0B";
+          dot.style.boxShadow = "0 0 8px #F59E0B";
           dot.style.animation = "pulse 1s infinite alternate";
         }
-        label.innerText = "Live Telemetry Stream";
+        label.innerText = "Headed Browser Active";
       } else if (state === "finished") {
         overlay.style.display = "flex";
         if (isSuccess) {
@@ -1544,7 +1528,7 @@
             dot.style.boxShadow = "0 0 8px #10B981";
             dot.style.animation = "none";
           }
-          label.innerText = "Capture Completed";
+          label.innerText = "Execution Completed";
         } else {
           overlay.style.background = "rgba(244, 63, 94, 0.25)";
           overlay.style.color = "#F43F5E";
@@ -1610,14 +1594,8 @@
         currentAbortController = null;
       }
 
-      // Hide the iframe and virtual cursor, restore video player
-      const iframe = document.getElementById("live-e2e-iframe");
-      const cursor = document.getElementById("virtual-cursor");
-      const player = document.getElementById("e2e-video-player");
-      
-      if (iframe) iframe.style.display = "none";
-      if (cursor) cursor.style.display = "none";
-      if (player) player.style.display = "block";
+      // Hide live overlay
+      toggleLiveStreamOverlay("hide");
     }
 
     function cancelActiveRun() {
@@ -1638,14 +1616,8 @@
       // Stop live console running timer
       stopConsoleTimer();
 
-      // Hide the iframe and virtual cursor, restore video player
-      const iframe = document.getElementById("live-e2e-iframe");
-      const cursor = document.getElementById("virtual-cursor");
-      const player = document.getElementById("e2e-video-player");
-      
-      if (iframe) iframe.style.display = "none";
-      if (cursor) cursor.style.display = "none";
-      if (player) player.style.display = "block";
+      // Hide live overlay
+      toggleLiveStreamOverlay("hide");
 
       // Restore run-single button
       const singleBtn = document.getElementById("btn-run-single");
@@ -1695,334 +1667,6 @@
       renderTestCases();
       selectTest(selectedId, true);
       updateActiveBadgeState(false);
-    }
-
-    function driveIframeDOM(iframe, selector, action, value) {
-      try {
-        const doc = iframe.contentDocument || iframe.contentWindow.document;
-        if (!doc) return false;
-        const el = doc.querySelector(selector);
-        if (!el) return false;
-        
-        if (action === 'click') {
-          el.click();
-        } else if (action === 'fill') {
-          el.value = value;
-          el.dispatchEvent(new Event('input', { bubbles: true }));
-          el.dispatchEvent(new Event('change', { bubbles: true }));
-        }
-        return true;
-      } catch (e) {
-        // Safe fallback for cross-origin (e.g. if opened as file://)
-        console.warn("Iframe DOM access blocked due to Same-Origin Policy. Using visual cursor cast simulation.", e);
-        return false;
-      }
-    }
-
-    function getTargetRoute(t) {
-      const title = t.title.toLowerCase();
-      if (title.includes("smart home") || title.includes("smartyswitch")) {
-        return "/products/smart-home";
-      } else if (title.includes("smart farming") || title.includes("irrigation")) {
-        return "/products/smart-farming";
-      } else if (title.includes("smart office") || title.includes("presence")) {
-        return "/products/smart-office";
-      } else if (title.includes("smart industrial") || title.includes("vibration")) {
-        return "/products/smart-industrial";
-      } else if (title.includes("about")) {
-        return "/about";
-      } else if (title.includes("services")) {
-        return "/services";
-      } else if (title.includes("careers")) {
-        return "/careers";
-      } else if (title.includes("contact")) {
-        return "/contact";
-      } else if (title.includes("pricing")) {
-        return "/pricing";
-      } else if (title.includes("privacy")) {
-        return "/privacy";
-      } else if (title.includes("terms")) {
-        return "/terms";
-      } else if (title.includes("trademarks")) {
-        return "/trademarks";
-      } else if (title.includes("smartyapp")) {
-        return "/smartyapp";
-      } else if (title.includes("store")) {
-        return "/store";
-      } else if (title.includes("theme")) {
-        return "/";
-      }
-      return "/";
-    }
-
-    function startLiveIframeSimulation(t) {
-      // Clear any running simulation first
-      activeSimulationTimeoutIds.forEach(id => clearTimeout(id));
-      activeSimulationTimeoutIds = [];
-      
-      const iframe = document.getElementById("live-e2e-iframe");
-      const player = document.getElementById("e2e-video-player");
-      const cursor = document.getElementById("virtual-cursor");
-      
-      if (!iframe || !player || !cursor) return;
-      
-      // Swap views
-      player.style.display = "none";
-      iframe.style.display = "block";
-      cursor.style.display = "block";
-      
-      // Set iframe source
-      const route = getTargetRoute(t);
-      iframe.src = apiBaseUrl + route;
-      
-      // Reset cursor to center
-      cursor.style.left = "50%";
-      cursor.style.top = "50%";
-      
-      // Define standard helper to move cursor
-      const moveCursor = (leftPct, topPct) => {
-        cursor.style.left = leftPct + "%";
-        cursor.style.top = topPct + "%";
-      };
-      
-      // Define standard helper to click (pulsate cursor visual and click DOM)
-      const clickCursor = (selector = null) => {
-        cursor.style.transform = "translate(-50%, -50%) scale(0.7)";
-        setTimeout(() => {
-          cursor.style.transform = "translate(-50%, -50%) scale(1)";
-        }, 150);
-        
-        if (selector) {
-          driveIframeDOM(iframe, selector, 'click');
-        }
-      };
-
-      const fillInput = (selector, value) => {
-        cursor.style.transform = "translate(-50%, -50%) scale(0.8)";
-        setTimeout(() => {
-          cursor.style.transform = "translate(-50%, -50%) scale(1)";
-        }, 200);
-        driveIframeDOM(iframe, selector, 'fill', value);
-      };
-
-      // Turn on Live stream overlay
-      toggleLiveStreamOverlay("running");
-      
-      // Step-by-step timed execution timeline
-      const delay = (ms, fn) => {
-        const id = setTimeout(fn, ms);
-        activeSimulationTimeoutIds.push(id);
-      };
-      
-      const consoleBody = document.querySelector(".console-body");
-      
-      // Log starting
-      consoleBody.innerHTML += `<div class="console-line system" style="color: #6366F1;">[LIVE] [0.0s] Simulating visual execution for "${t.title}"...</div>`;
-      consoleBody.scrollTop = consoleBody.scrollHeight;
-      
-      // Timeline steps
-      delay(800, () => {
-        consoleBody.innerHTML += `<div class="console-line system">[LIVE] [0.8s] Loaded internal browser frame at ${route}</div>`;
-        consoleBody.scrollTop = consoleBody.scrollHeight;
-        moveCursor(30, 20); // Move to header area
-      });
-      
-      const titleLower = t.title.toLowerCase();
-      if (titleLower.includes("smart home") || titleLower.includes("smartyswitch")) {
-        // Smart Home Simulator Execution Timeline
-        delay(1800, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Locating elements: input range slider & current readings</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(35, 60); // Move to range slider
-        });
-        
-        delay(2600, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [2.6s] Dragging load slider to 16.0 Amps (Safety Cutoff limit: 15A)</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          fillInput("input[type='range']", "16");
-          moveCursor(48, 60); // Slide action visual movement
-        });
-        
-        delay(3600, () => {
-          consoleBody.innerHTML += `<div class="console-line text-amber-500" style="color: #F59E0B;">[LIVE] [3.6s] ANOMALY DETECTED: SmartySwitch™ AUTOMATIC CUTOFF TRIPPED (OFFLINE)</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-        });
-        
-        delay(4800, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [4.8s] Locating element: button.reset-fuse ("Reset Fuse")</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(62, 70); // Move to reset button
-        });
-        
-        delay(5600, () => {
-          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [5.6s] Clicking "Reset Fuse" button to restore telemetry flow</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          let resetTriggered = driveIframeDOM(iframe, "#reset-fuse-button", 'click');
-          if (!resetTriggered) {
-            resetTriggered = driveIframeDOM(iframe, "button", 'click'); // Fallback click first button
-          }
-          clickCursor();
-        });
-        
-        delay(6600, () => {
-          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [6.6s] Telemetry healthy! SmartHome state restored to OPERATIONAL (ON)</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(50, 50); // Restore to center
-        });
-      }
-      else if (titleLower.includes("smart farming") || titleLower.includes("irrigation")) {
-        // Smart Farming Simulator Execution Timeline
-        delay(1800, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Locating element: input range slider (Soil Hydration level)</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(35, 60); // Move to range slider
-        });
-        
-        delay(2600, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [2.6s] Depleting moisture level to 20% (Automatic trigger threshold: <30%)</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          fillInput("input[type='range']", "20");
-          moveCursor(25, 60); // Slide left visual movement
-        });
-        
-        delay(3600, () => {
-          consoleBody.innerHTML += `<div class="console-line text-blue-400" style="color: #60A5FA;">[LIVE] [3.6s] VALVE TRIPPED: Closed-Loop Solenoid Open (IRRIGATING ACTIVE)</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-        });
-        
-        delay(5000, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [5.0s] Awaiting closed-loop replenishment loop (20% -> 65%+)</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(50, 45); // Float near telemetry chart
-        });
-        
-        delay(6800, () => {
-          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [6.8s] Closed-loop hydration complete! Valve shut down.</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(50, 50);
-        });
-      }
-      else if (titleLower.includes("smart office") || titleLower.includes("presence")) {
-        // Smart Office Simulator Execution Timeline
-        delay(1800, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Locating occupancy sensor card: "Main Open Workspace"</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(40, 45); // Move to card
-        });
-        
-        delay(2800, () => {
-          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [2.8s] Toggling presence state to VACANT to dim workplace lights</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          
-          let clicked = false;
-          try {
-            const doc = iframe.contentDocument || iframe.contentWindow.document;
-            if (doc) {
-              const cards = Array.from(doc.querySelectorAll("div"));
-              const targetCard = cards.find(c => c.textContent.includes("Main Open Workspace") || c.textContent.includes("Workspace"));
-              if (targetCard) {
-                targetCard.click();
-                clicked = true;
-              }
-            }
-          } catch(e) {}
-          
-          if (!clicked) {
-            driveIframeDOM(iframe, ".workspace-card", 'click');
-          }
-          clickCursor();
-        });
-        
-        delay(4000, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [4.0s] Verifying adaptive savings ratio dial</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(65, 45); // Move to dial
-        });
-        
-        delay(5500, () => {
-          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [5.5s] Confirmed: Utility Savings increased above 40%!</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(50, 50);
-        });
-      }
-      else if (titleLower.includes("smart industrial") || titleLower.includes("vibration")) {
-        // Smart Industrial Simulator Execution Timeline
-        delay(1800, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Locating element: #anomaly-spike-toggle (Vibration Overdrive Switch)</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(30, 55); // Move to toggle
-        });
-        
-        delay(2600, () => {
-          consoleBody.innerHTML += `<div class="console-line text-rose-500" style="color: #F43F5E;">[LIVE] [2.6s] Toggling anomaly spike overdrive switch to inject motor vibration</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          driveIframeDOM(iframe, "#anomaly-spike-toggle", 'click');
-          clickCursor();
-        });
-        
-        delay(3600, () => {
-          consoleBody.innerHTML += `<div class="console-line text-rose-500" style="color: #F43F5E;">[LIVE] [3.6s] ALERT: PREDICTIVE CRITICAL ALARM TRIPPED! MOTOR VIBRATION SPIKED!</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(50, 30); // Inspect alarm
-        });
-        
-        delay(4800, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [4.8s] Locating Emergency shutoff switch: #estop-motor-button</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(50, 70); // Move to E-Stop button
-        });
-        
-        delay(5600, () => {
-          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [5.6s] Pressing E-STOP button to perform motor shutdown</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          driveIframeDOM(iframe, "#estop-motor-button", 'click');
-          clickCursor();
-        });
-        
-        delay(6600, () => {
-          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [6.6s] Confirmed: Motor RPM returned to 0 (SYSTEM STANDBY)</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(50, 50);
-        });
-      }
-      else {
-        // Generic walkthrough visual cursor automation path
-        delay(1800, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [1.8s] Scanning DOM elements for accessibility & nav trees...</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(45, 15); // Move to navbar
-        });
-        
-        delay(3000, () => {
-          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [3.0s] Scrolling viewport down to inspect landing layouts...</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          try {
-            const win = iframe.contentWindow;
-            if (win) {
-              win.scrollTo({ top: 350, behavior: 'smooth' });
-            }
-          } catch(e) {}
-          moveCursor(50, 80); // Move down
-        });
-        
-        delay(4500, () => {
-          consoleBody.innerHTML += `<div class="console-line system">[LIVE] [4.5s] Verifying component visibility & CSS boundary compliance</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          moveCursor(70, 40);
-        });
-        
-        delay(5800, () => {
-          consoleBody.innerHTML += `<div class="console-line success" style="color: #10B981;">[LIVE] [5.8s] Navigating viewport to top coordinates</div>`;
-          consoleBody.scrollTop = consoleBody.scrollHeight;
-          try {
-            const win = iframe.contentWindow;
-            if (win) {
-              win.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-          } catch(e) {}
-          moveCursor(50, 50);
-        });
-      }
     }
 
     async function triggerRerunAll() {
@@ -2083,21 +1727,19 @@
         consoleBody.innerHTML = `
           <div class="console-line header">[START] Initiating parallel E2E execution on umeshbranch...</div>
           <div class="console-line system">[SYS] Concurrency Model: Parallel Multi-worker (5 Workers)</div>
-          <div class="console-line system">[SYS] Headed Browser: DISABLED (Background headless execution)</div>
-          <div class="console-line system">[SYS] Live Dashboard Cast: ${isHeaded ? 'ENABLED (Streaming visual telemetry inside panel)' : 'DISABLED'}</div>
-          <div class="console-line system">[SYS] Executing Command: npx playwright test${isFilteredOnly ? ` -g "[filtered pattern]"` : ''}</div>
+          <div class="console-line system">[SYS] Headed Browser: ${isHeaded ? 'ENABLED (Opening native headed browser window)' : 'DISABLED (Background headless execution)'}</div>
+          <div class="console-line system">[SYS] Executing Command: npx playwright test${isHeaded ? ' --headed' : ''}${isFilteredOnly ? ` -g "[filtered pattern]"` : ''}</div>
           <div class="console-line system">[SYS] Running ${filtered.length} of ${testCases.length} E2E tests...</div>
           <div class="console-line system">[SYS] Awaiting execution logs...</div>
         `;
 
         startConsoleTimer("parallel-timer", "[RUNNING] Playwright multi-worker parallel execution active");
 
-        // If headed mode/visual stream is enabled, start the first simulation visually in parallel
         if (isHeaded) {
-          startLiveIframeSimulation(filtered[0]);
+          toggleLiveStreamOverlay("running");
         }
 
-        let url = apiBaseUrl + `/api/run-tests?parallel=true&headed=false`;
+        let url = apiBaseUrl + `/api/run-tests?parallel=true&headed=${isHeaded}`;
         if (isFilteredOnly) {
           const titlesPattern = filtered.map(t => t.title).join('|');
           url += "&title=" + encodeURIComponent(titlesPattern);
@@ -2142,8 +1784,7 @@
         consoleBody.innerHTML = `
           <div class="console-line header">[START] Initiating sequential E2E test execution...</div>
           <div class="console-line system">[SYS] Concurrency Model: Sequential (Single Worker Serial Execution)</div>
-          <div class="console-line system">[SYS] Headed Browser: DISABLED (Background headless execution)</div>
-          <div class="console-line system">[SYS] Live Dashboard Cast: ${isHeaded ? 'ENABLED (Streaming visual telemetry inside panel)' : 'DISABLED'}</div>
+          <div class="console-line system">[SYS] Headed Browser: ${isHeaded ? 'ENABLED (Opening native headed browser window)' : 'DISABLED (Background headless execution)'}</div>
           <div class="console-line system">[SYS] Running each test case individually. View progression below...</div>
           <div class="console-line"></div>
         `;
@@ -2178,12 +1819,11 @@
           consoleBody.scrollTop = consoleBody.scrollHeight;
 
           if (isHeaded) {
-            startLiveIframeSimulation(t);
-          } else {
-            startConsoleTimer("seq-timer-" + t.id, `  [RUNNING] Playwright executing "${t.title.substring(0, 30)}..."`);
+            toggleLiveStreamOverlay("running");
           }
+          startConsoleTimer("seq-timer-" + t.id, `  [RUNNING] Playwright executing "${t.title.substring(0, 30)}..."`);
 
-          fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(t.title)}&parallel=false&headed=false`, { signal })
+          fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(t.title)}&parallel=false&headed=${isHeaded}`, { signal })
             .then(res => res.json())
             .then(data => {
               if (data.success) {
@@ -2266,28 +1906,25 @@
       updateActiveBadgeState(true, match.title);
       
       if (isHeaded) {
-        startLiveIframeSimulation(match);
+        toggleLiveStreamOverlay("running");
       }
 
       const consoleBody = document.querySelector(".console-body");
       consoleBody.innerHTML = `
         <div class="console-line header">[START] Initiating specific test execution...</div>
         <div class="console-line system">[SYS] Test Title: "${match.title}"</div>
-        <div class="console-line system">[SYS] Headed Browser: DISABLED (Background headless execution)</div>
-        <div class="console-line system">[SYS] Live Dashboard Cast: ${isHeaded ? 'ENABLED (Streaming visual telemetry inside panel)' : 'DISABLED'}</div>
-        <div class="console-line system">[SYS] Command: npx playwright test -g "${match.title}"</div>
+        <div class="console-line system">[SYS] Headed Browser: ${isHeaded ? 'ENABLED (Opening native headed browser window)' : 'DISABLED (Background headless execution)'}</div>
+        <div class="console-line system">[SYS] Command: npx playwright test -g "${match.title}"${isHeaded ? ' --headed' : ''}</div>
         <div class="console-line system">[SYS] Awaiting compiler and runner outputs...</div>
       `;
 
-      if (!isHeaded) {
-        startConsoleTimer("single-timer", "[RUNNING] Playwright compiler compiling and executing");
-      }
+      startConsoleTimer("single-timer", "[RUNNING] Playwright compiler compiling and executing");
 
       currentAbortController = new AbortController();
       const signal = currentAbortController.signal;
 
-      // Run background headless for local non-disruptive embedded player integration without blocking UI thread
-      fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(match.title)}&parallel=${isParallel}&headed=false`, { signal })
+      // Run execution queue dynamically (supports both headed native popup and background headless modes)
+      fetch(apiBaseUrl + `/api/run-tests?title=${encodeURIComponent(match.title)}&parallel=${isParallel}&headed=${isHeaded}`, { signal })
         .then(res => res.json())
         .then(data => {
           if (data.success) {
