@@ -1,20 +1,44 @@
 "use client";
 
 import React, { useState, useRef, useCallback, useEffect } from "react";
-import { Maximize2, Minimize2, Wifi, WifiOff, AlertCircle, RefreshCw, Smartphone, Tablet, Eraser } from "lucide-react";
+import { Wifi, WifiOff, AlertCircle, RefreshCw, Eraser, ExternalLink, Camera, ChevronDown, Smartphone } from "lucide-react";
 
 // Use the raw app query parameter so the external black background is skipped entirely
 const SMARTYAPP_URL = "https://smartyapp.piltismart.com/?isApp=true";
 
+const DEVICE_PRESETS = {
+  // iPhones
+  "iphone-16-pro-max": { name: "iPhone 16 Pro Max", width: 440, height: 956, category: "iPhone" },
+  "iphone-16-pro":     { name: "iPhone 16 Pro",     width: 402, height: 874, category: "iPhone" },
+  "iphone-16":         { name: "iPhone 16",         width: 393, height: 852, category: "iPhone" },
+  "iphone-15":         { name: "iPhone 15",         width: 393, height: 852, category: "iPhone" },
+  "iphone-se":         { name: "iPhone SE",         width: 375, height: 667, category: "iPhone" },
+  // Android
+  "pixel-9-pro":       { name: "Pixel 9 Pro",       width: 412, height: 892, category: "Android" },
+  "pixel-9":           { name: "Pixel 9",           width: 412, height: 892, category: "Android" },
+  "samsung-s24-ultra": { name: "Galaxy S24 Ultra",  width: 412, height: 915, category: "Android" },
+  "samsung-s24":       { name: "Galaxy S24",        width: 360, height: 780, category: "Android" },
+  "samsung-a15":       { name: "Galaxy A15",        width: 384, height: 854, category: "Android" },
+  // Tablets
+  "ipad-pro-13":       { name: "iPad Pro 13\u2033",    width: 1032, height: 1376, category: "Tablet" },
+  "ipad-air":          { name: "iPad Air",          width: 820,  height: 1180, category: "Tablet" },
+  "ipad-mini":         { name: "iPad Mini",         width: 744,  height: 1133, category: "Tablet" },
+  "galaxy-tab-s9":     { name: "Galaxy Tab S9",     width: 800,  height: 1280, category: "Tablet" },
+} as const;
+
+type DeviceKey = keyof typeof DEVICE_PRESETS;
+
 export default function SmartyAppPage() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const deviceFrameRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [isFullscreen, setIsFullscreen] = useState(false);
   const [isOnline, setIsOnline] = useState<boolean>(true);
   const [hasError, setHasError] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
-  const [device, setDevice] = useState<"phone" | "tablet">("phone");
+  const [selectedDevice, setSelectedDevice] = useState<DeviceKey>("iphone-16-pro");
+  const [showDeviceMenu, setShowDeviceMenu] = useState(false);
   const [iframeSrc, setIframeSrc] = useState(SMARTYAPP_URL);
+  const [showFlash, setShowFlash] = useState(false);
 
   // Monitor network status using navigator.onLine and a non-blocking check
   useEffect(() => {
@@ -140,28 +164,83 @@ export default function SmartyAppPage() {
     setIframeSrc(`${SMARTYAPP_URL}&clear_cache=${Date.now()}&nocache=${Math.random()}&logout=true`);
   }, []);
 
-  const toggleFullscreen = useCallback(() => {
-    setIsFullscreen((f) => !f);
+  const handlePopOut = useCallback(() => {
+    const w = screen.width;
+    const h = screen.height;
+    window.open("https://smartyapp.piltismart.com", "SmartyApp", `noopener,noreferrer,width=${w},height=${h},top=0,left=0,resizable=no,scrollbars=yes`);
+  }, []);
+
+  const handleScreenshot = useCallback(async () => {
+    if (!deviceFrameRef.current) return;
+    try {
+      // Get device frame position before the share dialog appears
+      const rect = deviceFrameRef.current.getBoundingClientRect();
+
+      // Use Screen Capture API to capture actual rendered pixels
+      const stream = await navigator.mediaDevices.getDisplayMedia({
+        video: { displaySurface: "browser" } as MediaTrackConstraints,
+        preferCurrentTab: true,
+      } as DisplayMediaStreamOptions);
+
+      const video = document.createElement("video");
+      video.srcObject = stream;
+      await video.play();
+
+      // Small delay to ensure the frame is rendered
+      await new Promise((r) => setTimeout(r, 150));
+
+      // Flash effect
+      setShowFlash(true);
+      setTimeout(() => setShowFlash(false), 300);
+
+      // Calculate scale between captured resolution and viewport
+      const scaleX = video.videoWidth / window.innerWidth;
+      const scaleY = video.videoHeight / window.innerHeight;
+
+      // Crop coordinates mapped to captured resolution
+      const cropX = rect.left * scaleX;
+      const cropY = rect.top * scaleY;
+      const cropW = rect.width * scaleX;
+      const cropH = rect.height * scaleY;
+
+      // Draw only the cropped device frame area
+      const canvas = document.createElement("canvas");
+      canvas.width = cropW;
+      canvas.height = cropH;
+      const ctx = canvas.getContext("2d")!;
+      ctx.drawImage(video, cropX, cropY, cropW, cropH, 0, 0, cropW, cropH);
+
+      // Stop the stream
+      stream.getTracks().forEach((t) => t.stop());
+
+      // Download the screenshot
+      const link = document.createElement("a");
+      link.download = `smartyapp-screenshot-${Date.now()}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    } catch (err) {
+      console.error("Screenshot failed:", err);
+    }
   }, []);
 
   return (
     <div
-      className={`flex flex-col bg-[#F2F2F2] transition-colors duration-500 ${isFullscreen ? "fixed inset-0 z-[200]" : "min-h-screen pt-16"
-        }`}
+      className="flex flex-col bg-[#F2F2F2] transition-colors duration-500 min-h-screen pt-16"
     >
       {/* Outer Browser Mockup Wrapper */}
-      <div className={`flex flex-col flex-1 items-center justify-center relative ${isFullscreen ? "" : "p-6"}`}>
+      <div className="flex flex-col flex-1 items-center justify-center relative p-6">
 
         {/* Sleek Device Mockup Frame Container (Handles Light Theme and Sizing) */}
         {!hasError && (
           <div
-            className={`transition-all duration-500 flex items-center justify-center ${isFullscreen
-                ? "w-full h-full"
-                : device === "phone"
-                  ? "h-[76vh] w-full max-w-[360px] bg-black rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] relative overflow-hidden border border-black/[0.06]"
-                  : "h-[76vh] w-full max-w-[1024px] bg-black rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] relative overflow-hidden border border-black/[0.06]"
-              }`}
+            ref={deviceFrameRef}
+            className="transition-all duration-500 flex items-center justify-center h-[88vh] bg-black rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] relative overflow-hidden border border-black/[0.06]"
+            style={{ width: `${DEVICE_PRESETS[selectedDevice].width}px`, maxWidth: "100%" }}
           >
+            {/* Screenshot flash overlay */}
+            {showFlash && (
+              <div className="absolute inset-0 z-50 bg-white animate-[flash_0.3s_ease-out] pointer-events-none" />
+            )}
             <div className="w-full h-full relative">
               {/* Loading State inside our local device frame */}
               {isLoading && (
@@ -226,8 +305,8 @@ export default function SmartyAppPage() {
           </div>
         )}
 
-        {/* Status Badge - Top Center */}
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 z-[100] flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-black/10 backdrop-blur-md shadow-sm transition-all select-none">
+        {/* Status Badge - Top Right (above refresh controls) */}
+        <div className="absolute top-2 right-6 z-[100] flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-black/10 backdrop-blur-md shadow-sm transition-all select-none">
           {isOnline ? (
             <>
               <span className="relative flex h-2 w-2">
@@ -249,33 +328,54 @@ export default function SmartyAppPage() {
 
         {/* Floating Action Controls - Top Right */}
         {!isLoading && !hasError && (
-          <div className="absolute top-6 right-6 z-[100] flex items-center gap-3">
+          <div className="absolute top-14 right-6 z-[100] flex items-center gap-3">
 
-            {/* Local Device Mockup Switcher (Only visible when not fullscreen) */}
-            {!isFullscreen && (
-              <div className="flex items-center bg-white/80 border border-black/10 backdrop-blur-md p-1 rounded-full shadow-lg gap-1">
-                <button
-                  onClick={() => setDevice("phone")}
-                  className={`cursor-pointer p-2.5 rounded-full transition-all active:scale-95 ${device === "phone"
-                      ? "bg-[#0078D4] text-white shadow-md scale-105"
-                      : "text-black/60 hover:text-black hover:bg-black/5"
-                    }`}
-                  title="Switch to Phone View"
-                >
-                  <Smartphone size={16} />
-                </button>
-                <button
-                  onClick={() => setDevice("tablet")}
-                  className={`cursor-pointer p-2.5 rounded-full transition-all active:scale-95 ${device === "tablet"
-                      ? "bg-[#0078D4] text-white shadow-md scale-105"
-                      : "text-black/60 hover:text-black hover:bg-black/5"
-                    }`}
-                  title="Switch to Tablet View"
-                >
-                  <Tablet size={16} />
-                </button>
-              </div>
-            )}
+            {/* Device Selector Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setShowDeviceMenu((v) => !v)}
+                className="cursor-pointer flex items-center gap-2 px-4 py-2.5 bg-white/80 hover:bg-white border border-black/10 backdrop-blur-md rounded-full shadow-lg transition-all active:scale-95"
+              >
+                <Smartphone size={14} className="text-black/60" />
+                <span className="text-xs font-semibold text-black/80 whitespace-nowrap">{DEVICE_PRESETS[selectedDevice].name}</span>
+                <ChevronDown size={14} className={`text-black/40 transition-transform duration-200 ${showDeviceMenu ? "rotate-180" : ""}`} />
+              </button>
+
+              {showDeviceMenu && (
+                <>
+                  {/* Backdrop to close menu */}
+                  <div className="fixed inset-0 z-[99]" onClick={() => setShowDeviceMenu(false)} />
+
+                  {/* Dropdown Menu */}
+                  <div className="absolute top-full right-0 mt-2 w-56 bg-white/95 backdrop-blur-xl border border-black/10 rounded-2xl shadow-2xl z-[100] overflow-hidden py-1 max-h-[60vh] overflow-y-auto">
+                    {(["iPhone", "Android", "Tablet"] as const).map((category) => (
+                      <div key={category}>
+                        <div className="px-4 py-2 text-[10px] uppercase tracking-wider font-bold text-black/30">{category}</div>
+                        {Object.entries(DEVICE_PRESETS)
+                          .filter(([, d]) => d.category === category)
+                          .map(([key, d]) => (
+                            <button
+                              key={key}
+                              onClick={() => {
+                                setSelectedDevice(key as DeviceKey);
+                                setShowDeviceMenu(false);
+                              }}
+                              className={`cursor-pointer w-full text-left px-4 py-2.5 flex items-center justify-between transition-all ${
+                                selectedDevice === key
+                                  ? "bg-[#0078D4]/10 text-[#0078D4]"
+                                  : "text-black/70 hover:bg-black/5"
+                              }`}
+                            >
+                              <span className="text-xs font-medium">{d.name}</span>
+                              <span className="text-[10px] font-mono text-black/30">{d.width}×{d.height}</span>
+                            </button>
+                          ))}
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
 
             {/* Clear Cache Button */}
             <button
@@ -294,7 +394,27 @@ export default function SmartyAppPage() {
             >
               <RefreshCw size={20} className="group-hover/reload:rotate-180 transition-transform duration-700 ease-out" />
             </button>
+
+            {/* Pop Out Button - Opens in new browser tab */}
+            <button
+              onClick={handlePopOut}
+              className="cursor-pointer p-4 bg-white/80 hover:bg-white border border-black/10 backdrop-blur-md shadow-lg text-black/80 hover:text-black rounded-full transition-all hover:scale-105 active:scale-95 group/popout"
+              title="Open in New Window"
+            >
+              <ExternalLink size={20} className="group-hover/popout:translate-x-0.5 group-hover/popout:-translate-y-0.5 transition-transform duration-300" />
+            </button>
           </div>
+        )}
+
+        {/* Screenshot Button - Bottom Right */}
+        {!isLoading && !hasError && (
+          <button
+            onClick={handleScreenshot}
+            className="absolute bottom-6 right-6 z-[100] cursor-pointer p-4 bg-white/80 hover:bg-white border border-black/10 backdrop-blur-md shadow-lg text-black/80 hover:text-black rounded-full transition-all hover:scale-105 active:scale-95 group/screenshot"
+            title="Take Screenshot"
+          >
+            <Camera size={20} className="group-hover/screenshot:scale-110 transition-transform duration-300" />
+          </button>
         )}
       </div>
     </div>
